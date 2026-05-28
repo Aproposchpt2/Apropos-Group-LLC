@@ -1,0 +1,33 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/capabilities"
+  to = "/capabilities.html"
+  status = 200
+
+[[redirects]]
+  from = "/contract-vehicles"
+  to = "/contract-vehicles.html"
+  status = 200
+
+[[redirects]]
+  from = "/past-performance"
+  to = "/past-performance.html"
+  status = 200
