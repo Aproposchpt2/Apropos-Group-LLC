@@ -161,8 +161,8 @@ footer{border-top:1px solid var(--line);padding:32px clamp(20px,5vw,72px);displa
         <form id="contact-form" novalidate>
           <div class="form-row">
             <div class="form-group">
-              <label for="name">Full Name *</label>
-              <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+              <label for="contracting_officer">Contracting Officer / POC *</label>
+              <input type="text" id="contracting_officer" name="contracting_officer" placeholder="Jane Smith" required autocomplete="name" />
             </div>
             <div class="form-group">
               <label for="email">Email Address *</label>
@@ -172,31 +172,37 @@ footer{border-top:1px solid var(--line);padding:32px clamp(20px,5vw,72px);displa
 
           <div class="form-row">
             <div class="form-group">
+              <label for="agency_name">Agency / Organization *</label>
+              <input type="text" id="agency_name" name="agency_name" placeholder="Department of Veterans Affairs" required />
+            </div>
+            <div class="form-group">
               <label for="phone">Phone Number</label>
               <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel" />
             </div>
+          </div>
+
+          <div class="form-row">
             <div class="form-group">
-              <label for="organization">Organization / Agency *</label>
-              <input type="text" id="organization" name="organization" placeholder="Department of Veterans Affairs" required />
+              <label for="inquiry_type">Inquiry Type *</label>
+              <select id="inquiry_type" name="inquiry_type" required>
+                <option value="" disabled selected>Select one…</option>
+                <option value="capability-briefing">Capability Briefing Request</option>
+                <option value="rfp-response">RFP / Solicitation Response</option>
+                <option value="teaming">Teaming or Subcontracting Inquiry</option>
+                <option value="demo">Product Demo</option>
+                <option value="partnership">Partnership Discussion</option>
+                <option value="general">General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="opportunity_number">Opportunity / Solicitation #</label>
+              <input type="text" id="opportunity_number" name="opportunity_number" placeholder="W912HQ-26-R-0001 (optional)" />
             </div>
           </div>
 
           <div class="form-group">
-            <label for="inquiry_type">Inquiry Type *</label>
-            <select id="inquiry_type" name="inquiry_type" required>
-              <option value="" disabled selected>Select one…</option>
-              <option value="capability-briefing">Capability Briefing Request</option>
-              <option value="rfp-response">RFP / Solicitation Response</option>
-              <option value="teaming">Teaming or Subcontracting Inquiry</option>
-              <option value="demo">Product Demo</option>
-              <option value="partnership">Partnership Discussion</option>
-              <option value="general">General Inquiry</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message *</label>
-            <textarea id="message" name="message" placeholder="Describe your requirement, timeline, or questions…" required></textarea>
+            <label for="requirement">Requirement *</label>
+            <textarea id="requirement" name="requirement" placeholder="Describe your requirement, timeline, or questions…" required></textarea>
           </div>
 
           <p class="form-note">* Required fields. We respond within one business day, Monday–Friday.</p>
@@ -299,13 +305,13 @@ footer{border-top:1px solid var(--line);padding:32px clamp(20px,5vw,72px);displa
   form.addEventListener('submit', function(e){
     e.preventDefault();
 
-    var name = document.getElementById('name').value.trim();
+    var contracting_officer = document.getElementById('contracting_officer').value.trim();
     var email = document.getElementById('email').value.trim();
-    var organization = document.getElementById('organization').value.trim();
+    var agency_name = document.getElementById('agency_name').value.trim();
     var inquiry_type = document.getElementById('inquiry_type').value;
-    var message = document.getElementById('message').value.trim();
+    var requirement = document.getElementById('requirement').value.trim();
 
-    if (!name || !email || !organization || !inquiry_type || !message) {
+    if (!contracting_officer || !email || !agency_name || !inquiry_type || !requirement) {
       showStatus('error', 'Please complete all required fields before submitting.');
       return;
     }
@@ -322,12 +328,13 @@ footer{border-top:1px solid var(--line);padding:32px clamp(20px,5vw,72px);displa
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        name: name,
+        contracting_officer: contracting_officer,
         email: email,
+        agency_name: agency_name,
         phone: document.getElementById('phone').value.trim(),
-        organization: organization,
+        opportunity_number: document.getElementById('opportunity_number').value.trim(),
         inquiry_type: inquiry_type,
-        message: message
+        requirement: requirement
       })
     })
     .then(function(r){ return r.json(); })

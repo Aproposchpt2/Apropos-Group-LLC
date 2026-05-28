@@ -27,9 +27,17 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: JSON.stringify({ ok: false, error: 'Invalid JSON' }) };
   }
 
-  const { name, email, phone, organization, inquiry_type, message } = body;
+  const {
+    contracting_officer,
+    agency_name,
+    email,
+    phone,
+    opportunity_number,
+    inquiry_type,
+    requirement,
+  } = body;
 
-  if (!name || !email || !organization || !inquiry_type || !message) {
+  if (!contracting_officer || !agency_name || !email || !inquiry_type || !requirement) {
     return { statusCode: 400, body: JSON.stringify({ ok: false, error: 'Missing required fields' }) };
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -38,22 +46,24 @@ exports.handler = async (event) => {
   if (!ALLOWED_INQUIRY_TYPES.includes(inquiry_type)) {
     return { statusCode: 400, body: JSON.stringify({ ok: false, error: 'Invalid inquiry type' }) };
   }
-  if (name.length > 120 || email.length > 254 || organization.length > 200 || message.length > 4000) {
+  if (
+    contracting_officer.length > 120 ||
+    agency_name.length > 200 ||
+    email.length > 254 ||
+    requirement.length > 4000
+  ) {
     return { statusCode: 400, body: JSON.stringify({ ok: false, error: 'Input too long' }) };
   }
 
   const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
-  const now = new Date().toISOString();
   const { error: dbError } = await supabase.from('contact_inquiries').insert({
-    created_at: now,
-    name: name.trim(),
+    agency_name: agency_name.trim(),
+    contracting_officer: contracting_officer.trim(),
     email: email.trim().toLowerCase(),
     phone: phone ? phone.trim() : null,
-    organization: organization.trim(),
-    inquiry_type,
-    message: message.trim(),
-    source_site: 'aproposgroupllc.com',
+    opportunity_number: opportunity_number ? opportunity_number.trim() : null,
+    requirement: requirement.trim(),
     status: 'new',
   });
 
@@ -74,19 +84,20 @@ exports.handler = async (event) => {
   const emailHtml = `
 <div style="font-family:Arial,sans-serif;max-width:600px;background:#0A0E17;color:#F2F5FA;padding:32px;border-radius:8px">
   <div style="border-bottom:1px solid rgba(200,169,110,.3);padding-bottom:16px;margin-bottom:24px">
-    <span style="font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#C8A96E">Apropos Group LLC · New Inquiry</span>
+    <span style="font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#C8A96E">Apropos Group LLC · New Government Inquiry</span>
   </div>
   <h2 style="font-size:20px;color:#F2F5FA;margin:0 0 20px">${inquiryLabels[inquiry_type] || inquiry_type}</h2>
   <table style="width:100%;border-collapse:collapse">
-    <tr><td style="padding:8px 0;color:#8FA3BE;font-size:13px;width:120px">Name</td><td style="padding:8px 0;font-size:14px">${name}</td></tr>
+    <tr><td style="padding:8px 0;color:#8FA3BE;font-size:13px;width:160px">Contracting Officer</td><td style="padding:8px 0;font-size:14px">${contracting_officer}</td></tr>
+    <tr><td style="padding:8px 0;color:#8FA3BE;font-size:13px">Agency / Organization</td><td style="padding:8px 0;font-size:14px">${agency_name}</td></tr>
     <tr><td style="padding:8px 0;color:#8FA3BE;font-size:13px">Email</td><td style="padding:8px 0;font-size:14px"><a href="mailto:${email}" style="color:#C8A96E">${email}</a></td></tr>
     ${phone ? `<tr><td style="padding:8px 0;color:#8FA3BE;font-size:13px">Phone</td><td style="padding:8px 0;font-size:14px">${phone}</td></tr>` : ''}
-    <tr><td style="padding:8px 0;color:#8FA3BE;font-size:13px">Organization</td><td style="padding:8px 0;font-size:14px">${organization}</td></tr>
-    <tr><td style="padding:8px 0;color:#8FA3BE;font-size:13px">Received</td><td style="padding:8px 0;font-size:14px">${new Date(now).toLocaleString('en-US',{timeZone:'America/Los_Angeles'})}</td></tr>
+    ${opportunity_number ? `<tr><td style="padding:8px 0;color:#8FA3BE;font-size:13px">Opportunity #</td><td style="padding:8px 0;font-size:14px;font-family:monospace">${opportunity_number}</td></tr>` : ''}
+    <tr><td style="padding:8px 0;color:#8FA3BE;font-size:13px">Received</td><td style="padding:8px 0;font-size:14px">${new Date().toLocaleString('en-US',{timeZone:'America/Los_Angeles'})}</td></tr>
   </table>
   <div style="margin-top:24px;padding:20px;background:rgba(28,35,51,.8);border-radius:6px;border-left:2px solid #C8A96E">
-    <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#8FA3BE;margin-bottom:10px">Message</div>
-    <div style="font-size:14px;line-height:1.7;color:#B8C8DC;white-space:pre-wrap">${message}</div>
+    <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#8FA3BE;margin-bottom:10px">Requirement</div>
+    <div style="font-size:14px;line-height:1.7;color:#B8C8DC;white-space:pre-wrap">${requirement}</div>
   </div>
   <div style="margin-top:24px;font-size:11px;color:#2A3448">Apropos Group LLC · aproposgroupllc.com</div>
 </div>`;
@@ -102,7 +113,7 @@ exports.handler = async (event) => {
         from: FROM_EMAIL,
         to: ALERT_EMAIL,
         reply_to: email,
-        subject: `[Apropos Group] ${inquiryLabels[inquiry_type] || 'New Inquiry'} — ${name}`,
+        subject: `[Apropos Group] ${inquiryLabels[inquiry_type] || 'New Inquiry'} — ${agency_name}`,
         html: emailHtml,
       }),
     });
