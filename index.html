@@ -5,26 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Apropos Group LLC — Federal AI Automation Contractor</title>
   <meta name="description" content="SAM.gov registered federal contractor providing AI-powered business automation systems. Smart Auto-Attendant, Lead Management, and AI Contact Center solutions." />
-  <meta name="theme-color" content="#0A0E17" />
+  <meta name="theme-color" content="#0F2A6A" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Barlow:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;1,6..96,400;1,6..96,500&family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
 :root {
-  --ink:     #0A0E17;
-  --ink-2:   #111827;
-  --ink-3:   #1C2333;
-  --steel:   #2A3448;
-  --line:    rgba(180,195,220,.14);
-  --line-2:  rgba(180,195,220,.28);
-  --gold:    #C8A96E;
-  --gold-2:  #E8C98E;
-  --silver:  #8FA3BE;
-  --mist:    #B8C8DC;
-  --white:   #F2F5FA;
-  --shadow:  0 32px 80px rgba(0,0,0,.52);
+  --ink:     #0F2A6A;
+  --ink-2:   #163472;
+  --ink-3:   #1C3878;
+  --steel:   #3A5898;
+  --line:    rgba(255,255,255,.12);
+  --line-2:  rgba(255,255,255,.22);
+  --gold:    #FFFFFF;
+  --gold-2:  #EEF3FF;
+  --silver:  #9DB0D4;
+  --mist:    #C3D0E8;
+  --white:   #FFFFFF;
+  --ink-soft:#1C3878;
+  --ink-muted:#3A5898;
+  --gold-bright:#EEF3FF;
+  --gold-dim:rgba(255,255,255,.12);
+  --cream:#FFFFFF;
+  --rule:rgba(15,42,106,.1);
+  --disp:'Bodoni Moda',serif;
+  --subdisp:'Cormorant',serif;
+  --body:'Jost',sans-serif;
+  --shadow:  0 32px 80px rgba(0,0,0,.40);
   --r:       6px;
-  font-family: 'Barlow', system-ui, sans-serif;
+  font-family: 'Jost', system-ui, sans-serif;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -41,8 +50,8 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(200,169,110,.06), transparent),
-    radial-gradient(ellipse 60% 40% at 100% 80%, rgba(42,52,72,.8), transparent);
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255,255,255,.07), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 80%, rgba(255,255,255,.05), transparent);
   pointer-events: none;
   z-index: 0;
 }
@@ -57,7 +66,7 @@ img { display: block; max-width: 100%; }
   gap: 24px;
   padding: 0 clamp(20px,5vw,72px);
   height: 72px;
-  background: rgba(10,14,23,.92);
+  background: rgba(10,28,74,.92);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(24px);
 }
@@ -69,13 +78,13 @@ img { display: block; max-width: 100%; }
   border: 1px solid var(--gold);
   border-radius: 50%;
   display: grid; place-items: center;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: .65rem; font-weight: 700;
   letter-spacing: .12em; color: var(--gold);
   flex-shrink: 0;
 }
 .nav-name {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: .72rem; font-weight: 600;
   letter-spacing: .2em; text-transform: uppercase;
   color: var(--mist); line-height: 1.2;
@@ -94,9 +103,9 @@ img { display: block; max-width: 100%; }
   color: var(--silver); padding: 8px 14px;
   border-radius: var(--r); transition: .18s;
 }
-.nav-links a:hover { color: var(--white); background: rgba(255,255,255,.04); }
+.nav-links a:hover { color: var(--white); background: rgba(255,255,255,.07); }
 .nav-cta {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: .72rem; font-weight: 600;
   letter-spacing: .14em; text-transform: uppercase;
   color: var(--ink); background: var(--gold);
@@ -126,7 +135,7 @@ img { display: block; max-width: 100%; }
 }
 .registration-badge {
   display: inline-flex; align-items: center; gap: 10px;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: .68rem; font-weight: 600;
   letter-spacing: .2em; text-transform: uppercase;
   color: var(--gold); margin-bottom: 2rem;
@@ -136,7 +145,7 @@ img { display: block; max-width: 100%; }
   background: var(--gold);
 }
 h1 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Bodoni Moda', Georgia, serif;
   font-size: clamp(2.8rem, 5vw, 5.2rem);
   font-weight: 500; line-height: 1.06;
   letter-spacing: -.01em;
@@ -144,8 +153,10 @@ h1 {
   margin-bottom: 1.6rem;
 }
 h1 em {
+  font-family: 'Cormorant', Georgia, serif;
   font-style: italic;
-  color: var(--gold);
+  font-weight: 600;
+  color: #E6ECFF;
 }
 .hero-copy {
   font-size: 1.08rem; font-weight: 300;
@@ -156,7 +167,7 @@ h1 em {
   display: flex; flex-wrap: wrap; gap: 12px;
 }
 .btn-primary {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: .78rem; font-weight: 600;
   letter-spacing: .14em; text-transform: uppercase;
   color: var(--ink); background: var(--gold);
@@ -165,7 +176,7 @@ h1 em {
 }
 .btn-primary:hover { background: var(--gold-2); }
 .btn-secondary {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: .78rem; font-weight: 600;
   letter-spacing: .14em; text-transform: uppercase;
   color: var(--mist);
@@ -179,13 +190,13 @@ h1 em {
 .cred-panel {
   border: 1px solid var(--line-2);
   border-radius: 10px;
-  background: rgba(28,35,51,.6);
+  background: rgba(255,255,255,.07);
   overflow: hidden;
 }
 .cred-header {
   padding: 14px 20px;
   border-bottom: 1px solid var(--line);
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: .64rem; font-weight: 600;
   letter-spacing: .2em; text-transform: uppercase;
   color: var(--silver);
@@ -206,7 +217,7 @@ h1 em {
 .cred-row:last-child { border-bottom: none; }
 .cred-label { color: var(--silver); font-weight: 400; }
 .cred-value {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: .78rem; font-weight: 600;
   letter-spacing: .1em; text-transform: uppercase;
   color: var(--gold);
@@ -219,11 +230,11 @@ h1 em {
 .naics-panel {
   border: 1px solid var(--line-2);
   border-radius: 10px;
-  background: rgba(28,35,51,.4);
+  background: rgba(255,255,255,.05);
   padding: 20px;
 }
 .naics-title {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: .64rem; font-weight: 600;
   letter-spacing: .2em; text-transform: uppercase;
   color: var(--silver); margin-bottom: 14px;
@@ -237,7 +248,7 @@ h1 em {
   font-size: .84rem; color: var(--mist);
 }
 .naics-code {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-weight: 600; color: var(--gold);
   letter-spacing: .06em; flex-shrink: 0;
   width: 52px;
@@ -251,7 +262,7 @@ h1 em {
 .container { max-width: 1200px; margin: 0 auto; }
 .section-eyebrow {
   display: flex; align-items: center; gap: 12px;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: .66rem; font-weight: 600;
   letter-spacing: .22em; text-transform: uppercase;
   color: var(--gold); margin-bottom: 1.2rem;
@@ -261,7 +272,7 @@ h1 em {
   background: var(--gold);
 }
 h2 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Bodoni Moda', Georgia, serif;
   font-size: clamp(2rem,4vw,3.6rem);
   font-weight: 500; line-height: 1.1;
   color: var(--white); margin-bottom: 1rem;
@@ -291,13 +302,13 @@ h2 em { font-style: italic; color: var(--gold); }
 }
 .cap-card:hover { background: var(--ink-3); }
 .cap-num {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: .64rem; font-weight: 600;
   letter-spacing: .18em; color: var(--gold);
   margin-bottom: 14px;
 }
 .cap-card h3 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Bodoni Moda', Georgia, serif;
   font-size: 1.4rem; font-weight: 500;
   color: var(--white); margin-bottom: 10px;
   line-height: 1.2;
@@ -312,18 +323,18 @@ h2 em { font-style: italic; color: var(--gold); }
   margin-top: 3rem;
   border-left: 2px solid var(--gold);
   padding: 28px 36px;
-  background: rgba(200,169,110,.04);
+  background: rgba(255,255,255,.05);
   border-radius: 0 10px 10px 0;
 }
 .mission-text {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(1.2rem,2vw,1.6rem);
-  font-weight: 400; font-style: italic;
+  font-family: 'Cormorant', Georgia, serif;
+  font-size: clamp(1.35rem,2.2vw,1.8rem);
+  font-weight: 500; font-style: italic;
   line-height: 1.65; color: var(--mist);
 }
 .mission-attribution {
   margin-top: 16px;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: .7rem; font-weight: 600;
   letter-spacing: .2em; text-transform: uppercase;
   color: var(--gold);
@@ -340,22 +351,22 @@ h2 em { font-style: italic; color: var(--gold); }
   border: 1px solid var(--line-2);
   border-radius: 10px;
   padding: 28px;
-  background: rgba(28,35,51,.4);
+  background: rgba(255,255,255,.05);
   transition: .22s;
   display: block;
 }
 .product-card:hover {
-  border-color: rgba(200,169,110,.3);
-  background: rgba(28,35,51,.7);
+  border-color: rgba(255,255,255,.22);
+  background: rgba(255,255,255,.05);
 }
 .product-tag {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: .62rem; font-weight: 600;
   letter-spacing: .18em; text-transform: uppercase;
   color: var(--gold); margin-bottom: 12px;
 }
 .product-card h3 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Bodoni Moda', Georgia, serif;
   font-size: 1.5rem; font-weight: 500;
   color: var(--white); margin-bottom: 8px;
 }
@@ -370,7 +381,7 @@ h2 em { font-style: italic; color: var(--gold); }
   margin-top: 2rem;
 }
 .stack-tag {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: .7rem; font-weight: 600;
   letter-spacing: .12em; text-transform: uppercase;
   color: var(--silver);
@@ -406,7 +417,7 @@ footer {
   gap: 16px; flex-wrap: wrap;
 }
 .footer-brand {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: .7rem; font-weight: 600;
   letter-spacing: .16em; text-transform: uppercase;
   color: var(--silver);
@@ -438,7 +449,278 @@ footer {
   .product-grid { grid-template-columns: 1fr; }
   footer { flex-direction: column; align-items: flex-start; }
 }
-  </style>
+  
+/* ===== cloned promotional cards (pillars + two-products) ===== */
+.tracked {letter-spacing:.22em;text-transform:uppercase;font-size:10px;font-family:var(--body);font-weight:500}
+.wrap {max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,5vw,4rem);position:relative;z-index:1}
+.hero-eyebrow {
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  margin-bottom:2rem;
+}
+.hero-eyebrow-line {width:36px;height:1px;background:var(--gold)}
+.hero-eyebrow span {
+  font-family:var(--body);
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+.pillars {
+  background:var(--ink);
+  padding:clamp(5rem,9vh,8rem) 0;
+}
+.pillars .section-head h2 {color:var(--white)}
+.pillars .section-head p {color:rgba(255,255,255,.55)}
+.pillars .eyebrow {color:var(--gold)}
+.section-head {
+  text-align:center;
+  margin-bottom:clamp(3.5rem,6vh,5rem);
+}
+.section-head .eyebrow {
+  color:var(--gold);
+  margin-bottom:1.2rem;
+}
+.section-head h2 {
+  font-family:var(--disp);
+  font-size:clamp(2rem,4vw,3.8rem);
+  font-weight:400;
+  line-height:1.08;
+  letter-spacing:-.02em;
+  color:var(--white);
+}
+.section-head h2 em {font-style:italic;color:var(--gold)}
+.section-head p {
+  font-size:1rem;
+  color:rgba(255,255,255,.55);
+  max-width:600px;
+  margin:.9rem auto 0;
+  line-height:1.75;
+}
+.cards {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.08);
+}
+.card {
+  background:rgba(255,255,255,.05);
+  padding:clamp(2rem,3.5vw,3rem) clamp(1.5rem,2.5vw,2.5rem);
+  position:relative;
+  transition:background .3s;
+}
+.card::before {
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:3px;
+  background:var(--ink);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .4s ease;
+}
+.card:hover {background:rgba(255,255,255,.09)}
+.card:hover::before {transform:scaleX(1)}
+.card-folio {
+  font-family:var(--subdisp);
+  font-style:italic;
+  font-size:clamp(3.5rem,6vw,5rem);
+  font-weight:400;
+  color:rgba(255,255,255,.1);
+  line-height:1;
+  margin-bottom:1.2rem;
+}
+.card-tag {
+  color:var(--gold);
+  margin-bottom:.8rem;
+}
+.card h3 {
+  font-family:var(--disp);
+  font-size:clamp(1.15rem,1.8vw,1.55rem);
+  font-weight:400;
+  line-height:1.2;
+  letter-spacing:-.01em;
+  margin-bottom:.8rem;
+  color:var(--white);
+}
+.card h3 em {font-style:italic;color:var(--gold)}
+.card-def {
+  font-family:var(--subdisp);
+  font-style:italic;
+  font-size:1rem;
+  color:rgba(255,255,255,.55);
+  line-height:1.65;
+  margin-bottom:1.5rem;
+  padding-bottom:1.5rem;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+.card-metrics {
+  display:flex;
+  flex-direction:column;
+  gap:.9rem;
+  margin-bottom:1.5rem;
+}
+.metric {
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:.75rem;
+  align-items:start;
+}
+.metric-val {
+  font-family:var(--disp);
+  font-size:1.35rem;
+  font-weight:400;
+  color:var(--white);
+  line-height:1.1;
+  white-space:nowrap;
+}
+.metric-desc {
+  font-size:.82rem;
+  color:rgba(255,255,255,.55);
+  line-height:1.5;
+  padding-top:.1rem;
+}
+.card-note {
+  font-size:.78rem;
+  color:rgba(255,255,255,.4);
+  font-style:italic;
+  border-top:1px solid var(--rule);
+  padding-top:1rem;
+  line-height:1.55;
+}
+.market .section-head h2 {color:var(--white)}
+.market .section-head p {color:rgba(255,255,255,.55)}
+.market .eyebrow {color:var(--gold)}
+.eng-left .eyebrow {color:var(--gold);margin-bottom:1.2rem}
+.close-cta .eyebrow {color:var(--gold);margin-bottom:1.5rem}
+.two-products {
+  background:var(--ink);
+  padding:clamp(5rem,9vh,8rem) 0;
+  border-top:1px solid var(--rule);
+}
+.tp-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2px;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.1);
+}
+.tp-card {
+  background:rgba(255,255,255,.05);
+  padding:clamp(2.5rem,4vw,3.5rem);
+  display:flex;
+  flex-direction:column;
+  gap:1.8rem;
+}
+.tp-card-dark {
+  background:var(--ink);
+}
+.tp-num {
+  font-family:var(--subdisp);
+  font-style:italic;
+  font-size:clamp(4rem,7vw,6rem);
+  font-weight:400;
+  color:rgba(255,255,255,.1);
+  line-height:1;
+}
+.tp-tag {color:var(--gold)}
+.tp-title {
+  font-family:var(--disp);
+  font-size:clamp(1.4rem,2.5vw,2.2rem);
+  font-weight:400;
+  line-height:1.1;
+  letter-spacing:-.01em;
+  color:var(--white);
+}
+.tp-card-dark .tp-title {color:var(--white)}
+.tp-title em {font-style:italic;color:var(--gold)}
+.tp-def {
+  font-family:var(--subdisp);
+  font-style:italic;
+  font-size:1rem;
+  color:rgba(255,255,255,.55);
+  line-height:1.7;
+  padding-bottom:1.8rem;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+.tp-card-dark .tp-def {color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.08)}
+.tp-includes {display:flex;flex-direction:column;gap:1rem}
+.tp-inc-label {color:var(--gold);margin-bottom:.3rem}
+.tp-inc-list {display:flex;flex-direction:column;gap:1.2rem}
+.tp-inc-item {
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:.8rem;
+  align-items:start;
+}
+.tp-inc-icon {
+  color:var(--gold);
+  font-family:var(--disp);
+  font-size:1rem;
+  padding-top:.1rem;
+  flex-shrink:0;
+}
+.tp-inc-item strong {
+  display:block;
+  font-family:var(--body);
+  font-size:.88rem;
+  font-weight:500;
+  color:var(--white);
+  margin-bottom:.25rem;
+}
+.tp-card-dark .tp-inc-item strong {color:var(--white)}
+.tp-inc-item p {
+  font-size:.82rem;
+  color:rgba(255,255,255,.45);
+  line-height:1.55;
+}
+.tp-card-dark .tp-inc-item p {color:rgba(255,255,255,.4)}
+.tp-multiplier {
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.2);
+  padding:1.2rem 1.5rem;
+  border-radius:2px;
+}
+.tp-mult-val {
+  font-family:var(--disp);
+  font-size:clamp(1.8rem,3vw,2.5rem);
+  font-weight:400;
+  color:var(--gold);
+  white-space:nowrap;
+}
+.tp-mult-label {
+  font-size:.8rem;
+  color:rgba(255,255,255,.5);
+  line-height:1.5;
+}
+.tp-cta-line {margin-top:auto;padding-top:1rem}
+.tp-link {
+  font-family:var(--body);
+  font-size:.78rem;
+  font-weight:500;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--gold);
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.25);
+  padding-bottom:2px;
+  transition:border-color .25s;
+}
+.tp-link:hover {border-color:var(--gold)}
+@media(max-width:1024px){
+.tp-grid {grid-template-columns:1fr}
+}
+@media(max-width:1024px){
+.cards {grid-template-columns:1fr}
+}
+.hero-eyebrow {animation:fadeUp .6s .1s both}
+</style>
 </head>
 <body>
 <div class="shell">
@@ -488,11 +770,11 @@ footer {
       </div>
       <div class="cred-row">
         <span class="cred-label">CAGE Code</span>
-        <span class="cred-value">Pending</span>
+        <span class="cred-value active">Issued ✓</span>
       </div>
       <div class="cred-row">
         <span class="cred-label">Entity Type</span>
-        <span class="cred-value">Small Business</span>
+        <span class="cred-value active">Small Business ✓</span>
       </div>
       <div class="cred-row">
         <span class="cred-label">State</span>
@@ -517,94 +799,224 @@ footer {
 </section>
 
 <!-- CAPABILITIES -->
-<section class="section" id="capabilities">
-  <div class="container">
-    <div class="section-eyebrow">Core Capabilities</div>
-    <h2>What We <em>Deliver</em></h2>
-    <p class="section-desc">
-      Purpose-built AI automation systems for small and mid-sized businesses, government agencies, and enterprise clients. Every system is designed for rapid deployment with zero technical overhead.
-    </p>
-
-    <div class="cap-grid">
-      <div class="cap-card">
-        <div class="cap-num">01</div>
-        <h3>AI Voice Systems</h3>
-        <p>Smart auto-attendants and conversational AI agents for inbound call management — answering, routing, and logging every interaction automatically.</p>
-      </div>
-      <div class="cap-card">
-        <div class="cap-num">02</div>
-        <h3>Lead Management</h3>
-        <p>Real-time lead capture, CRM dashboard, and automated follow-up workflows. Every caller tracked, qualified, and delivered to your team instantly.</p>
-      </div>
-      <div class="cap-card">
-        <div class="cap-num">03</div>
-        <h3>Business Process Automation</h3>
-        <p>End-to-end workflow automation eliminating repetitive manual tasks and streamlining operations without expensive integration or long setup timelines.</p>
-      </div>
-      <div class="cap-card">
-        <div class="cap-num">04</div>
-        <h3>AI Contact Centers</h3>
-        <p>Full conversational AI deployment for customer intake and intelligent routing. Natural language understanding with real-time dashboard visibility.</p>
-      </div>
-      <div class="cap-card">
-        <div class="cap-num">05</div>
-        <h3>Bilingual AI Systems</h3>
-        <p>English and Spanish language AI systems serving diverse customer and constituent bases — same quality experience in both languages.</p>
-      </div>
-      <div class="cap-card">
-        <div class="cap-num">06</div>
-        <h3>White Label Deployment</h3>
-        <p>Rapid branded deployment for agencies and enterprise clients. Each system configured to client specifications and live within hours of onboarding.</p>
-      </div>
+  <!-- promotional cards (cloned from Gold Standard) -->
+  <section class="pillars" id="pillars">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="tracked eyebrow">The Platform</div>
+      <h2>Three systems.<br><em>One unified workflow.</em></h2>
+      <p>Each component is a proven, standalone market category. Together they form a revenue engine no single-point solution can replicate.</p>
     </div>
 
-    <div class="stack-row">
-      <span class="stack-tag">Twilio</span>
-      <span class="stack-tag">Supabase</span>
-      <span class="stack-tag">Anthropic Claude AI</span>
-      <span class="stack-tag">Netlify</span>
-      <span class="stack-tag">Resend</span>
-      <span class="stack-tag">GitHub</span>
+    <div class="cards">
+
+      <!-- CARD 1: CRM -->
+      <article class="card">
+        <div class="card-folio">I</div>
+        <div class="tracked card-tag">System of Record</div>
+        <h3>CRM &amp;<br><em>Customer Intelligence</em></h3>
+        <p class="card-def">
+          The central database for everything a business knows about a customer —
+          contacts, history, communications, and preferences in one place,
+          so every team works from the same accurate data instead of scattered spreadsheets.
+        </p>
+        <div class="card-metrics">
+          <div class="metric">
+            <div class="metric-val">29%</div>
+            <div class="metric-desc">average lift in sales revenue reported by businesses using CRM</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">$8.71</div>
+            <div class="metric-desc">average ROI per dollar spent on CRM — when teams use it consistently</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">300%</div>
+            <div class="metric-desc">increase in conversion rates documented across CRM-adopting organizations</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">91%</div>
+            <div class="metric-desc">of companies with 10+ employees now run a CRM — the baseline expectation has shifted</div>
+          </div>
+        </div>
+        <p class="card-note">Global CRM market reached $109B in 2026. Retention improves up to 27% with full interaction context per customer.</p>
+      </article>
+
+      <!-- CARD 2: Lead Management -->
+      <article class="card">
+        <div class="card-folio">II</div>
+        <div class="tracked card-tag">Workflow Engine</div>
+        <h3>Lead Management<br><em>System</em></h3>
+        <p class="card-def">
+          The CRM stores contacts — the lead management system moves them.
+          Structured workflows, scoring models, and automated follow-up
+          operationalize the data and push leads through qualification stages
+          into the sales pipeline without manual intervention.
+        </p>
+        <div class="card-metrics">
+          <div class="metric">
+            <div class="metric-val">↓ CAC</div>
+            <div class="metric-desc">intelligent lead scoring focuses teams on high-intent prospects, cutting acquisition costs</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">Zero</div>
+            <div class="metric-desc">data loss on marketing-to-sales handoff when lead system and CRM are integrated</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">SLA</div>
+            <div class="metric-desc">enforces response-time agreements and standardizes handoffs — removing the human variable</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">∞</div>
+            <div class="metric-desc">no lead goes cold by accident — automated nurture sequences run on schedule without anyone remembering</div>
+          </div>
+        </div>
+        <p class="card-note">Prevents the three most common revenue leaks in fast-growing businesses: missed leads, slow follow-up, and inconsistent qualification criteria.</p>
+      </article>
+
+      <!-- CARD 3: AI Voice -->
+      <article class="card">
+        <div class="card-folio">III</div>
+        <div class="tracked card-tag">The Front Door</div>
+        <h3>Conversational AI<br><em>Voice Attendant</em></h3>
+        <p class="card-def">
+          The modern replacement for the press-1 phone tree. Understands natural
+          language, holds multi-turn conversations, books appointments in real time,
+          qualifies intent, and hands off to humans when needed — inbound and outbound,
+          24 hours a day.
+        </p>
+        <div class="card-metrics">
+          <div class="metric">
+            <div class="metric-val">100%</div>
+            <div class="metric-desc">of inbound calls answered — no opportunity leaks to a competitor who picks up the phone</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">$0.40</div>
+            <div class="metric-desc">per AI-handled call vs. $7–$12 per human call — the unit economics are no longer a judgment call</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">$80B</div>
+            <div class="metric-desc">Gartner forecast for global contact-center labor cost reduction from conversational AI in 2026</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">24/7</div>
+            <div class="metric-desc">coverage with no overtime, no sick days, no Monday-morning backlog of missed-call voicemails</div>
+          </div>
+        </div>
+        <p class="card-note">Stronger intent understanding improves first-contact resolution — callers reach the right answer or routing on the first try.</p>
+      </article>
+
     </div>
   </div>
 </section>
 
-<!-- PRODUCTS -->
-<section class="section">
-  <div class="container">
-    <div class="section-eyebrow">Deployed Products</div>
-    <h2>FlowDesk Pro <em>Suite</em></h2>
-    <p class="section-desc">
-      Four live AI automation systems available for immediate deployment. Each product is independently operational and white-label ready.
-    </p>
+  <section class="two-products">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="tracked eyebrow">What We Offer</div>
+      <h2>Two ways to<br><em>work with us.</em></h2>
+      <p>Whether you want to run FlowDesk Pro inside your own business or build a business on top of it, there is a path designed specifically for you.</p>
+    </div>
 
-    <div class="product-grid">
-      <a class="product-card" href="https://auto-attendant.aiflowdeskpro.com" target="_blank">
-        <div class="product-tag">Product 01 · Live</div>
-        <h3>Smart Auto-Attendant</h3>
-        <p>AI-powered call routing and logging. Answers every inbound call with the client's business name, routes intelligently, and logs to a live dashboard in real time.</p>
-      </a>
-      <a class="product-card" href="https://lead-management.aiflowdeskpro.com" target="_blank">
-        <div class="product-tag">Product 02 · Live</div>
-        <h3>Lead Manager CRM</h3>
-        <p>Automated lead capture and management. AI extracts caller name, intent, and urgency level — delivered as a structured record to the command dashboard instantly.</p>
-      </a>
-      <a class="product-card" href="https://contact-center.aiflowdeskpro.com" target="_blank">
-        <div class="product-tag">Product 03 · Live</div>
-        <h3>AI Contact Center</h3>
-        <p>Full conversational AI for customer intake. Natural language understanding, multi-turn dialogue, caller recognition, and real-time dashboard updates.</p>
-      </a>
-      <a class="product-card" href="https://ai4websitedesign.com" target="_blank">
-        <div class="product-tag">Product 04 · Live</div>
-        <h3>AI Website Design Studio</h3>
-        <p>Five-agent AI pipeline for automated website generation. Bilingual English and Spanish output. Designed for rapid business onboarding at scale.</p>
-      </a>
+    <div class="tp-grid">
+
+      <!-- PRODUCT 1: FlowDesk Pro -->
+      <div class="tp-card">
+        <div class="tp-num">I</div>
+        <div class="tracked tp-tag">The Platform</div>
+        <h3 class="tp-title">FlowDesk Pro<br><em>Lead Management System</em></h3>
+        <p class="tp-def">
+          The all-in-one business automation platform that answers every call,
+          qualifies every lead, and delivers a structured record to your dashboard
+          in real time. One system. Three integrated engines. Fully automated.
+        </p>
+        <div class="tp-includes">
+          <div class="tracked tp-inc-label">What's inside</div>
+          <div class="tp-inc-list">
+            <div class="tp-inc-item">
+              <span class="tp-inc-icon">—</span>
+              <div>
+                <strong>CRM &amp; Customer Intelligence</strong>
+                <p>Centralized contact database with full interaction history, sentiment tracking, and customer lifecycle visibility.</p>
+              </div>
+            </div>
+            <div class="tp-inc-item">
+              <span class="tp-inc-icon">—</span>
+              <div>
+                <strong>Lead Management Workflow Engine</strong>
+                <p>Automated capture, qualification, scoring, routing, and follow-up — no lead goes cold, no handoff loses data.</p>
+              </div>
+            </div>
+            <div class="tp-inc-item">
+              <span class="tp-inc-icon">—</span>
+              <div>
+                <strong>Live Conversational AI Voice Attendant</strong>
+                <p>Answers every inbound call in natural language, 24/7, in English and Spanish, without adding headcount.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tp-cta-line">
+          <a href="#request" class="tp-link">Request Platform Overview →</a>
+        </div>
+      </div>
+
+      <!-- PRODUCT 2: White Label -->
+      <div class="tp-card tp-card-dark">
+        <div class="tp-num">II</div>
+        <div class="tracked tp-tag">The Partnership</div>
+        <h3 class="tp-title">White Label<br><em>Partnership Program</em></h3>
+        <p class="tp-def">
+          Put your brand on the platform. Deploy FlowDesk Pro under your own name
+          to your own client base. You own the relationship. We provide the infrastructure,
+          the AI, and the automation engine behind it.
+        </p>
+        <div class="tp-includes">
+          <div class="tracked tp-inc-label">What partners get</div>
+          <div class="tp-inc-list">
+            <div class="tp-inc-item">
+              <span class="tp-inc-icon">—</span>
+              <div>
+                <strong>Full White-Label Configuration</strong>
+                <p>Your logo. Your brand. Your domain. Clients see your product — not ours.</p>
+              </div>
+            </div>
+            <div class="tp-inc-item">
+              <span class="tp-inc-icon">—</span>
+              <div>
+                <strong>Reseller Rights &amp; Revenue Share</strong>
+                <p>You set your own pricing and margins. The Agency tier turns you into a distribution channel that scales itself.</p>
+              </div>
+            </div>
+            <div class="tp-inc-item">
+              <span class="tp-inc-icon">—</span>
+              <div>
+                <strong>Full API + Webhooks + Custom AI Flows</strong>
+                <p>Deep integration capability so the platform fits your existing product stack and client workflows.</p>
+              </div>
+            </div>
+            <div class="tp-inc-item">
+              <span class="tp-inc-icon">—</span>
+              <div>
+                <strong>Dedicated Account Manager · 2-Hour SLA</strong>
+                <p>You have a direct line. Your clients get enterprise-grade responsiveness under your brand name.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tp-multiplier">
+          <span class="tp-mult-val">10–20×</span>
+          <span class="tp-mult-label">Sub-clients per Agency partner seat — one partner relationship scales to an entire book of business</span>
+        </div>
+        <div class="tp-cta-line">
+          <a href="#request" class="tp-link">Apply for White Label Partnership →</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- MISSION -->
-<section class="section">
+  <section class="section">
   <div class="container">
     <div class="section-eyebrow">Our Standard</div>
     <h2>The <em>Apropos Promise</em></h2>
