@@ -78,9 +78,9 @@
 
     /* TODAY stats */
     .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
-    .stat{border:1px solid var(--line-dk);background:#fff;border-radius:10px;padding:26px 24px;box-shadow:0 18px 40px rgba(10,28,63,.06)}
-    .stat .n{font-family:var(--disp);font-weight:600;font-size:2.2rem;line-height:1;color:var(--navy);letter-spacing:-.02em}
-    .stat .l{font-size:.86rem;color:#5a6a86;margin-top:10px;line-height:1.5}
+    .stat{border:1px solid var(--line);background:rgba(255,255,255,.045);border-radius:10px;padding:26px 24px}
+    .stat .n{font-family:var(--disp);font-weight:600;font-size:2.2rem;line-height:1;color:#fff;letter-spacing:-.02em}
+    .stat .l{font-size:.86rem;color:var(--muted);margin-top:10px;line-height:1.5}
     @media(max-width:880px){.stats{grid-template-columns:1fr 1fr}}
 
     /* CAPABILITIES */
@@ -107,10 +107,10 @@
 
     /* VISION horizons */
     .horizons{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
-    .horizon{border:1px solid var(--line-dk);background:#fff;border-radius:10px;padding:30px 28px}
-    .horizon .k{font-family:var(--body);font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-    .horizon h4{font-family:var(--disp);font-weight:600;font-size:1.4rem;color:var(--navy);margin-bottom:10px}
-    .horizon p{font-size:.95rem;color:#56657f;font-weight:300;line-height:1.7}
+    .horizon{border:1px solid var(--line);background:rgba(255,255,255,.045);border-radius:10px;padding:30px 28px}
+    .horizon .k{font-family:var(--body);font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2);margin-bottom:14px}
+    .horizon h4{font-family:var(--disp);font-weight:600;font-size:1.4rem;color:#fff;margin-bottom:10px}
+    .horizon p{font-size:.95rem;color:var(--muted);font-weight:300;line-height:1.7}
     @media(max-width:820px){.horizons{grid-template-columns:1fr}}
 
     /* CREDENTIALS */
@@ -178,7 +178,7 @@
 
   <main>
     <!-- TODAY -->
-    <section class="band light" id="company">
+    <section class="band" id="company">
       <div class="wrap">
         <div class="head">
           <span class="eyebrow">Who We Are</span>
@@ -236,11 +236,11 @@
         </div>
         <div class="proof">
           <ul class="proof-list">
-            <li><span></span><div><b>Migrated 2,000+ enterprise users across 100+ departments</b> to modern unified communications — with zero unplanned service interruptions.</div></li>
-            <li><span></span><div><b>Engineered enterprise contact-center and IVR platforms</b> for a multi-campus higher-education system — 100+ call queues, in continuous operation.</div></li>
-            <li><span></span><div><b>Deployed voice infrastructure for a U.S. Department of Veterans Affairs medical facility</b> — clinical and administrative telephony from design through cutover.</div></li>
-            <li><span></span><div><b>Architected production AI platforms</b> for government procurement intelligence — modern LLM, secure authentication, and cloud-native automation.</div></li>
-            <li><span></span><div><b>Led accelerated collaboration deployments under pressure</b> — keeping mission-critical operations running through rapid, high-stakes transitions.</div></li>
+            <li><div><b>Migrated 2,000+ enterprise users across 100+ departments</b> to modern unified communications — with zero unplanned service interruptions.</div></li>
+            <li><div><b>Engineered enterprise contact-center and IVR platforms</b> for a multi-campus higher-education system — 100+ call queues, in continuous operation.</div></li>
+            <li><div><b>Deployed voice infrastructure for a U.S. Department of Veterans Affairs medical facility</b> — clinical and administrative telephony from design through cutover.</div></li>
+            <li><div><b>Architected production AI platforms</b> for government procurement intelligence — modern LLM, secure authentication, and cloud-native automation.</div></li>
+            <li><div><b>Led accelerated collaboration deployments under pressure</b> — keeping mission-critical operations running through rapid, high-stakes transitions.</div></li>
           </ul>
           <aside class="proof-aside">
             <p class="q">"Built today for the company we're becoming."</p>
@@ -251,7 +251,7 @@
     </section>
 
     <!-- VISION -->
-    <section class="band light">
+    <section class="band" style="background:#091a3a">
       <div class="wrap">
         <div class="head">
           <span class="eyebrow">Where We're Going</span>
