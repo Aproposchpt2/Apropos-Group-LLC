@@ -150,55 +150,47 @@
       .hero-image-wrap{display:block}
       .hero-image{height:330px}
     }
-  </style>
+  .nav.hero-image-mode{display:none}.home-hero{position:relative;width:100%;background:#0a1733;line-height:0;font-size:0}.home-hero picture,.home-hero img{display:block;width:100%;height:auto}.hero-hotspot{position:absolute;display:block;z-index:5;border-radius:6px;outline:0}.hero-hotspot:focus-visible{outline:2px solid #f0d38d;outline-offset:3px}.home-cta{display:none;gap:12px;justify-content:center;flex-wrap:wrap;padding:16px;background:#071b3f}.home-cta a{min-width:200px;text-align:center}@media(max-width:820px){.nav.hero-image-mode{display:flex}.hero-hotspot{display:none}.home-cta{display:flex}}</style>
 </head>
 <body>
-  <nav class="nav" aria-label="Main navigation">
-    <a class="brand" href="#top" aria-label="Apropos Group LLC homepage">
+  <nav class="nav hero-image-mode" aria-label="Main navigation">
+    <a class="brand" href="/" aria-label="Apropos Group LLC homepage">
       <div class="seal">AG</div>
       <div class="brand-text">
         <strong>Apropos Group LLC</strong>
-        <span>SAM.gov Registered · CAGE Issued</span>
+        <span>Federal Contractor · Las Vegas, NV</span>
       </div>
     </a>
     <ul class="nav-links">
+      <li><a href="/capabilities">Capabilities</a></li>
+      <li><a href="/contract-vehicles">Contract Vehicles</a></li>
       <li><a href="#status">Status</a></li>
-      <li><a href="#naics">NAICS</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
-    <a class="nav-cta" href="mailto:jmitchell@aproposgroupllc.com">Contact</a>
+    <a class="nav-cta" href="/contact">Contact Us</a>
   </nav>
 
   <main id="top">
-    <section class="hero" aria-label="Apropos Group LLC federal contractor profile">
-      <div class="hero-copy">
-        <div class="eyebrow">Federal Contractor Profile</div>
-        <h1>Registered. Verified. <em>Ready to Serve.</em></h1>
-        <p class="lead">
-          Apropos Group LLC is a Las Vegas, Nevada government-facing technology company positioned for federal agency, state agency, local government, and prime contractor engagement.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#status">View Corporate Status</a>
-          <a class="btn btn-secondary" href="mailto:jmitchell@aproposgroupllc.com">Request Capability Brief</a>
-        </div>
-        <div class="quick-status" aria-label="Federal registration summary">
-          <div><span>SAM.gov</span><strong>Active</strong></div>
-          <div><span>UEI</span><strong>YVNXN3XBUSD5</strong></div>
-          <div><span>CAGE</span><strong>20UQ1</strong></div>
-          <div><span>Entity</span><strong>Nevada LLC</strong></div>
-        </div>
-      </div>
-      <div class="hero-image-wrap" aria-label="Modern government and Las Vegas corporate skyline visual">
-        <div class="hero-image" role="img" aria-label="Modern Las Vegas government-facing corporate skyline with U.S. flags and institutional building">
-          <img src="/assets/hero.png" alt="Modern government-facing Las Vegas skyline and institutional building visual for Apropos Group LLC" />
-        </div>
-        <div class="image-note">
-          <span>Corporate Positioning</span>
-          <strong>Small business federal contractor with active registration credentials.</strong>
-        </div>
-      </div>
+    <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Apropos Group LLC — Registered, Verified, Ready to Serve. Your trusted federal technology partner delivering AI automation and communications solutions that strengthen government operations. SAM.gov registered, CAGE 20UQ1, UEI YVNXN3XBUSD5, Small Business, Minority Owned — Las Vegas, Nevada.</h1>
+
+    <section class="home-hero" aria-label="Apropos Group LLC federal contractor homepage">
+      <picture>
+        <source srcset="/assets/home-hero.webp" type="image/webp">
+        <img src="/assets/home-hero.png" alt="Apropos Group LLC — Registered, Verified, Ready to Serve. Federal technology partner in Las Vegas, Nevada. SAM.gov registered, CAGE 20UQ1, UEI YVNXN3XBUSD5, small business, minority owned." />
+      </picture>
+      <a class="hero-hotspot" href="/capabilities" aria-label="Solutions" style="left:47.5%;top:3.4%;width:7.2%;height:6.6%"></a>
+      <a class="hero-hotspot" href="/capabilities" aria-label="Capabilities" style="left:55%;top:3.4%;width:8.6%;height:6.6%"></a>
+      <a class="hero-hotspot" href="/contract-vehicles" aria-label="Contract Vehicles" style="left:64%;top:3.4%;width:11.2%;height:6.6%"></a>
+      <a class="hero-hotspot" href="/past-performance" aria-label="Company" style="left:76%;top:3.4%;width:7.6%;height:6.6%"></a>
+      <a class="hero-hotspot" href="/capabilities" aria-label="Resources" style="left:83.6%;top:3.4%;width:8%;height:6.6%"></a>
+      <a class="hero-hotspot" href="/contact" aria-label="Contact Us" style="left:91%;top:3%;width:8.2%;height:7.6%"></a>
+      <a class="hero-hotspot" href="/capabilities" aria-label="Our solutions and services" style="left:7%;top:80%;width:86%;height:14%"></a>
     </section>
+
+    <div class="home-cta">
+      <a class="btn btn-primary" href="/contact">Contact Us</a>
+      <a class="btn btn-secondary" href="/capabilities">View Capabilities</a>
+    </div>
 
     <section class="section light" id="status">
       <div class="container">
