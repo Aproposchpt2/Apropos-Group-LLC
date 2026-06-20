@@ -3,1067 +3,352 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apropos Group LLC — Federal AI Automation Contractor</title>
-  <meta name="description" content="SAM.gov registered federal contractor providing AI-powered business automation systems. Smart Auto-Attendant, Lead Management, and AI Contact Center solutions." />
-  <meta name="theme-color" content="#0F2A6A" />
+  <title>Apropos Group LLC — SAM.gov Registered Federal Contractor</title>
+  <meta name="description" content="Apropos Group LLC is a Las Vegas, Nevada SAM.gov active, CAGE-issued, UEI-issued small business federal contractor positioned for government and prime contractor engagement." />
+  <meta name="theme-color" content="#071b3f" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;1,6..96,400;1,6..96,500&family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=Cormorant:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-:root {
-  --ink:     #0F2A6A;
-  --ink-2:   #163472;
-  --ink-3:   #1C3878;
-  --steel:   #3A5898;
-  --line:    rgba(255,255,255,.12);
-  --line-2:  rgba(255,255,255,.22);
-  --gold:    #FFFFFF;
-  --gold-2:  #EEF3FF;
-  --silver:  #9DB0D4;
-  --mist:    #C3D0E8;
-  --white:   #FFFFFF;
-  --ink-soft:#1C3878;
-  --ink-muted:#3A5898;
-  --gold-bright:#EEF3FF;
-  --gold-dim:rgba(255,255,255,.12);
-  --cream:#FFFFFF;
-  --rule:rgba(15,42,106,.1);
-  --disp:'Bodoni Moda',serif;
-  --subdisp:'Cormorant',serif;
-  --body:'Jost',sans-serif;
-  --shadow:  0 32px 80px rgba(0,0,0,.40);
-  --r:       6px;
-  font-family: 'Jost', system-ui, sans-serif;
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  background: var(--ink);
-  color: var(--white);
-  font-size: 16px;
-  line-height: 1.7;
-  overflow-x: hidden;
-  min-height: 100vh;
-}
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255,255,255,.07), transparent),
-    radial-gradient(ellipse 60% 40% at 100% 80%, rgba(255,255,255,.05), transparent);
-  pointer-events: none;
-  z-index: 0;
-}
-a { color: inherit; text-decoration: none; }
-img { display: block; max-width: 100%; }
-.shell { position: relative; z-index: 1; }
+    :root {
+      --navy:#071b3f;
+      --navy-2:#0b2a5b;
+      --navy-3:#12376f;
+      --gold:#caa355;
+      --gold-2:#f0d38d;
+      --cream:#f6f2ea;
+      --white:#fff;
+      --slate:#d8e2f2;
+      --muted:#96a8c2;
+      --ink:#10213c;
+      --line:rgba(255,255,255,.16);
+      --line-dark:rgba(7,27,63,.14);
+      --shadow:0 30px 90px rgba(0,0,0,.34);
+      --disp:'Bodoni Moda', Georgia, serif;
+      --sub:'Cormorant', Georgia, serif;
+      --body:'Jost', system-ui, sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--body);background:var(--navy);color:var(--white);line-height:1.65;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .nav{
+      position:sticky;top:0;z-index:20;
+      height:76px;padding:0 clamp(20px,5vw,76px);
+      display:flex;align-items:center;justify-content:space-between;gap:24px;
+      background:rgba(7,27,63,.94);backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    .brand{display:flex;align-items:center;gap:14px;min-width:max-content}
+    .seal{
+      width:42px;height:42px;border-radius:50%;
+      border:1.5px solid var(--gold);display:grid;place-items:center;
+      font-family:var(--disp);font-weight:700;color:var(--gold);letter-spacing:.04em;
+      box-shadow:0 0 0 4px rgba(202,163,85,.08);
+    }
+    .brand-text strong{display:block;font-family:var(--disp);font-size:1.22rem;font-weight:600;letter-spacing:.02em;line-height:1}
+    .brand-text span{display:block;color:var(--gold-2);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;margin-top:3px}
+    .nav-links{display:flex;align-items:center;gap:22px;list-style:none}
+    .nav-links a{font-size:.74rem;text-transform:uppercase;letter-spacing:.15em;color:#dbe5f4;font-weight:600}
+    .nav-links a:hover{color:var(--gold-2)}
+    .nav-cta{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:var(--navy);font-weight:800;letter-spacing:.13em;text-transform:uppercase;font-size:.72rem;padding:11px 18px;border-radius:3px;white-space:nowrap}
 
-/* ── NAV ── */
-.nav {
-  position: sticky; top: 0; z-index: 50;
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 24px;
-  padding: 0 clamp(20px,5vw,72px);
-  height: 72px;
-  background: rgba(10,28,74,.92);
-  border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(24px);
-}
-.nav-brand {
-  display: flex; align-items: center; gap: 14px;
-}
-.nav-seal {
-  width: 36px; height: 36px;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-  display: grid; place-items: center;
-  font-family: 'Jost', sans-serif;
-  font-size: .65rem; font-weight: 700;
-  letter-spacing: .12em; color: var(--gold);
-  flex-shrink: 0;
-}
-.nav-name {
-  font-family: 'Jost', sans-serif;
-  font-size: .72rem; font-weight: 600;
-  letter-spacing: .2em; text-transform: uppercase;
-  color: var(--mist); line-height: 1.2;
-}
-.nav-name span {
-  display: block; font-size: .56rem;
-  color: var(--silver); letter-spacing: .16em;
-}
-.nav-links {
-  display: flex; align-items: center;
-  gap: 2px; list-style: none;
-}
-.nav-links a {
-  font-size: .72rem; font-weight: 500;
-  letter-spacing: .14em; text-transform: uppercase;
-  color: var(--silver); padding: 8px 14px;
-  border-radius: var(--r); transition: .18s;
-}
-.nav-links a:hover { color: var(--white); background: rgba(255,255,255,.07); }
-.nav-cta {
-  font-family: 'Jost', sans-serif;
-  font-size: .72rem; font-weight: 600;
-  letter-spacing: .14em; text-transform: uppercase;
-  color: var(--ink); background: var(--gold);
-  padding: 10px 20px; border-radius: var(--r);
-  transition: .18s; white-space: nowrap;
-}
-.nav-cta:hover { background: var(--gold-2); }
-
-/* ── HERO ── */
-.hero {
-  min-height: calc(100vh - 72px);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  border-bottom: 1px solid var(--line);
-}
-.hero-left {
-  padding: clamp(60px,8vw,100px) clamp(20px,5vw,72px);
-  display: flex; flex-direction: column;
-  justify-content: center;
-  border-right: 1px solid var(--line);
-}
-.hero-right {
-  padding: clamp(60px,8vw,100px) clamp(20px,5vw,72px);
-  display: flex; flex-direction: column;
-  justify-content: center; gap: 24px;
-}
-.registration-badge {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-family: 'Jost', sans-serif;
-  font-size: .68rem; font-weight: 600;
-  letter-spacing: .2em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 2rem;
-}
-.registration-badge::before {
-  content: ''; width: 28px; height: 1px;
-  background: var(--gold);
-}
-h1 {
-  font-family: 'Bodoni Moda', Georgia, serif;
-  font-size: clamp(2.8rem, 5vw, 5.2rem);
-  font-weight: 500; line-height: 1.06;
-  letter-spacing: -.01em;
-  color: var(--white);
-  margin-bottom: 1.6rem;
-}
-h1 em {
-  font-family: 'Cormorant', Georgia, serif;
-  font-style: italic;
-  font-weight: 600;
-  color: #E6ECFF;
-}
-.hero-copy {
-  font-size: 1.08rem; font-weight: 300;
-  color: var(--silver); line-height: 1.85;
-  max-width: 560px; margin-bottom: 2.4rem;
-}
-.hero-actions {
-  display: flex; flex-wrap: wrap; gap: 12px;
-}
-.btn-primary {
-  font-family: 'Jost', sans-serif;
-  font-size: .78rem; font-weight: 600;
-  letter-spacing: .14em; text-transform: uppercase;
-  color: var(--ink); background: var(--gold);
-  padding: 14px 28px; border-radius: var(--r);
-  transition: .18s;
-}
-.btn-primary:hover { background: var(--gold-2); }
-.btn-secondary {
-  font-family: 'Jost', sans-serif;
-  font-size: .78rem; font-weight: 600;
-  letter-spacing: .14em; text-transform: uppercase;
-  color: var(--mist);
-  border: 1px solid var(--line-2);
-  padding: 14px 28px; border-radius: var(--r);
-  transition: .18s;
-}
-.btn-secondary:hover { border-color: var(--silver); color: var(--white); }
-
-/* Credentials panel */
-.cred-panel {
-  border: 1px solid var(--line-2);
-  border-radius: 10px;
-  background: rgba(255,255,255,.07);
-  overflow: hidden;
-}
-.cred-header {
-  padding: 14px 20px;
-  border-bottom: 1px solid var(--line);
-  font-family: 'Jost', sans-serif;
-  font-size: .64rem; font-weight: 600;
-  letter-spacing: .2em; text-transform: uppercase;
-  color: var(--silver);
-  display: flex; align-items: center; gap: 8px;
-}
-.cred-header::before {
-  content: ''; width: 6px; height: 6px;
-  border-radius: 50%; background: var(--gold);
-  box-shadow: 0 0 8px var(--gold);
-}
-.cred-row {
-  display: flex; align-items: center;
-  justify-content: space-between;
-  padding: 14px 20px;
-  border-bottom: 1px solid var(--line);
-  font-size: .88rem;
-}
-.cred-row:last-child { border-bottom: none; }
-.cred-label { color: var(--silver); font-weight: 400; }
-.cred-value {
-  font-family: 'Jost', sans-serif;
-  font-size: .78rem; font-weight: 600;
-  letter-spacing: .1em; text-transform: uppercase;
-  color: var(--gold);
-}
-.cred-value.active {
-  color: #6EE7A8;
-}
-
-/* NAICS panel */
-.naics-panel {
-  border: 1px solid var(--line-2);
-  border-radius: 10px;
-  background: rgba(255,255,255,.05);
-  padding: 20px;
-}
-.naics-title {
-  font-family: 'Jost', sans-serif;
-  font-size: .64rem; font-weight: 600;
-  letter-spacing: .2em; text-transform: uppercase;
-  color: var(--silver); margin-bottom: 14px;
-}
-.naics-list {
-  display: flex; flex-direction: column; gap: 8px;
-  list-style: none;
-}
-.naics-list li {
-  display: flex; gap: 12px;
-  font-size: .84rem; color: var(--mist);
-}
-.naics-code {
-  font-family: 'Jost', sans-serif;
-  font-weight: 600; color: var(--gold);
-  letter-spacing: .06em; flex-shrink: 0;
-  width: 52px;
-}
-
-/* ── SECTIONS ── */
-.section {
-  padding: clamp(72px,8vw,112px) clamp(20px,5vw,72px);
-  border-bottom: 1px solid var(--line);
-}
-.container { max-width: 1200px; margin: 0 auto; }
-.section-eyebrow {
-  display: flex; align-items: center; gap: 12px;
-  font-family: 'Jost', sans-serif;
-  font-size: .66rem; font-weight: 600;
-  letter-spacing: .22em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 1.2rem;
-}
-.section-eyebrow::before {
-  content: ''; width: 28px; height: 1px;
-  background: var(--gold);
-}
-h2 {
-  font-family: 'Bodoni Moda', Georgia, serif;
-  font-size: clamp(2rem,4vw,3.6rem);
-  font-weight: 500; line-height: 1.1;
-  color: var(--white); margin-bottom: 1rem;
-}
-h2 em { font-style: italic; color: var(--gold); }
-.section-desc {
-  color: var(--silver); font-size: 1.02rem;
-  font-weight: 300; line-height: 1.85;
-  max-width: 680px;
-}
-
-/* Capabilities grid */
-.cap-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 3rem;
-}
-.cap-card {
-  background: var(--ink-2);
-  padding: 32px 28px;
-  transition: .22s;
-}
-.cap-card:hover { background: var(--ink-3); }
-.cap-num {
-  font-family: 'Jost', sans-serif;
-  font-size: .64rem; font-weight: 600;
-  letter-spacing: .18em; color: var(--gold);
-  margin-bottom: 14px;
-}
-.cap-card h3 {
-  font-family: 'Bodoni Moda', Georgia, serif;
-  font-size: 1.4rem; font-weight: 500;
-  color: var(--white); margin-bottom: 10px;
-  line-height: 1.2;
-}
-.cap-card p {
-  color: var(--silver); font-size: .92rem;
-  font-weight: 300; line-height: 1.7;
-}
-
-/* Mission statement */
-.mission-wrap {
-  margin-top: 3rem;
-  border-left: 2px solid var(--gold);
-  padding: 28px 36px;
-  background: rgba(255,255,255,.05);
-  border-radius: 0 10px 10px 0;
-}
-.mission-text {
-  font-family: 'Cormorant', Georgia, serif;
-  font-size: clamp(1.35rem,2.2vw,1.8rem);
-  font-weight: 500; font-style: italic;
-  line-height: 1.65; color: var(--mist);
-}
-.mission-attribution {
-  margin-top: 16px;
-  font-family: 'Jost', sans-serif;
-  font-size: .7rem; font-weight: 600;
-  letter-spacing: .2em; text-transform: uppercase;
-  color: var(--gold);
-}
-
-/* Products */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 3rem;
-}
-.product-card {
-  border: 1px solid var(--line-2);
-  border-radius: 10px;
-  padding: 28px;
-  background: rgba(255,255,255,.05);
-  transition: .22s;
-  display: block;
-}
-.product-card:hover {
-  border-color: rgba(255,255,255,.22);
-  background: rgba(255,255,255,.05);
-}
-.product-tag {
-  font-family: 'Jost', sans-serif;
-  font-size: .62rem; font-weight: 600;
-  letter-spacing: .18em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 12px;
-}
-.product-card h3 {
-  font-family: 'Bodoni Moda', Georgia, serif;
-  font-size: 1.5rem; font-weight: 500;
-  color: var(--white); margin-bottom: 8px;
-}
-.product-card p {
-  color: var(--silver); font-size: .92rem;
-  font-weight: 300; line-height: 1.7;
-}
-
-/* Stack */
-.stack-row {
-  display: flex; flex-wrap: wrap; gap: 8px;
-  margin-top: 2rem;
-}
-.stack-tag {
-  font-family: 'Jost', sans-serif;
-  font-size: .7rem; font-weight: 600;
-  letter-spacing: .12em; text-transform: uppercase;
-  color: var(--silver);
-  border: 1px solid var(--line-2);
-  padding: 6px 14px; border-radius: 4px;
-}
-
-/* CTA section */
-.cta-section {
-  padding: clamp(72px,8vw,112px) clamp(20px,5vw,72px);
-  text-align: center;
-}
-.cta-inner {
-  max-width: 800px; margin: 0 auto;
-}
-.cta-inner h2 { margin-bottom: 1rem; }
-.cta-inner p {
-  color: var(--silver); font-size: 1.05rem;
-  font-weight: 300; line-height: 1.8;
-  margin-bottom: 2.4rem;
-}
-.cta-actions {
-  display: flex; justify-content: center;
-  flex-wrap: wrap; gap: 12px;
-}
-
-/* Footer */
-footer {
-  border-top: 1px solid var(--line);
-  padding: 32px clamp(20px,5vw,72px);
-  display: flex; align-items: center;
-  justify-content: space-between;
-  gap: 16px; flex-wrap: wrap;
-}
-.footer-brand {
-  font-family: 'Jost', sans-serif;
-  font-size: .7rem; font-weight: 600;
-  letter-spacing: .16em; text-transform: uppercase;
-  color: var(--silver);
-}
-.footer-links {
-  display: flex; gap: 20px; flex-wrap: wrap;
-}
-.footer-links a {
-  font-size: .78rem; color: var(--silver);
-  font-weight: 400; transition: .18s;
-}
-.footer-links a:hover { color: var(--gold); }
-.footer-copy {
-  font-size: .74rem; color: var(--steel);
-  width: 100%; padding-top: 16px;
-  border-top: 1px solid var(--line);
-  margin-top: 16px;
-}
-
-/* Responsive */
-@media(max-width:1020px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero-left { border-right: none; border-bottom: 1px solid var(--line); }
-  .cap-grid { grid-template-columns: repeat(2,1fr); }
-}
-@media(max-width:720px) {
-  .nav-links { display: none; }
-  .cap-grid { grid-template-columns: 1fr; }
-  .product-grid { grid-template-columns: 1fr; }
-  footer { flex-direction: column; align-items: flex-start; }
-}
-  
-/* ===== cloned promotional cards (pillars + two-products) ===== */
-.tracked {letter-spacing:.22em;text-transform:uppercase;font-size:10px;font-family:var(--body);font-weight:500}
-.wrap {max-width:1200px;margin:0 auto;padding:0 clamp(1.5rem,5vw,4rem);position:relative;z-index:1}
-.hero-eyebrow {
-  display:flex;
-  align-items:center;
-  gap:1rem;
-  margin-bottom:2rem;
-}
-.hero-eyebrow-line {width:36px;height:1px;background:var(--gold)}
-.hero-eyebrow span {
-  font-family:var(--body);
-  font-size:10px;
-  font-weight:500;
-  letter-spacing:.26em;
-  text-transform:uppercase;
-  color:var(--gold);
-}
-.pillars {
-  background:var(--ink);
-  padding:clamp(5rem,9vh,8rem) 0;
-}
-.pillars .section-head h2 {color:var(--white)}
-.pillars .section-head p {color:rgba(255,255,255,.55)}
-.pillars .eyebrow {color:var(--gold)}
-.section-head {
-  text-align:center;
-  margin-bottom:clamp(3.5rem,6vh,5rem);
-}
-.section-head .eyebrow {
-  color:var(--gold);
-  margin-bottom:1.2rem;
-}
-.section-head h2 {
-  font-family:var(--disp);
-  font-size:clamp(2rem,4vw,3.8rem);
-  font-weight:400;
-  line-height:1.08;
-  letter-spacing:-.02em;
-  color:var(--white);
-}
-.section-head h2 em {font-style:italic;color:var(--gold)}
-.section-head p {
-  font-size:1rem;
-  color:rgba(255,255,255,.55);
-  max-width:600px;
-  margin:.9rem auto 0;
-  line-height:1.75;
-}
-.cards {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:2px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.08);
-}
-.card {
-  background:rgba(255,255,255,.05);
-  padding:clamp(2rem,3.5vw,3rem) clamp(1.5rem,2.5vw,2.5rem);
-  position:relative;
-  transition:background .3s;
-}
-.card::before {
-  content:'';
-  position:absolute;
-  top:0;left:0;right:0;
-  height:3px;
-  background:var(--ink);
-  transform:scaleX(0);
-  transform-origin:left;
-  transition:transform .4s ease;
-}
-.card:hover {background:rgba(255,255,255,.09)}
-.card:hover::before {transform:scaleX(1)}
-.card-folio {
-  font-family:var(--subdisp);
-  font-style:italic;
-  font-size:clamp(3.5rem,6vw,5rem);
-  font-weight:400;
-  color:rgba(255,255,255,.1);
-  line-height:1;
-  margin-bottom:1.2rem;
-}
-.card-tag {
-  color:var(--gold);
-  margin-bottom:.8rem;
-}
-.card h3 {
-  font-family:var(--disp);
-  font-size:clamp(1.15rem,1.8vw,1.55rem);
-  font-weight:400;
-  line-height:1.2;
-  letter-spacing:-.01em;
-  margin-bottom:.8rem;
-  color:var(--white);
-}
-.card h3 em {font-style:italic;color:var(--gold)}
-.card-def {
-  font-family:var(--subdisp);
-  font-style:italic;
-  font-size:1rem;
-  color:rgba(255,255,255,.55);
-  line-height:1.65;
-  margin-bottom:1.5rem;
-  padding-bottom:1.5rem;
-  border-bottom:1px solid rgba(255,255,255,.1);
-}
-.card-metrics {
-  display:flex;
-  flex-direction:column;
-  gap:.9rem;
-  margin-bottom:1.5rem;
-}
-.metric {
-  display:grid;
-  grid-template-columns:auto 1fr;
-  gap:.75rem;
-  align-items:start;
-}
-.metric-val {
-  font-family:var(--disp);
-  font-size:1.35rem;
-  font-weight:400;
-  color:var(--white);
-  line-height:1.1;
-  white-space:nowrap;
-}
-.metric-desc {
-  font-size:.82rem;
-  color:rgba(255,255,255,.55);
-  line-height:1.5;
-  padding-top:.1rem;
-}
-.card-note {
-  font-size:.78rem;
-  color:rgba(255,255,255,.4);
-  font-style:italic;
-  border-top:1px solid var(--rule);
-  padding-top:1rem;
-  line-height:1.55;
-}
-.market .section-head h2 {color:var(--white)}
-.market .section-head p {color:rgba(255,255,255,.55)}
-.market .eyebrow {color:var(--gold)}
-.eng-left .eyebrow {color:var(--gold);margin-bottom:1.2rem}
-.close-cta .eyebrow {color:var(--gold);margin-bottom:1.5rem}
-.two-products {
-  background:var(--ink);
-  padding:clamp(5rem,9vh,8rem) 0;
-  border-top:1px solid var(--rule);
-}
-.tp-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:2px;
-  background:rgba(255,255,255,.1);
-  border:1px solid rgba(255,255,255,.1);
-}
-.tp-card {
-  background:rgba(255,255,255,.05);
-  padding:clamp(2.5rem,4vw,3.5rem);
-  display:flex;
-  flex-direction:column;
-  gap:1.8rem;
-}
-.tp-card-dark {
-  background:var(--ink);
-}
-.tp-num {
-  font-family:var(--subdisp);
-  font-style:italic;
-  font-size:clamp(4rem,7vw,6rem);
-  font-weight:400;
-  color:rgba(255,255,255,.1);
-  line-height:1;
-}
-.tp-tag {color:var(--gold)}
-.tp-title {
-  font-family:var(--disp);
-  font-size:clamp(1.4rem,2.5vw,2.2rem);
-  font-weight:400;
-  line-height:1.1;
-  letter-spacing:-.01em;
-  color:var(--white);
-}
-.tp-card-dark .tp-title {color:var(--white)}
-.tp-title em {font-style:italic;color:var(--gold)}
-.tp-def {
-  font-family:var(--subdisp);
-  font-style:italic;
-  font-size:1rem;
-  color:rgba(255,255,255,.55);
-  line-height:1.7;
-  padding-bottom:1.8rem;
-  border-bottom:1px solid rgba(255,255,255,.1);
-}
-.tp-card-dark .tp-def {color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.08)}
-.tp-includes {display:flex;flex-direction:column;gap:1rem}
-.tp-inc-label {color:var(--gold);margin-bottom:.3rem}
-.tp-inc-list {display:flex;flex-direction:column;gap:1.2rem}
-.tp-inc-item {
-  display:grid;
-  grid-template-columns:auto 1fr;
-  gap:.8rem;
-  align-items:start;
-}
-.tp-inc-icon {
-  color:var(--gold);
-  font-family:var(--disp);
-  font-size:1rem;
-  padding-top:.1rem;
-  flex-shrink:0;
-}
-.tp-inc-item strong {
-  display:block;
-  font-family:var(--body);
-  font-size:.88rem;
-  font-weight:500;
-  color:var(--white);
-  margin-bottom:.25rem;
-}
-.tp-card-dark .tp-inc-item strong {color:var(--white)}
-.tp-inc-item p {
-  font-size:.82rem;
-  color:rgba(255,255,255,.45);
-  line-height:1.55;
-}
-.tp-card-dark .tp-inc-item p {color:rgba(255,255,255,.4)}
-.tp-multiplier {
-  display:flex;
-  align-items:center;
-  gap:1.2rem;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.2);
-  padding:1.2rem 1.5rem;
-  border-radius:2px;
-}
-.tp-mult-val {
-  font-family:var(--disp);
-  font-size:clamp(1.8rem,3vw,2.5rem);
-  font-weight:400;
-  color:var(--gold);
-  white-space:nowrap;
-}
-.tp-mult-label {
-  font-size:.8rem;
-  color:rgba(255,255,255,.5);
-  line-height:1.5;
-}
-.tp-cta-line {margin-top:auto;padding-top:1rem}
-.tp-link {
-  font-family:var(--body);
-  font-size:.78rem;
-  font-weight:500;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--gold);
-  text-decoration:none;
-  border-bottom:1px solid rgba(255,255,255,.25);
-  padding-bottom:2px;
-  transition:border-color .25s;
-}
-.tp-link:hover {border-color:var(--gold)}
-@media(max-width:1024px){
-.tp-grid {grid-template-columns:1fr}
-}
-@media(max-width:1024px){
-.cards {grid-template-columns:1fr}
-}
-.hero-eyebrow {animation:fadeUp .6s .1s both}
-</style>
+    .hero{
+      position:relative;min-height:calc(100vh - 76px);
+      display:grid;grid-template-columns:minmax(0,1.02fr) minmax(420px,.98fr);
+      isolation:isolate;overflow:hidden;background:
+        radial-gradient(circle at 20% 15%, rgba(240,211,141,.16), transparent 34%),
+        linear-gradient(135deg,#061632 0%,#09224d 48%,#071b3f 100%);
+    }
+    .hero::after{
+      content:'';position:absolute;inset:0;z-index:-1;
+      background:linear-gradient(90deg,rgba(7,27,63,.94) 0%,rgba(7,27,63,.84) 42%,rgba(7,27,63,.42) 68%,rgba(7,27,63,.12) 100%);
+    }
+    .hero-copy{
+      padding:clamp(70px,8vw,120px) clamp(22px,6vw,84px);
+      display:flex;flex-direction:column;justify-content:center;max-width:820px;
+    }
+    .eyebrow{display:flex;align-items:center;gap:14px;color:var(--gold-2);font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;margin-bottom:24px}
+    .eyebrow::before{content:'';width:42px;height:1px;background:var(--gold)}
+    h1{font-family:var(--disp);font-size:clamp(3rem,5.9vw,6.6rem);line-height:.99;font-weight:600;letter-spacing:-.035em;margin-bottom:24px;color:#fff}
+    h1 em{display:block;font-family:var(--sub);font-style:italic;font-weight:600;color:var(--gold-2);font-size:.72em;letter-spacing:-.015em;margin-top:8px}
+    .lead{font-size:clamp(1.04rem,1.4vw,1.2rem);color:#dce6f5;font-weight:300;max-width:650px;margin-bottom:32px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:3px;font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em;transition:.2s}
+    .btn-primary{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:var(--navy)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.25)}
+    .btn-secondary{border:1px solid rgba(255,255,255,.28);color:#fff;background:rgba(255,255,255,.05)}
+    .btn-secondary:hover{border-color:var(--gold-2);color:var(--gold-2)}
+    .quick-status{display:grid;grid-template-columns:repeat(4,minmax(125px,1fr));gap:1px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.16);max-width:720px}
+    .quick-status div{background:rgba(4,18,44,.72);padding:14px 16px}
+    .quick-status span{display:block;color:var(--muted);font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px}
+    .quick-status strong{display:block;color:#fff;font-size:.92rem;font-weight:700;letter-spacing:.03em}
+    .hero-image-wrap{position:relative;min-height:520px;display:flex;align-items:stretch;justify-content:flex-end}
+    .hero-image{
+      width:100%;min-height:100%;object-fit:cover;object-position:center;
+      background-image:image-set(url('/assets/hero.webp') type('image/webp'),url('/assets/hero.png') type('image/png'));
+      background-size:cover;background-position:center;
+      box-shadow:inset 1px 0 0 rgba(255,255,255,.08);
+    }
+    .hero-image img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:0}
+    .image-note{
+      position:absolute;right:clamp(18px,4vw,54px);bottom:clamp(18px,4vw,54px);
+      max-width:390px;background:rgba(7,27,63,.84);border:1px solid rgba(240,211,141,.45);
+      box-shadow:var(--shadow);padding:22px;border-radius:4px;backdrop-filter:blur(12px);
+    }
+    .image-note span{display:block;color:var(--gold-2);font-size:.66rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px}
+    .image-note strong{font-family:var(--disp);font-size:1.45rem;line-height:1.18;font-weight:600}
+    .section{padding:clamp(76px,8vw,116px) clamp(22px,5vw,76px)}
+    .light{background:#f7f4ee;color:var(--ink)}
+    .dark{background:var(--navy);border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}
+    .container{max-width:1180px;margin:0 auto}
+    .section-head{max-width:760px;margin-bottom:42px}
+    .section-kicker{display:flex;align-items:center;gap:12px;color:var(--gold);font-size:.7rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;margin-bottom:14px}
+    .section-kicker::before{content:'';width:34px;height:1px;background:var(--gold)}
+    h2{font-family:var(--disp);font-size:clamp(2.1rem,4vw,4.2rem);line-height:1.05;letter-spacing:-.025em;font-weight:600;margin-bottom:16px}
+    h2 em{font-family:var(--sub);font-style:italic;color:var(--gold)}
+    .section-head p{color:inherit;opacity:.76;font-size:1.04rem;font-weight:300}
+    .status-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .status-card{background:#fff;border:1px solid var(--line-dark);padding:26px;border-radius:8px;box-shadow:0 16px 36px rgba(7,27,63,.07)}
+    .status-card .label{font-size:.66rem;color:#687995;text-transform:uppercase;letter-spacing:.18em;font-weight:800;margin-bottom:8px}
+    .status-card .value{font-family:var(--disp);font-size:1.55rem;line-height:1.1;color:var(--navy);font-weight:700}
+    .status-card .small{color:#58677c;margin-top:8px;font-size:.92rem}
+    .capability-band{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14)}
+    .capability{background:rgba(255,255,255,.055);padding:28px}
+    .capability .code{font-family:var(--disp);font-size:2rem;color:var(--gold-2);line-height:1;margin-bottom:10px}
+    .capability h3{font-family:var(--disp);font-size:1.45rem;margin-bottom:8px;font-weight:600}
+    .capability p{color:#cdd9ea;font-weight:300;font-size:.96rem}
+    .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+    .proof-card{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:30px}
+    .proof-card h3{font-family:var(--disp);font-size:1.7rem;line-height:1.15;margin-bottom:16px}
+    .proof-list{list-style:none;display:grid;gap:14px}
+    .proof-list li{display:grid;grid-template-columns:22px 1fr;gap:10px;color:#dce6f5;font-weight:300}
+    .proof-list li::before{content:'✓';color:var(--gold-2);font-weight:800}
+    .notice{margin-top:22px;padding:16px 18px;border-left:3px solid var(--gold);background:rgba(255,255,255,.055);color:#cdd9ea;font-size:.92rem}
+    .cta{text-align:center;background:linear-gradient(135deg,#071b3f,#0a2b60);border-top:1px solid rgba(255,255,255,.12)}
+    .cta .container{max-width:820px}
+    .cta h2{color:#fff}
+    .cta p{color:#dbe5f4;font-size:1.08rem;font-weight:300;margin:0 auto 28px;max-width:700px}
+    .contact-line{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;color:var(--gold-2);font-weight:700;letter-spacing:.04em;margin-top:18px}
+    footer{padding:30px clamp(22px,5vw,76px);background:#05142f;color:#9aacca;border-top:1px solid rgba(255,255,255,.12);font-size:.86rem}
+    .footer-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .footer-inner strong{color:#fff}
+    @media(max-width:1040px){
+      .hero{grid-template-columns:1fr}
+      .hero-image-wrap{min-height:420px}
+      .quick-status{grid-template-columns:repeat(2,1fr)}
+      .status-grid,.proof-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:760px){
+      .nav{height:auto;min-height:72px;align-items:flex-start;padding-top:14px;padding-bottom:14px}
+      .nav-links{display:none}
+      .nav-cta{display:none}
+      .brand-text strong{font-size:1rem}
+      .hero-copy{padding-top:64px;padding-bottom:48px}
+      .quick-status,.status-grid,.capability-band,.proof-grid{grid-template-columns:1fr}
+      .image-note{position:relative;right:auto;bottom:auto;margin:18px;background:rgba(7,27,63,.92)}
+      .hero-image-wrap{display:block}
+      .hero-image{height:330px}
+    }
+  </style>
 </head>
 <body>
-<div class="shell">
-
-<!-- NAV -->
-<nav class="nav">
-  <div class="nav-brand">
-    <div class="nav-seal">AG</div>
-    <div class="nav-name">
-      Apropos Group LLC
-      <span>Federal Contractor · Las Vegas, NV</span>
-    </div>
-  </div>
-  <ul class="nav-links">
-    <li><a href="capabilities.html">Capabilities</a></li>
-    <li><a href="contract-vehicles.html">Contracts</a></li>
-    <li><a href="past-performance.html">Past Performance</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <a class="nav-cta" href="contact.html">Get In Touch →</a>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <div class="registration-badge">Active Federal Registration · UEI Issued</div>
-    <h1>AI Automation Solutions for <em>Government and Enterprise</em></h1>
-    <p class="hero-copy">
-      Apropos Group LLC is a registered federal contractor delivering plug-and-play AI systems that automate repetitive workflows, streamline operations, and reduce costs — without complex implementation or long-term contracts.
-    </p>
-    <div class="hero-actions">
-      <a class="btn-primary" href="capabilities.html">View Our Capabilities →</a>
-      <a class="btn-secondary" href="contact.html">Contact Us</a>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <div class="cred-panel">
-      <div class="cred-header">Registration & Credentials</div>
-      <div class="cred-row">
-        <span class="cred-label">Registration Status</span>
-        <span class="cred-value active">Registered ✓</span>
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="#top" aria-label="Apropos Group LLC homepage">
+      <div class="seal">AG</div>
+      <div class="brand-text">
+        <strong>Apropos Group LLC</strong>
+        <span>SAM.gov Registered · CAGE Issued</span>
       </div>
-      <div class="cred-row">
-        <span class="cred-label">Unique Entity ID</span>
-        <span class="cred-value active">Issued ✓</span>
-      </div>
-      <div class="cred-row">
-        <span class="cred-label">CAGE Code</span>
-        <span class="cred-value active">Issued ✓</span>
-      </div>
-      <div class="cred-row">
-        <span class="cred-label">Entity Type</span>
-        <span class="cred-value active">Small Business ✓</span>
-      </div>
-      <div class="cred-row">
-        <span class="cred-label">State</span>
-        <span class="cred-value active">Nevada LLC ✓</span>
-      </div>
-      <div class="cred-row">
-        <span class="cred-label">Location</span>
-        <span class="cred-value">Las Vegas, NV</span>
-      </div>
-    </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#status">Status</a></li>
+      <li><a href="#naics">NAICS</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="mailto:jmitchell@aproposgroupllc.com">Contact</a>
+  </nav>
 
-    <div class="naics-panel">
-      <div class="naics-title">NAICS Codes</div>
-      <ul class="naics-list">
-        <li><span class="naics-code">541511</span>Custom Computer Programming Services</li>
-        <li><span class="naics-code">541512</span>Computer Systems Design Services</li>
-        <li><span class="naics-code">541519</span>Other Computer Related Services</li>
-        <li><span class="naics-code">561499</span>All Other Business Support Services</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- CAPABILITIES -->
-  <!-- promotional cards (cloned from Gold Standard) -->
-  <section class="pillars" id="pillars">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="tracked eyebrow">The Platform</div>
-      <h2>Three systems.<br><em>One unified workflow.</em></h2>
-      <p>Each component is a proven, standalone market category. Together they form a revenue engine no single-point solution can replicate.</p>
-    </div>
-
-    <div class="cards">
-
-      <!-- CARD 1: CRM -->
-      <article class="card">
-        <div class="card-folio">I</div>
-        <div class="tracked card-tag">System of Record</div>
-        <h3>CRM &amp;<br><em>Customer Intelligence</em></h3>
-        <p class="card-def">
-          The central database for everything a business knows about a customer —
-          contacts, history, communications, and preferences in one place,
-          so every team works from the same accurate data instead of scattered spreadsheets.
+  <main id="top">
+    <section class="hero" aria-label="Apropos Group LLC federal contractor profile">
+      <div class="hero-copy">
+        <div class="eyebrow">Federal Contractor Profile</div>
+        <h1>Registered. Verified. <em>Ready to Serve.</em></h1>
+        <p class="lead">
+          Apropos Group LLC is a Las Vegas, Nevada government-facing technology company positioned for federal agency, state agency, local government, and prime contractor engagement.
         </p>
-        <div class="card-metrics">
-          <div class="metric">
-            <div class="metric-val">29%</div>
-            <div class="metric-desc">average lift in sales revenue reported by businesses using CRM</div>
-          </div>
-          <div class="metric">
-            <div class="metric-val">$8.71</div>
-            <div class="metric-desc">average ROI per dollar spent on CRM — when teams use it consistently</div>
-          </div>
-          <div class="metric">
-            <div class="metric-val">300%</div>
-            <div class="metric-desc">increase in conversion rates documented across CRM-adopting organizations</div>
-          </div>
-          <div class="metric">
-            <div class="metric-val">91%</div>
-            <div class="metric-desc">of companies with 10+ employees now run a CRM — the baseline expectation has shifted</div>
-          </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#status">View Corporate Status</a>
+          <a class="btn btn-secondary" href="mailto:jmitchell@aproposgroupllc.com">Request Capability Brief</a>
         </div>
-        <p class="card-note">Global CRM market reached $109B in 2026. Retention improves up to 27% with full interaction context per customer.</p>
-      </article>
-
-      <!-- CARD 2: Lead Management -->
-      <article class="card">
-        <div class="card-folio">II</div>
-        <div class="tracked card-tag">Workflow Engine</div>
-        <h3>Lead Management<br><em>System</em></h3>
-        <p class="card-def">
-          The CRM stores contacts — the lead management system moves them.
-          Structured workflows, scoring models, and automated follow-up
-          operationalize the data and push leads through qualification stages
-          into the sales pipeline without manual intervention.
-        </p>
-        <div class="card-metrics">
-          <div class="metric">
-            <div class="metric-val">↓ CAC</div>
-            <div class="metric-desc">intelligent lead scoring focuses teams on high-intent prospects, cutting acquisition costs</div>
-          </div>
-          <div class="metric">
-            <div class="metric-val">Zero</div>
-            <div class="metric-desc">data loss on marketing-to-sales handoff when lead system and CRM are integrated</div>
-          </div>
-          <div class="metric">
-            <div class="metric-val">SLA</div>
-            <div class="metric-desc">enforces response-time agreements and standardizes handoffs — removing the human variable</div>
-          </div>
-          <div class="metric">
-            <div class="metric-val">∞</div>
-            <div class="metric-desc">no lead goes cold by accident — automated nurture sequences run on schedule without anyone remembering</div>
-          </div>
-        </div>
-        <p class="card-note">Prevents the three most common revenue leaks in fast-growing businesses: missed leads, slow follow-up, and inconsistent qualification criteria.</p>
-      </article>
-
-      <!-- CARD 3: AI Voice -->
-      <article class="card">
-        <div class="card-folio">III</div>
-        <div class="tracked card-tag">The Front Door</div>
-        <h3>Conversational AI<br><em>Voice Attendant</em></h3>
-        <p class="card-def">
-          The modern replacement for the press-1 phone tree. Understands natural
-          language, holds multi-turn conversations, books appointments in real time,
-          qualifies intent, and hands off to humans when needed — inbound and outbound,
-          24 hours a day.
-        </p>
-        <div class="card-metrics">
-          <div class="metric">
-            <div class="metric-val">100%</div>
-            <div class="metric-desc">of inbound calls answered — no opportunity leaks to a competitor who picks up the phone</div>
-          </div>
-          <div class="metric">
-            <div class="metric-val">$0.40</div>
-            <div class="metric-desc">per AI-handled call vs. $7–$12 per human call — the unit economics are no longer a judgment call</div>
-          </div>
-          <div class="metric">
-            <div class="metric-val">$80B</div>
-            <div class="metric-desc">Gartner forecast for global contact-center labor cost reduction from conversational AI in 2026</div>
-          </div>
-          <div class="metric">
-            <div class="metric-val">24/7</div>
-            <div class="metric-desc">coverage with no overtime, no sick days, no Monday-morning backlog of missed-call voicemails</div>
-          </div>
-        </div>
-        <p class="card-note">Stronger intent understanding improves first-contact resolution — callers reach the right answer or routing on the first try.</p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-  <section class="two-products">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="tracked eyebrow">What We Offer</div>
-      <h2>Two ways to<br><em>work with us.</em></h2>
-      <p>Whether you want to run FlowDesk Pro inside your own business or build a business on top of it, there is a path designed specifically for you.</p>
-    </div>
-
-    <div class="tp-grid">
-
-      <!-- PRODUCT 1: FlowDesk Pro -->
-      <div class="tp-card">
-        <div class="tp-num">I</div>
-        <div class="tracked tp-tag">The Platform</div>
-        <h3 class="tp-title">FlowDesk Pro<br><em>Lead Management System</em></h3>
-        <p class="tp-def">
-          The all-in-one business automation platform that answers every call,
-          qualifies every lead, and delivers a structured record to your dashboard
-          in real time. One system. Three integrated engines. Fully automated.
-        </p>
-        <div class="tp-includes">
-          <div class="tracked tp-inc-label">What's inside</div>
-          <div class="tp-inc-list">
-            <div class="tp-inc-item">
-              <span class="tp-inc-icon">—</span>
-              <div>
-                <strong>CRM &amp; Customer Intelligence</strong>
-                <p>Centralized contact database with full interaction history, sentiment tracking, and customer lifecycle visibility.</p>
-              </div>
-            </div>
-            <div class="tp-inc-item">
-              <span class="tp-inc-icon">—</span>
-              <div>
-                <strong>Lead Management Workflow Engine</strong>
-                <p>Automated capture, qualification, scoring, routing, and follow-up — no lead goes cold, no handoff loses data.</p>
-              </div>
-            </div>
-            <div class="tp-inc-item">
-              <span class="tp-inc-icon">—</span>
-              <div>
-                <strong>Live Conversational AI Voice Attendant</strong>
-                <p>Answers every inbound call in natural language, 24/7, in English and Spanish, without adding headcount.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tp-cta-line">
-          <a href="#request" class="tp-link">Request Platform Overview →</a>
+        <div class="quick-status" aria-label="Federal registration summary">
+          <div><span>SAM.gov</span><strong>Active</strong></div>
+          <div><span>UEI</span><strong>YVNXN3XBUSD5</strong></div>
+          <div><span>CAGE</span><strong>20UQ1</strong></div>
+          <div><span>Entity</span><strong>Nevada LLC</strong></div>
         </div>
       </div>
-
-      <!-- PRODUCT 2: White Label -->
-      <div class="tp-card tp-card-dark">
-        <div class="tp-num">II</div>
-        <div class="tracked tp-tag">The Partnership</div>
-        <h3 class="tp-title">White Label<br><em>Partnership Program</em></h3>
-        <p class="tp-def">
-          Put your brand on the platform. Deploy FlowDesk Pro under your own name
-          to your own client base. You own the relationship. We provide the infrastructure,
-          the AI, and the automation engine behind it.
-        </p>
-        <div class="tp-includes">
-          <div class="tracked tp-inc-label">What partners get</div>
-          <div class="tp-inc-list">
-            <div class="tp-inc-item">
-              <span class="tp-inc-icon">—</span>
-              <div>
-                <strong>Full White-Label Configuration</strong>
-                <p>Your logo. Your brand. Your domain. Clients see your product — not ours.</p>
-              </div>
-            </div>
-            <div class="tp-inc-item">
-              <span class="tp-inc-icon">—</span>
-              <div>
-                <strong>Reseller Rights &amp; Revenue Share</strong>
-                <p>You set your own pricing and margins. The Agency tier turns you into a distribution channel that scales itself.</p>
-              </div>
-            </div>
-            <div class="tp-inc-item">
-              <span class="tp-inc-icon">—</span>
-              <div>
-                <strong>Full API + Webhooks + Custom AI Flows</strong>
-                <p>Deep integration capability so the platform fits your existing product stack and client workflows.</p>
-              </div>
-            </div>
-            <div class="tp-inc-item">
-              <span class="tp-inc-icon">—</span>
-              <div>
-                <strong>Dedicated Account Manager · 2-Hour SLA</strong>
-                <p>You have a direct line. Your clients get enterprise-grade responsiveness under your brand name.</p>
-              </div>
-            </div>
-          </div>
+      <div class="hero-image-wrap" aria-label="Modern government and Las Vegas corporate skyline visual">
+        <div class="hero-image" role="img" aria-label="Modern Las Vegas government-facing corporate skyline with U.S. flags and institutional building">
+          <img src="/assets/hero.png" alt="Modern government-facing Las Vegas skyline and institutional building visual for Apropos Group LLC" />
         </div>
-        <div class="tp-multiplier">
-          <span class="tp-mult-val">10–20×</span>
-          <span class="tp-mult-label">Sub-clients per Agency partner seat — one partner relationship scales to an entire book of business</span>
-        </div>
-        <div class="tp-cta-line">
-          <a href="#request" class="tp-link">Apply for White Label Partnership →</a>
+        <div class="image-note">
+          <span>Corporate Positioning</span>
+          <strong>Small business federal contractor with active registration credentials.</strong>
         </div>
       </div>
+    </section>
 
+    <section class="section light" id="status">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Registration & Credentials</div>
+          <h2>Corporate status built for <em>government review.</em></h2>
+          <p>
+            This homepage is structured to present the corporation first: registration status, entity identifiers, state business standing, and procurement-aligned classification details.
+          </p>
+        </div>
+        <div class="status-grid">
+          <div class="status-card">
+            <div class="label">SAM.gov</div>
+            <div class="value">Active</div>
+            <div class="small">Federal contractor registration profile.</div>
+          </div>
+          <div class="status-card">
+            <div class="label">Unique Entity ID</div>
+            <div class="value">YVNXN3XBUSD5</div>
+            <div class="small">UEI issued for federal entity identification.</div>
+          </div>
+          <div class="status-card">
+            <div class="label">CAGE Code</div>
+            <div class="value">20UQ1</div>
+            <div class="small">CAGE code issued for federal contracting reference.</div>
+          </div>
+          <div class="status-card">
+            <div class="label">Business Type</div>
+            <div class="value">Small Business</div>
+            <div class="small">Government-facing small business designation.</div>
+          </div>
+          <div class="status-card">
+            <div class="label">Socio-Economic Status</div>
+            <div class="value">Minority-Owned</div>
+            <div class="small">Self-identified in SAM profile materials.</div>
+          </div>
+          <div class="status-card">
+            <div class="label">Nevada Business License</div>
+            <div class="value">Active</div>
+            <div class="small">Nevada Business ID: V20253463838 · Expires 10/31/2026.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="naics">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">NAICS Alignment</div>
+          <h2>Procurement categories that match <em>technology operations.</em></h2>
+          <p>
+            Apropos Group LLC is positioned for government opportunities involving systems design, programming, infrastructure support, communications workflows, and business operations support.
+          </p>
+        </div>
+        <div class="capability-band">
+          <div class="capability">
+            <div class="code">541512</div>
+            <h3>Computer Systems Design Services</h3>
+            <p>Primary classification for designing and supporting technology systems aligned to agency operational needs.</p>
+          </div>
+          <div class="capability">
+            <div class="code">541511</div>
+            <h3>Custom Computer Programming Services</h3>
+            <p>Supports custom application, automation, and workflow development requirements.</p>
+          </div>
+          <div class="capability">
+            <div class="code">541519</div>
+            <h3>Other Computer Related Services</h3>
+            <p>Broad IT support classification for technical services that extend beyond standard development work.</p>
+          </div>
+          <div class="capability">
+            <div class="code">518210</div>
+            <h3>Computing Infrastructure, Data Processing & Hosting</h3>
+            <p>Supports hosted technology environments, data workflows, and operational infrastructure requirements.</p>
+          </div>
+          <div class="capability">
+            <div class="code">561421</div>
+            <h3>Telephone Answering Services</h3>
+            <p>Relevant to call handling, constituent intake, communications support, and front-office operational coverage.</p>
+          </div>
+          <div class="capability">
+            <div class="code">561499</div>
+            <h3>All Other Business Support Services</h3>
+            <p>Supports administrative, operational, and process-support engagements for government and prime contractor workflows.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Key Personnel Experience</div>
+          <h2>Principal-led delivery backed by <em>enterprise communications experience.</em></h2>
+          <p>
+            The corporation is represented through a clear federal-contractor profile and supported by the demonstrated engineering experience of its principal.
+          </p>
+        </div>
+        <div class="proof-grid">
+          <article class="proof-card">
+            <h3>Government-facing technical experience</h3>
+            <ul class="proof-list">
+              <li>Senior unified communications engineering background with large enterprise voice environments.</li>
+              <li>Experience supporting 2,000+ user communications environments across 100+ departments.</li>
+              <li>Federal-environment voice infrastructure experience for a U.S. Department of Veterans Affairs medical facility.</li>
+              <li>Contact center and IVR architecture experience involving Cisco UCCX, CUCM, CUBE, SIP trunking, and Teams Voice / Direct Routing.</li>
+            </ul>
+          </article>
+          <article class="proof-card">
+            <h3>Agency and prime contractor fit</h3>
+            <ul class="proof-list">
+              <li>SAM.gov active registration, UEI, and CAGE identifiers are placed prominently for procurement review.</li>
+              <li>Small Business, Nevada LLC, and Minority-Owned / Self-Identified SAM status are presented in a direct corporate-status format.</li>
+              <li>NAICS codes are organized around government buying language instead of product sales language.</li>
+              <li>Messaging avoids product showcases and centers the corporation as a qualified government contractor.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="notice">
+          Key personnel experience is presented as personnel qualifications and not as a claim of Apropos Group LLC corporate contract history unless separately documented in a contract record.
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta" id="contact">
+      <div class="container">
+        <div class="section-kicker" style="justify-content:center">Government Inquiries</div>
+        <h2>Request a corporate capability briefing.</h2>
+        <p>
+          Apropos Group LLC welcomes capability briefings, subcontracting discussions, agency inquiries, and prime contractor conversations related to technology services, business support, communications modernization, and process improvement.
+        </p>
+        <a class="btn btn-primary" href="mailto:jmitchell@aproposgroupllc.com?subject=Apropos%20Group%20LLC%20Capability%20Briefing%20Request">Email Apropos Group LLC</a>
+        <div class="contact-line">
+          <span>jmitchell@aproposgroupllc.com</span>
+          <span>·</span>
+          <span>Las Vegas, Nevada</span>
+          <span>·</span>
+          <span>UEI YVNXN3XBUSD5</span>
+          <span>·</span>
+          <span>CAGE 20UQ1</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div><strong>Apropos Group LLC</strong> · SAM.gov Active · Small Business · Nevada LLC</div>
+      <div>© 2026 · jmitchell@aproposgroupllc.com · <a href="/privacy" style="color:inherit">Privacy</a> · <a href="/terms" style="color:inherit">Terms</a></div>
     </div>
-  </div>
-</section>
-
-  <section class="section">
-  <div class="container">
-    <div class="section-eyebrow">Our Standard</div>
-    <h2>The <em>Apropos Promise</em></h2>
-
-    <div class="mission-wrap">
-      <p class="mission-text">
-        "Our product line is focused on automating small and mid-sized businesses' repetitive tasks and streamlining operations through simple, plug-and-play AI systems that require no technical experience or complicated setup. Our model is centered around practical automation without the typical AI industry upsells, hidden fees, long-term contracts, overly complex implementations, or expensive onboarding."
-      </p>
-      <div class="mission-attribution">— Apropos Group LLC · Las Vegas, Nevada</div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <div class="cta-inner">
-    <div class="section-eyebrow" style="justify-content:center">Government Inquiries</div>
-    <h2>Ready to <em>Partner</em> With Us?</h2>
-    <p>
-      Apropos Group LLC is positioned for small business set-aside contracts in IT services, business process automation, and AI systems deployment. We welcome RFP responses, capability briefings, and partnership inquiries from government agencies and prime contractors.<br/><em style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85em;opacity:.55">Sourced from official public records.</em>
-    </p>
-    <div class="cta-actions">
-      <a class="btn-primary" href="contact.html">Submit an Inquiry →</a>
-      <a class="btn-secondary" href="capabilities.html">View Capabilities</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-brand">
-    Apropos Group LLC · SAM.gov Registered Federal Contractor
-  </div>
-  <div class="footer-links">
-    <a href="capabilities.html">Capabilities</a>
-    <a href="contract-vehicles.html">Contract Vehicles</a>
-    <a href="past-performance.html">Past Performance</a>
-    <a href="contact.html">Contact</a>
-    <a href="https://aiflowdeskpro.com" target="_blank">FlowDesk Pro</a>
-    <a href="/privacy">Privacy</a>
-    <a href="/terms">Terms</a>
-  </div>
-  <div class="footer-copy">
-    © 2026 Apropos Group LLC · Las Vegas, Nevada · (888) 244-5737 · jmitchell1126@gmail.com
-  </div>
-</footer>
-
-</div>
+  </footer>
 </body>
 </html>
