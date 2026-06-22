@@ -47,20 +47,20 @@
     @media(max-width:900px){.bar-links{display:none}}
 
     /* HERO */
-    .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);
+    .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);min-height:calc(100svh - 78px);display:flex;flex-direction:column;
       background-image:linear-gradient(to bottom,transparent 56%,rgba(6,16,40,.55) 100%),linear-gradient(102deg,rgba(6,16,40,.97) 0%,rgba(8,22,52,.88) 32%,rgba(8,22,52,.5) 60%,rgba(8,22,52,.3) 100%),url('/assets/headquarters.webp');
       background-size:cover;background-position:center right;background-repeat:no-repeat}
     .hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.14;
       background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:64px 64px;
       mask-image:radial-gradient(circle at 16% 38%,#000,transparent 55%)}
     @media(max-width:680px){.hero{background-image:linear-gradient(to bottom,rgba(6,16,40,.84),rgba(8,22,52,.92)),url('/assets/headquarters.webp');background-position:68% center}}
-    .hero-in{position:relative;z-index:1;padding:clamp(72px,11vh,140px) 0 clamp(56px,8vh,96px);max-width:920px}
+    .hero-in{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(72px,11vh,140px) 0 clamp(56px,8vh,96px);max-width:920px}
     .hero h1{font-family:var(--disp);font-weight:600;font-size:clamp(2.7rem,6vw,5.4rem);line-height:1.02;letter-spacing:-.025em;color:#fff;margin:24px 0 22px;text-shadow:0 2px 34px rgba(0,8,24,.45)}
     .hero h1 em{font-family:var(--sub);font-style:italic;font-weight:600;color:var(--gold-2)}
     .hero .lead{font-size:clamp(1.06rem,1.5vw,1.32rem);color:var(--slate);font-weight:300;max-width:760px;margin-bottom:34px}
     .hero .lead b{color:#fff;font-weight:400}
     .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
-    .credbar{position:relative;z-index:1;border-top:1px solid var(--line);background:rgba(4,12,30,.4)}
+    .credbar{position:relative;z-index:2;border-top:1px solid var(--line);background:rgba(4,12,30,.94);backdrop-filter:blur(14px);box-shadow:0 -18px 38px rgba(4,12,30,.45)}
     .credbar-in{display:flex;flex-wrap:wrap;gap:0;padding:0}
     .credbar .c{flex:1 1 0;min-width:150px;padding:18px 4px;text-align:center;border-right:1px solid var(--line)}
     .credbar .c:last-child{border-right:none}
@@ -178,7 +178,7 @@
     </div></div>
   </header>
 
-  <main>
+  <main style="position:relative;z-index:2;background:var(--navy);">
     <!-- TODAY -->
     <section class="band" id="company">
       <div class="wrap">
