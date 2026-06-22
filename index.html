@@ -48,12 +48,14 @@
 
     /* HERO */
     .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);
-      background:radial-gradient(1100px 520px at 78% -12%,rgba(198,160,82,.14),transparent 60%),radial-gradient(900px 600px at 8% 110%,rgba(30,90,200,.12),transparent 60%),linear-gradient(160deg,#081634 0%,#0a1c3f 55%,#0a1830 100%)}
-    .hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
-      background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:64px 64px;
-      mask-image:radial-gradient(circle at 70% 20%,#000,transparent 75%)}
+      background-image:linear-gradient(to bottom,transparent 56%,rgba(6,16,40,.55) 100%),linear-gradient(102deg,rgba(6,16,40,.97) 0%,rgba(8,22,52,.88) 32%,rgba(8,22,52,.5) 60%,rgba(8,22,52,.3) 100%),url('/assets/headquarters.webp');
+      background-size:cover;background-position:center right;background-repeat:no-repeat}
+    .hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.14;
+      background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:64px 64px;
+      mask-image:radial-gradient(circle at 16% 38%,#000,transparent 55%)}
+    @media(max-width:680px){.hero{background-image:linear-gradient(to bottom,rgba(6,16,40,.84),rgba(8,22,52,.92)),url('/assets/headquarters.webp');background-position:68% center}}
     .hero-in{position:relative;z-index:1;padding:clamp(72px,11vh,140px) 0 clamp(56px,8vh,96px);max-width:920px}
-    .hero h1{font-family:var(--disp);font-weight:600;font-size:clamp(2.7rem,6vw,5.4rem);line-height:1.02;letter-spacing:-.025em;color:#fff;margin:24px 0 22px}
+    .hero h1{font-family:var(--disp);font-weight:600;font-size:clamp(2.7rem,6vw,5.4rem);line-height:1.02;letter-spacing:-.025em;color:#fff;margin:24px 0 22px;text-shadow:0 2px 34px rgba(0,8,24,.45)}
     .hero h1 em{font-family:var(--sub);font-style:italic;font-weight:600;color:var(--gold-2)}
     .hero .lead{font-size:clamp(1.06rem,1.5vw,1.32rem);color:var(--slate);font-weight:300;max-width:760px;margin-bottom:34px}
     .hero .lead b{color:#fff;font-weight:400}
