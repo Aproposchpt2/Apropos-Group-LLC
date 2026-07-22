@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CIME — Conversation Intelligence Marketing Engine</title>
-  <meta name="description" content="CIME is the APROPOS GROUP LLC conversation intelligence platform for discovering trends, generating professional discussion prompts, publishing to LinkedIn, and learning from engagement." />
+  <meta name="description" content="CIME discovers trends, generates professional conversation prompts, and publishes them to the AI For Businesses LinkedIn Page." />
   <meta name="theme-color" content="#0a1c3f" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=Cormorant:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    :root{--navy:#0a1c3f;--navy2:#102b60;--gold:#c6a052;--gold2:#ecd69d;--white:#fff;--slate:#d4deef;--muted:#8ea3c4;--line:rgba(255,255,255,.13);--success:#74d9aa;--danger:#ff9b9b;--disp:'Bodoni Moda',Georgia,serif;--sub:'Cormorant',Georgia,serif;--body:'Jost',system-ui,sans-serif;--max:1180px}
+    :root{--navy:#0a1c3f;--navy2:#102b60;--gold:#c6a052;--gold2:#ecd69d;--slate:#d4deef;--muted:#8ea3c4;--line:rgba(255,255,255,.13);--success:#74d9aa;--danger:#ff9b9b;--disp:'Bodoni Moda',Georgia,serif;--sub:'Cormorant',Georgia,serif;--body:'Jost',system-ui,sans-serif;--max:1180px}
     *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--body);background:var(--navy);color:var(--slate);font-weight:300;line-height:1.65}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 38px));margin:auto}
     nav{position:sticky;top:0;z-index:20;background:rgba(10,28,63,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.navin{height:74px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:12px;align-items:center}.seal{width:42px;height:42px;border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-family:var(--disp);color:var(--gold2)}.brand b{display:block;font-family:var(--disp);color:#fff}.brand small{display:block;color:var(--gold2);letter-spacing:.16em;text-transform:uppercase;font-size:.56rem}.links{display:flex;gap:22px;font-size:.68rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase}@media(max-width:760px){.links{display:none}}
     .button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border:1px solid transparent;border-radius:4px;font:700 .68rem var(--body);letter-spacing:.13em;text-transform:uppercase;cursor:pointer;transition:.2s}.button:disabled{opacity:.45;cursor:not-allowed}.primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--navy)}.ghost{border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.04);color:#fff}.button:hover:not(:disabled){transform:translateY(-2px)}
@@ -25,88 +25,19 @@
 <body>
 <nav><div class="wrap navin"><a class="brand" href="/"><span class="seal">AG</span><span><b>APROPOS GROUP LLC</b><small>Conversation Intelligence</small></span></a><div class="links"><a href="#platform">Platform</a><a href="#architecture">Architecture</a><a href="#linkedin">LinkedIn</a></div><a class="button ghost" href="/">Main Website</a></div></nav>
 <main>
-  <header class="hero"><div class="wrap hero-in"><div><span class="eyebrow">APROPOS Intelligence Platform</span><h1>Conversation Intelligence <em>Marketing Engine</em></h1><p class="lead">CIME discovers timely professional topics, creates concise questions people want to answer, publishes strategically, and learns from every conversation.</p><div class="actions"><a class="button primary" href="#linkedin">Connect LinkedIn</a><a class="button ghost" href="#architecture">Explore Architecture</a></div></div>
-    <aside class="panel"><div class="panel-head"><b>Publishing Mission Control</b><span class="state" id="topStatus">Checking connection…</span></div><div class="panel-body"><div class="metrics"><div class="metric"><span>LinkedIn App</span><strong>Active</strong></div><div class="metric"><span>Target Profile</span><strong>Personal</strong></div><div class="metric"><span>Primary Format</span><strong>Questions</strong></div><div class="metric"><span>Operating Mode</span><strong>Test</strong></div></div><div class="queue"><label for="postText">Test Conversation Post</label><textarea id="postText">Looking for recommendations. Which AI platform has become essential to your daily business operations?</textarea><div class="queue-actions"><a class="button ghost" id="connectTop" href="/.netlify/functions/linkedin-auth">Connect LinkedIn</a><button class="button primary" id="publishButton" type="button" disabled>Publish Test Post</button></div><div class="message" id="publishMessage"></div></div></div></aside>
-  </div></header>
-
-  <section id="platform"><div class="wrap"><div class="head"><span class="eyebrow">The Platform</span><h2>Built to start conversations—not <em>broadcast advertisements.</em></h2><p>CIME reverses conventional social marketing. It finds the timely subject and asks the question that opens the door.</p></div><div class="cards"><article class="card"><span>01</span><h3>Trend Intelligence</h3><p>Detects relevant developments across AI, business, technology, procurement, and entrepreneurship.</p></article><article class="card"><span>02</span><h3>Question Generation</h3><p>Transforms trends into recommendation requests, polls, rankings, comparisons, and experience prompts.</p></article><article class="card"><span>03</span><h3>Variety Control</h3><p>Prevents repetitive openings, topics, structures, and recognizable promotional patterns.</p></article><article class="card"><span>04</span><h3>Strategic Publishing</h3><p>Publishes approved questions through LinkedIn’s authorized member integration.</p></article><article class="card"><span>05</span><h3>Engagement Intelligence</h3><p>Measures comments, recommendations, thread depth, and participant-to-participant interaction.</p></article><article class="card"><span>06</span><h3>Continuous Learning</h3><p>Identifies the wording, topic, format, and timing that create the strongest conversations.</p></article></div></div></section>
-
-  <section id="architecture"><div class="wrap"><div class="head"><span class="eyebrow">System Architecture</span><h2>Acquire. Understand. Generate. Publish. <em>Learn.</em></h2><p>The engine applies the APROPOS intelligence architecture to market conversations.</p></div><div class="flow"><div class="step"><span>01</span><b>Trend Sources</b><small>Current signals</small></div><div class="step"><span>02</span><b>Acquisition</b><small>Collect and normalize</small></div><div class="step"><span>03</span><b>Catalog</b><small>Topics and relationships</small></div><div class="step"><span>04</span><b>Intelligence</b><small>Score opportunity</small></div><div class="step"><span>05</span><b>Generator</b><small>Create the spark</small></div><div class="step"><span>06</span><b>Publisher</b><small>Publish and verify</small></div><div class="step"><span>07</span><b>Learning</b><small>Improve continuously</small></div></div></div></section>
-
-  <section id="linkedin"><div class="wrap"><div class="head"><span class="eyebrow">LinkedIn Integration</span><h2>Securely connect the <em>Jeffery E. Mitchell</em> profile.</h2><p>The profile URL identifies the intended destination. LinkedIn OAuth confirms the account and grants controlled publishing permission.</p></div><div class="account"><div class="account-card"><h3>Publishing Account</h3><div class="field"><span>Profile Name</span><b>Jeffery E. Mitchell</b></div><div class="field"><span>Profile Slug</span><b>jeffery-e-mitchell</b></div><div class="field"><span>Profile URL</span><b>https://www.linkedin.com/in/jeffery-e-mitchell</b></div><div class="field"><span>Account Type</span><b>Personal LinkedIn Profile</b></div></div><div class="account-card"><div class="status-box"><h3>Connection Status</h3><div class="status-line" id="connectionStatus">Checking LinkedIn authorization…</div><p id="connectionDetail">CIME is verifying whether an authorized member session is available.</p><a class="button primary" id="connectButton" href="/.netlify/functions/linkedin-auth">Connect LinkedIn</a></div></div></div></div></section>
+<header class="hero"><div class="wrap hero-in"><div><span class="eyebrow">APROPOS Intelligence Platform</span><h1>Conversation Intelligence <em>Marketing Engine</em></h1><p class="lead">CIME discovers timely professional topics, creates concise questions people want to answer, publishes strategically, and learns from every conversation.</p><div class="actions"><a class="button primary" href="#linkedin">Connect LinkedIn Page</a><a class="button ghost" href="#architecture">Explore Architecture</a></div></div><aside class="panel"><div class="panel-head"><b>Publishing Mission Control</b><span class="state" id="topStatus">Checking connection…</span></div><div class="panel-body"><div class="metrics"><div class="metric"><span>LinkedIn App</span><strong>Active</strong></div><div class="metric"><span>Publishing Target</span><strong>Company Page</strong></div><div class="metric"><span>Primary Format</span><strong>Questions</strong></div><div class="metric"><span>Operating Mode</span><strong>Test</strong></div></div><div class="queue"><label for="postText">Test Conversation Post</label><textarea id="postText">Looking for recommendations. Which AI platform has become essential to your daily business operations?</textarea><div class="queue-actions"><a class="button ghost" id="connectTop" href="/.netlify/functions/linkedin-auth">Connect LinkedIn Page</a><button class="button primary" id="publishButton" type="button" disabled>Publish Test Post</button></div><div class="message" id="publishMessage"></div></div></div></aside></div></header>
+<section id="platform"><div class="wrap"><div class="head"><span class="eyebrow">The Platform</span><h2>Built to start conversations—not <em>broadcast advertisements.</em></h2><p>CIME finds the timely subject and asks the question that opens the door.</p></div><div class="cards"><article class="card"><span>01</span><h3>Trend Intelligence</h3><p>Detects relevant developments across AI, business, technology, procurement, and entrepreneurship.</p></article><article class="card"><span>02</span><h3>Question Generation</h3><p>Transforms trends into recommendation requests, polls, rankings, comparisons, and experience prompts.</p></article><article class="card"><span>03</span><h3>Variety Control</h3><p>Prevents repetitive openings, topics, structures, and recognizable promotional patterns.</p></article><article class="card"><span>04</span><h3>Strategic Publishing</h3><p>Publishes approved questions to the authorized AI For Businesses LinkedIn Page.</p></article><article class="card"><span>05</span><h3>Engagement Intelligence</h3><p>Measures comments, recommendations, thread depth, and participant-to-participant interaction.</p></article><article class="card"><span>06</span><h3>Continuous Learning</h3><p>Identifies the wording, topic, format, and timing that create the strongest conversations.</p></article></div></div></section>
+<section id="architecture"><div class="wrap"><div class="head"><span class="eyebrow">System Architecture</span><h2>Acquire. Understand. Generate. Publish. <em>Learn.</em></h2><p>The engine applies the APROPOS intelligence architecture to market conversations.</p></div><div class="flow"><div class="step"><span>01</span><b>Trend Sources</b><small>Current signals</small></div><div class="step"><span>02</span><b>Acquisition</b><small>Collect and normalize</small></div><div class="step"><span>03</span><b>Catalog</b><small>Topics and relationships</small></div><div class="step"><span>04</span><b>Intelligence</b><small>Score opportunity</small></div><div class="step"><span>05</span><b>Generator</b><small>Create the spark</small></div><div class="step"><span>06</span><b>Publisher</b><small>Publish and verify</small></div><div class="step"><span>07</span><b>Learning</b><small>Improve continuously</small></div></div></div></section>
+<section id="linkedin"><div class="wrap"><div class="head"><span class="eyebrow">LinkedIn Integration</span><h2>Securely connect the <em>AI For Businesses</em> Page.</h2><p>Your LinkedIn administrator account authorizes CIME to publish on behalf of the company page.</p></div><div class="account"><div class="account-card"><h3>Publishing Destination</h3><div class="field"><span>Page Name</span><b>AI For Businesses</b></div><div class="field"><span>Page Slug</span><b>ai4businesses</b></div><div class="field"><span>Page URL</span><b>https://www.linkedin.com/company/ai4businesses/</b></div><div class="field"><span>Account Type</span><b>LinkedIn Company Page</b></div></div><div class="account-card"><div class="status-box"><h3>Connection Status</h3><div class="status-line" id="connectionStatus">Checking LinkedIn authorization…</div><p id="connectionDetail">CIME is verifying whether an authorized organization session is available.</p><a class="button primary" id="connectButton" href="/.netlify/functions/linkedin-auth">Connect LinkedIn Page</a></div></div></div></div></section>
 </main>
-<footer><div class="wrap foot"><span>© 2026 APROPOS GROUP LLC. All rights reserved.</span><span><a href="/privacy">Privacy Policy</a> · <a href="https://www.linkedin.com/in/jeffery-e-mitchell">LinkedIn Profile</a></span></div></footer>
+<footer><div class="wrap foot"><span>© 2026 APROPOS GROUP LLC. All rights reserved.</span><span><a href="/privacy">Privacy Policy</a> · <a href="https://www.linkedin.com/company/ai4businesses/">AI For Businesses LinkedIn Page</a></span></div></footer>
 <script>
-  const topStatus = document.getElementById('topStatus');
-  const connectionStatus = document.getElementById('connectionStatus');
-  const connectionDetail = document.getElementById('connectionDetail');
-  const connectButton = document.getElementById('connectButton');
-  const connectTop = document.getElementById('connectTop');
-  const publishButton = document.getElementById('publishButton');
-  const publishMessage = document.getElementById('publishMessage');
-  const postText = document.getElementById('postText');
-
-  function showMessage(text, type) {
-    publishMessage.textContent = text;
-    publishMessage.className = `message show ${type}`;
-  }
-
-  async function loadStatus() {
-    try {
-      const response = await fetch('/.netlify/functions/linkedin-status', { credentials: 'same-origin', cache: 'no-store' });
-      const data = await response.json();
-      if (data.connected) {
-        topStatus.textContent = 'LinkedIn connected';
-        connectionStatus.textContent = `Connected as ${data.name || 'LinkedIn Member'}`;
-        connectionDetail.textContent = 'Authorization is active. CIME is ready to publish a controlled test post.';
-        connectButton.textContent = 'Reconnect LinkedIn';
-        connectTop.textContent = 'Reconnect LinkedIn';
-        publishButton.disabled = false;
-      } else {
-        topStatus.textContent = 'Authorization required';
-        connectionStatus.textContent = 'Not connected';
-        connectionDetail.textContent = 'Connect LinkedIn to authorize CIME to publish on your behalf.';
-        publishButton.disabled = true;
-      }
-    } catch (error) {
-      topStatus.textContent = 'Status unavailable';
-      connectionStatus.textContent = 'Connection check failed';
-      connectionDetail.textContent = error.message;
-      publishButton.disabled = true;
-    }
-  }
-
-  publishButton.addEventListener('click', async () => {
-    publishButton.disabled = true;
-    publishButton.textContent = 'Publishing…';
-    showMessage('Sending the test post to LinkedIn…', 'ok');
-    try {
-      const response = await fetch('/.netlify/functions/linkedin-publish', {
-        method: 'POST',
-        credentials: 'same-origin',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text: postText.value }),
-      });
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.message || 'LinkedIn publishing failed.');
-      showMessage(`Published successfully${data.postId ? ` — Post ID: ${data.postId}` : ''}`, 'ok');
-    } catch (error) {
-      showMessage(error.message, 'error');
-    } finally {
-      publishButton.textContent = 'Publish Test Post';
-      await loadStatus();
-    }
-  });
-
-  const params = new URLSearchParams(location.search);
-  if (params.get('linkedin') === 'connected') {
-    showMessage('LinkedIn authorization completed successfully.', 'ok');
-    history.replaceState({}, '', location.pathname + location.hash);
-  } else if (params.get('linkedin') === 'error') {
-    showMessage(params.get('detail') || 'LinkedIn authorization failed.', 'error');
-  }
-
-  loadStatus();
+const topStatus=document.getElementById('topStatus'),connectionStatus=document.getElementById('connectionStatus'),connectionDetail=document.getElementById('connectionDetail'),connectButton=document.getElementById('connectButton'),connectTop=document.getElementById('connectTop'),publishButton=document.getElementById('publishButton'),publishMessage=document.getElementById('publishMessage'),postText=document.getElementById('postText');
+function showMessage(text,type){publishMessage.textContent=text;publishMessage.className=`message show ${type}`}
+async function loadStatus(){try{const response=await fetch('/.netlify/functions/linkedin-status',{credentials:'same-origin',cache:'no-store'}),data=await response.json();if(data.connected){topStatus.textContent='LinkedIn Page connected';connectionStatus.textContent=`Connected to ${data.name||'AI For Businesses'}`;connectionDetail.textContent=data.authorizedBy?`Authorized by ${data.authorizedBy}. CIME is ready to publish a controlled test post.`:'Organization authorization is active. CIME is ready to publish.';connectButton.textContent='Reconnect LinkedIn Page';connectTop.textContent='Reconnect LinkedIn Page';publishButton.disabled=false}else{topStatus.textContent='Authorization required';connectionStatus.textContent='Not connected';connectionDetail.textContent='Connect LinkedIn to authorize CIME to publish to AI For Businesses.';publishButton.disabled=true}}catch(error){topStatus.textContent='Status unavailable';connectionStatus.textContent='Connection check failed';connectionDetail.textContent=error.message;publishButton.disabled=true}}
+publishButton.addEventListener('click',async()=>{publishButton.disabled=true;publishButton.textContent='Publishing…';showMessage('Sending the test post to the AI For Businesses LinkedIn Page…','ok');try{const response=await fetch('/.netlify/functions/linkedin-publish',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:postText.value})}),data=await response.json();if(!response.ok)throw new Error(data.message||'LinkedIn publishing failed.');showMessage(`Published successfully to ${data.target||'AI For Businesses'}${data.postId?` — Post ID: ${data.postId}`:''}`,'ok')}catch(error){showMessage(error.message,'error')}finally{publishButton.textContent='Publish Test Post';await loadStatus()}});
+const params=new URLSearchParams(location.search);if(params.get('linkedin')==='connected'){showMessage('LinkedIn organization authorization completed successfully.','ok');history.replaceState({},'',location.pathname+location.hash)}else if(params.get('linkedin')==='error'){showMessage(params.get('detail')||'LinkedIn authorization failed.','error')}
+loadStatus();
 </script>
 </body>
 </html>
