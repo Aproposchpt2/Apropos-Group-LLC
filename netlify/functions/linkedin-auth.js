@@ -18,7 +18,7 @@ exports.handler = async () => {
     client_id: clientId,
     redirect_uri: redirectUri,
     state,
-    scope: 'openid profile w_member_social',
+    scope: 'openid profile w_organization_social',
   });
 
   return {
