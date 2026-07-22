@@ -18,9 +18,13 @@ exports.handler = async (event) => {
 
   return json(200, {
     connected: true,
-    name: session.name,
+    targetType: 'organization',
+    name: session.organizationName || session.name || 'AI For Businesses',
+    organizationId: session.organizationId || null,
+    organizationUrl: session.organizationUrl || 'https://www.linkedin.com/company/ai4businesses/',
+    authorizedBy: session.memberName || null,
     authorUrn: session.authorUrn,
     expiresAt: session.expiresAt,
-    picture: session.picture,
+    scopes: session.scope || null,
   });
 };
