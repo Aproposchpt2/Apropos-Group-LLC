@@ -8,15 +8,14 @@ const {
 } = require('./lib/linkedin-session');
 
 const CIME_URL = 'https://aproposgroupllc.com/cime/';
+const ORGANIZATION_NAME = 'AI For Businesses';
+const ORGANIZATION_URL = 'https://www.linkedin.com/company/ai4businesses/';
 
 function redirect(location, cookies = []) {
   return {
     statusCode: 302,
     multiValueHeaders: cookies.length ? { 'Set-Cookie': cookies } : undefined,
-    headers: {
-      Location: location,
-      'Cache-Control': 'no-store',
-    },
+    headers: { Location: location, 'Cache-Control': 'no-store' },
     body: '',
   };
 }
@@ -38,9 +37,10 @@ exports.handler = async (event) => {
   const clientId = process.env.LINKEDIN_CLIENT_ID;
   const clientSecret = process.env.LINKEDIN_CLIENT_SECRET;
   const redirectUri = process.env.LINKEDIN_REDIRECT_URI;
+  const organizationId = String(process.env.LINKEDIN_ORGANIZATION_ID || '').trim();
 
-  if (!clientId || !clientSecret || !redirectUri) {
-    return redirect(`${CIME_URL}?linkedin=error&detail=Server%20configuration%20missing`, [clearCookie(STATE_COOKIE)]);
+  if (!clientId || !clientSecret || !redirectUri || !organizationId) {
+    return redirect(`${CIME_URL}?linkedin=error&detail=Server%20configuration%20missing.%20Add%20LINKEDIN_ORGANIZATION_ID%20in%20Netlify.`, [clearCookie(STATE_COOKIE)]);
   }
 
   try {
@@ -66,7 +66,7 @@ exports.handler = async (event) => {
     });
     const profile = await profileResponse.json();
     if (!profileResponse.ok || !profile.sub) {
-      throw new Error(profile.message || profile.error_description || 'LinkedIn profile verification failed.');
+      throw new Error(profile.message || profile.error_description || 'LinkedIn administrator verification failed.');
     }
 
     const expiresIn = Number(tokenData.expires_in || 5184000);
@@ -74,10 +74,14 @@ exports.handler = async (event) => {
       accessToken: tokenData.access_token,
       expiresAt: Date.now() + expiresIn * 1000,
       memberId: profile.sub,
-      authorUrn: `urn:li:person:${profile.sub}`,
-      name: profile.name || [profile.given_name, profile.family_name].filter(Boolean).join(' ') || 'LinkedIn Member',
+      memberName: profile.name || [profile.given_name, profile.family_name].filter(Boolean).join(' ') || 'LinkedIn Administrator',
+      authorUrn: `urn:li:organization:${organizationId}`,
+      organizationId,
+      organizationName: ORGANIZATION_NAME,
+      organizationUrl: ORGANIZATION_URL,
+      name: ORGANIZATION_NAME,
       picture: profile.picture || null,
-      scope: tokenData.scope || 'openid profile w_member_social',
+      scope: tokenData.scope || 'openid profile w_organization_social',
     });
 
     return redirect(`${CIME_URL}?linkedin=connected`, [
