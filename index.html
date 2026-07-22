@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apropos Group LLC — Federal Technology Company | Las Vegas, Nevada</title>
-  <meta name="description" content="Apropos Group LLC is a SAM.gov-registered federal technology company in Las Vegas, Nevada — engineering the communications, automation, and intelligence systems that modern government and enterprise depend on." />
+  <title>Apropos Group LLC — Procurement Intelligence & Technology Solutions</title>
+  <meta name="description" content="Apropos Group LLC develops procurement intelligence platforms, AI-powered software, strategic sourcing solutions, and enterprise technologies that help government agencies and businesses connect, compete, and grow." />
   <meta name="author" content="Apropos Group LLC" />
   <meta name="theme-color" content="#0a1c3f" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,8 +32,6 @@
     .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(198,160,82,.22)}
     .btn-ghost{border-color:rgba(255,255,255,.26);color:#fff;background:rgba(255,255,255,.04)}
     .btn-ghost:hover{border-color:var(--gold-2);color:var(--gold-2)}
-
-    /* NAV */
     nav.bar{position:sticky;top:0;z-index:40;background:rgba(10,28,63,.86);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
     .bar-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:78px}
     .brand{display:flex;align-items:center;gap:14px}
@@ -45,20 +43,14 @@
     .bar-links a:hover{color:var(--gold-2)}
     .bar .btn{min-height:42px;padding:0 18px;font-size:.66rem}
     @media(max-width:900px){.bar-links{display:none}}
-
-    /* HERO */
-    .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);min-height:calc(100svh - 78px);display:flex;flex-direction:column;
-      background-image:linear-gradient(to bottom,transparent 72%,rgba(6,16,40,.4) 100%),linear-gradient(102deg,rgba(6,16,40,.92) 0%,rgba(8,22,52,.66) 36%,rgba(8,22,52,.3) 64%,rgba(8,22,52,.12) 100%),url('/assets/headquarters.webp');
-      background-size:cover;background-position:center right;background-repeat:no-repeat}
-    .hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.14;
-      background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:64px 64px;
-      mask-image:radial-gradient(circle at 16% 38%,#000,transparent 55%)}
+    .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);min-height:calc(100svh - 78px);display:flex;flex-direction:column;background-image:linear-gradient(to bottom,transparent 72%,rgba(6,16,40,.4) 100%),linear-gradient(102deg,rgba(6,16,40,.92) 0%,rgba(8,22,52,.66) 36%,rgba(8,22,52,.3) 64%,rgba(8,22,52,.12) 100%),url('/assets/headquarters.webp');background-size:cover;background-position:center right;background-repeat:no-repeat}
+    .hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.14;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(circle at 16% 38%,#000,transparent 55%)}
     @media(max-width:680px){.hero{background-image:linear-gradient(to bottom,rgba(6,16,40,.84),rgba(8,22,52,.92)),url('/assets/headquarters.webp');background-position:68% center}}
     .hero-in{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(72px,11vh,140px) 0 clamp(56px,8vh,96px);max-width:920px}
     @media(min-width:1024px){.hero .hero-in{max-width:none;width:auto;margin:0;padding-left:clamp(40px,6.5vw,120px);padding-right:40px}}
-    .hero h1{font-family:var(--disp);font-weight:600;font-size:clamp(2.7rem,6vw,5.4rem);line-height:1.02;letter-spacing:-.025em;color:#fff;margin:24px 0 22px;text-shadow:0 2px 34px rgba(0,8,24,.45)}
+    .hero h1{font-family:var(--disp);font-weight:600;font-size:clamp(2.7rem,6vw,5.4rem);line-height:1.02;letter-spacing:-.025em;color:#fff;margin:24px 0 22px;text-shadow:0 2px 34px rgba(0,8,24,.45);max-width:1000px}
     .hero h1 em{font-family:var(--sub);font-style:italic;font-weight:600;color:var(--gold-2)}
-    .hero .lead{font-size:clamp(1.06rem,1.5vw,1.32rem);color:var(--slate);font-weight:300;max-width:760px;margin-bottom:34px}
+    .hero .lead{font-size:clamp(1.06rem,1.5vw,1.32rem);color:var(--slate);font-weight:300;max-width:820px;margin-bottom:34px}
     .hero .lead b{color:#fff;font-weight:400}
     .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
     .credbar{position:relative;z-index:2;border-top:1px solid var(--line);background:rgba(4,12,30,.94);backdrop-filter:blur(14px);box-shadow:0 -18px 38px rgba(4,12,30,.45)}
@@ -68,25 +60,16 @@
     .credbar .c span{display:block;font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
     .credbar .c b{font-family:var(--body);font-size:.92rem;font-weight:600;color:#fff;letter-spacing:.02em}
     @media(max-width:760px){.credbar .c{flex-basis:50%;border-bottom:1px solid var(--line)}}
-
-    /* SECTIONS */
     section.band{padding:clamp(70px,9vw,124px) 0;border-bottom:1px solid var(--line)}
-    .band.light{background:var(--paper);color:var(--paper-ink);border-bottom:none}
-    .band.light .eyebrow{color:var(--gold)}
-    .head{max-width:780px;margin-bottom:54px}
+    .head{max-width:820px;margin-bottom:54px}
     .head h2{font-family:var(--disp);font-weight:600;font-size:clamp(2rem,4.4vw,3.6rem);line-height:1.05;letter-spacing:-.025em;color:#fff;margin:16px 0 18px}
-    .light .head h2{color:var(--ink)}
     .head h2 em{font-family:var(--sub);font-style:italic;color:var(--gold)}
     .head p{font-size:clamp(1.02rem,1.4vw,1.18rem);font-weight:300;opacity:.84;line-height:1.75}
-
-    /* TODAY stats */
     .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
     .stat{border:1px solid var(--line);background:rgba(255,255,255,.045);border-radius:10px;padding:26px 24px}
-    .stat .n{font-family:var(--disp);font-weight:600;font-size:2.2rem;line-height:1;color:#fff;letter-spacing:-.02em}
+    .stat .n{font-family:var(--disp);font-weight:600;font-size:1.7rem;line-height:1.1;color:#fff;letter-spacing:-.02em}
     .stat .l{font-size:.86rem;color:var(--muted);margin-top:10px;line-height:1.5}
     @media(max-width:880px){.stats{grid-template-columns:1fr 1fr}}
-
-    /* CAPABILITIES */
     .caps{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
     .cap{border:1px solid var(--line);background:rgba(255,255,255,.045);border-radius:12px;padding:34px 32px;position:relative;overflow:hidden;transition:.25s}
     .cap::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent);transform:scaleX(0);transform-origin:left;transition:transform .4s}
@@ -96,8 +79,6 @@
     .cap h3{font-family:var(--disp);font-weight:600;font-size:1.55rem;color:#fff;margin-bottom:12px;letter-spacing:-.01em}
     .cap p{font-size:.97rem;color:var(--muted);font-weight:300;line-height:1.7}
     @media(max-width:760px){.caps{grid-template-columns:1fr}}
-
-    /* PROOF */
     .proof{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:start}
     .proof-list{list-style:none;display:grid;gap:18px}
     .proof-list li{display:grid;grid-template-columns:26px 1fr;gap:14px;font-size:1.02rem;color:var(--slate);font-weight:300;line-height:1.6}
@@ -107,16 +88,12 @@
     .proof-aside .q{font-family:var(--sub);font-style:italic;font-size:1.5rem;line-height:1.4;color:#fff}
     .proof-note{margin-top:30px;font-size:.82rem;color:var(--muted-2);line-height:1.7;border-top:1px solid var(--line);padding-top:18px}
     @media(max-width:820px){.proof{grid-template-columns:1fr;gap:28px}}
-
-    /* VISION horizons */
     .horizons{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
     .horizon{border:1px solid var(--line);background:rgba(255,255,255,.045);border-radius:10px;padding:30px 28px}
     .horizon .k{font-family:var(--body);font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2);margin-bottom:14px}
     .horizon h4{font-family:var(--disp);font-weight:600;font-size:1.4rem;color:#fff;margin-bottom:10px}
     .horizon p{font-size:.95rem;color:var(--muted);font-weight:300;line-height:1.7}
     @media(max-width:820px){.horizons{grid-template-columns:1fr}}
-
-    /* CREDENTIALS */
     .creds{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
     .cred{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:10px;padding:22px}
     .cred .l{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
@@ -127,13 +104,10 @@
     .naics span{font-family:var(--body);font-size:.78rem;color:var(--slate);border:1px solid var(--line-2);border-radius:4px;padding:5px 11px}
     @media(max-width:880px){.creds{grid-template-columns:1fr 1fr}.cred.wide{grid-column:span 2}}
     @media(max-width:520px){.creds{grid-template-columns:1fr}.cred.wide{grid-column:span 1}}
-
-    /* CTA */
     .cta{background:linear-gradient(135deg,#081634,#0d2a5e);text-align:center;border-bottom:none}
     .cta h2{font-family:var(--disp);font-weight:600;font-size:clamp(2rem,4vw,3.4rem);color:#fff;letter-spacing:-.02em;margin-bottom:16px}
-    .cta p{max-width:680px;margin:0 auto 30px;font-size:1.06rem;font-weight:300;color:var(--slate)}
+    .cta p{max-width:720px;margin:0 auto 30px;font-size:1.06rem;font-weight:300;color:var(--slate)}
     .cta-line{margin-top:24px;display:flex;justify-content:center;flex-wrap:wrap;gap:8px 20px;font-size:.82rem;letter-spacing:.04em;color:var(--gold-2);font-weight:500}
-
     footer{background:#06122c;padding:34px 0}
     .foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center;font-size:.78rem;letter-spacing:.08em;color:var(--muted)}
     .foot a:hover{color:#fff}
@@ -142,19 +116,18 @@
   </style>
 </head>
 <body>
-
   <nav class="bar" aria-label="Primary">
     <div class="wrap bar-in">
       <a class="brand" href="/" aria-label="Apropos Group LLC home">
         <span class="seal">AG</span>
-        <span style="display:block"><b>Apropos Group LLC</b><span>Federal Technology Company</span></span>
+        <span style="display:block"><b>Apropos Group LLC</b><span>Procurement Intelligence & Technology Solutions</span></span>
       </a>
       <div class="bar-links">
         <a href="#company">Company</a>
-        <a href="#capabilities">Capabilities</a>
+        <a href="#capabilities">Solutions</a>
+        <a href="#platforms">Platforms</a>
         <a href="/contract-vehicles">Contract Vehicles</a>
         <a href="#credentials">Credentials</a>
-        <a href="#engage">Contact</a>
       </div>
       <a class="btn btn-primary" href="#engage">Capability Briefing</a>
     </div>
@@ -162,13 +135,12 @@
 
   <header class="hero">
     <div class="wrap hero-in">
-      <span class="eyebrow">Federal Technology · Las Vegas, Nevada</span>
-      <h1>Apropos Group LLC</h1>
-      <p class="lead">Apropos Group LLC is a SAM.gov-registered technology company engineering modern <b>communications, automation, and intelligence systems</b> for government, enterprise, and business operations.</p>
-      <p class="lead" style="font-size:1rem;max-width:680px;margin-top:-16px;">Built for organizations that need reliable systems, clear intelligence, and execution-ready technology.</p>
+      <span class="eyebrow">Procurement Intelligence · Technology Solutions · Las Vegas, Nevada</span>
+      <h1>Modernizing Public Procurement Through <em>Intelligence, Innovation, and Technology.</em></h1>
+      <p class="lead"><b>APROPOS GROUP LLC is a Procurement Intelligence & Technology Solutions company</b> that develops AI-powered software, procurement intelligence systems, strategic sourcing solutions, and enterprise technologies that help government agencies and businesses connect, compete, and grow.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#engage">Request a Capability Briefing</a>
-        <a class="btn btn-ghost" href="#capabilities">Explore Capabilities</a>
+        <a class="btn btn-ghost" href="#capabilities">Explore Our Solutions</a>
       </div>
     </div>
     <div class="credbar"><div class="wrap credbar-in">
@@ -181,126 +153,114 @@
   </header>
 
   <main style="position:relative;z-index:2;background:var(--navy);">
-    <!-- TODAY -->
     <section class="band" id="company">
       <div class="wrap">
         <div class="head">
           <span class="eyebrow">Who We Are</span>
-          <h2>Where we stand <em>today.</em></h2>
-          <p>Founded and led by a senior communications engineer with over a decade in mission-critical environments, Apropos Group LLC is a registered federal contractor headquartered in Las Vegas, Nevada. We pair the discipline of enterprise engineering with modern artificial intelligence — delivering technology that works on day one and keeps working when it matters most.</p>
+          <h2>Procurement intelligence with an <em>economic purpose.</em></h2>
+          <p>Apropos Group LLC develops technology that reduces procurement fragmentation, improves opportunity discovery, strengthens sourcing decisions, and expands access to public-sector markets. We combine artificial intelligence, data engineering, enterprise software, and disciplined program execution to help agencies and businesses move from scattered information to informed action.</p>
         </div>
         <div class="stats">
-          <div class="stat"><div class="n">10+ yrs</div><div class="l">Enterprise engineering pedigree across government, healthcare &amp; education</div></div>
-          <div class="stat"><div class="n">Contracts</div><div class="l">Connecting businesses to federal and state contract opportunities</div></div>
-          <div class="stat"><div class="n">AI Systems</div><div class="l">Creating innovative AI business systems</div></div>
-          <div class="stat"><div class="n">Software</div><div class="l">Software-based solutions that save cost and increase profit</div></div>
+          <div class="stat"><div class="n">Procurement</div><div class="l">Opportunity acquisition, normalization, analysis, and business capability matching</div></div>
+          <div class="stat"><div class="n">Technology</div><div class="l">AI-powered software, data systems, automation, and enterprise applications</div></div>
+          <div class="stat"><div class="n">Sourcing</div><div class="l">Supplier discovery, vendor qualification, logistics consulting, and procurement support</div></div>
+          <div class="stat"><div class="n">Growth</div><div class="l">Expanding market access, strengthening supply chains, and supporting economic development</div></div>
         </div>
       </div>
     </section>
 
-    <!-- CAPABILITIES -->
     <section class="band" id="capabilities">
       <div class="wrap">
         <div class="head">
           <span class="eyebrow">What We Do</span>
-          <h2>Four disciplines. One standard of <em>engineering.</em></h2>
-          <p>We operate where reliability is non-negotiable — and we hold every engagement to the same standard, whether it's a campus-wide voice migration or a production AI system.</p>
+          <h2>Four solution areas. One connected <em>procurement ecosystem.</em></h2>
+          <p>Our capabilities are organized around the complete pathway from opportunity discovery to informed sourcing, technology execution, and measurable economic impact.</p>
         </div>
         <div class="caps">
-          <article class="cap">
-            <div class="ix">01</div>
-            <h3>Unified Communications Engineering</h3>
-            <p>Enterprise voice, contact center, and collaboration — Cisco UC (CUCM, Unity, UCCX, CUBE) and Microsoft Teams Enterprise Voice, with SIP trunking, SBC, E911, and Direct Routing — architected for scale, continuity, and compliance.</p>
-          </article>
-          <article class="cap">
-            <div class="ix">02</div>
-            <h3>AI Automation &amp; Intelligent Systems</h3>
-            <p>Production artificial intelligence built on modern large-language-model and cloud architecture — automating workflows, surfacing intelligence, and turning operational data into decisions agencies and enterprises can act on.</p>
-          </article>
-          <article class="cap">
-            <div class="ix">03</div>
-            <h3>Government Technology &amp; Modernization</h3>
-            <p>Secure, compliant systems that move organizations from legacy to modern. We design, build, and sustain to public-sector standards — bridging aging infrastructure to current platforms without the risk of disruption.</p>
-          </article>
-          <article class="cap">
-            <div class="ix">04</div>
-            <h3>Enterprise Infrastructure &amp; Integration</h3>
-            <p>Networks, gateways, and integrations that connect legacy and cloud. We consolidate cost and complexity while increasing reliability — the unglamorous backbone that everything else depends on.</p>
-          </article>
+          <article class="cap"><div class="ix">01</div><h3>Procurement Intelligence</h3><p>Procurement data acquisition, opportunity normalization, solicitation monitoring, business capability matching, supplier intelligence, procurement analytics, and contract opportunity discovery across public-sector markets.</p></article>
+          <article class="cap"><div class="ix">02</div><h3>Government Technology</h3><p>Custom software development, artificial intelligence, data engineering, workflow automation, cloud applications, secure integrations, and enterprise platforms designed for government and regulated environments.</p></article>
+          <article class="cap"><div class="ix">03</div><h3>Strategic Sourcing & Supply Chain</h3><p>Supplier discovery, vendor qualification, strategic sourcing support, procurement coordination, logistics consulting, quote management, and process improvement supported by data and technology.</p></article>
+          <article class="cap"><div class="ix">04</div><h3>Enterprise Technology</h3><p>Unified communications, collaboration platforms, infrastructure integration, network modernization, contact-center systems, and reliable enterprise technology engineered for continuity and scale.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- PROOF -->
+    <section class="band" id="platforms" style="background:#091a3a">
+      <div class="wrap">
+        <div class="head">
+          <span class="eyebrow">Our Platform Ecosystem</span>
+          <h2>From fragmented postings to <em>actionable opportunity intelligence.</em></h2>
+          <p>Our procurement intelligence architecture connects data acquisition, opportunity analysis, and business-facing delivery through a coordinated platform ecosystem.</p>
+        </div>
+        <div class="horizons">
+          <div class="horizon"><div class="k">PDAS</div><h4>Procurement Data Acquisition System</h4><p>Acquires, verifies, normalizes, and organizes public procurement opportunities from official government sources.</p></div>
+          <div class="horizon"><div class="k">AOIE</div><h4>Opportunity Intelligence Engine</h4><p>Analyzes solicitations and matches opportunities to business capabilities, qualifications, and strategic fit.</p></div>
+          <div class="horizon"><div class="k">NAT-CORP</div><h4>National Corporate Contract Exchange</h4><p>Delivers a unified, intelligent experience for businesses seeking relevant public-sector contract opportunities.</p></div>
+        </div>
+      </div>
+    </section>
+
     <section class="band" style="background:#091a3a">
       <div class="wrap">
         <div class="head">
-          <span class="eyebrow">Proven In The Field</span>
-          <h2>Delivered where <em>downtime isn't an option.</em></h2>
+          <span class="eyebrow">Why Apropos</span>
+          <h2>Technology that connects procurement to <em>economic growth.</em></h2>
         </div>
         <div class="proof">
           <ul class="proof-list">
-            <li><div><b>Migrated 2,000+ enterprise users across 100+ departments</b> to modern unified communications — with zero unplanned service interruptions.</div></li>
-            <li><div><b>Engineered enterprise contact-center and IVR platforms</b> for a multi-campus higher-education system — 100+ call queues, in continuous operation.</div></li>
-            <li><div><b>Deployed voice infrastructure for a U.S. Department of Veterans Affairs medical facility</b> — clinical and administrative telephony from design through cutover.</div></li>
-            <li><div><b>Architected production AI platforms</b> for government procurement intelligence — modern LLM, secure authentication, and cloud-native automation.</div></li>
-            <li><div><b>Led accelerated collaboration deployments under pressure</b> — keeping mission-critical operations running through rapid, high-stakes transitions.</div></li>
+            <li><div><b>Reduce procurement fragmentation</b> by organizing opportunities from disconnected public-sector sources.</div></li>
+            <li><div><b>Improve business access</b> by matching contract opportunities to actual capabilities, NAICS codes, qualifications, and service profiles.</div></li>
+            <li><div><b>Strengthen sourcing decisions</b> through supplier intelligence, strategic analysis, and disciplined vendor coordination.</div></li>
+            <li><div><b>Modernize operations</b> with AI, automation, data engineering, secure applications, and enterprise technology.</div></li>
+            <li><div><b>Support economic development</b> by helping qualified businesses reach public markets, compete, grow, and create jobs.</div></li>
           </ul>
           <aside class="proof-aside">
-            <p class="q">"Built today for the company we're becoming."</p>
-            <p class="proof-note">Engineering experience reflects the qualifications of the firm's principal and is presented as capability, not as a claim of Apropos Group LLC corporate contract history unless separately documented in a contract record.</p>
+            <p class="q">“Better procurement access creates stronger businesses, stronger supply chains, and stronger communities.”</p>
+            <p class="proof-note">Apropos Group LLC is building digital procurement infrastructure designed to improve public-market access while preserving the integrity, transparency, and responsibility required in government contracting.</p>
           </aside>
         </div>
       </div>
     </section>
 
-    <!-- VISION -->
     <section class="band" style="background:#091a3a">
       <div class="wrap">
         <div class="head">
-          <span class="eyebrow">Where We're Going</span>
-          <h2>Built today for the company we're <em>becoming.</em></h2>
-          <p>We hold ourselves to the engineering standard of a far larger firm — because that is the company we are building toward. Every system we deliver, every credential we earn, and every contract we pursue is a deliberate step. We're early. We're disciplined. And we're building Apropos Group LLC to last.</p>
+          <span class="eyebrow">Mission & Vision</span>
+          <h2>Building a national standard for <em>procurement intelligence.</em></h2>
+          <p>Our mission is to modernize public procurement through intelligent technology that connects government agencies with qualified businesses, expands opportunity, strengthens supply chains, and promotes sustainable economic growth.</p>
         </div>
         <div class="horizons">
-          <div class="horizon"><div class="k">Today</div><h4>Registered &amp; delivering</h4><p>A SAM.gov-registered small business with CAGE and UEI issued, an engineering pedigree behind it, and live work in the field.</p></div>
-          <div class="horizon"><div class="k">Next</div><h4>Scaling the work</h4><p>Growth as both prime and subcontractor across federal and state technology programs — deepening capability and past performance.</p></div>
-          <div class="horizon"><div class="k">The vision</div><h4>A national standard</h4><p>A leading provider of AI-driven government and enterprise technology — known for engineering that simply works.</p></div>
+          <div class="horizon"><div class="k">Today</div><h4>Building the infrastructure</h4><p>Developing the systems, classifications, supplier processes, and technology required to support credible procurement intelligence.</p></div>
+          <div class="horizon"><div class="k">Next</div><h4>Expanding participation</h4><p>Helping more businesses identify relevant opportunities, improve readiness, and participate effectively in public procurement.</p></div>
+          <div class="horizon"><div class="k">The Vision</div><h4>Economic development through procurement</h4><p>A national platform that improves government-business connectivity, strengthens regional economies, and supports job creation.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- CREDENTIALS -->
     <section class="band" id="credentials">
       <div class="wrap">
         <div class="head">
-          <span class="eyebrow">Registration &amp; Credentials</span>
-          <h2>Verified, and ready for <em>government review.</em></h2>
+          <span class="eyebrow">Registration & Credentials</span>
+          <h2>Aligned for federal review and <em>strategic growth.</em></h2>
         </div>
         <div class="creds">
-          <div class="cred"><div class="l">SAM.gov</div><div class="v">Active</div><div class="s">Federal contractor registration on file.</div></div>
+          <div class="cred"><div class="l">SAM.gov</div><div class="v">Active</div><div class="s">Federal contractor and financial-assistance registration on file.</div></div>
           <div class="cred"><div class="l">Unique Entity ID (UEI)</div><div class="v">YVNXN3XBUSD5</div><div class="s">Issued for federal entity identification.</div></div>
           <div class="cred"><div class="l">CAGE Code</div><div class="v">20UQ1</div><div class="s">Issued for federal contracting reference.</div></div>
           <div class="cred"><div class="l">Business Type</div><div class="v">Small Business</div><div class="s">Minority-owned · self-identified in SAM profile.</div></div>
           <div class="cred"><div class="l">Entity</div><div class="v">Nevada LLC</div><div class="s">Nevada Business ID V20253463838 · active.</div></div>
-          <div class="cred wide"><div class="l">NAICS Codes</div><div class="naics"><span>541512</span><span>541511</span><span>541519</span><span>518210</span><span>561421</span><span>561499</span></div><div class="s">Systems design · custom programming · IT services · computing infrastructure · communications &amp; business support.</div></div>
+          <div class="cred wide"><div class="l">NAICS Codes</div><div class="naics"><span>541511</span><span>541512</span><span>541519</span><span>541611</span><span>541614</span><span>541618</span></div><div class="s">Custom programming · systems design · IT services and value-added solutions · management consulting · logistics and supply-chain consulting.</div></div>
         </div>
       </div>
     </section>
 
-    <!-- ENGAGE / CTA -->
     <section class="band cta" id="engage">
       <div class="wrap">
         <span class="eyebrow" style="justify-content:center;display:flex">Engage Apropos Group LLC</span>
-        <h2 style="margin-top:14px">Let's talk about the work.</h2>
-        <p>We welcome capability briefings, subcontracting and teaming discussions, agency inquiries, and prime contractor conversations across technology engineering, communications modernization, automation, and AI.</p>
+        <h2 style="margin-top:14px">Let's modernize procurement together.</h2>
+        <p>We welcome agency inquiries, capability briefings, technology partnerships, strategic sourcing discussions, subcontracting opportunities, and collaborations focused on procurement modernization and economic development.</p>
         <a class="btn btn-primary" href="mailto:jmitchell@aproposgroupllc.com?subject=Apropos%20Group%20LLC%20Capability%20Briefing%20Request">Request a Capability Briefing</a>
-        <div class="cta-line">
-          <span>jmitchell@aproposgroupllc.com</span><span>·</span>
-          <span>Las Vegas, Nevada</span><span>·</span>
-          <span>UEI YVNXN3XBUSD5</span><span>·</span>
-          <span>CAGE 20UQ1</span>
-        </div>
+        <div class="cta-line"><span>jmitchell@aproposgroupllc.com</span><span>·</span><span>Las Vegas, Nevada</span><span>·</span><span>UEI YVNXN3XBUSD5</span><span>·</span><span>CAGE 20UQ1</span></div>
       </div>
     </section>
   </main>
@@ -308,10 +268,10 @@
   <footer>
     <div class="wrap">
       <div class="foot">
-        <div><strong>Apropos Group LLC</strong> &nbsp;·&nbsp; Federal Technology Company &nbsp;·&nbsp; Las Vegas, Nevada</div>
+        <div><strong>Apropos Group LLC</strong> &nbsp;·&nbsp; Procurement Intelligence & Technology Solutions &nbsp;·&nbsp; Las Vegas, Nevada</div>
         <div><a href="/contract-vehicles">Contract Vehicles</a> &nbsp; <a href="/contact">Contact</a> &nbsp; <a href="/privacy">Privacy</a> &nbsp; <a href="/terms">Terms</a></div>
       </div>
-      <p class="legal">© <span id="yr"></span> Apropos Group LLC. SAM.gov registered · CAGE 20UQ1 · UEI YVNXN3XBUSD5 · Nevada LLC · Small Business. Capability descriptions and engineering experience are presented for informational purposes and reflect the qualifications of the firm and its principal.</p>
+      <p class="legal">© <span id="yr"></span> Apropos Group LLC. SAM.gov registered · CAGE 20UQ1 · UEI YVNXN3XBUSD5 · Nevada LLC · Small Business. Capability descriptions are presented for informational purposes and should be evaluated against the requirements of each procurement or funding opportunity.</p>
     </div>
   </footer>
   <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
