@@ -18,7 +18,14 @@ exports.handler = async (event) => {
   if (!session || !session.accessToken || !session.authorUrn || session.expiresAt <= Date.now()) {
     return json(401, {
       error: 'linkedin_not_connected',
-      message: 'Connect LinkedIn before publishing.',
+      message: 'Connect the AI For Businesses LinkedIn Page before publishing.',
+    });
+  }
+
+  if (!String(session.authorUrn).startsWith('urn:li:organization:')) {
+    return json(409, {
+      error: 'invalid_publishing_target',
+      message: 'The active LinkedIn session is not configured for organization publishing. Reconnect LinkedIn.',
     });
   }
 
@@ -71,7 +78,7 @@ exports.handler = async (event) => {
     if (!response.ok) {
       return json(response.status, {
         error: 'linkedin_publish_failed',
-        message: responseData?.message || responseData?.error_description || 'LinkedIn rejected the post.',
+        message: responseData?.message || responseData?.error_description || 'LinkedIn rejected the organization post.',
         linkedinStatus: response.status,
         details: responseData,
       });
@@ -80,6 +87,8 @@ exports.handler = async (event) => {
     const postId = response.headers.get('x-restli-id') || response.headers.get('x-linkedin-id') || null;
     return json(201, {
       published: true,
+      target: session.organizationName || 'AI For Businesses',
+      organizationId: session.organizationId || null,
       postId,
       text: commentary,
       publishedAt: new Date().toISOString(),
@@ -87,7 +96,7 @@ exports.handler = async (event) => {
   } catch (error) {
     return json(500, {
       error: 'linkedin_publish_exception',
-      message: error.message || 'Unexpected LinkedIn publishing error.',
+      message: error.message || 'Unexpected LinkedIn organization publishing error.',
     });
   }
 };
