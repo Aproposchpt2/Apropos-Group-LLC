@@ -3,17 +3,45 @@ const path = require('path');
 
 const root = process.cwd();
 const authoritativeOrigin = 'https://aproposgroupllc.com';
+const officialEmail = 'jmitchell@aproposgroupllc.com';
+const verifiedNevadaBusinessId = 'NV20253463838';
 const homepagePath = path.join(root, 'index.html');
 
-function replaceCanonicalHost(filePath) {
+const publicPages = [
+  'index.html',
+  'capabilities.html',
+  'contract-vehicles.html',
+  'past-performance.html',
+  'contact.html',
+  'privacy.html',
+  'terms.html'
+];
+
+function normalizePublicIdentity(filePath) {
   if (!fs.existsSync(filePath)) return;
   const original = fs.readFileSync(filePath, 'utf8');
-  const updated = original.replace(
+  let updated = original;
+
+  // Project Owner confirmed the corporate-domain address as the authoritative
+  // public email. This deliberately does not modify Netlify function delivery
+  // addresses or other private/operational workflow configuration.
+  updated = updated.replace(/jmitchell1126@gmail\.com/gi, officialEmail);
+
+  // Nevada Secretary of State evidence identifies the NV Business ID with the
+  // leading "N". Correct the previously published typographical omission.
+  updated = updated.replace(/\bV20253463838\b/g, verifiedNevadaBusinessId);
+
+  // The apex domain is the approved corporate authority. Normalize legacy WWW
+  // canonical declarations on active public pages without changing route paths.
+  updated = updated.replace(
     /(<link\s+rel=["']canonical["']\s+href=["'])https:\/\/www\.aproposgroupllc\.com\//gi,
     `$1${authoritativeOrigin}/`
   );
+
   if (updated !== original) fs.writeFileSync(filePath, updated, 'utf8');
 }
+
+publicPages.forEach((file) => normalizePublicIdentity(path.join(root, file)));
 
 if (!fs.existsSync(homepagePath)) {
   throw new Error('Corporate homepage index.html was not found.');
@@ -56,13 +84,4 @@ if (!insertionPoint.test(homepage)) {
 homepage = homepage.replace(insertionPoint, `$1\n  ${metadataBlock}`);
 fs.writeFileSync(homepagePath, homepage, 'utf8');
 
-[
-  'capabilities.html',
-  'contract-vehicles.html',
-  'past-performance.html',
-  'contact.html',
-  'privacy.html',
-  'terms.html'
-].forEach((file) => replaceCanonicalHost(path.join(root, file)));
-
-console.log('Corporate trust metadata prepared for production.');
+console.log('Corporate trust metadata and verified public identity prepared for production.');
