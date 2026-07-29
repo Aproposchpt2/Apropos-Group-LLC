@@ -12,6 +12,28 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+# Permanent trust namespace. Keep temporary during pilot so a dedicated
+# verification experience can replace this redirect without changing the URL.
+[[redirects]]
+  from = "/verify"
+  to = "/"
+  status = 302
+  force = true
+
+# Retain the historical homepage artifact in source control, but prevent it
+# from remaining an independently authoritative public corporate identity.
+[[redirects]]
+  from = "/index-imagefirst.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index-imagefirst"
+  to = "/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/contact"
   to = "/contact.html"
