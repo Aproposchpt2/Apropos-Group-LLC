@@ -14,10 +14,23 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[headers]]
+  for = "/opportunity/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+    Cache-Control = "no-store, private"
+    Referrer-Policy = "no-referrer"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
   for = "/jeffery-mitchell.vcf"
   [headers.values]
     Content-Type = "text/vcard; charset=utf-8"
     Content-Disposition = "attachment; filename=jeffery-mitchell.vcf"
+
+[[redirects]]
+  from = "/opportunity"
+  to = "/opportunity/index.html"
+  status = 200
 
 # Permanent trust namespace. Keep temporary during pilot so a dedicated
 # verification experience can replace this redirect without changing the URL.
