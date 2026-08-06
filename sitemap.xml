@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aproposgroupllc.com/</loc>
+    <lastmod>2026-08-06</lastmod>
+  </url>
+  <url>
+    <loc>https://aproposgroupllc.com/contact</loc>
+    <lastmod>2026-08-06</lastmod>
+  </url>
+  <url>
+    <loc>https://aproposgroupllc.com/capabilities</loc>
     <lastmod>2026-07-29</lastmod>
   </url>
   <url>
-    <loc>https://aproposgroupllc.com/capabilities.html</loc>
+    <loc>https://aproposgroupllc.com/contract-vehicles</loc>
     <lastmod>2026-07-29</lastmod>
   </url>
   <url>
-    <loc>https://aproposgroupllc.com/contract-vehicles.html</loc>
+    <loc>https://aproposgroupllc.com/past-performance</loc>
     <lastmod>2026-07-29</lastmod>
   </url>
   <url>
-    <loc>https://aproposgroupllc.com/past-performance.html</loc>
+    <loc>https://aproposgroupllc.com/privacy</loc>
     <lastmod>2026-07-29</lastmod>
   </url>
   <url>
-    <loc>https://aproposgroupllc.com/contact.html</loc>
-    <lastmod>2026-07-29</lastmod>
-  </url>
-  <url>
-    <loc>https://aproposgroupllc.com/privacy.html</loc>
-    <lastmod>2026-07-29</lastmod>
-  </url>
-  <url>
-    <loc>https://aproposgroupllc.com/terms.html</loc>
+    <loc>https://aproposgroupllc.com/terms</loc>
     <lastmod>2026-07-29</lastmod>
   </url>
 </urlset>

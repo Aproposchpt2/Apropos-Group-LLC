@@ -13,6 +13,12 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+[[headers]]
+  for = "/jeffery-mitchell.vcf"
+  [headers.values]
+    Content-Type = "text/vcard; charset=utf-8"
+    Content-Disposition = "attachment; filename=jeffery-mitchell.vcf"
+
 # Permanent trust namespace. Keep temporary during pilot so a dedicated
 # verification experience can replace this redirect without changing the URL.
 [[redirects]]
