@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Contract Opportunity | APROPOS Group LLC</title>
+<link rel="stylesheet" href="/opportunity/opportunity.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="https://aproposgroupllc.com" aria-label="APROPOS Group LLC home">
+    <img src="/assets/apropos-logo.png" alt="APROPOS Group LLC">
+    <span><strong>APROPOS GROUP LLC</strong><small>Government Opportunity Intelligence</small></span>
+  </a>
+  <span class="confidential">CONFIDENTIAL OPPORTUNITY WORKSPACE</span>
+</header>
+<main id="app" class="page-shell">
+  <section id="loading" class="state-card"><div class="spinner"></div><h1>Loading your contract opportunity</h1><p>Verifying secure access and assembling the complete solicitation package.</p></section>
+  <section id="errorState" class="state-card hidden"><span class="state-icon">!</span><h1>Opportunity workspace unavailable</h1><p id="errorMessage">The access link could not be verified.</p><a class="button secondary" href="mailto:jmitchell@aproposgroupllc.com">Contact APROPOS Group LLC</a></section>
+
+  <div id="workspace" class="hidden">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">CONTRACT OPPORTUNITY</p>
+        <h1 id="title">Opportunity title</h1>
+        <p id="agency" class="agency"></p>
+        <div class="hero-badges"><span id="packageBadge" class="badge verified">Package Verified</span><span id="statusBadge" class="badge"></span></div>
+      </div>
+      <aside class="deadline-card"><small>RESPONSE DEADLINE</small><strong id="deadline">—</strong><span id="deadlineTime"></span></aside>
+    </section>
+
+    <section class="client-note">
+      <div><p class="eyebrow">PREPARED FOR</p><h2 id="clientBusiness">Your business</h2></div>
+      <p>APROPOS Group LLC identified this opportunity because the advertised requirements appear relevant to your business capabilities. Review the official package before deciding whether to pursue.</p>
+    </section>
+
+    <section class="content-grid">
+      <article class="card wide">
+        <div class="section-heading"><div><p class="eyebrow">OPPORTUNITY OVERVIEW</p><h2>What the agency is buying</h2></div><a id="officialSource" class="text-link" target="_blank" rel="noopener">Official source ↗</a></div>
+        <p id="description" class="lead"></p>
+        <dl class="facts">
+          <div><dt>Solicitation</dt><dd id="solicitation"></dd></div>
+          <div><dt>Agency</dt><dd id="issuingAgency"></dd></div>
+          <div><dt>Procurement type</dt><dd id="procurementType"></dd></div>
+          <div><dt>Performance location</dt><dd id="location"></dd></div>
+          <div><dt>Question deadline</dt><dd id="questionDeadline"></dd></div>
+          <div><dt>Pre-bid event</dt><dd id="prebid"></dd></div>
+        </dl>
+      </article>
+
+      <article class="card action-card">
+        <p class="eyebrow">APROPOS CONTRACT BRIEF</p>
+        <h2>A clear executive reference</h2>
+        <p>The APROPOS Contract Brief organizes the solicitation, deadlines, requirements, forms, addenda and important conditions into one readable document. Official solicitation documents remain controlling.</p>
+        <div class="button-stack"><a id="briefDownload" class="button primary disabled" aria-disabled="true">Contract Brief Preparing</a><span class="micro">Branded APROPOS Group LLC DOCX</span></div>
+      </article>
+    </section>
+
+    <section class="card package-card">
+      <div class="section-heading">
+        <div><p class="eyebrow">COMPLETE SOLICITATION PACKAGE</p><h2>Contract documents and addenda</h2><p id="packageSummary"></p></div>
+        <button id="downloadPackage" class="button primary" type="button">Download Complete Package</button>
+      </div>
+      <div id="packageNotice" class="package-notice">The documents below were retrieved and stored as the verified solicitation package.</div>
+      <div id="documents" class="document-list"></div>
+    </section>
+
+    <section class="analyze-fit">
+      <div class="analyze-copy">
+        <p class="eyebrow gold">DECISION INTELLIGENCE</p>
+        <h2>Should your company pursue this opportunity?</h2>
+        <p>The APROPOS Analyze Fit Report compares your business against the complete solicitation package. It evaluates eligibility, technical alignment, operational readiness, required forms, pricing considerations, material risks and recommended next steps before you invest resources in a bid.</p>
+        <div class="benefits">
+          <span>Fit score and recommendation</span><span>Mandatory eligibility gates</span><span>Capability gaps and evidence</span><span>Bid / no-bid action plan</span>
+        </div>
+      </div>
+      <aside class="purchase-card">
+        <span class="available">ANALYZE FIT REPORT AVAILABLE</span>
+        <h3>Make an informed pursuit decision</h3>
+        <p>Secure payment is completed through the APROPOS Product Purchasing Center.</p>
+        <button id="purchaseAnalyzeFit" class="button gold-button" type="button">Purchase Analyze Fit Report</button>
+      </aside>
+    </section>
+
+    <section class="official-notice">
+      <strong>Official documents control.</strong>
+      <p>APROPOS Group LLC provides opportunity organization and decision support. Businesses remain responsible for verifying live solicitation status, addenda, eligibility, deadlines and submission requirements with the issuing agency.</p>
+    </section>
+  </div>
+</main>
+<footer><span>APROPOS GROUP LLC</span><span>Government Opportunity Intelligence</span><span>Confidential client delivery</span></footer>
+<script src="/opportunity/opportunity.js"></script>
+</body>
+</html>
