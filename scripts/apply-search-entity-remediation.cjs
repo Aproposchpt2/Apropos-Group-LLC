@@ -6,7 +6,11 @@ const file = 'index.html';
 let html = fs.readFileSync(file, 'utf8');
 
 // One authoritative Analyze Fit price across the APROPOS ecosystem.
-html = html.replaceAll('Additional report · $15 one-time', 'Additional report · $79 one-time');
+// Normalize all known legacy/current shorthand variants to the exact public price.
+html = html
+  .replaceAll('Additional report · $15 one-time', 'Additional report · $79.00 one-time')
+  .replaceAll('Additional report · $49.99 one-time', 'Additional report · $79.00 one-time')
+  .replaceAll('Additional report · $79 one-time', 'Additional report · $79.00 one-time');
 
 const match = html.match(/<script\s+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/i);
 if (!match) throw new Error('Corporate entity remediation: JSON-LD block not found.');
@@ -62,7 +66,7 @@ const replacement = `<script type="application/ld+json">\n${JSON.stringify(data,
 html = html.replace(match[0], replacement);
 
 const required = [
-  'Additional report · $79 one-time',
+  'Additional report · $79.00 one-time',
   'https://federalcontractorportal.aproposgroupllc.com/#organization',
   'https://natcorp.aproposgroupllc.com/#organization',
   'https://nebc.aproposgroupllc.com/#organization',
@@ -71,7 +75,9 @@ const required = [
   'jmitchell@aproposgroupllc.com'
 ];
 for (const value of required) if (!html.includes(value)) throw new Error(`Corporate entity remediation validation failed: missing ${value}`);
-if (html.includes('Additional report · $15 one-time')) throw new Error('Corporate entity remediation validation failed: stale Analyze Fit price remains.');
+if (html.includes('Additional report · $15 one-time')) throw new Error('Corporate entity remediation validation failed: stale $15 Analyze Fit price remains.');
+if (html.includes('Additional report · $49.99 one-time')) throw new Error('Corporate entity remediation validation failed: stale $49.99 Analyze Fit price remains.');
+if (html.includes('Additional report · $79 one-time')) throw new Error('Corporate entity remediation validation failed: unnormalized Analyze Fit price remains.');
 
 fs.writeFileSync(file, html, 'utf8');
-console.log('[corporate-search-entity] PASS — corporate entity graph and pricing are consistent.');
+console.log('[corporate-search-entity] PASS — corporate entity graph and Analyze Fit $79.00 pricing are consistent.');
