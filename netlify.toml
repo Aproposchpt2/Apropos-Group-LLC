@@ -1,5 +1,5 @@
 [build]
-  command = "node scripts/prepare-corporate-trust.js"
+  command = "node scripts/prepare-corporate-trust.js && node scripts/apply-search-entity-remediation.cjs"
   publish = "."
   functions = "netlify/functions"
 
