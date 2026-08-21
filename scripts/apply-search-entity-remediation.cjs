@@ -65,6 +65,15 @@ org.subOrganization = [
 const replacement = `<script type="application/ld+json">\n${JSON.stringify(data, null, 2)}\n  </script>`;
 html = html.replace(match[0], replacement);
 
+// Phase 2B performance: make the CSS hero background discoverable immediately.
+const heroHref = '/assets/headquarters.webp';
+const heroPreload = `<link rel="preload" as="image" href="${heroHref}" type="image/webp" fetchpriority="high" />`;
+if (!html.includes(heroHref)) throw new Error('Corporate performance remediation: active hero asset not found.');
+if (!html.includes(heroPreload)) {
+  if (!/<\/head>/i.test(html)) throw new Error('Corporate performance remediation: closing head tag not found.');
+  html = html.replace(/<\/head>/i, `  ${heroPreload}\n</head>`);
+}
+
 const required = [
   'Additional report · $79.00 one-time',
   'https://federalcontractorportal.aproposgroupllc.com/#organization',
@@ -72,12 +81,14 @@ const required = [
   'https://nebc.aproposgroupllc.com/#organization',
   'https://marketplace.aproposgroupllc.com/#organization',
   'National Government Contract Center',
-  'jmitchell@aproposgroupllc.com'
+  'jmitchell@aproposgroupllc.com',
+  heroPreload
 ];
 for (const value of required) if (!html.includes(value)) throw new Error(`Corporate entity remediation validation failed: missing ${value}`);
 if (html.includes('Additional report · $15 one-time')) throw new Error('Corporate entity remediation validation failed: stale $15 Analyze Fit price remains.');
 if (html.includes('Additional report · $49.99 one-time')) throw new Error('Corporate entity remediation validation failed: stale $49.99 Analyze Fit price remains.');
 if (html.includes('Additional report · $79 one-time')) throw new Error('Corporate entity remediation validation failed: unnormalized Analyze Fit price remains.');
+if ((html.match(/rel="preload" as="image" href="\/assets\/headquarters\.webp"/g) || []).length !== 1) throw new Error('Corporate performance remediation: hero preload must appear exactly once.');
 
 fs.writeFileSync(file, html, 'utf8');
-console.log('[corporate-search-entity] PASS — corporate entity graph and Analyze Fit $79.00 pricing are consistent.');
+console.log('[corporate-search-entity] PASS — entity graph, Analyze Fit $79.00 pricing, and hero preload are consistent.');
