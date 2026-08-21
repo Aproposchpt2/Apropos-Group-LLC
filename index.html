@@ -37,57 +37,104 @@
   <meta name="twitter:image:alt" content="APROPOS Group LLC business development and procurement intelligence" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://aproposgroupllc.com/#organization",
-        "name": "APROPOS Group LLC",
-        "url": "https://aproposgroupllc.com/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://aproposgroupllc.com/assets/apropos-logo.png"
-        },
-        "description": "APROPOS Group LLC develops business-development and procurement intelligence platforms that expand access to opportunity and support community economic development.",
-        "founder": {
-          "@type": "Person",
-          "name": "Jeffery Mitchell"
-        },
-        "subOrganization": [
-          {
-            "@type": "Organization",
-            "name": "National Enterprise Business Center",
-            "url": "https://nebc.aproposgroupllc.com/"
-          },
-          {
-            "@type": "Organization",
-            "name": "Registered Federal Contractors Portal",
-            "url": "https://federalcontractorportal.aproposgroupllc.com/"
-          },
-          {
-            "@type": "Organization",
-            "name": "National Corporate Contract Exchange",
-            "url": "https://natcorp.aproposgroupllc.com/"
-          },
-          {
-            "@type": "Organization",
-            "name": "APROPOS Marketing Marketplace",
-            "url": "https://marketplace.aproposgroupllc.com/"
-          }
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "Corporation"
+      ],
+      "@id": "https://aproposgroupllc.com/#organization",
+      "name": "APROPOS Group LLC",
+      "url": "https://aproposgroupllc.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://aproposgroupllc.com/#logo",
+        "url": "https://aproposgroupllc.com/assets/apropos-logo.png",
+        "contentUrl": "https://aproposgroupllc.com/assets/apropos-logo.png"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://aproposgroupllc.com/#website",
-        "url": "https://aproposgroupllc.com/",
-        "name": "APROPOS Group LLC",
-        "publisher": {
-          "@id": "https://aproposgroupllc.com/#organization"
+      "description": "APROPOS Group LLC develops business-development and procurement intelligence platforms that expand access to opportunity and support community economic development.",
+      "founder": {
+        "@type": "Person",
+        "name": "Jeffery Mitchell"
+      },
+      "sameAs": [
+        "https://github.com/Aproposchpt2",
+        "https://federalcontractorportal.aproposgroupllc.com/",
+        "https://natcorp.aproposgroupllc.com/",
+        "https://nebc.aproposgroupllc.com/",
+        "https://marketplace.aproposgroupllc.com/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "jmitchell@aiflowdeskpro.com"
+      },
+      "subOrganization": [
+        {
+          "@type": "Organization",
+          "@id": "https://nebc.aproposgroupllc.com/#organization",
+          "name": "National Enterprise Business Center",
+          "url": "https://nebc.aproposgroupllc.com/",
+          "parentOrganization": {
+            "@id": "https://aproposgroupllc.com/#organization"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://federalcontractorportal.aproposgroupllc.com/#organization",
+          "name": "Registered Federal Contractors Portal",
+          "url": "https://federalcontractorportal.aproposgroupllc.com/",
+          "parentOrganization": {
+            "@id": "https://aproposgroupllc.com/#organization"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://natcorp.aproposgroupllc.com/#organization",
+          "name": "National Corporate Contract Exchange",
+          "url": "https://natcorp.aproposgroupllc.com/",
+          "parentOrganization": {
+            "@id": "https://aproposgroupllc.com/#organization"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://marketplace.aproposgroupllc.com/#organization",
+          "name": "APROPOS Marketing Marketplace",
+          "url": "https://marketplace.aproposgroupllc.com/",
+          "parentOrganization": {
+            "@id": "https://aproposgroupllc.com/#organization"
+          }
         }
-      }
-    ]
-  }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://aproposgroupllc.com/#website",
+      "url": "https://aproposgroupllc.com/",
+      "name": "APROPOS Group LLC",
+      "publisher": {
+        "@id": "https://aproposgroupllc.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://aproposgroupllc.com/#webpage",
+      "url": "https://aproposgroupllc.com/",
+      "name": "APROPOS Group LLC | Business Development and Procurement Intelligence",
+      "isPartOf": {
+        "@id": "https://aproposgroupllc.com/#website"
+      },
+      "about": {
+        "@id": "https://aproposgroupllc.com/#organization"
+      },
+      "inLanguage": "en-US"
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
