@@ -101,3 +101,4 @@ if (publishedHtml.includes('Additional report · $49.99 one-time')) throw new Er
 if ((publishedHtml.match(/rel="preload" as="image" href="\/assets\/headquarters\.webp"/g) || []).length !== 1) throw new Error('Corporate post-write validation failed: hero preload must appear exactly once in publish artifact.');
 
 console.log('[corporate-search-entity] PASS — publish artifact has entity graph, Analyze Fit $79.00 pricing, and exactly-once hero preload.');
+require('./apply-nonblocking-fonts.cjs');
