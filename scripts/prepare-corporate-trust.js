@@ -19,6 +19,7 @@ const robots = 'index,follow,max-image-preview:large,max-snippet:-1,max-video-pr
 const publicPages = [
   ['index.html', '/'],
   ['capabilities.html', '/capabilities'],
+  ['ai-procurement-modernization.html', '/ai-procurement-modernization'],
   ['contract-vehicles.html', '/contract-vehicles'],
   ['past-performance.html', '/past-performance'],
   ['contact.html', '/contact'],

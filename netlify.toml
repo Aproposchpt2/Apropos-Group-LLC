@@ -1,5 +1,5 @@
 [build]
-  command = "node scripts/prepare-corporate-trust.js && node scripts/apply-search-entity-remediation.cjs"
+  command = "node scripts/prepare-corporate-trust.js && node scripts/apply-search-entity-remediation.cjs && node scripts/validate-ai-procurement-pillar.cjs"
   publish = "."
   functions = "netlify/functions"
 
@@ -62,6 +62,11 @@
 [[redirects]]
   from = "/capabilities"
   to = "/capabilities.html"
+  status = 200
+
+[[redirects]]
+  from = "/ai-procurement-modernization"
+  to = "/ai-procurement-modernization.html"
   status = 200
 
 [[redirects]]
