@@ -91,4 +91,13 @@ if (html.includes('Additional report · $79 one-time')) throw new Error('Corpora
 if ((html.match(/rel="preload" as="image" href="\/assets\/headquarters\.webp"/g) || []).length !== 1) throw new Error('Corporate performance remediation: hero preload must appear exactly once.');
 
 fs.writeFileSync(file, html, 'utf8');
-console.log('[corporate-search-entity] PASS — entity graph, Analyze Fit $79.00 pricing, and hero preload are consistent.');
+
+// Re-read the publish artifact after writing so a successful build cannot report
+// PASS while leaving a stale public price in the actual file Netlify publishes.
+const publishedHtml = fs.readFileSync(file, 'utf8');
+if (!publishedHtml.includes('Additional report · $79.00 one-time')) throw new Error('Corporate post-write validation failed: authoritative Analyze Fit price missing from publish artifact.');
+if (publishedHtml.includes('Additional report · $15 one-time')) throw new Error('Corporate post-write validation failed: stale $15 Analyze Fit price remains in publish artifact.');
+if (publishedHtml.includes('Additional report · $49.99 one-time')) throw new Error('Corporate post-write validation failed: stale $49.99 Analyze Fit price remains in publish artifact.');
+if ((publishedHtml.match(/rel="preload" as="image" href="\/assets\/headquarters\.webp"/g) || []).length !== 1) throw new Error('Corporate post-write validation failed: hero preload must appear exactly once in publish artifact.');
+
+console.log('[corporate-search-entity] PASS — publish artifact has entity graph, Analyze Fit $79.00 pricing, and exactly-once hero preload.');
