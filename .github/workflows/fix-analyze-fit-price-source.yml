@@ -1,0 +1,63 @@
+name: One-time Analyze Fit Price Source Repair
+
+on:
+  push:
+    branches:
+      - fix/analyze-fit-price-source-of-truth
+    paths:
+      - .github/workflows/fix-analyze-fit-price-source.yml
+
+permissions:
+  contents: write
+
+jobs:
+  repair-source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/analyze-fit-price-source-of-truth
+          fetch-depth: 0
+
+      - name: Replace stale committed Analyze Fit price
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+          old = 'Additional report · $15 one-time'
+          new = 'Additional report · $79.00 one-time'
+
+          if old in text:
+              if text.count(old) != 1:
+                  raise SystemExit(f'FAIL: expected one stale source price, found {text.count(old)}')
+              text = text.replace(old, new)
+          elif text.count(new) != 1:
+              raise SystemExit('FAIL: neither the expected stale source price nor exactly one authoritative price is present')
+
+          if old in text:
+              raise SystemExit('FAIL: stale $15 source price remains')
+          if text.count(new) != 1:
+              raise SystemExit(f'FAIL: authoritative price must appear exactly once, found {text.count(new)}')
+
+          path.write_text(text, encoding='utf-8')
+          print('PASS: committed homepage source now contains only the $79.00 Analyze Fit price')
+          PY
+
+      - name: Verify build guard no longer silently rewrites pricing
+        run: |
+          grep -Fq "const AUTHORITATIVE_ANALYZE_FIT_PRICE = 'Additional report · $79.00 one-time';" scripts/apply-search-entity-remediation.cjs
+          ! grep -Fq ".replaceAll('Additional report · $15 one-time'" scripts/apply-search-entity-remediation.cjs
+          node scripts/apply-search-entity-remediation.cjs
+          grep -Fq 'Additional report · $79.00 one-time' index.html
+          ! grep -Fq 'Additional report · $15 one-time' index.html
+
+      - name: Commit permanent source correction and remove one-time workflow
+        run: |
+          git config user.name "APROPOS Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add -- index.html
+          git rm -- .github/workflows/fix-analyze-fit-price-source.yml
+          git commit -m "fix: make Analyze Fit $79 source authoritative"
+          git push origin HEAD:fix/analyze-fit-price-source-of-truth
