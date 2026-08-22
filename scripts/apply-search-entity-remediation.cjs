@@ -5,12 +5,15 @@ const fs = require('fs');
 const file = 'index.html';
 let html = fs.readFileSync(file, 'utf8');
 
-// One authoritative Analyze Fit price across the APROPOS ecosystem.
-// Normalize all known legacy/current shorthand variants to the exact public price.
-html = html
-  .replaceAll('Additional report · $15 one-time', 'Additional report · $79.00 one-time')
-  .replaceAll('Additional report · $49.99 one-time', 'Additional report · $79.00 one-time')
-  .replaceAll('Additional report · $79 one-time', 'Additional report · $79.00 one-time');
+// Pricing is source-controlled. The build MUST NOT silently repair stale values,
+// because doing so can hide a bad committed source and allow old pricing to
+// reappear through alternate deploy paths or later merges.
+const AUTHORITATIVE_ANALYZE_FIT_PRICE = 'Additional report · $79.00 one-time';
+const pricePattern = /Additional report · \$([0-9]+(?:\.[0-9]{1,2})?) one-time/g;
+const priceMatches = [...html.matchAll(pricePattern)];
+if (priceMatches.length !== 1 || priceMatches[0][0] !== AUTHORITATIVE_ANALYZE_FIT_PRICE) {
+  throw new Error(`Corporate pricing validation failed: expected exactly one "${AUTHORITATIVE_ANALYZE_FIT_PRICE}" in committed index.html.`);
+}
 
 const match = html.match(/<script\s+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/i);
 if (!match) throw new Error('Corporate entity remediation: JSON-LD block not found.');
@@ -75,7 +78,7 @@ if (!html.includes(heroPreload)) {
 }
 
 const required = [
-  'Additional report · $79.00 one-time',
+  AUTHORITATIVE_ANALYZE_FIT_PRICE,
   'https://federalcontractorportal.aproposgroupllc.com/#organization',
   'https://natcorp.aproposgroupllc.com/#organization',
   'https://nebc.aproposgroupllc.com/#organization',
@@ -85,9 +88,10 @@ const required = [
   heroPreload
 ];
 for (const value of required) if (!html.includes(value)) throw new Error(`Corporate entity remediation validation failed: missing ${value}`);
-if (html.includes('Additional report · $15 one-time')) throw new Error('Corporate entity remediation validation failed: stale $15 Analyze Fit price remains.');
-if (html.includes('Additional report · $49.99 one-time')) throw new Error('Corporate entity remediation validation failed: stale $49.99 Analyze Fit price remains.');
-if (html.includes('Additional report · $79 one-time')) throw new Error('Corporate entity remediation validation failed: unnormalized Analyze Fit price remains.');
+const postTransformPriceMatches = [...html.matchAll(pricePattern)];
+if (postTransformPriceMatches.length !== 1 || postTransformPriceMatches[0][0] !== AUTHORITATIVE_ANALYZE_FIT_PRICE) {
+  throw new Error('Corporate entity remediation validation failed: Analyze Fit price drift detected.');
+}
 if ((html.match(/rel="preload" as="image" href="\/assets\/headquarters\.webp"/g) || []).length !== 1) throw new Error('Corporate performance remediation: hero preload must appear exactly once.');
 
 fs.writeFileSync(file, html, 'utf8');
@@ -95,10 +99,11 @@ fs.writeFileSync(file, html, 'utf8');
 // Re-read the publish artifact after writing so a successful build cannot report
 // PASS while leaving a stale public price in the actual file Netlify publishes.
 const publishedHtml = fs.readFileSync(file, 'utf8');
-if (!publishedHtml.includes('Additional report · $79.00 one-time')) throw new Error('Corporate post-write validation failed: authoritative Analyze Fit price missing from publish artifact.');
-if (publishedHtml.includes('Additional report · $15 one-time')) throw new Error('Corporate post-write validation failed: stale $15 Analyze Fit price remains in publish artifact.');
-if (publishedHtml.includes('Additional report · $49.99 one-time')) throw new Error('Corporate post-write validation failed: stale $49.99 Analyze Fit price remains in publish artifact.');
+const publishedPriceMatches = [...publishedHtml.matchAll(pricePattern)];
+if (publishedPriceMatches.length !== 1 || publishedPriceMatches[0][0] !== AUTHORITATIVE_ANALYZE_FIT_PRICE) {
+  throw new Error('Corporate post-write validation failed: authoritative Analyze Fit price drifted in publish artifact.');
+}
 if ((publishedHtml.match(/rel="preload" as="image" href="\/assets\/headquarters\.webp"/g) || []).length !== 1) throw new Error('Corporate post-write validation failed: hero preload must appear exactly once in publish artifact.');
 
-console.log('[corporate-search-entity] PASS — publish artifact has entity graph, Analyze Fit $79.00 pricing, and exactly-once hero preload.');
+console.log('[corporate-search-entity] PASS — committed source and publish artifact both enforce Analyze Fit $79.00 pricing with exactly-once hero preload.');
 require('./apply-nonblocking-fonts.cjs');
