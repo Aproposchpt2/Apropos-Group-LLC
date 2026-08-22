@@ -6,12 +6,19 @@ on:
       - fix/analyze-fit-price-source-of-truth
     paths:
       - .github/workflows/fix-analyze-fit-price-source.yml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/fix-analyze-fit-price-source.yml
+      - scripts/apply-search-entity-remediation.cjs
 
 permissions:
   contents: write
 
 jobs:
   repair-source:
+    if: github.repository == 'Aproposchpt2/Apropos-Group-LLC'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
