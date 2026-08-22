@@ -1,17 +1,15 @@
 name: One-time Analyze Fit Source Repair
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - .github/workflows/repair-analyze-fit-price-source.yml
+  issue_comment:
+    types: [created]
 
 permissions:
   contents: write
 
 jobs:
   repair-source-of-truth:
+    if: github.event.comment.body == '/repair-analyze-fit-price-source' && github.event.repository.full_name == 'Aproposchpt2/Apropos-Group-LLC'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -40,34 +38,30 @@ jobs:
           script = script_path.read_text(encoding='utf-8')
 
           old_normalizer = """// One authoritative Analyze Fit price across the APROPOS ecosystem.\n// Normalize all known legacy/current shorthand variants to the exact public price.\nhtml = html\n  .replaceAll('Additional report · $15 one-time', 'Additional report · $79.00 one-time')\n  .replaceAll('Additional report · $49.99 one-time', 'Additional report · $79.00 one-time')\n  .replaceAll('Additional report · $79 one-time', 'Additional report · $79.00 one-time');\n"""
-          new_guard = """// Pricing is source-controlled. The build MUST NOT silently repair stale values,\n// because doing so can hide a bad committed source and allow old pricing to\n// reappear through alternate deploy paths or later merges.\nconst AUTHORITATIVE_ANALYZE_FIT_PRICE = 'Additional report · $79.00 one-time';\nconst pricePattern = /Additional report · \\$([0-9]+(?:\\.[0-9]{1,2})?) one-time/g;\nconst priceMatches = [...html.matchAll(pricePattern)];\nif (priceMatches.length !== 1 || priceMatches[0][0] !== AUTHORITATIVE_ANALYZE_FIT_PRICE) {\n  throw new Error(`Corporate pricing validation failed: expected exactly one "${AUTHORITATIVE_ANALYZE_FIT_PRICE}" in committed index.html.`);\n}\n"""
+          new_guard = """// Pricing is source-controlled. The build MUST NOT silently repair stale values,\n// because doing so can hide a bad committed source and allow old pricing to\n// reappear through alternate deploy paths or later merges.\nconst AUTHORITATIVE_ANALYZE_FIT_PRICE = 'Additional report · $79.00 one-time';\nconst pricePattern = /Additional report · \\$([0-9]+(?:\\.[0-9]{1,2})?) one-time/g;\nconst priceMatches = [...html.matchAll(pricePattern)];\nif (priceMatches.length !== 1 || priceMatches[0][0] !== AUTHORITATIVE_ANALYZE_FIT_PRICE) {\n  throw new Error(`Corporate pricing validation failed: expected exactly one \"${AUTHORITATIVE_ANALYZE_FIT_PRICE}\" in committed index.html.`);\n}\n"""
           if old_normalizer not in script:
               raise SystemExit('FAIL: silent Analyze Fit price normalizer block not found')
           script = script.replace(old_normalizer, new_guard)
-
           script = script.replace("  'Additional report · $79.00 one-time',", "  AUTHORITATIVE_ANALYZE_FIT_PRICE,")
 
-          old_mid_checks = """if (html.includes('Additional report · $15 one-time')) throw new Error('Corporate entity remediation validation failed: stale $15 Analyze Fit price remains.');\nif (html.includes('Additional report · $49.99 one-time')) throw new Error('Corporate entity remediation validation failed: stale $49.99 Analyze Fit price remains.');\nif (html.includes('Additional report · $79 one-time')) throw new Error('Corporate entity remediation validation failed: unnormalized Analyze Fit price remains.');\n"""
-          new_mid_checks = """const postTransformPriceMatches = [...html.matchAll(pricePattern)];\nif (postTransformPriceMatches.length !== 1 || postTransformPriceMatches[0][0] !== AUTHORITATIVE_ANALYZE_FIT_PRICE) {\n  throw new Error('Corporate entity remediation validation failed: Analyze Fit price drift detected.');\n}\n"""
-          if old_mid_checks not in script:
+          old_mid = """if (html.includes('Additional report · $15 one-time')) throw new Error('Corporate entity remediation validation failed: stale $15 Analyze Fit price remains.');\nif (html.includes('Additional report · $49.99 one-time')) throw new Error('Corporate entity remediation validation failed: stale $49.99 Analyze Fit price remains.');\nif (html.includes('Additional report · $79 one-time')) throw new Error('Corporate entity remediation validation failed: unnormalized Analyze Fit price remains.');\n"""
+          new_mid = """const postTransformPriceMatches = [...html.matchAll(pricePattern)];\nif (postTransformPriceMatches.length !== 1 || postTransformPriceMatches[0][0] !== AUTHORITATIVE_ANALYZE_FIT_PRICE) {\n  throw new Error('Corporate entity remediation validation failed: Analyze Fit price drift detected.');\n}\n"""
+          if old_mid not in script:
               raise SystemExit('FAIL: legacy mid-build price checks not found')
-          script = script.replace(old_mid_checks, new_mid_checks)
+          script = script.replace(old_mid, new_mid)
 
-          old_post_checks = """if (!publishedHtml.includes('Additional report · $79.00 one-time')) throw new Error('Corporate post-write validation failed: authoritative Analyze Fit price missing from publish artifact.');\nif (publishedHtml.includes('Additional report · $15 one-time')) throw new Error('Corporate post-write validation failed: stale $15 Analyze Fit price remains in publish artifact.');\nif (publishedHtml.includes('Additional report · $49.99 one-time')) throw new Error('Corporate post-write validation failed: stale $49.99 Analyze Fit price remains in publish artifact.');\n"""
-          new_post_checks = """const publishedPriceMatches = [...publishedHtml.matchAll(pricePattern)];\nif (publishedPriceMatches.length !== 1 || publishedPriceMatches[0][0] !== AUTHORITATIVE_ANALYZE_FIT_PRICE) {\n  throw new Error('Corporate post-write validation failed: authoritative Analyze Fit price drifted in publish artifact.');\n}\n"""
-          if old_post_checks not in script:
+          old_post = """if (!publishedHtml.includes('Additional report · $79.00 one-time')) throw new Error('Corporate post-write validation failed: authoritative Analyze Fit price missing from publish artifact.');\nif (publishedHtml.includes('Additional report · $15 one-time')) throw new Error('Corporate post-write validation failed: stale $15 Analyze Fit price remains in publish artifact.');\nif (publishedHtml.includes('Additional report · $49.99 one-time')) throw new Error('Corporate post-write validation failed: stale $49.99 Analyze Fit price remains in publish artifact.');\n"""
+          new_post = """const publishedPriceMatches = [...publishedHtml.matchAll(pricePattern)];\nif (publishedPriceMatches.length !== 1 || publishedPriceMatches[0][0] !== AUTHORITATIVE_ANALYZE_FIT_PRICE) {\n  throw new Error('Corporate post-write validation failed: authoritative Analyze Fit price drifted in publish artifact.');\n}\n"""
+          if old_post not in script:
               raise SystemExit('FAIL: legacy post-write price checks not found')
-          script = script.replace(old_post_checks, new_post_checks)
-
+          script = script.replace(old_post, new_post)
           script = script.replace(
               "console.log('[corporate-search-entity] PASS — publish artifact has entity graph, Analyze Fit $79.00 pricing, and exactly-once hero preload.');",
               "console.log('[corporate-search-entity] PASS — committed source and publish artifact both enforce Analyze Fit $79.00 pricing with exactly-once hero preload.');"
           )
-
           if ".replaceAll('Additional report · $15 one-time'" in script:
               raise SystemExit('FAIL: silent $15 normalizer still exists')
           script_path.write_text(script, encoding='utf-8')
-
           print('PASS: source price is $79.00 and build now rejects future pricing drift')
           PY
 
