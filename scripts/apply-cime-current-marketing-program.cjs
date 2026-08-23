@@ -11,7 +11,6 @@ let html = fs.readFileSync(pageFile, 'utf8');
 const START = '<!-- CIME_CURRENT_MARKETING_PROGRAM_START -->';
 const END = '<!-- CIME_CURRENT_MARKETING_PROGRAM_END -->';
 
-// Preserve CIME as an operator application, not a public search landing page.
 if (!html.includes('<meta name="robots" content="noindex,nofollow"')) {
   throw new Error('[cime-marketing] CIME noindex boundary is missing.');
 }
@@ -74,8 +73,14 @@ if (html.includes(START)) {
   html = html.replace(marker, `${programSection}\n${marker}`);
 }
 
-// Expose the current registry to the operator UI without introducing another API.
-const registryScript = `<script id="cime-current-marketing-registry" type="application/json">${JSON.stringify(registry)}</script>`;
+const publicRegistry = {
+  program: registry.program,
+  version: registry.version,
+  linkedinTarget: registry.linkedinTarget,
+  editorialHome: registry.editorialHome,
+  properties: registry.properties,
+};
+const registryScript = `<script id="cime-current-marketing-registry" type="application/json">${JSON.stringify(publicRegistry)}</script>`;
 if (!html.includes('id="cime-current-marketing-registry"')) {
   html = html.replace('</body>', `${registryScript}\n</body>`);
 }
