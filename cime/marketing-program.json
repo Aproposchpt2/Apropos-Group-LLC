@@ -1,0 +1,68 @@
+{
+  "program": "APROPOS Public Visibility Program",
+  "version": "2026-08-22",
+  "linkedinTarget": {
+    "name": "AI For Businesses",
+    "url": "https://www.linkedin.com/company/ai4businesses/"
+  },
+  "editorialHome": "https://marketplace.aproposgroupllc.com/articles/",
+  "properties": [
+    {
+      "name": "APROPOS Marketing Marketplace",
+      "focus": "Public education, service discovery, government contracting articles, and routing into the APROPOS ecosystem.",
+      "marketingUrl": "https://marketplace.aproposgroupllc.com/",
+      "productionUrl": "https://marketplace.aproposgroupllc.com/"
+    },
+    {
+      "name": "Registered Federal Contractors Portal",
+      "focus": "Federal and released state public-sector contract opportunities for registered federal contractors.",
+      "marketingUrl": "https://marketplace.aproposgroupllc.com/registered-federal-contractors-portal/",
+      "productionUrl": "https://federalcontractorportal.aproposgroupllc.com/"
+    },
+    {
+      "name": "NAT-CORP Contract Exchange",
+      "focus": "Business-first state, local, municipal, education, and related public-sector contract discovery.",
+      "marketingUrl": "https://marketplace.aproposgroupllc.com/nat-corp-contract-exchange/",
+      "productionUrl": "https://natcorp.aproposgroupllc.com/"
+    },
+    {
+      "name": "National Enterprise Business Center",
+      "focus": "Business assessment, planning, development guidance, funding readiness, and growth support.",
+      "marketingUrl": "https://marketplace.aproposgroupllc.com/national-enterprise-business-center/",
+      "productionUrl": "https://nebc.aproposgroupllc.com/"
+    },
+    {
+      "name": "AI4 Businesses",
+      "focus": "Practical AI automation and business technology solutions.",
+      "marketingUrl": "https://marketplace.aproposgroupllc.com/ai4-businesses/",
+      "productionUrl": "https://ai4businesses.org/"
+    },
+    {
+      "name": "AI4 Website Design Studio",
+      "focus": "AI-assisted website creation and professional online presence for businesses.",
+      "marketingUrl": "https://marketplace.aproposgroupllc.com/ai4-website-design/",
+      "productionUrl": "https://ai4websitedesign.com/"
+    },
+    {
+      "name": "AI4 Website Design Studio — Español",
+      "focus": "Spanish-language AI-assisted website creation for business owners.",
+      "marketingUrl": "https://marketplace.aproposgroupllc.com/ai4-website-design-es/",
+      "productionUrl": "https://espanola.ai4websitedesign.com/"
+    },
+    {
+      "name": "APROPOS Group LLC",
+      "focus": "Parent organization, procurement modernization, AI automation, and the APROPOS business ecosystem.",
+      "marketingUrl": "https://marketplace.aproposgroupllc.com/apropos-group-llc/",
+      "productionUrl": "https://aproposgroupllc.com/"
+    }
+  ],
+  "retiredTokens": [
+    "StateGen",
+    "CapGen",
+    "National Government Contract Center",
+    "ngcc.aproposgroupllc.com",
+    "aibizcenter.aproposgroupllc.com",
+    "calstategen.aproposgroupllc.com",
+    "nevadastategen.aproposgroupllc.com"
+  ]
+}
