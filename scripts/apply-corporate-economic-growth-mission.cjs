@@ -8,53 +8,49 @@ let html = fs.readFileSync(file, 'utf8');
 
 const START = '<!-- APROPOS_ECONOMIC_GROWTH_MISSION_START -->';
 const END = '<!-- APROPOS_ECONOMIC_GROWTH_MISSION_END -->';
+const TITLE = 'APROPOS Group LLC | Economic Growth Through Business Opportunity';
+const DESCRIPTION = 'APROPOS Group LLC connects Federal and State public-sector opportunity with capable businesses so contracts can drive business revenue, job creation, and stronger communities.';
+const ENTITY_DESCRIPTION = 'APROPOS Group LLC connects Federal and State public-sector opportunity with capable businesses through business-development and procurement intelligence services that support revenue growth, employment, and community prosperity.';
 
 function mustReplace(from, to, label) {
   if (!html.includes(from)) throw new Error(`[corporate-mission] Missing ${label}`);
   html = html.replace(from, to);
 }
 
-// Search + social positioning. Corporate authority leads with the mission and the Federal/State public-sector bridge.
-mustReplace(
-  '<title>APROPOS Group LLC | Business Development and Procurement Intelligence</title>',
-  '<title>APROPOS Group LLC | Economic Growth Through Business Opportunity</title>',
-  'homepage title'
-);
-mustReplace(
-  '<meta name="description" content="APROPOS Group LLC develops business-development and procurement intelligence platforms that expand access to opportunity and support community economic development." />',
-  '<meta name="description" content="APROPOS Group LLC connects Federal and State public-sector opportunity with capable businesses so contracts can drive business revenue, job creation, and stronger communities." />',
-  'meta description'
-);
-mustReplace(
-  '<meta property="og:title" content="APROPOS Group LLC | Business Development and Procurement Intelligence" />',
-  '<meta property="og:title" content="APROPOS Group LLC | Economic Growth Through Business Opportunity" />',
-  'Open Graph title'
-);
-mustReplace(
-  '<meta property="og:description" content="APROPOS Group LLC develops business-development and procurement intelligence platforms that expand access to opportunity and support community economic development." />',
-  '<meta property="og:description" content="Connecting Federal and State public-sector opportunity with capable businesses to support revenue, employment, and community prosperity." />',
-  'Open Graph description'
-);
-mustReplace(
-  '<meta name="twitter:title" content="APROPOS Group LLC | Business Development and Procurement Intelligence" />',
-  '<meta name="twitter:title" content="APROPOS Group LLC | Economic Growth Through Business Opportunity" />',
-  'Twitter title'
-);
-mustReplace(
-  '<meta name="twitter:description" content="Business-development and procurement intelligence systems supporting access to opportunity and community economic development." />',
-  '<meta name="twitter:description" content="Connecting public-sector opportunity, business revenue, employment, and community prosperity." />',
-  'Twitter description'
-);
+function replaceTag(pattern, tag, label) {
+  if (!pattern.test(html)) throw new Error(`[corporate-mission] Missing ${label}`);
+  html = html.replace(pattern, tag);
+}
 
-// Preserve the corporate entity graph while strengthening its visible description.
-html = html.replaceAll(
-  'APROPOS Group LLC develops business-development and procurement intelligence platforms that expand access to opportunity and support community economic development.',
-  'APROPOS Group LLC connects Federal and State public-sector opportunity with capable businesses through business-development and procurement intelligence services that support revenue growth, employment, and community prosperity.'
-);
-html = html.replace(
-  '"name": "APROPOS Group LLC | Business Development and Procurement Intelligence",',
-  '"name": "APROPOS Group LLC | Economic Growth Through Business Opportunity",'
-);
+// The existing corporate trust build owns the raw SEO baseline. This layer intentionally
+// runs after that baseline and promotes the approved economic-growth mission.
+replaceTag(/<title>[\s\S]*?<\/title>/i, `<title>${TITLE}</title>`, 'homepage title');
+replaceTag(/<meta\s+name=["']description["'][^>]*>/i, `<meta name="description" content="${DESCRIPTION}" />`, 'meta description');
+replaceTag(/<meta\s+property=["']og:title["'][^>]*>/i, `<meta property="og:title" content="${TITLE}" />`, 'Open Graph title');
+replaceTag(/<meta\s+property=["']og:description["'][^>]*>/i, '<meta property="og:description" content="Connecting Federal and State public-sector opportunity with capable businesses to support revenue, employment, and community prosperity." />', 'Open Graph description');
+replaceTag(/<meta\s+name=["']twitter:title["'][^>]*>/i, `<meta name="twitter:title" content="${TITLE}" />`, 'Twitter title');
+replaceTag(/<meta\s+name=["']twitter:description["'][^>]*>/i, '<meta name="twitter:description" content="Connecting public-sector opportunity, business revenue, employment, and community prosperity." />', 'Twitter description');
+
+// Update the primary corporate entity graph without disturbing the stable entity IDs or child-property graph.
+const ldPattern = /<script\s+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/i;
+const ldMatch = html.match(ldPattern);
+if (!ldMatch) throw new Error('[corporate-mission] Primary JSON-LD graph missing.');
+try {
+  const graph = JSON.parse(ldMatch[1]);
+  if (Array.isArray(graph['@graph'])) {
+    for (const node of graph['@graph']) {
+      if (node['@id'] === 'https://aproposgroupllc.com/#organization') node.description = ENTITY_DESCRIPTION;
+      if (node['@id'] === 'https://aproposgroupllc.com/#webpage') {
+        node.name = TITLE;
+        node.description = DESCRIPTION;
+      }
+    }
+  }
+  const updatedLd = `<script type="application/ld+json">\n${JSON.stringify(graph, null, 2)}\n  </script>`;
+  html = html.replace(ldPattern, updatedLd);
+} catch (error) {
+  throw new Error(`[corporate-mission] JSON-LD update failed: ${error.message}`);
+}
 
 // Corporate navigation and hero.
 mustReplace(
@@ -127,13 +123,11 @@ html = html.replace(
   '<p>Business-first State and local public-sector contract discovery that starts with what a business provides and matches opportunity to demonstrated capability.</p>'
 );
 
-// Institutional engagement now states the public-purpose partnership logic directly.
 html = html.replace(
   '<h2>Expand Opportunity Through <em>Partnership</em></h2>\n          <p>APROPOS may work with institutions that share a commitment to business growth, supplier participation, workforce stability, and Community Economic Development.</p>',
   '<h2>Help More Public Opportunity Reach <em>Capable Businesses</em></h2>\n          <p>Federal, State, economic-development, workforce, education, and business-support institutions already work to expand participation and economic opportunity. APROPOS is designed to complement that work by strengthening the connection between public-sector demand, business capability, revenue opportunity, and employment.</p>'
 );
 
-// Final corporate CTA should reinforce mission and route to the existing contact flow.
 html = html.replace(
   '<h2>Find the Right Business, Procurement, or <em>Partnership Pathway</em></h2>\n          <p>Connect with Jeffery Mitchell, Founder of APROPOS Group LLC, for corporate introductions, institutional partnerships, pilot discussions, capability briefings, and ecosystem inquiries.</p>',
   '<h2>Build More Opportunity Into the <em>Economic Growth Chain</em></h2>\n          <p>Connect with APROPOS Group LLC for Federal or State procurement modernization discussions, institutional partnerships, business-development initiatives, capability briefings, pilots, and programs designed to expand business participation and community economic opportunity.</p>'
