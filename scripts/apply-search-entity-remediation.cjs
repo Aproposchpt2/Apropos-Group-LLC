@@ -65,6 +65,78 @@ org.subOrganization = [
   }
 ];
 
+// AI4 properties are APROPOS brands/services/web properties. They are not
+// represented as separate legal organizations. This keeps the public entity
+// graph aligned with the actual product architecture.
+org.brand = [
+  {
+    '@type': 'Brand',
+    '@id': 'https://ai4businesses.org/#brand',
+    name: 'AI4 Businesses',
+    url: 'https://ai4businesses.org/'
+  },
+  {
+    '@type': 'Brand',
+    '@id': 'https://ai4websitedesign.com/#brand',
+    name: 'AI4 Website Design Studio',
+    url: 'https://ai4websitedesign.com/'
+  }
+];
+
+function upsertGraphNode(id, node) {
+  const index = graph.findIndex(item => item && item['@id'] === id);
+  if (index >= 0) graph[index] = node;
+  else graph.push(node);
+}
+
+upsertGraphNode('https://ai4businesses.org/#website', {
+  '@type': 'WebSite',
+  '@id': 'https://ai4businesses.org/#website',
+  url: 'https://ai4businesses.org/',
+  name: 'AI4 Businesses',
+  publisher: { '@id': corporateId },
+  inLanguage: 'en-US'
+});
+upsertGraphNode('https://ai4businesses.org/#service', {
+  '@type': 'Service',
+  '@id': 'https://ai4businesses.org/#service',
+  name: 'AI4 Businesses',
+  url: 'https://ai4businesses.org/',
+  serviceType: 'Business process automation and AI workflow systems',
+  provider: { '@id': corporateId },
+  mainEntityOfPage: { '@id': 'https://ai4businesses.org/#website' }
+});
+upsertGraphNode('https://ai4websitedesign.com/#website', {
+  '@type': 'WebSite',
+  '@id': 'https://ai4websitedesign.com/#website',
+  url: 'https://ai4websitedesign.com/',
+  name: 'AI4 Website Design Studio',
+  publisher: { '@id': corporateId },
+  inLanguage: 'en-US',
+  workTranslation: { '@id': 'https://espanola.ai4websitedesign.com/#website' }
+});
+upsertGraphNode('https://espanola.ai4websitedesign.com/#website', {
+  '@type': 'WebSite',
+  '@id': 'https://espanola.ai4websitedesign.com/#website',
+  url: 'https://espanola.ai4websitedesign.com/',
+  name: 'AI4 Website Design Studio — Español',
+  publisher: { '@id': corporateId },
+  inLanguage: 'es',
+  translationOfWork: { '@id': 'https://ai4websitedesign.com/#website' }
+});
+upsertGraphNode('https://ai4websitedesign.com/#application', {
+  '@type': 'WebApplication',
+  '@id': 'https://ai4websitedesign.com/#application',
+  name: 'AI4 Website Design Studio',
+  url: 'https://ai4websitedesign.com/',
+  applicationCategory: 'DesignApplication',
+  operatingSystem: 'Web',
+  inLanguage: ['en-US', 'es'],
+  provider: { '@id': corporateId },
+  isPartOf: { '@id': 'https://ai4websitedesign.com/#website' }
+});
+
+data['@graph'] = graph;
 const replacement = `<script type="application/ld+json">\n${JSON.stringify(data, null, 2)}\n  </script>`;
 html = html.replace(match[0], replacement);
 
@@ -83,6 +155,11 @@ const required = [
   'https://natcorp.aproposgroupllc.com/#organization',
   'https://nebc.aproposgroupllc.com/#organization',
   'https://marketplace.aproposgroupllc.com/#organization',
+  'https://ai4businesses.org/#brand',
+  'https://ai4businesses.org/#service',
+  'https://ai4websitedesign.com/#brand',
+  'https://ai4websitedesign.com/#application',
+  'https://espanola.ai4websitedesign.com/#website',
   'National Government Contract Center',
   'jmitchell@aproposgroupllc.com',
   heroPreload
@@ -104,6 +181,13 @@ if (publishedPriceMatches.length !== 1 || publishedPriceMatches[0][0] !== AUTHOR
   throw new Error('Corporate post-write validation failed: authoritative Analyze Fit price drifted in publish artifact.');
 }
 if ((publishedHtml.match(/rel="preload" as="image" href="\/assets\/headquarters\.webp"/g) || []).length !== 1) throw new Error('Corporate post-write validation failed: hero preload must appear exactly once in publish artifact.');
+for (const value of [
+  'https://ai4businesses.org/#service',
+  'https://ai4websitedesign.com/#application',
+  'https://espanola.ai4websitedesign.com/#website'
+]) {
+  if (!publishedHtml.includes(value)) throw new Error(`Corporate post-write validation failed: missing AI4 entity ${value}`);
+}
 
-console.log('[corporate-search-entity] PASS — committed source and publish artifact both enforce Analyze Fit $79.00 pricing with exactly-once hero preload.');
+console.log('[corporate-search-entity] PASS — authoritative pricing, hero preload, and current APROPOS/AI4 entity relationships enforced.');
 require('./apply-nonblocking-fonts.cjs');
