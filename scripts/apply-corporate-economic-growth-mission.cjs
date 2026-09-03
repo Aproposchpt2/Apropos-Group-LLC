@@ -52,21 +52,27 @@ try {
   throw new Error(`[corporate-mission] JSON-LD update failed: ${error.message}`);
 }
 
-// Corporate navigation and hero.
+// Corporate navigation and approved homepage hero.
 mustReplace(
   '<span class="brand-sub">Business Development &amp; Procurement Intelligence</span>',
   '<span class="brand-sub">Economic Growth Through Business Opportunity</span>',
   'brand subtitle'
 );
-mustReplace(
-  '<span class="eyebrow">APROPOS Group LLC Corporate Headquarters</span>\n      <h1>Opportunity Builds Business.<span>Business Builds Community.</span></h1>\n      <p class="hero-copy"><strong>APROPOS Group LLC develops business-development and procurement intelligence platforms</strong> that help qualified businesses prepare for opportunity, identify relevant government contracts, understand requirements, and pursue growth with greater clarity.</p>',
-  '<span class="eyebrow">APROPOS Group LLC · Federal &amp; State Opportunity Infrastructure</span>\n      <h1>Business Opportunity Builds Economic Growth.<span>Economic Growth Builds Stronger Communities.</span></h1>\n      <p class="hero-copy"><strong>APROPOS Group LLC closes the gap between public-sector need and community prosperity.</strong> We help Federal and State entities reach capable businesses, help businesses find contract opportunities relevant to the services they provide, and support the economic activity that creates jobs, strengthens households, and expands opportunity across communities.</p>',
-  'hero mission'
-);
-mustReplace(
-  '<a class="btn btn-primary" href="#ecosystem">Explore the APROPOS Ecosystem</a>',
+
+const approvedHero = '<span class="eyebrow">Corporate Headquarters</span>\n      <h1>APROPOS GROUP LLC</h1>\n      <p class="hero-tagline">Dedicated to building ECONOMIC, BUSINESS, and COMMUNITY Growth.</p>\n      <p class="hero-copy"><strong>APROPOS Group LLC develops business-development and procurement intelligence platforms</strong> that help qualified businesses prepare for opportunity, identify relevant government contracts, understand requirements, and pursue growth with greater clarity.</p>';
+const legacyHero = '<span class="eyebrow">APROPOS Group LLC Corporate Headquarters</span>\n      <h1>Opportunity Builds Business.<span>Business Builds Community.</span></h1>\n      <p class="hero-copy"><strong>APROPOS Group LLC develops business-development and procurement intelligence platforms</strong> that help qualified businesses prepare for opportunity, identify relevant government contracts, understand requirements, and pursue growth with greater clarity.</p>';
+const priorMissionHero = '<span class="eyebrow">APROPOS Group LLC · Federal &amp; State Opportunity Infrastructure</span>\n      <h1>Business Opportunity Builds Economic Growth.<span>Economic Growth Builds Stronger Communities.</span></h1>\n      <p class="hero-copy"><strong>APROPOS Group LLC closes the gap between public-sector need and community prosperity.</strong> We help Federal and State entities reach capable businesses, help businesses find contract opportunities relevant to the services they provide, and support the economic activity that creates jobs, strengthens households, and expands opportunity across communities.</p>';
+
+if (!html.includes(approvedHero)) {
+  if (html.includes(legacyHero)) html = html.replace(legacyHero, approvedHero);
+  else if (html.includes(priorMissionHero)) html = html.replace(priorMissionHero, approvedHero);
+  else throw new Error('[corporate-mission] Missing approved hero mission');
+}
+
+// Preserve the current CTA if present; only normalize the prior mission CTA when encountered.
+html = html.replace(
   '<a class="btn btn-primary" href="#economic-growth">See How the Mission Works</a>',
-  'primary hero CTA'
+  '<a class="btn btn-primary" href="#ecosystem">Explore the APROPOS Ecosystem</a>'
 );
 
 // Replace the existing mission section with the governing economic-growth chain.
@@ -159,4 +165,4 @@ if (!html.includes('APROPOS corporate economic-growth mission — Platinum insti
 }
 
 fs.writeFileSync(file, html, 'utf8');
-console.log('[corporate-mission] PASS — economic growth mission, Federal/State bridge, Platinum mission chain, and corporate search positioning applied.');
+console.log('[corporate-mission] PASS — approved APROPOS hero, economic growth mission, Federal/State bridge, Platinum mission chain, and corporate search positioning applied.');
