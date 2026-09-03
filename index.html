@@ -191,15 +191,15 @@
 
     .hero{position:relative;min-height:calc(100svh - 78px);display:flex;flex-direction:column;color:#fff;overflow:hidden;background-image:linear-gradient(to bottom,transparent 70%,rgba(4,12,30,.72) 100%),linear-gradient(101deg,rgba(6,16,40,.95) 0%,rgba(8,22,52,.75) 40%,rgba(8,22,52,.26) 75%),url('/assets/headquarters.webp');background-size:cover;background-position:center right;background-repeat:no-repeat}
     .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:64px 64px;opacity:.18;pointer-events:none;mask-image:radial-gradient(circle at 18% 35%,#000,transparent 58%)}
-    .hero-inner{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(74px,10vh,130px) 0 clamp(54px,7vh,84px);max-width:980px}
+    .hero .hero-inner{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;justify-content:center;width:min(760px,calc(100% - 48px));max-width:760px;margin-left:clamp(24px,6vw,96px);margin-right:0;padding:clamp(74px,10vh,130px) 0 clamp(54px,7vh,84px)}
     .hero .eyebrow{color:var(--gold-light)}
-    .hero h1{font-family:var(--display);font-weight:600;font-size:clamp(2.75rem,6vw,5.55rem);line-height:1.01;letter-spacing:-.035em;max-width:1050px;margin:23px 0 22px;text-shadow:0 3px 34px rgba(0,8,24,.52)}
-    .hero h1 span{display:block;font-family:var(--serif);font-style:italic;color:var(--gold-light)}
-    .hero-copy{font-size:clamp(1.04rem,1.55vw,1.32rem);line-height:1.72;color:var(--slate);max-width:850px}
+    .hero h1{font-family:var(--display);font-weight:600;font-size:clamp(3rem,5.8vw,5.35rem);line-height:1.01;letter-spacing:-.035em;max-width:760px;margin:23px 0 12px;text-shadow:0 3px 34px rgba(0,8,24,.52)}
+    .hero-tagline{font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(1.75rem,3.2vw,3rem);line-height:1.12;color:var(--gold-light);max-width:740px;margin:0 0 24px}
+    .hero-copy{font-size:clamp(1.04rem,1.4vw,1.2rem);line-height:1.72;color:var(--slate);max-width:720px}
     .hero-copy strong{font-weight:500;color:#fff}
     .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
     .hero-note{margin-top:24px;font-size:.76rem;letter-spacing:.06em;color:#b9c6dc}
-    @media(max-width:680px){.hero{background-image:linear-gradient(rgba(6,16,40,.88),rgba(8,22,52,.94)),url('/assets/headquarters.webp');background-position:68% center}.hero-actions .btn{width:100%}}
+    @media(max-width:680px){.hero{background-image:linear-gradient(rgba(6,16,40,.88),rgba(8,22,52,.94)),url('/assets/headquarters.webp');background-position:68% center}.hero .hero-inner{width:calc(100% - 36px);margin:0 auto}.hero-actions .btn{width:100%}}
 
     .credbar{background:#061228;color:#fff;border-top:1px solid rgba(255,255,255,.12)}
     .cred-grid{display:grid;grid-template-columns:repeat(5,1fr)}
@@ -375,8 +375,9 @@
 
   <header class="hero">
     <div class="wrap hero-inner">
-      <span class="eyebrow">APROPOS Group LLC Corporate Headquarters</span>
-      <h1>Opportunity Builds Business.<span>Business Builds Community.</span></h1>
+      <span class="eyebrow">Corporate Headquarters</span>
+      <h1>APROPOS GROUP LLC</h1>
+      <p class="hero-tagline">Dedicated to building ECONOMIC, BUSINESS, and COMMUNITY Growth.</p>
       <p class="hero-copy"><strong>APROPOS Group LLC develops business-development and procurement intelligence platforms</strong> that help qualified businesses prepare for opportunity, identify relevant government contracts, understand requirements, and pursue growth with greater clarity.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#ecosystem">Explore the APROPOS Ecosystem</a>
