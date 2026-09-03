@@ -27,6 +27,13 @@ requireText('APROPOS is an independent private company and is not a government a
 requireText('Additional report · $79.00 one-time', 'Analyze Fit price preserved');
 requireText('/assets/headquarters.webp', 'corporate hero preserved');
 
+// Approved homepage hero identity and composition.
+requireText('<h1>APROPOS GROUP LLC</h1>', 'APROPOS hero site name');
+requireText('Dedicated to building ECONOMIC, BUSINESS, and COMMUNITY Growth.', 'approved hero growth line');
+requireText('<span class="eyebrow">Corporate Headquarters</span>', 'corporate headquarters eyebrow');
+requireText('margin-left:clamp(24px,6vw,96px);margin-right:0', 'left-anchored hero composition');
+forbid('Business Opportunity Builds Economic Growth.<span>Economic Growth Builds Stronger Communities.</span>', 'retired centered economic-growth hero');
+
 // Provenance guard: SAM.gov may be referenced for registration/profile facts, but never as the source of APROPOS contract inventory.
 forbid('contracts from SAM.gov', 'forbidden SAM.gov contract-source claim');
 forbid('opportunities from SAM.gov', 'forbidden SAM.gov opportunity-source claim');
@@ -39,4 +46,4 @@ if (failures.length) {
   process.exit(2);
 }
 
-console.log('[corporate-mission] PASS — mission chain, RFCP/NAT-CORP boundaries, provenance guard, pricing, hero, and corporate pathways validated.');
+console.log('[corporate-mission] PASS — approved hero identity/alignment, mission chain, RFCP/NAT-CORP boundaries, provenance guard, pricing, hero image, and corporate pathways validated.');
