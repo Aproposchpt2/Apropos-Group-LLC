@@ -56,9 +56,10 @@ create table if not exists public.apropos_vendor_expenses (
   tax_category text,
   notes text,
   created_at timestamptz not null default now(),
-  updated_at timestamptz not null default now(),
-  unique(vendor_id, expense_date, amount, coalesce(invoice_number, ''))
+  updated_at timestamptz not null default now()
 );
+create unique index if not exists apropos_vendor_expenses_dedupe_idx
+  on public.apropos_vendor_expenses(vendor_id, expense_date, amount, coalesce(invoice_number, ''));
 
 create table if not exists public.apropos_openai_usage (
   id bigint generated always as identity primary key,
