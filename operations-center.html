@@ -11,21 +11,21 @@
     .grid{display:grid;gap:16px}.kpis{grid-template-columns:repeat(6,minmax(0,1fr));margin:24px 0}.card{background:linear-gradient(180deg,rgba(12,33,77,.92),rgba(7,20,47,.92));border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 12px 40px rgba(0,0,0,.18)}.kpi .label{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.kpi .value{font-size:1.8rem;margin-top:8px;font-weight:700}.kpi .sub{font-size:.75rem;color:var(--muted);margin-top:4px}.meter{height:8px;background:#061127;border-radius:999px;overflow:hidden;margin-top:12px}.meter>span{display:block;height:100%;background:linear-gradient(90deg,var(--gold),#f0d48d);width:0%}
     .layout{grid-template-columns:1.15fr 1fr}.section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.section-title h2{font-family:Georgia,serif;font-size:1.45rem;font-weight:500;margin:0}.section-title small{color:var(--muted)}.refresh{border:1px solid var(--line);background:transparent;color:var(--ivory);border-radius:999px;padding:7px 10px;cursor:pointer}.refresh:hover{border-color:rgba(200,164,91,.6)}
     .link-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.link-card{display:block;border:1px solid var(--line);border-radius:12px;padding:14px;background:rgba(255,255,255,.02);transition:.15s}.link-card:hover{transform:translateY(-1px);border-color:rgba(200,164,91,.55)}.link-card b{display:flex;align-items:center;gap:8px}.link-card span{display:block;color:var(--muted);font-size:.8rem;margin-top:5px}.tag{display:inline-block!important;margin-top:10px!important;padding:4px 7px;border-radius:999px;font-size:.68rem!important;background:rgba(86,184,139,.12);color:#8ee0b9!important}.quick{display:flex!important;gap:8px;flex-wrap:wrap;margin-top:10px!important}.quick a{font-size:.7rem;border:1px solid var(--line);padding:5px 8px;border-radius:999px}.dot{width:8px;height:8px;border-radius:50%;background:var(--amber);display:inline-block;box-shadow:0 0 0 3px rgba(225,185,94,.12)}.dot.ok{background:var(--green);box-shadow:0 0 0 3px rgba(86,184,139,.12)}.dot.bad{background:var(--red);box-shadow:0 0 0 3px rgba(219,109,109,.12)}
-    .table{width:100%;border-collapse:collapse}.table th,.table td{text-align:left;padding:10px 8px;border-bottom:1px solid rgba(255,255,255,.07);font-size:.83rem}.table th{color:var(--muted);font-size:.68rem;text-transform:uppercase;letter-spacing:.08em}.money{text-align:right!important}.notice{padding:12px;border-left:3px solid var(--gold);background:rgba(200,164,91,.07);color:var(--muted);font-size:.82rem;border-radius:6px}.pipeline{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.stage{padding:12px 8px;border:1px solid var(--line);border-radius:10px;text-align:center}.stage b{display:block;font-size:1.15rem}.stage span{color:var(--muted);font-size:.7rem}.health-table td:nth-child(2),.health-table td:nth-child(3){white-space:nowrap}.footer{margin:28px 0 4px;color:var(--muted);font-size:.72rem;text-align:center}
-    @media(max-width:1050px){.kpis{grid-template-columns:repeat(3,1fr)}.layout{grid-template-columns:1fr}}@media(max-width:640px){.shell{padding:18px}.top{align-items:flex-start;flex-direction:column}.kpis{grid-template-columns:repeat(2,1fr)}.link-grid{grid-template-columns:1fr}.pipeline{grid-template-columns:repeat(2,1fr)}}
+    .table{width:100%;border-collapse:collapse}.table th,.table td{text-align:left;padding:10px 8px;border-bottom:1px solid rgba(255,255,255,.07);font-size:.83rem}.table th{color:var(--muted);font-size:.68rem;text-transform:uppercase;letter-spacing:.08em}.money{text-align:right!important}.notice{padding:12px;border-left:3px solid var(--gold);background:rgba(200,164,91,.07);color:var(--muted);font-size:.82rem;border-radius:6px}.pipeline{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.stage{padding:12px 8px;border:1px solid var(--line);border-radius:10px;text-align:center}.stage b{display:block;font-size:1.15rem}.stage span{color:var(--muted);font-size:.7rem}.health-table td:nth-child(2),.health-table td:nth-child(3){white-space:nowrap}.muted{color:var(--muted)}.footer{margin:28px 0 4px;color:var(--muted);font-size:.72rem;text-align:center}
+    @media(max-width:1050px){.kpis{grid-template-columns:repeat(3,1fr)}.layout{grid-template-columns:1fr}}@media(max-width:640px){.shell{padding:18px}.top{align-items:flex-start;flex-direction:column}.kpis{grid-template-columns:repeat(2,1fr)}.link-grid{grid-template-columns:1fr}.pipeline{grid-template-columns:repeat(2,1fr)}.table{display:block;overflow:auto}}
   </style>
 </head>
 <body>
 <main class="shell">
-  <header class="top"><div><div class="eyebrow">Apropos Group LLC · Internal Operations</div><h1>Operations Center</h1><p>One owner view of sites, command centers, infrastructure, usage, costs, vendors, deployments, and Business Development Agency acquisition activity.</p></div><div class="status"><span class="pill">Mode: <strong>Owner</strong></span><span class="pill">Environment: <strong>Internal</strong></span><span class="pill">Health: <strong id="headerHealth">Checking…</strong></span></div></header>
+  <header class="top"><div><div class="eyebrow">Apropos Group LLC · Internal Operations</div><h1>Operations Center</h1><p>One owner view of sites, command centers, infrastructure, usage, costs, vendors, deployments, and Business Development Agency acquisition activity.</p></div><div class="status"><span class="pill">Mode: <strong>Owner</strong></span><span class="pill">Environment: <strong>Internal</strong></span><span class="pill">Health: <strong id="headerHealth">Checking…</strong></span><span class="pill">Data Plane: <strong id="dataPlaneStatus">Checking…</strong></span></div></header>
 
   <section class="grid kpis">
     <div class="card kpi"><div class="label">System Health</div><div class="value" id="systemHealthValue">—</div><div class="sub" id="systemHealthSub">Checking production sites</div></div>
-    <div class="card kpi"><div class="label">OpenAI Runway</div><div class="value">—</div><div class="meter"><span></span></div><div class="sub">Project usage integration next</div></div>
-    <div class="card kpi"><div class="label">Fixed Monthly Cost</div><div class="value">$120</div><div class="sub">Known vendor baseline</div></div>
-    <div class="card kpi"><div class="label">Annual Fixed Run Rate</div><div class="value">$1,440</div><div class="sub">Before usage-based services</div></div>
-    <div class="card kpi"><div class="label">Open Incidents</div><div class="value" id="incidentValue">—</div><div class="sub">Incident ledger integration pending</div></div>
-    <div class="card kpi"><div class="label">Agency Pipeline</div><div class="value">—</div><div class="sub">Acquisition ledger integration pending</div></div>
+    <div class="card kpi"><div class="label">OpenAI Usage</div><div class="value" id="openaiSpendValue">—</div><div class="meter"><span id="openaiMeter"></span></div><div class="sub" id="openaiSpendSub">Loading consolidated ledger</div></div>
+    <div class="card kpi"><div class="label">Fixed Monthly Cost</div><div class="value" id="fixedMonthlyValue">—</div><div class="sub">Owner baseline · receipts to verify</div></div>
+    <div class="card kpi"><div class="label">Annual Fixed Run Rate</div><div class="value" id="annualRunRateValue">—</div><div class="sub">Before usage-based services</div></div>
+    <div class="card kpi"><div class="label">Open Incidents</div><div class="value" id="incidentValue">—</div><div class="sub" id="incidentSub">Loading incident ledger</div></div>
+    <div class="card kpi"><div class="label">Active Evaluations</div><div class="value" id="agencyPipelineValue">—</div><div class="sub" id="agencyPipelineSub">Loading agency ledger</div></div>
   </section>
 
   <section class="grid layout">
@@ -35,6 +35,7 @@
         <div class="link-grid">
           <div class="link-card"><a href="https://acb.aproposgroupllc.com" target="_blank" rel="noopener"><b><i class="dot" data-health-dot="acb"></i>Government Contract Portal / ACB</b><span data-health-text="acb">Checking…</span></a><span class="quick"><a href="https://acb.aproposgroupllc.com" target="_blank" rel="noopener">SITE</a><a href="https://acb.aproposgroupllc.com/command-center.html" target="_blank" rel="noopener">COMMAND CENTER</a><a href="https://github.com/Aproposchpt2/APROPOS-CONTRACT-BRIEF" target="_blank" rel="noopener">GITHUB</a></span></div>
           <div class="link-card"><a href="https://natcorp.aproposgroupllc.com" target="_blank" rel="noopener"><b><i class="dot" data-health-dot="natcorp"></i>NAT-CORP</b><span data-health-text="natcorp">Checking…</span></a><span class="quick"><a href="https://natcorp.aproposgroupllc.com" target="_blank" rel="noopener">SITE</a><a href="https://natcorp.aproposgroupllc.com/command-center.html" target="_blank" rel="noopener">COMMAND CENTER</a><a href="https://github.com/Aproposchpt2/NAT-CORP-CONTRACT-EXCHANGE" target="_blank" rel="noopener">GITHUB</a></span></div>
+          <div class="link-card"><a href="https://acp.aproposgroupllc.com" target="_blank" rel="noopener"><b><i class="dot" data-health-dot="acp"></i>ACP Outreach</b><span>Agency discovery and institutional outreach</span></a><span class="quick"><a href="https://acp.aproposgroupllc.com" target="_blank" rel="noopener">SITE</a><a href="https://github.com/Aproposchpt2/Aproposchpt2-APROPOS-COMMUNITY-PARTNERSHIP-OUTREACH" target="_blank" rel="noopener">GITHUB</a></span></div>
           <div class="link-card"><a href="https://nebc.aproposgroupllc.com" target="_blank" rel="noopener"><b><i class="dot" data-health-dot="nebc"></i>NEBC</b><span data-health-text="nebc">Checking…</span></a></div>
           <div class="link-card"><a href="https://cdc.aproposgroupllc.com" target="_blank" rel="noopener"><b><i class="dot" data-health-dot="cdc"></i>Contract Development Center</b><span data-health-text="cdc">Checking…</span></a></div>
           <div class="link-card"><a href="https://rfcp.aproposgroupllc.com" target="_blank" rel="noopener"><b><i class="dot" data-health-dot="rfcp"></i>RFCP</b><span data-health-text="rfcp">Checking…</span></a></div>
@@ -46,32 +47,38 @@
 
       <article class="card"><div class="section-title"><h2>Live Site Health</h2><small id="healthCheckedAt">Waiting for first check</small></div><table class="table health-table"><thead><tr><th>System</th><th>Status</th><th>Latency</th></tr></thead><tbody id="healthRows"><tr><td colspan="3">Checking production endpoints…</td></tr></tbody></table></article>
 
-      <article class="card"><div class="section-title"><h2>Business Development Agency Acquisition</h2><small>Lifecycle view</small></div><div class="notice">Targets → outreach → qualification → demonstration → evaluation → decision → acquisition → onboarding → active agency → renewal / expansion.</div><div class="pipeline"><div class="stage"><b>—</b><span>Targets</span></div><div class="stage"><b>—</b><span>Contacted</span></div><div class="stage"><b>—</b><span>Evaluation</span></div><div class="stage"><b>—</b><span>Active</span></div><div class="stage"><b>—</b><span>Demos</span></div><div class="stage"><b>—</b><span>Decision</span></div><div class="stage"><b>—</b><span>Onboarding</span></div><div class="stage"><b>—</b><span>Renewal</span></div></div></article>
+      <article class="card"><div class="section-title"><h2>Business Development Agency Acquisition</h2><small>ACP → ACB → Operations Center</small></div><div class="notice">All agencies use AGENCY30. The 30-day evaluation begins on the first successful ACB login associated with Advisor Name + Agency Name + AGENCY30.</div><div class="pipeline"><div class="stage"><b id="agencyTotal">0</b><span>Tracked</span></div><div class="stage"><b id="agencyInvited">0</b><span>Invited</span></div><div class="stage"><b id="agencyActive">0</b><span>Active Evaluation</span></div><div class="stage"><b id="agencyExpiring">0</b><span>Expiring</span></div></div><table class="table" style="margin-top:14px"><thead><tr><th>Agency</th><th>Advisor</th><th>Start</th><th>End</th><th>Status</th></tr></thead><tbody id="agencyRows"><tr><td colspan="5" class="muted">No evaluation records yet.</td></tr></tbody></table></article>
     </div>
 
     <div class="grid">
-      <article class="card"><div class="section-title"><h2>Infrastructure Access</h2><small>Owner launchpad</small></div><div class="link-grid"><a class="link-card" href="https://github.com/Aproposchpt2" target="_blank" rel="noopener"><b>GitHub</b><span>Repositories · PRs · Actions</span></a><a class="link-card" href="https://app.netlify.com" target="_blank" rel="noopener"><b>Netlify</b><span>Sites · Deploys · Environment</span></a><a class="link-card" href="https://supabase.com/dashboard" target="_blank" rel="noopener"><b>Supabase</b><span>Projects · Database · Logs</span></a><a class="link-card" href="https://resend.com" target="_blank" rel="noopener"><b>Resend</b><span>Email · Domains · Delivery</span></a><a class="link-card" href="https://platform.openai.com" target="_blank" rel="noopener"><b>OpenAI</b><span>API projects · Usage · Billing</span></a><a class="link-card" href="https://console.anthropic.com" target="_blank" rel="noopener"><b>Anthropic / Claude</b><span>API and account access</span></a></div></article>
+      <article class="card"><div class="section-title"><h2>Infrastructure Access</h2><small>Owner launchpad</small></div><div class="link-grid"><a class="link-card" href="https://github.com/Aproposchpt2" target="_blank" rel="noopener"><b>GitHub</b><span>Repositories · PRs · Actions</span></a><a class="link-card" href="https://app.netlify.com/projects/apropos-group-llc" target="_blank" rel="noopener"><b>Netlify</b><span>Sites · Deploys · Environment</span></a><a class="link-card" href="https://supabase.com/dashboard/project/judislfknmhofcgzyozc" target="_blank" rel="noopener"><b>Supabase</b><span>Operations data plane · Database · Logs</span></a><a class="link-card" href="https://resend.com" target="_blank" rel="noopener"><b>Resend</b><span>Email · Domains · Delivery</span></a><a class="link-card" href="https://platform.openai.com" target="_blank" rel="noopener"><b>OpenAI</b><span>Consolidated API usage · Billing</span></a><a class="link-card" href="https://console.anthropic.com" target="_blank" rel="noopener"><b>Anthropic / Claude</b><span>API and account access</span></a></div></article>
 
-      <article class="card"><div class="section-title"><h2>Vendor & Cost Center</h2><small>Known baseline</small></div><table class="table"><thead><tr><th>Vendor</th><th>Category</th><th class="money">Monthly</th><th>Due</th></tr></thead><tbody><tr><td>Supabase</td><td>Database</td><td class="money">$20.00</td><td>To verify</td></tr><tr><td>Netlify</td><td>Hosting</td><td class="money">$20.00</td><td>To verify</td></tr><tr><td>ChatGPT</td><td>AI / Productivity</td><td class="money">$20.00</td><td>To verify</td></tr><tr><td>Claude</td><td>AI / Productivity</td><td class="money">$20.00</td><td>To verify</td></tr><tr><td>Resend</td><td>Email</td><td class="money">$20.00</td><td>To verify</td></tr><tr><td>ElevenLabs</td><td>Voice / AI</td><td class="money">$20.00</td><td>To verify</td></tr></tbody><tfoot><tr><th colspan="2">Known Monthly Fixed Cost</th><th class="money">$120.00</th><th></th></tr></tfoot></table></article>
+      <article class="card"><div class="section-title"><h2>OpenAI Consolidated Usage</h2><small id="openaiUpdated">Operations ledger</small></div><table class="table"><tbody><tr><th>Requests</th><td class="money" id="openaiRequests">—</td></tr><tr><th>Input Tokens</th><td class="money" id="openaiInputTokens">—</td></tr><tr><th>Output Tokens</th><td class="money" id="openaiOutputTokens">—</td></tr><tr><th>Total Tokens</th><td class="money" id="openaiTotalTokens">—</td></tr><tr><th>Estimated Cost</th><td class="money" id="openaiEstimatedCost">—</td></tr><tr><th>Failures</th><td class="money" id="openaiFailures">—</td></tr></tbody></table><div class="notice" style="margin-top:12px">This view currently reflects the Operations Center usage ledger. Direct OpenAI account billing/credit ingestion will be added as the next telemetry layer; no unverified credit balance is displayed.</div></article>
 
-      <article class="card"><div class="section-title"><h2>Next Integration Targets</h2><small>Controlled rollout</small></div><div class="notice">1. OpenAI project usage meters and runway · 2. Vendor billing calendar · 3. Agency acquisition ledger · 4. Tax / expense evidence · 5. Dependency and incident tracking · 6. Deployment telemetry by site.</div></article>
+      <article class="card"><div class="section-title"><h2>Vendor & Cost Center</h2><small>Autopay · receipt reconciliation</small></div><table class="table"><thead><tr><th>Vendor</th><th>Category</th><th class="money">Monthly</th><th>Verification</th></tr></thead><tbody id="vendorRows"><tr><td colspan="4" class="muted">Loading vendor ledger…</td></tr></tbody><tfoot><tr><th colspan="2">Known Monthly Fixed Cost</th><th class="money" id="vendorTotal">—</th><th></th></tr></tfoot></table></article>
+
+      <article class="card"><div class="section-title"><h2>Operations Data Plane</h2><small>Supabase · public.apropos_*</small></div><div class="notice">Authoritative Operations Center tables now use the public.apropos_ naming convention. Privileged access remains server-side through Netlify Functions; secret values are never returned to the browser.</div></article>
     </div>
   </section>
   <div class="footer">Apropos Group LLC · Internal Operations Center · Owner use only</div>
 </main>
 <script>
-  const endpoint='/.netlify/functions/operations-center-health';
+  const healthEndpoint='/.netlify/functions/operations-center-health';
+  const dataEndpoint='/.netlify/functions/operations-center-data';
+  const money=(n)=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(Number(n||0));
+  const number=(n)=>new Intl.NumberFormat('en-US').format(Number(n||0));
+  const date=(v)=>v?new Date(v).toLocaleDateString():'—';
+
   async function loadHealth(){
     const button=document.getElementById('refreshHealth');
     button.disabled=true;button.textContent='Checking…';
     try{
-      const response=await fetch(endpoint,{cache:'no-store'});
+      const response=await fetch(healthEndpoint,{cache:'no-store'});
       if(!response.ok)throw new Error('health endpoint failed');
       const data=await response.json();
       document.getElementById('systemHealthValue').textContent=`${data.online} / ${data.total}`;
       document.getElementById('systemHealthSub').textContent=data.attention===0?'All monitored sites responding':`${data.attention} system${data.attention===1?'':'s'} require attention`;
       document.getElementById('headerHealth').textContent=data.status;
-      document.getElementById('incidentValue').textContent=data.attention;
       document.getElementById('healthCheckedAt').textContent=`Checked ${new Date(data.checked_at).toLocaleString()}`;
       const rows=[];
       for(const item of data.checks){
@@ -86,8 +93,49 @@
       document.getElementById('healthRows').innerHTML='<tr><td colspan="3">Unable to load live health telemetry.</td></tr>';
     }finally{button.disabled=false;button.textContent='Refresh health'}
   }
-  document.getElementById('refreshHealth').addEventListener('click',loadHealth);
-  loadHealth();setInterval(loadHealth,60000);
+
+  async function loadOperationsData(){
+    try{
+      const response=await fetch(dataEndpoint,{cache:'no-store'});
+      if(!response.ok)throw new Error('data endpoint failed');
+      const data=await response.json();
+      document.getElementById('dataPlaneStatus').textContent='ONLINE';
+      document.getElementById('fixedMonthlyValue').textContent=money(data.costs.fixed_monthly);
+      document.getElementById('annualRunRateValue').textContent=money(data.costs.annual_fixed_run_rate);
+      document.getElementById('incidentValue').textContent=data.incidents.open;
+      document.getElementById('incidentSub').textContent=data.incidents.open===0?'No open Operations Center incidents':'Incident ledger requires attention';
+      document.getElementById('agencyPipelineValue').textContent=data.agencies.active;
+      document.getElementById('agencyPipelineSub').textContent=`${data.agencies.total} tracked · ${data.agencies.expiring} expiring`;
+
+      const o=data.openai.summary;
+      document.getElementById('openaiSpendValue').textContent=money(o.estimated_cost);
+      document.getElementById('openaiSpendSub').textContent=o.request_count?`${number(o.request_count)} ledger requests · ${number(o.total_tokens)} tokens`:'No OpenAI usage ledger records yet';
+      document.getElementById('openaiRequests').textContent=number(o.request_count);
+      document.getElementById('openaiInputTokens').textContent=number(o.input_tokens);
+      document.getElementById('openaiOutputTokens').textContent=number(o.output_tokens);
+      document.getElementById('openaiTotalTokens').textContent=number(o.total_tokens);
+      document.getElementById('openaiEstimatedCost').textContent=money(o.estimated_cost);
+      document.getElementById('openaiFailures').textContent=number(o.failure_count);
+      document.getElementById('openaiUpdated').textContent=`Updated ${new Date(data.generated_at).toLocaleString()}`;
+
+      document.getElementById('vendorTotal').textContent=money(data.costs.fixed_monthly);
+      document.getElementById('vendorRows').innerHTML=data.vendors.map(v=>`<tr><td>${v.vendor_name}</td><td>${v.service_category}</td><td class="money">${money(v.fixed_monthly_cost)}</td><td>${v.verification_status}</td></tr>`).join('')||'<tr><td colspan="4">No vendors recorded.</td></tr>';
+
+      const agencies=data.agencies.records||[];
+      document.getElementById('agencyTotal').textContent=agencies.length;
+      document.getElementById('agencyInvited').textContent=agencies.filter(a=>String(a.evaluation_status).toUpperCase()==='INVITED').length;
+      document.getElementById('agencyActive').textContent=data.agencies.active;
+      document.getElementById('agencyExpiring').textContent=data.agencies.expiring;
+      document.getElementById('agencyRows').innerHTML=agencies.slice(0,12).map(a=>`<tr><td>${a.agency_name}</td><td>${a.advisor_name}</td><td>${date(a.evaluation_started_at)}</td><td>${date(a.evaluation_ends_at)}</td><td>${a.evaluation_status}</td></tr>`).join('')||'<tr><td colspan="5" class="muted">No agency evaluation records yet.</td></tr>';
+    }catch(error){
+      document.getElementById('dataPlaneStatus').textContent='UNAVAILABLE';
+      document.getElementById('incidentSub').textContent='Operations data telemetry unavailable';
+    }
+  }
+
+  document.getElementById('refreshHealth').addEventListener('click',()=>{loadHealth();loadOperationsData()});
+  loadHealth();loadOperationsData();
+  setInterval(loadHealth,60000);setInterval(loadOperationsData,60000);
 </script>
 </body>
 </html>
