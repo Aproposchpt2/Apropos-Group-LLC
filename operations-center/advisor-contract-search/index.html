@@ -7,14 +7,14 @@
   <title>Advisor Contract Search Portal / BDMS — Campaign Operations</title>
   <style>
     :root{--navy:#07142f;--navy2:#0c214d;--gold:#c8a45b;--ivory:#f4efe5;--muted:#aab5c9;--line:rgba(200,164,91,.24);--green:#56b88b;--amber:#e1b95e;--red:#db6d6d}
-    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(180deg,var(--navy),#040a16 82%);color:var(--ivory);font-family:Inter,Arial,sans-serif}a{color:inherit;text-decoration:none}.shell{max-width:1500px;margin:auto;padding:28px}.top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;border-bottom:1px solid var(--line);padding-bottom:20px}.eyebrow{color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.top h1{font-family:Georgia,serif;font-size:clamp(2rem,4vw,3.7rem);font-weight:500;margin:.35rem 0 0}.top p{margin:.6rem 0 0;color:var(--muted);max-width:900px}.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:.76rem}.btn:hover{border-color:rgba(200,164,91,.65)}.btn.primary{background:var(--gold);color:#07142f;font-weight:700}.grid{display:grid;gap:16px}.kpis{grid-template-columns:repeat(6,minmax(0,1fr));margin:24px 0}.card{background:linear-gradient(180deg,rgba(12,33,77,.94),rgba(7,20,47,.94));border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 12px 40px rgba(0,0,0,.18)}.label{color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em}.value{font-size:1.8rem;font-weight:700;margin-top:8px}.sub{font-size:.75rem;color:var(--muted);margin-top:5px}.layout{grid-template-columns:1fr 1fr}.section-title{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:14px}.section-title h2{font-family:Georgia,serif;font-size:1.5rem;font-weight:500;margin:0}.section-title small{color:var(--muted)}.signal{border-radius:12px;padding:15px;border:1px solid var(--line);background:rgba(255,255,255,.025);margin-bottom:14px}.signal strong{font-size:1.1rem}.signal.good strong{color:var(--green)}.signal.watch strong{color:var(--amber)}.signal.bad strong{color:var(--red)}.table-wrap{overflow:auto;max-height:680px;border:1px solid rgba(255,255,255,.06);border-radius:12px}.table{width:100%;border-collapse:collapse;min-width:900px}.table th,.table td{text-align:left;padding:10px 9px;border-bottom:1px solid rgba(255,255,255,.07);font-size:.8rem}.table th{position:sticky;top:0;background:#0a1b3d;color:var(--muted);font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;z-index:1}.status{display:inline-block;padding:4px 7px;border-radius:999px;border:1px solid var(--line);font-size:.66rem}.status.active{color:#8ee0b9}.status.invited{color:#f0d48d}.status.ready{color:#c9d2e4}.status.expiring{color:#ffcc72}.inventory-grid{grid-template-columns:repeat(3,1fr);margin-top:10px}.mini{border:1px solid var(--line);border-radius:12px;padding:14px}.mini b{display:block;font-size:1.35rem}.mini span{font-size:.72rem;color:var(--muted)}.notice{padding:12px;border-left:3px solid var(--gold);background:rgba(200,164,91,.07);border-radius:6px;color:var(--muted);font-size:.8rem}.footer{text-align:center;color:var(--muted);font-size:.7rem;margin:26px 0 4px}@media(max-width:1100px){.kpis{grid-template-columns:repeat(3,1fr)}.layout{grid-template-columns:1fr}}@media(max-width:640px){.shell{padding:18px}.top{align-items:flex-start;flex-direction:column}.kpis{grid-template-columns:repeat(2,1fr)}.inventory-grid{grid-template-columns:repeat(2,1fr)}}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(180deg,var(--navy),#040a16 82%);color:var(--ivory);font-family:Inter,Arial,sans-serif}a{color:inherit;text-decoration:none}.shell{max-width:1500px;margin:auto;padding:28px}.top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;border-bottom:1px solid var(--line);padding-bottom:20px}.eyebrow{color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.top h1{font-family:Georgia,serif;font-size:clamp(2rem,4vw,3.7rem);font-weight:500;margin:.35rem 0 0}.top p{margin:.6rem 0 0;color:var(--muted);max-width:900px}.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:.76rem;background:transparent;color:var(--ivory);cursor:pointer}.btn:hover{border-color:rgba(200,164,91,.65)}.btn.primary{background:var(--gold);color:#07142f;font-weight:700}.btn.danger{border-color:rgba(219,109,109,.65);color:#ffb2b2}.grid{display:grid;gap:16px}.kpis{grid-template-columns:repeat(6,minmax(0,1fr));margin:24px 0}.card{background:linear-gradient(180deg,rgba(12,33,77,.94),rgba(7,20,47,.94));border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 12px 40px rgba(0,0,0,.18)}.label{color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em}.value{font-size:1.8rem;font-weight:700;margin-top:8px}.sub{font-size:.75rem;color:var(--muted);margin-top:5px}.layout{grid-template-columns:1fr 1fr}.section-title{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:14px}.section-title h2{font-family:Georgia,serif;font-size:1.5rem;font-weight:500;margin:0}.section-title small{color:var(--muted)}.signal{border-radius:12px;padding:15px;border:1px solid var(--line);background:rgba(255,255,255,.025);margin-bottom:14px}.signal strong{font-size:1.1rem}.signal.good strong{color:var(--green)}.signal.watch strong{color:var(--amber)}.signal.bad strong{color:var(--red)}.table-wrap{overflow:auto;max-height:680px;border:1px solid rgba(255,255,255,.06);border-radius:12px}.table{width:100%;border-collapse:collapse;min-width:900px}.table th,.table td{text-align:left;padding:10px 9px;border-bottom:1px solid rgba(255,255,255,.07);font-size:.8rem}.table th{position:sticky;top:0;background:#0a1b3d;color:var(--muted);font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;z-index:1}.status{display:inline-block;padding:4px 7px;border-radius:999px;border:1px solid var(--line);font-size:.66rem}.status.active{color:#8ee0b9}.status.invited{color:#f0d48d}.status.ready{color:#c9d2e4}.status.expiring{color:#ffcc72}.inventory-grid{grid-template-columns:repeat(3,1fr);margin-top:10px}.mini{border:1px solid var(--line);border-radius:12px;padding:14px}.mini b{display:block;font-size:1.35rem}.mini span{font-size:.72rem;color:var(--muted)}.notice{padding:12px;border-left:3px solid var(--gold);background:rgba(200,164,91,.07);border-radius:6px;color:var(--muted);font-size:.8rem}.source-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}.source{border:1px solid var(--line);border-radius:10px;padding:10px;font-size:.72rem}.source b{display:block;margin-bottom:4px}.source.ok b{color:var(--green)}.source.bad b{color:var(--red)}.source span{color:var(--muted)}.diag{display:flex;justify-content:space-between;align-items:center;gap:16px}.diag p{margin:.4rem 0;color:var(--muted);font-size:.8rem}.footer{text-align:center;color:var(--muted);font-size:.7rem;margin:26px 0 4px}@media(max-width:1100px){.kpis{grid-template-columns:repeat(3,1fr)}.layout{grid-template-columns:1fr}.source-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:640px){.shell{padding:18px}.top,.diag{align-items:flex-start;flex-direction:column}.kpis{grid-template-columns:repeat(2,1fr)}.inventory-grid{grid-template-columns:repeat(2,1fr)}.source-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
 <main class="shell">
   <header class="top">
-    <div><div class="eyebrow">Apropos Group LLC · Revenue Operations</div><h1>Advisor Contract Search Portal / BDMS</h1><p>Campaign Operations foundation: agency outreach, 30-day evaluation timing, and contract repository inventory health.</p></div>
-    <div class="actions"><a class="btn" href="/operations-center">Operations Center</a><a class="btn" href="https://bdms.aproposgroupllc.com" target="_blank" rel="noopener">Portal</a><a class="btn" href="https://acp.aproposgroupllc.com" target="_blank" rel="noopener">ACP Outreach</a><a class="btn primary" href="https://ai4-product-purchasing.ai4businesses.org/acb-advisor-license" target="_blank" rel="noopener">Licensing</a></div>
+    <div><div class="eyebrow">Apropos Group LLC · Revenue Operations</div><h1>Advisor Contract Search Portal / BDMS</h1><p>Campaign Operations: agency outreach, 30-day evaluation timing, and contract repository inventory health.</p></div>
+    <div class="actions"><a class="btn" href="/operations-center">Operations Center</a><a class="btn" href="https://bdms.aproposgroupllc.com" target="_blank" rel="noopener">Portal</a><a class="btn" href="https://acp.aproposgroupllc.com" target="_blank" rel="noopener">ACP Outreach</a><button class="btn danger" id="downloadError" type="button">Download Error Report</button><a class="btn primary" href="https://ai4-product-purchasing.ai4businesses.org/acb-advisor-license" target="_blank" rel="noopener">Licensing</a></div>
   </header>
 
   <section class="grid kpis">
@@ -25,6 +25,11 @@
     <div class="card"><div class="label">Contract Inventory</div><div class="value" id="contractCount">—</div><div class="sub">Future-dated open contracts</div></div>
     <div class="card"><div class="label">Closing ≤ 30 Days</div><div class="value" id="within30">—</div><div class="sub" id="within30Sub">Repository pressure</div></div>
   </section>
+
+  <article class="card" style="margin-bottom:16px">
+    <div class="section-title"><h2>Data Source Health</h2><small id="requestId">Waiting for telemetry</small></div>
+    <div class="source-grid" id="sourceGrid"><div class="source"><b>Checking…</b><span>Live source diagnostics</span></div></div>
+  </article>
 
   <section class="grid layout">
     <article class="card">
@@ -38,7 +43,7 @@
         <div class="mini"><b id="missingDeadline">—</b><span>Missing close date</span></div>
         <div class="mini"><b id="expiredNotClosed">—</b><span>Past deadline, not CLOSED</span></div>
       </div>
-      <div class="notice" style="margin-top:14px">Campaign operating rule: this panel is intended to tell the Owner when repository replenishment pressure supports running the Contract Acquisition Task. The current foundation flags acquisition at ≥70% of future-dated inventory closing within 30 days and WATCH at ≥50%.</div>
+      <div class="notice" style="margin-top:14px">Repository replenishment signal: ACQUISITION RECOMMENDED at ≥70% of future-dated inventory closing within 30 days; WATCH at ≥50%.</div>
     </article>
 
     <article class="card">
@@ -57,25 +62,61 @@
     <div class="table-wrap"><table class="table"><thead><tr><th>Agency</th><th>Type</th><th>City</th><th>Email</th><th>Email Status</th><th>Invite Date</th><th>Evaluation Start</th><th>30-Day Expiration</th><th>Days Left</th><th>Status</th></tr></thead><tbody id="agencyRows"><tr><td colspan="10">Loading campaign records…</td></tr></tbody></table></div>
   </article>
 
+  <article class="card" style="margin-top:16px">
+    <div class="diag"><div><div class="label">Operations Diagnostic Package</div><h2 style="font-family:Georgia,serif;font-weight:500;margin:.35rem 0">Download Error Report</h2><p>The report captures source health, endpoint status, request ID, deployment metadata, browser/device context, and which metrics loaded or failed. Secrets and credentials are not included.</p><p id="diagState">No diagnostic request has completed yet.</p></div><button class="btn danger" id="downloadErrorBottom" type="button">Download Error Report</button></div>
+  </article>
+
   <div class="footer">Apropos Group LLC · Advisor Contract Search Portal / BDMS · Campaign Operations</div>
 </main>
 <script>
   const endpoint='/.netlify/functions/advisor-portal-campaign-data';
-  const fmt=(n)=>new Intl.NumberFormat('en-US').format(Number(n||0));
+  const fmt=(n)=>n==null?'—':new Intl.NumberFormat('en-US').format(Number(n||0));
   const date=(v)=>v?new Date(v).toLocaleDateString():'—';
   const esc=(v)=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  let lastDiagnostic={page:'Advisor Contract Search Portal / BDMS Campaign Operations',page_url:location.href,generated_at:new Date().toISOString(),status:'NOT_LOADED'};
+
   function statusClass(s){s=String(s||'').toUpperCase();if(s==='ACTIVE_EVALUATION')return'active';if(s==='EXPIRING')return'expiring';if(s==='INVITED')return'invited';return'ready'}
+  function resetContract(){contractCount.textContent='—';within30.textContent='—';within30Sub.textContent='Repository data unavailable';within7.textContent='—';days8to14.textContent='—';days15to30.textContent='—';after30.textContent='—';missingDeadline.textContent='—';expiredNotClosed.textContent='—';signalText.textContent='DATA UNAVAILABLE';signalRule.textContent='See Data Source Health or download the error report.';inventorySignal.className='signal bad';contractUpdated.textContent='Unavailable'}
+  function resetOutreach(){agencyCount.textContent='—';emailsSent.textContent='—';remaining.textContent='—';activeEval.textContent='—';invitedCount.textContent='—';expiringCount.textContent='—';readyCount.textContent='—';agencyRows.innerHTML='<tr><td colspan="10">Outreach data is temporarily unavailable. Contract inventory may still be available above.</td></tr>';campaignUpdated.textContent='Unavailable'}
+  function renderSources(sources){const entries=Object.entries(sources||{});sourceGrid.innerHTML=entries.length?entries.map(([name,s])=>`<div class="source ${s.ok?'ok':'bad'}"><b>${s.ok?'NORMAL':'FAILED'} · ${esc(name)}</b><span>${s.ok?`${fmt(s.latency_ms)} ms`:esc(s.error||'Unknown error')}</span></div>`).join(''):'<div class="source bad"><b>NO SOURCE STATUS</b><span>Download the error report for browser-side details.</span></div>'}
+  function captureDiagnostic(extra={}){return {
+    schema:'apropos_campaign_error_report_v1',
+    captured_at:new Date().toISOString(),
+    page:'Advisor Contract Search Portal / BDMS Campaign Operations',
+    page_url:location.href,
+    endpoint,
+    browser:{user_agent:navigator.userAgent,language:navigator.language,online:navigator.onLine,viewport:{width:innerWidth,height:innerHeight},screen:{width:screen.width,height:screen.height},platform:navigator.platform||null},
+    ...lastDiagnostic,
+    ...extra
+  }}
+  function downloadDiagnostic(){const report=captureDiagnostic();const blob=new Blob([JSON.stringify(report,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');const stamp=new Date().toISOString().replace(/[:.]/g,'-');a.href=url;a.download=`bdms-campaign-error-report-${stamp}.json`;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url)}
+  downloadError.addEventListener('click',downloadDiagnostic);downloadErrorBottom.addEventListener('click',downloadDiagnostic);
+
   async function load(){
+    const started=performance.now();
+    let responseStatus=null;
     try{
-      const response=await fetch(endpoint,{cache:'no-store'});if(!response.ok)throw new Error('Campaign data endpoint failed');
-      const data=await response.json();const o=data.outreach,c=data.contracts;
-      agencyCount.textContent=fmt(o.agency_count);emailsSent.textContent=fmt(o.emails_sent);remaining.textContent=fmt(o.agencies_remaining_to_email);activeEval.textContent=fmt(o.active_evaluations);contractCount.textContent=fmt(c.active_future_dated);within30.textContent=fmt(c.closing_within_30_days);within30Sub.textContent=`${Math.round((c.near_term_share||0)*100)}% of future-dated inventory`;
-      within7.textContent=fmt(c.closing_within_7_days);days8to14.textContent=fmt(c.closing_8_14_days);days15to30.textContent=fmt(c.closing_15_30_days);after30.textContent=fmt(c.closing_after_30_days);missingDeadline.textContent=fmt(c.missing_deadline);expiredNotClosed.textContent=fmt(c.expired_not_closed);
-      signalText.textContent=String(c.inventory_signal||'UNKNOWN').replaceAll('_',' ');signalRule.textContent=c.signal_rule||'';inventorySignal.className='signal '+(c.inventory_signal==='HEALTHY'?'good':c.inventory_signal==='WATCH'?'watch':'bad');
-      contractUpdated.textContent=`Updated ${new Date(c.generated_at).toLocaleString()}`;campaignUpdated.textContent=`Updated ${new Date(data.generated_at).toLocaleString()}`;
-      const records=o.records||[];invitedCount.textContent=fmt(records.filter(r=>r.email_status==='SENT').length);expiringCount.textContent=fmt(o.expiring_within_7_days);readyCount.textContent=fmt(records.filter(r=>r.status==='READY_TO_EMAIL').length);
-      agencyRows.innerHTML=records.map(r=>`<tr><td>${esc(r.agency_name)}</td><td>${esc(r.organization_type||'—')}</td><td>${esc(r.city||'—')}</td><td>${esc(r.email||'—')}</td><td>${esc(r.email_status)}</td><td>${date(r.invited_at)}</td><td>${date(r.evaluation_started_at)}</td><td>${date(r.evaluation_ends_at)}</td><td>${r.days_remaining==null?'—':fmt(r.days_remaining)}</td><td><span class="status ${statusClass(r.status)}">${esc(String(r.status).replaceAll('_',' '))}</span></td></tr>`).join('')||'<tr><td colspan="10">No campaign agencies found.</td></tr>';
-    }catch(error){agencyRows.innerHTML='<tr><td colspan="10">Campaign data is temporarily unavailable.</td></tr>';signalText.textContent='DATA UNAVAILABLE';inventorySignal.className='signal bad'}
+      const response=await fetch(endpoint,{cache:'no-store'});responseStatus=response.status;
+      const data=await response.json().catch(()=>({ok:false,error:'INVALID_JSON_RESPONSE'}));
+      lastDiagnostic={status:data.partial?'PARTIAL':'OK',http_status:response.status,request_id:data.request_id||null,generated_at:data.generated_at||null,deployment:data.deployment||null,sources:data.sources||{},outreach_summary:data.outreach?{ok:data.outreach.ok,agency_count:data.outreach.agency_count,emails_sent:data.outreach.emails_sent,remaining:data.outreach.agencies_remaining_to_email,active_evaluations:data.outreach.active_evaluations,error:data.outreach.error||null}:null,contract_summary:data.contracts?{ok:data.contracts.ok,active_future_dated:data.contracts.active_future_dated,closing_within_30_days:data.contracts.closing_within_30_days,inventory_signal:data.contracts.inventory_signal,error:data.contracts.error||null}:null,client_latency_ms:Math.round(performance.now()-started)};
+      renderSources(data.sources);requestId.textContent=data.request_id?`Request ${data.request_id}`:'Request ID unavailable';diagState.textContent=data.partial?'Partial data loaded — diagnostic report is ready.':'Latest request completed — diagnostic report is ready.';
+
+      const o=data.outreach||{};
+      if(o.ok){
+        agencyCount.textContent=fmt(o.agency_count);emailsSent.textContent=fmt(o.emails_sent);remaining.textContent=fmt(o.agencies_remaining_to_email);activeEval.textContent=fmt(o.active_evaluations);campaignUpdated.textContent=`Updated ${new Date(data.generated_at).toLocaleString()}`;
+        const records=o.records||[];invitedCount.textContent=fmt(records.filter(r=>r.email_status==='SENT').length);expiringCount.textContent=fmt(o.expiring_within_7_days);readyCount.textContent=fmt(records.filter(r=>r.status==='READY_TO_EMAIL').length);
+        agencyRows.innerHTML=records.map(r=>`<tr><td>${esc(r.agency_name)}</td><td>${esc(r.organization_type||'—')}</td><td>${esc(r.city||'—')}</td><td>${esc(r.email||'—')}</td><td>${esc(r.email_status)}</td><td>${date(r.invited_at)}</td><td>${date(r.evaluation_started_at)}</td><td>${date(r.evaluation_ends_at)}</td><td>${r.days_remaining==null?'—':fmt(r.days_remaining)}</td><td><span class="status ${statusClass(r.status)}">${esc(String(r.status).replaceAll('_',' '))}</span></td></tr>`).join('')||'<tr><td colspan="10">No campaign agencies found.</td></tr>';
+      }else resetOutreach();
+
+      const c=data.contracts||{};
+      if(c.ok){
+        contractCount.textContent=fmt(c.active_future_dated);within30.textContent=fmt(c.closing_within_30_days);within30Sub.textContent=`${Math.round((c.near_term_share||0)*100)}% of future-dated inventory`;within7.textContent=fmt(c.closing_within_7_days);days8to14.textContent=fmt(c.closing_8_14_days);days15to30.textContent=fmt(c.closing_15_30_days);after30.textContent=fmt(c.closing_after_30_days);missingDeadline.textContent=fmt(c.missing_deadline);expiredNotClosed.textContent=fmt(c.expired_not_closed);signalText.textContent=String(c.inventory_signal||'UNKNOWN').replaceAll('_',' ');signalRule.textContent=c.signal_rule||'';inventorySignal.className='signal '+(c.inventory_signal==='HEALTHY'?'good':c.inventory_signal==='WATCH'?'watch':'bad');contractUpdated.textContent=`Updated ${new Date(c.generated_at).toLocaleString()}`;
+      }else resetContract();
+
+      if(!response.ok && !data.ok) throw new Error(data.error||`Campaign endpoint HTTP ${response.status}`);
+    }catch(error){
+      resetOutreach();resetContract();renderSources(lastDiagnostic.sources||{});diagState.textContent='Request failed — download the error report and send it for troubleshooting.';lastDiagnostic={...lastDiagnostic,status:'FAILED',http_status:responseStatus,error:String(error&&error.message?error.message:error),client_latency_ms:Math.round(performance.now()-started)};
+    }
   }
   load();setInterval(load,60000);
 </script>
