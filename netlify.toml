@@ -61,6 +61,55 @@
   status = 301
   force = true
 
+# Consolidate physical HTML files into one extensionless canonical URL per page.
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/capabilities.html"
+  to = "/capabilities"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ai-procurement-modernization.html"
+  to = "/ai-procurement-modernization"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contract-vehicles.html"
+  to = "/contract-vehicles"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/past-performance.html"
+  to = "/past-performance"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy.html"
+  to = "/privacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/terms.html"
+  to = "/terms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/economic-development-partnerships.html"
+  to = "/economic-development-partnerships"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/contact"
   to = "/contact.html"
@@ -94,4 +143,9 @@
 [[redirects]]
   from = "/terms"
   to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/economic-development-partnerships"
+  to = "/economic-development-partnerships.html"
   status = 200
