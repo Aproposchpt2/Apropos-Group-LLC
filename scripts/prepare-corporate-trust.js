@@ -75,7 +75,7 @@ function schemaGraph() {
           { '@type': 'Organization', name: 'National Enterprise Business Center', url: 'https://nebc.aproposgroupllc.com/' },
           { '@type': 'Organization', name: 'Registered Federal Contractors Portal', url: 'https://federalcontractorportal.aproposgroupllc.com/' },
           { '@type': 'Organization', name: 'NAT-CORP Contract Exchange', url: 'https://natcorp.aproposgroupllc.com/' },
-          { '@type': 'Organization', name: 'APROPOS Marketing Marketplace', url: 'https://marketplace.aproposgroupllc.com/' }
+          { '@type': 'Organization', name: 'APROPOS Business Intelligence Marketplace', url: 'https://marketplace.aproposgroupllc.com/' }
         ]
       },
       {
