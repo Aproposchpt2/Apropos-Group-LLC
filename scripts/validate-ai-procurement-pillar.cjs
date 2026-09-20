@@ -24,8 +24,12 @@ if (!failures.length) {
   const internalHref = '/ai-procurement-modernization';
   const existingInternalLink = new RegExp(`href=["']${internalHref}["']`, 'g');
   if (!existingInternalLink.test(capabilities)) {
-    const marker = '<a class="btn-secondary" href="past-performance.html">View Past Performance</a>';
-    if (!capabilities.includes(marker)) {
+    const markers = [
+      '<a class="btn-secondary" href="/past-performance">View Past Performance</a>',
+      '<a class="btn-secondary" href="past-performance.html">View Past Performance</a>'
+    ];
+    const marker = markers.find(candidate => capabilities.includes(candidate));
+    if (!marker) {
       failures.push('capabilities.html internal-link injection marker missing');
     } else {
       capabilities = capabilities.replace(marker, `${marker}\n      <a class="btn-secondary" href="${internalHref}">AI Procurement Modernization</a>`);
