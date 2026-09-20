@@ -25,7 +25,8 @@ const publicPages = [
   ['contact.html', '/contact'],
   ['privacy.html', '/privacy'],
   ['terms.html', '/terms'],
-  ['economic-development-partnerships.html', '/economic-development-partnerships']
+  ['economic-development-partnerships.html', '/economic-development-partnerships'],
+  ['ecosystem.html', '/ecosystem']
 ];
 
 function escapeRegExp(value) {
