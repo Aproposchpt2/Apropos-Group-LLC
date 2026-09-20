@@ -24,7 +24,8 @@ const publicPages = [
   ['past-performance.html', '/past-performance'],
   ['contact.html', '/contact'],
   ['privacy.html', '/privacy'],
-  ['terms.html', '/terms']
+  ['terms.html', '/terms'],
+  ['economic-development-partnerships.html', '/economic-development-partnerships']
 ];
 
 function escapeRegExp(value) {
@@ -36,13 +37,16 @@ function setHeadTag(html, pattern, tag) {
   return html.replace(/<\/head>/i, `  ${tag}\n</head>`);
 }
 
-function normalizePublicIdentity(filePath) {
+function normalizePublicIdentity(filePath, route) {
   if (!fs.existsSync(filePath)) return;
   const original = fs.readFileSync(filePath, 'utf8');
   let updated = original
     .replace(/jmitchell1126@gmail\.com/gi, officialEmail)
     .replace(/\bV20253463838\b/g, verifiedNevadaBusinessId)
     .replace(/https:\/\/www\.aproposgroupllc\.com\//gi, `${origin}/`);
+  const canonical = route === '/' ? `${origin}/` : `${origin}${route}`;
+  updated = setHeadTag(updated, /<link\s+rel=["']canonical["'][^>]*>/i, `<link rel="canonical" href="${canonical}" />`);
+  updated = setHeadTag(updated, /<meta\s+property=["']og:url["'][^>]*>/i, `<meta property="og:url" content="${canonical}" />`);
   if (updated !== original) fs.writeFileSync(filePath, updated, 'utf8');
 }
 
@@ -145,7 +149,7 @@ async function generateSocialImage() {
 }
 
 async function main() {
-  publicPages.forEach(([file]) => normalizePublicIdentity(path.join(root, file)));
+  publicPages.forEach(([file, route]) => normalizePublicIdentity(path.join(root, file), route));
   if (!fs.existsSync(homepagePath)) throw new Error('Corporate homepage index.html was not found.');
   applyHomepageSeo();
   writeCrawlFiles();
