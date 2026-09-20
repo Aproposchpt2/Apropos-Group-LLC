@@ -111,6 +111,11 @@
   force = true
 
 [[redirects]]
+  from = "/ecosystem"
+  to = "/ecosystem.html"
+  status = 200
+
+[[redirects]]
   from = "/contact"
   to = "/contact.html"
   status = 200
