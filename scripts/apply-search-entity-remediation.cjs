@@ -60,7 +60,7 @@ org.subOrganization = [
   {
     '@type': 'Organization',
     '@id': 'https://marketplace.aproposgroupllc.com/#organization',
-    name: 'APROPOS Marketing Marketplace',
+    name: 'APROPOS Business Intelligence Marketplace',
     url: 'https://marketplace.aproposgroupllc.com/'
   }
 ];
@@ -80,6 +80,12 @@ org.brand = [
     '@id': 'https://ai4websitedesign.com/#brand',
     name: 'AI4 Website Design Studio',
     url: 'https://ai4websitedesign.com/'
+  },
+  {
+    '@type': 'Brand',
+    '@id': 'https://ai4contactcenter.aproposgroupllc.com/#brand',
+    name: 'AI4 Contact Center',
+    url: 'https://ai4contactcenter.aproposgroupllc.com/'
   }
 ];
 
@@ -89,6 +95,55 @@ function upsertGraphNode(id, node) {
   else graph.push(node);
 }
 
+upsertGraphNode('https://bdms.aproposgroupllc.com/#website', {
+  '@type': 'WebSite',
+  '@id': 'https://bdms.aproposgroupllc.com/#website',
+  url: 'https://bdms.aproposgroupllc.com/',
+  name: 'Business Development Management System',
+  publisher: { '@id': corporateId },
+  inLanguage: 'en-US'
+});
+upsertGraphNode('https://bdms.aproposgroupllc.com/#service', {
+  '@type': 'Service',
+  '@id': 'https://bdms.aproposgroupllc.com/#service',
+  name: 'Business Development Management System',
+  alternateName: 'Advisor Contract Search Portal',
+  url: 'https://bdms.aproposgroupllc.com/',
+  serviceType: 'Business development management and advisor contract opportunity research',
+  provider: { '@id': corporateId }
+});
+upsertGraphNode('https://ai4contactcenter.aproposgroupllc.com/#website', {
+  '@type': 'WebSite',
+  '@id': 'https://ai4contactcenter.aproposgroupllc.com/#website',
+  url: 'https://ai4contactcenter.aproposgroupllc.com/',
+  name: 'AI4 Contact Center',
+  publisher: { '@id': corporateId },
+  inLanguage: 'en-US'
+});
+upsertGraphNode('https://ai4contactcenter.aproposgroupllc.com/#service', {
+  '@type': 'Service',
+  '@id': 'https://ai4contactcenter.aproposgroupllc.com/#service',
+  name: 'AI4 Contact Center',
+  url: 'https://ai4contactcenter.aproposgroupllc.com/',
+  serviceType: 'AI-powered inbound call management, routing, lead capture and customer intake',
+  provider: { '@id': corporateId }
+});
+upsertGraphNode('https://aproposopportunity.org/#website', {
+  '@type': 'WebSite',
+  '@id': 'https://aproposopportunity.org/#website',
+  url: 'https://aproposopportunity.org/',
+  name: 'APROPOS Business Opportunity Agency',
+  publisher: { '@id': corporateId },
+  inLanguage: 'en-US'
+});
+upsertGraphNode('https://aproposopportunity.org/#service', {
+  '@type': 'Service',
+  '@id': 'https://aproposopportunity.org/#service',
+  name: 'APROPOS Business Opportunity Agency',
+  url: 'https://aproposopportunity.org/',
+  serviceType: 'Business opportunity delivery and complimentary contract opportunity claim pathway',
+  provider: { '@id': corporateId }
+});
 upsertGraphNode('https://ai4businesses.org/#website', {
   '@type': 'WebSite',
   '@id': 'https://ai4businesses.org/#website',
@@ -160,6 +215,9 @@ const required = [
   'https://ai4websitedesign.com/#brand',
   'https://ai4websitedesign.com/#application',
   'https://espanola.ai4websitedesign.com/#website',
+  'https://bdms.aproposgroupllc.com/#service',
+  'https://ai4contactcenter.aproposgroupllc.com/#service',
+  'https://aproposopportunity.org/#service',
   'National Government Contract Center',
   'jmitchell@aproposgroupllc.com',
   heroPreload
@@ -184,7 +242,10 @@ if ((publishedHtml.match(/rel="preload" as="image" href="\/assets\/headquarters\
 for (const value of [
   'https://ai4businesses.org/#service',
   'https://ai4websitedesign.com/#application',
-  'https://espanola.ai4websitedesign.com/#website'
+  'https://espanola.ai4websitedesign.com/#website',
+  'https://bdms.aproposgroupllc.com/#service',
+  'https://ai4contactcenter.aproposgroupllc.com/#service',
+  'https://aproposopportunity.org/#service'
 ]) {
   if (!publishedHtml.includes(value)) throw new Error(`Corporate post-write validation failed: missing AI4 entity ${value}`);
 }
