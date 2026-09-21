@@ -19,7 +19,7 @@ requireText('Businesses grow. People prosper. Communities become stronger.', 'mi
 requireText('Federal contract discovery and procurement intelligence built specifically for registered federal contractors seeking opportunities published by Federal procurement agencies.', 'RFCP governing positioning');
 requireText('Primary mission: help registered federal contractors find relevant Federal contract opportunities.', 'RFCP primary mission');
 requireText('Business-first State and local public-sector contract discovery', 'NAT-CORP positioning');
-requireText('https://federalcontractorportal.aproposgroupllc.com/', 'RFCP pathway');
+requireText('https://rfcp.aproposgroupllc.com/', 'RFCP pathway');
 requireText('https://natcorp.aproposgroupllc.com/', 'NAT-CORP pathway');
 requireText('https://nebc.aproposgroupllc.com/', 'NEBC pathway');
 requireText('https://marketplace.aproposgroupllc.com/', 'Marketplace pathway');
