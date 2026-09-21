@@ -45,10 +45,10 @@ org.subOrganization = [
   },
   {
     '@type': 'Organization',
-    '@id': 'https://federalcontractorportal.aproposgroupllc.com/#organization',
+    '@id': 'https://rfcp.aproposgroupllc.com/#organization',
     name: 'Registered Federal Contractors Portal',
     alternateName: ['National Government Contract Center', 'NGCC'],
-    url: 'https://federalcontractorportal.aproposgroupllc.com/'
+    url: 'https://rfcp.aproposgroupllc.com/'
   },
   {
     '@type': 'Organization',
@@ -151,7 +151,7 @@ if (!html.includes(heroPreload)) {
 
 const required = [
   AUTHORITATIVE_ANALYZE_FIT_PRICE,
-  'https://federalcontractorportal.aproposgroupllc.com/#organization',
+  'https://rfcp.aproposgroupllc.com/#organization',
   'https://natcorp.aproposgroupllc.com/#organization',
   'https://nebc.aproposgroupllc.com/#organization',
   'https://marketplace.aproposgroupllc.com/#organization',
