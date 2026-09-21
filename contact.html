@@ -147,6 +147,24 @@
     const submitButton = document.getElementById('submit-button');
     const statusBox = document.getElementById('form-status');
 
+    function trackBusinessEvent(name, params = {}) {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', name, { ...params, transport_type: 'beacon' });
+      }
+    }
+
+    document.addEventListener('click', (event) => {
+      const link = event.target.closest && event.target.closest('a[href]');
+      if (!link) return;
+      const href = link.getAttribute('href') || '';
+      if (href.startsWith('tel:') || href.startsWith('mailto:')) {
+        trackBusinessEvent('contact_intent', {
+          contact_method: href.startsWith('tel:') ? 'phone' : 'email',
+          link_text: (link.textContent || '').trim().slice(0, 100)
+        });
+      }
+    });
+
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
       statusBox.className = 'status';
@@ -170,6 +188,10 @@
         form.reset();
         statusBox.className = 'status success';
         statusBox.textContent = 'Your inquiry was submitted successfully. APROPOS Group LLC will review it promptly.';
+        trackBusinessEvent('generate_lead', {
+          form_id: 'contact-form',
+          inquiry_type: payload.inquiry_type || 'general'
+        });
       } catch (error) {
         statusBox.className = 'status error';
         statusBox.textContent = 'The inquiry could not be submitted. Please email jmitchell@aproposgroupllc.com or call (888) 244-5737.';
