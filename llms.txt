@@ -18,7 +18,7 @@
 - Business development and economic-growth services
 - Procurement and opportunity intelligence
 - AI-enabled contact-center CRM and lead management
-- Federal contractor opportunity access: https://federalcontractorportal.aproposgroupllc.com/
+- Federal contractor opportunity access: https://rfcp.aproposgroupllc.com/
 - State and local contract intelligence: https://natcorp.aproposgroupllc.com/
 - Marketing and business-intelligence marketplace: https://marketplace.aproposgroupllc.com/
 - AI business services: https://ai4businesses.org/
