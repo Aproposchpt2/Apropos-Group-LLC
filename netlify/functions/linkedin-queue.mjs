@@ -1,60 +1,35 @@
-import { SESSION_COOKIE, decrypt, json, parseCookies } from "./_shared/linkedin-personal-session.mjs";
-import { deleteQueuedPost, ensureStarterQueue, getQueuedPost, listQueue, saveConnection, saveQueuedPost, validBrowserSession } from "./_shared/linkedin-automation.mjs";
-
-function authorized(request) {
-  const cookies = parseCookies(request.headers.get("cookie") || "");
-  const session = decrypt(cookies[SESSION_COOKIE]);
-  return validBrowserSession(session) ? session : null;
-}
-
-export default async (request) => {
-  const session = authorized(request);
-  if (!session) return json({ error: "linkedin_not_connected", message: "Connect Jeffery's LinkedIn profile to manage the queue." }, 401);
-  await saveConnection(session);
-
-  if (request.method === "GET") {
-    await ensureStarterQueue();
-    return json({ posts: await listQueue(), cadence: "Every other day", localTime: "11:00 AM Pacific", approvalRequired: true });
-  }
-
-  let body;
-  try { body = await request.json(); } catch { return json({ error: "invalid_json", message: "The request body must be valid JSON." }, 400); }
-  const id = String(body?.id || "").trim();
-  if (!id) return json({ error: "missing_id", message: "A queue item ID is required." }, 400);
-  const post = await getQueuedPost(id);
-  if (!post) return json({ error: "not_found", message: "The queued post was not found." }, 404);
-
-  if (request.method === "DELETE") {
-    if (post.status === "published") return json({ error: "published_post", message: "Published history cannot be deleted here." }, 409);
-    await deleteQueuedPost(id);
-    return json({ deleted: true, id });
-  }
-  if (request.method !== "POST") return json({ error: "method_not_allowed", message: "Use GET, POST, or DELETE." }, 405);
-
-  const action = String(body?.action || "");
-  if (!["approve", "return_to_draft", "update"].includes(action)) return json({ error: "invalid_action", message: "Choose approve, return_to_draft, or update." }, 400);
-  if (post.status === "published") return json({ error: "published_post", message: "Published history cannot be changed." }, 409);
-
-  if (action === "update") {
-    const text = String(body?.text || "").trim();
-    const scheduledFor = new Date(body?.scheduledFor || "");
-    if (!text || text.length > 3000) return json({ error: "invalid_post_text", message: "Post text must contain between 1 and 3,000 characters." }, 400);
-    if (Number.isNaN(scheduledFor.getTime())) return json({ error: "invalid_schedule", message: "Choose a valid publishing date and time." }, 400);
-    post.text = text;
-    post.scheduledFor = scheduledFor.toISOString();
-    post.status = "draft";
-    post.approvedAt = null;
-  } else if (action === "approve") {
-    post.status = "approved";
-    post.approvedAt = new Date().toISOString();
-    post.lastError = null;
-  } else {
-    post.status = "draft";
-    post.approvedAt = null;
-  }
-  post.updatedAt = new Date().toISOString();
-  await saveQueuedPost(post);
-  return json({ post });
-};
-
-export const config = { path: "/api/linkedin-queue" };
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive">
+  <title>LinkedIn Publisher | Apropos Group LLC</title>
+  <style>
+    :root{--navy:#071a2d;--navy2:#102d4b;--gold:#c6a15b;--ivory:#f7f1e5;--white:#fff;--muted:#9eacba;--ok:#87b89a;--bad:#d58479}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 10%,#173c62 0,var(--navy) 42%,#04101d 100%);color:var(--ivory);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}.shell{width:min(1180px,92vw);margin:auto;padding:34px 0 70px}.brand{display:flex;align-items:center;gap:14px;color:var(--ivory);text-decoration:none}.seal{display:grid;place-items:center;width:52px;height:52px;border:1px solid var(--gold);border-radius:50%;font-family:Georgia,serif;font-size:23px;color:var(--gold)}.brand b{display:block;letter-spacing:.12em}.brand small{color:var(--muted);letter-spacing:.08em}.hero{margin:58px 0 28px}.eyebrow{color:var(--gold);font-weight:700;letter-spacing:.15em;text-transform:uppercase;font-size:.78rem}.hero h1{font:500 clamp(2.6rem,6vw,5.4rem)/.95 Georgia,serif;max-width:900px;margin:16px 0}.hero h1 em{color:var(--gold);font-weight:400}.hero p{max-width:780px;color:#c7d0d8;font-size:1.08rem;line-height:1.65}.grid{display:grid;grid-template-columns:.78fr 1.4fr;gap:24px;align-items:start}.card{background:rgba(255,255,255,.055);border:1px solid rgba(198,161,91,.35);border-radius:18px;padding:25px;box-shadow:0 24px 70px rgba(0,0,0,.24);backdrop-filter:blur(12px)}.card h2{font:500 1.55rem Georgia,serif;margin:0 0 16px}.status{padding:14px 16px;border-radius:10px;background:rgba(255,255,255,.055);color:#d7dee4;margin-bottom:16px;line-height:1.5}.status.ok{border-left:3px solid var(--ok)}.status.bad{border-left:3px solid var(--bad)}.facts{display:grid;gap:10px;margin:20px 0}.fact{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:9px}.fact span,.muted{color:var(--muted)}.fact b{text-align:right}button,.button{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:11px 17px;font-weight:750;text-decoration:none;cursor:pointer}.primary{background:var(--gold);color:#091827}.secondary{background:transparent;color:var(--ivory);border:1px solid rgba(255,255,255,.28)}.danger{background:transparent;color:#ffc2ba;border:1px solid rgba(213,132,121,.55)}button:disabled{opacity:.45;cursor:not-allowed}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.message{min-height:26px;margin-top:14px;color:#cbd4db}.message.error{color:#ffc2ba}.message.success{color:#aee0bf}.queue-head{display:flex;justify-content:space-between;gap:15px;align-items:flex-start;margin-bottom:18px}.queue{display:grid;gap:15px}.post{background:#061626;border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px}.post.approved{border-color:rgba(135,184,154,.65)}.post.published{opacity:.72}.post-top{display:flex;justify-content:space-between;gap:12px;margin-bottom:12px}.badge{border-radius:999px;padding:5px 10px;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.08)}.badge.approved{color:#aee0bf}.badge.draft{color:#f4d79f}.badge.published{color:#b7c6d5}textarea,input{width:100%;border-radius:10px;border:1px solid rgba(198,161,91,.32);background:#04111e;color:var(--white);padding:12px;font:inherit}textarea{min-height:145px;resize:vertical;line-height:1.5}input{margin-top:10px}.post .actions{margin-top:11px}.empty{padding:24px;text-align:center;color:var(--muted)}.foot{margin-top:34px;color:var(--muted);font-size:.9rem}.foot a{color:var(--gold)}@media(max-width:800px){.grid{grid-template-columns:1fr}.hero{margin-top:44px}.queue-head{display:block}.shell{padding-top:22px}}
+  </style>
+</head>
+<body><main class="shell">
+  <a class="brand" href="/"><span class="seal">AG</span><span><b>APROPOS GROUP LLC</b><small>LinkedIn Publishing Control</small></span></a>
+  <header class="hero"><span class="eyebrow">AG Publisher · Controlled Automation</span><h1>Review once. Publish <em>on schedule.</em></h1><p>Prepare Apropos Group LLC company-page messages for controlled publishing. Nothing publishes until you approve it.</p></header>
+  <section class="grid">
+    <aside class="card"><h2>Connection & Schedule</h2><div class="status" id="status">Checking LinkedIn authorization…</div>
+      <div class="facts"><div class="fact"><span>Target</span><b>Apropos Group LLC Company Page</b></div><div class="fact"><span>Cadence</span><b>Every other day</b></div><div class="fact"><span>Time</span><b>11:00 AM Pacific</b></div><div class="fact"><span>Control</span><b>Approval required</b></div></div>
+      <div class="actions"><a class="button primary" id="connect" href="/linkedin-personal-auth">Connect LinkedIn</a><a class="button secondary" href="https://www.linkedin.com/company/aproposgroupllc/" target="_blank" rel="noopener">Company Page</a></div><div class="message" id="message"></div>
+    </aside>
+    <section class="card"><div class="queue-head"><div><h2>30-Day Posting Queue</h2><div class="muted">Edit each draft, then approve it for automatic publishing.</div></div><button class="secondary" id="refresh">Refresh</button></div><div class="queue" id="queue"><div class="empty">Loading drafts…</div></div></section>
+  </section>
+  <div class="foot">© 2026 Apropos Group LLC · <a href="/privacy">Privacy Policy</a></div>
+</main>
+<script>
+const statusBox=document.getElementById('status'),connect=document.getElementById('connect'),message=document.getElementById('message'),queue=document.getElementById('queue');
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function show(text,type=''){message.textContent=text;message.className=`message ${type}`}
+function localInput(iso){const d=new Date(iso),pad=n=>String(n).padStart(2,'0');return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`}
+async function api(options={}){const response=await fetch('/api/linkedin-queue',{credentials:'same-origin',cache:'no-store',headers:{'Content-Type':'application/json'},...options});const data=await response.json();if(!response.ok)throw new Error(data.message||'Queue request failed.');return data}
+function render(posts){if(!posts.length){queue.innerHTML='<div class="empty">No posts are queued.</div>';return}queue.innerHTML=posts.map((p,i)=>`<article class="post ${esc(p.status)}" data-id="${esc(p.id)}"><div class="post-top"><b>Post ${i+1}</b><span class="badge ${esc(p.status)}">${esc(p.status)}</span></div><textarea maxlength="3000" ${p.status==='published'?'disabled':''}>${esc(p.text)}</textarea><input type="datetime-local" value="${localInput(p.scheduledFor)}" ${p.status==='published'?'disabled':''}><div class="muted" style="margin-top:8px">${new Date(p.scheduledFor).toLocaleString([],{dateStyle:'medium',timeStyle:'short'})}${p.lastError?` · Error: ${esc(p.lastError)}`:''}</div>${p.status!=='published'?`<div class="actions"><button class="secondary save">Save changes</button>${p.status==='approved'?'<button class="primary draft">Return to draft</button>':'<button class="primary approve">Approve for automatic posting</button>'}<button class="danger delete">Delete</button></div>`:`<div class="muted" style="margin-top:10px">Published ${p.publishedAt?new Date(p.publishedAt).toLocaleString():'successfully'}${p.postId?` · ${esc(p.postId)}`:''}</div>`}</article>`).join('')}
+async function loadQueue(){try{const data=await api();render(data.posts)}catch(error){queue.innerHTML=`<div class="empty">${esc(error.message)}</div>`}}
+async function loadStatus(){try{const response=await fetch('/api/linkedin-personal-status',{credentials:'same-origin',cache:'no-store'}),data=await response.json();if(data.connected){statusBox.textContent=`Connected to ${data.name||'Apropos Group LLC'} — company-page automation ready`;statusBox.className='status ok';connect.textContent='Reconnect LinkedIn';await loadQueue()}else{statusBox.textContent='LinkedIn authorization is required.';statusBox.className='status';queue.innerHTML='<div class="empty">Connect LinkedIn to load the posting queue.</div>'}}catch(error){statusBox.textContent='Connection status unavailable.';statusBox.className='status bad';show(error.message,'error')}}
+queue.addEventListener('click',async event=>{const button=event.target.closest('button');if(!button)return;const post=button.closest('.post'),id=post.dataset.id;button.disabled=true;try{if(button.classList.contains('delete')){if(!confirm('Delete this draft?'))return;await api({method:'DELETE',body:JSON.stringify({id})})}else{let action=button.classList.contains('approve')?'approve':button.classList.contains('draft')?'return_to_draft':'update';const body={id,action};if(action==='update'){body.text=post.querySelector('textarea').value.trim();body.scheduledFor=new Date(post.querySelector('input').value).toISOString()}await api({method:'POST',body:JSON.stringify(body)})}show('Queue updated.','success');await loadQueue()}catch(error){show(error.message,'error')}finally{button.disabled=false}});
+document.getElementById('refresh').addEventListener('click',loadQueue);
+const params=new URLSearchParams(location.search);if(params.get('linkedin')==='connected'){show('LinkedIn company-page authorization completed. Automatic scheduling is ready.','success');history.replaceState({},'',location.pathname)}else if(params.get('linkedin')==='error'){show(params.get('detail')||'LinkedIn authorization failed.','error')}
+loadStatus();
+</script></body></html>
