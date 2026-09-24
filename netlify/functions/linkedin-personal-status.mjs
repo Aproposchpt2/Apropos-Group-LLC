@@ -6,8 +6,8 @@ export default async (request) => {
   const browserSession = decrypt(cookies[SESSION_COOKIE]);
   if (validBrowserSession(browserSession)) await saveConnection(browserSession);
   const session = validBrowserSession(browserSession) ? browserSession : await loadConnection();
-  if (!session) return json({ connected: false, targetType: "organization", reason: browserSession ? "reauthorization_required" : "not_connected" }, 200, { "Set-Cookie": clearCookie(SESSION_COOKIE) });
-  return json({ connected: true, targetType: "organization", name: session.organizationName, organizationId: session.organizationId, authorUrn: session.authorUrn, expiresAt: session.expiresAt, scopes: session.scope, automationReady: true });
+  if (!session) return json({ connected: false, targetType: "member", reason: browserSession ? "reauthorization_required" : "not_connected" }, 200, { "Set-Cookie": clearCookie(SESSION_COOKIE) });
+  return json({ connected: true, targetType: "member", name: session.memberName, authorUrn: session.authorUrn, expiresAt: session.expiresAt, scopes: session.scope, automationReady: true });
 };
 
 export const config = { path: "/api/linkedin-personal-status" };

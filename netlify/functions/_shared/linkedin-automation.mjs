@@ -2,7 +2,7 @@ import { getStore } from "@netlify/blobs";
 import { decrypt, encrypt } from "./linkedin-personal-session.mjs";
 
 const STORE_NAME = "ag-linkedin-publisher";
-const TOKEN_KEY = "connection/organization";
+const TOKEN_KEY = "connection/member";
 const QUEUE_PREFIX = "queue/";
 
 export function linkedinStore() {
@@ -19,13 +19,13 @@ export async function loadConnection() {
   const encrypted = await store.get(TOKEN_KEY);
   const session = decrypt(encrypted);
   const scopes = String(session?.scope || "").split(/[ ,]+/).filter(Boolean);
-  if (!session || session.mode !== "organization" || !session.accessToken || session.expiresAt <= Date.now() || !session.organizationId || session.authorUrn !== `urn:li:organization:${session.organizationId}` || !scopes.includes("w_organization_social")) return null;
+  if (!session || session.mode !== "member" || !session.accessToken || session.expiresAt <= Date.now() || !scopes.includes("w_member_social")) return null;
   return session;
 }
 
 export function validBrowserSession(session) {
   const scopes = String(session?.scope || "").split(/[ ,]+/).filter(Boolean);
-  return Boolean(session && session.mode === "organization" && session.accessToken && session.expiresAt > Date.now() && session.organizationId && session.authorUrn === `urn:li:organization:${session.organizationId}` && scopes.includes("w_organization_social"));
+  return Boolean(session && session.mode === "member" && session.accessToken && session.expiresAt > Date.now() && session.memberId && session.authorUrn === `urn:li:person:${session.memberId}` && scopes.includes("w_member_social"));
 }
 
 function postKey(id) { return `${QUEUE_PREFIX}${id}`; }
@@ -52,7 +52,7 @@ export async function deleteQueuedPost(id) {
 
 export async function publishToLinkedIn(session, text) {
   if (!validBrowserSession(session)) {
-    const error = new Error("A valid Apropos Group LLC organization authorization is required.");
+    const error = new Error("A valid personal-profile authorization is required.");
     error.status = 401;
     throw error;
   }
@@ -82,7 +82,7 @@ export async function publishToLinkedIn(session, text) {
   let details = responseText || null;
   try { details = responseText ? JSON.parse(responseText) : null; } catch {}
   if (!response.ok) {
-    const error = new Error(details?.message || details?.error_description || "LinkedIn rejected the organization post.");
+    const error = new Error(details?.message || details?.error_description || "LinkedIn rejected the post.");
     error.status = response.status;
     error.details = details;
     throw error;

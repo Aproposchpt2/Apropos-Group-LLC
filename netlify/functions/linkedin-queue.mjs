@@ -9,12 +9,12 @@ function authorized(request) {
 
 export default async (request) => {
   const session = authorized(request);
-  if (!session) return json({ error: "linkedin_not_connected", message: "Connect an authorized Apropos Group LLC LinkedIn Page administrator to manage the queue." }, 401);
+  if (!session) return json({ error: "linkedin_not_connected", message: "Connect Jeffery's LinkedIn profile to manage the queue." }, 401);
   await saveConnection(session);
 
   if (request.method === "GET") {
     await ensureStarterQueue();
-    return json({ posts: await listQueue(), cadence: "Every other day", localTime: "11:00 AM Pacific", approvalRequired: true, target: "Apropos Group LLC company page" });
+    return json({ posts: await listQueue(), cadence: "Every other day", localTime: "11:00 AM Pacific", approvalRequired: true });
   }
 
   let body;
