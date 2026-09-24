@@ -2,7 +2,7 @@ import { getStore } from "@netlify/blobs";
 import { decrypt, encrypt } from "./linkedin-personal-session.mjs";
 
 const STORE_NAME = "ag-linkedin-publisher";
-const TOKEN_KEY = "connection/member";
+const TOKEN_KEY = "connection/organization";
 const QUEUE_PREFIX = "queue/";
 
 export function linkedinStore() {
@@ -19,13 +19,13 @@ export async function loadConnection() {
   const encrypted = await store.get(TOKEN_KEY);
   const session = decrypt(encrypted);
   const scopes = String(session?.scope || "").split(/[ ,]+/).filter(Boolean);
-  if (!session || session.mode !== "member" || !session.accessToken || session.expiresAt <= Date.now() || !scopes.includes("w_member_social")) return null;
+  if (!session || session.mode !== "organization" || !session.accessToken || session.expiresAt <= Date.now() || !session.organizationId || session.authorUrn !== `urn:li:organization:${session.organizationId}` || !scopes.includes("w_organization_social")) return null;
   return session;
 }
 
 export function validBrowserSession(session) {
   const scopes = String(session?.scope || "").split(/[ ,]+/).filter(Boolean);
-  return Boolean(session && session.mode === "member" && session.accessToken && session.expiresAt > Date.now() && session.memberId && session.authorUrn === `urn:li:person:${session.memberId}` && scopes.includes("w_member_social"));
+  return Boolean(session && session.mode === "organization" && session.accessToken && session.expiresAt > Date.now() && session.organizationId && session.authorUrn === `urn:li:organization:${session.organizationId}` && scopes.includes("w_organization_social"));
 }
 
 function postKey(id) { return `${QUEUE_PREFIX}${id}`; }
@@ -51,25 +51,38 @@ export async function deleteQueuedPost(id) {
 }
 
 export async function publishToLinkedIn(session, text) {
-  const response = await fetch("https://api.linkedin.com/v2/ugcPosts", {
+  if (!validBrowserSession(session)) {
+    const error = new Error("A valid Apropos Group LLC organization authorization is required.");
+    error.status = 401;
+    throw error;
+  }
+  const linkedinVersion = String(Netlify.env.get("LINKEDIN_API_VERSION") || "202608").trim();
+  const response = await fetch("https://api.linkedin.com/rest/posts", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${session.accessToken}`,
       "Content-Type": "application/json",
+      "Linkedin-Version": linkedinVersion,
       "X-Restli-Protocol-Version": "2.0.0",
     },
     body: JSON.stringify({
       author: session.authorUrn,
+      commentary: text,
+      visibility: "PUBLIC",
+      distribution: {
+        feedDistribution: "MAIN_FEED",
+        targetEntities: [],
+        thirdPartyDistributionChannels: [],
+      },
       lifecycleState: "PUBLISHED",
-      specificContent: { "com.linkedin.ugc.ShareContent": { shareCommentary: { text }, shareMediaCategory: "NONE" } },
-      visibility: { "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC" },
+      isReshareDisabledByAuthor: false,
     }),
   });
   const responseText = await response.text();
   let details = responseText || null;
   try { details = responseText ? JSON.parse(responseText) : null; } catch {}
   if (!response.ok) {
-    const error = new Error(details?.message || details?.error_description || "LinkedIn rejected the post.");
+    const error = new Error(details?.message || details?.error_description || "LinkedIn rejected the organization post.");
     error.status = response.status;
     error.details = details;
     throw error;
