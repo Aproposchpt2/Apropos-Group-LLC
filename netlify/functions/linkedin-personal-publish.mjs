@@ -5,8 +5,8 @@ export default async (request) => {
   if (request.method !== "POST") return json({ error: "method_not_allowed", message: "Use POST." }, 405, { Allow: "POST" });
   const cookies = parseCookies(request.headers.get("cookie") || "");
   const session = decrypt(cookies[SESSION_COOKIE]);
-  if (!validBrowserSession(session)) return json({ error: "linkedin_not_connected", message: "Connect Jeffery's LinkedIn profile before publishing." }, 401);
-  if (!String(session.authorUrn || "").startsWith("urn:li:person:")) return json({ error: "invalid_publishing_target", message: "The active session is not a personal-profile authorization." }, 409);
+  if (!validBrowserSession(session)) return json({ error: "linkedin_not_connected", message: "Connect an authorized Apropos Group LLC LinkedIn Page administrator before publishing." }, 401);
+  if (!String(session.authorUrn || "").startsWith("urn:li:organization:")) return json({ error: "invalid_publishing_target", message: "The active session is not an organization authorization." }, 409);
   let body;
   try { body = await request.json(); } catch { return json({ error: "invalid_json", message: "The request body must be valid JSON." }, 400); }
   const text = String(body?.text || "").trim();
@@ -14,7 +14,7 @@ export default async (request) => {
   try {
     await saveConnection(session);
     const result = await publishToLinkedIn(session, text);
-    return json({ published: true, target: session.memberName, postId: result.postId, text, publishedAt: new Date().toISOString() }, 201);
+    return json({ published: true, target: session.organizationName, postId: result.postId, text, publishedAt: new Date().toISOString() }, 201);
   } catch (error) {
     return json({ error: "linkedin_publish_failed", message: error.message || "LinkedIn publishing failed.", linkedinStatus: error.status || 500 }, error.status || 500);
   }

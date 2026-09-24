@@ -1,7 +1,7 @@
 import crypto from "node:crypto";
 
-export const SESSION_COOKIE = "ag_linkedin_personal_session";
-export const STATE_COOKIE = "ag_linkedin_personal_state";
+export const SESSION_COOKIE = "ag_linkedin_organization_session";
+export const STATE_COOKIE = "ag_linkedin_organization_state";
 
 function env(name) {
   return String(Netlify.env.get(name) || "").trim();
@@ -12,13 +12,14 @@ export function personalConfig() {
     clientId: env("LINKEDIN_PERSONAL_CLIENT_ID"),
     clientSecret: env("LINKEDIN_PERSONAL_CLIENT_SECRET"),
     redirectUri: env("LINKEDIN_PERSONAL_REDIRECT_URI"),
+    organizationId: env("LINKEDIN_ORGANIZATION_ID"),
   };
 }
 
 function encryptionKey() {
   const { clientId, clientSecret } = personalConfig();
   if (!clientId || !clientSecret) {
-    throw new Error("LinkedIn personal-profile credentials are not configured.");
+    throw new Error("LinkedIn Publisher credentials are not configured.");
   }
   return crypto.createHash("sha256").update(`${clientId}:${clientSecret}`).digest();
 }
