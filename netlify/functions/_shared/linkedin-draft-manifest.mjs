@@ -2,6 +2,15 @@
 // bundled with the site; the scheduled importer writes only unapproved drafts.
 export const DRAFTS = [
   {
+    key: "chat-agent-queue-test-2026-09-26",
+    preferredDate: "2026-09-26",
+    text: `CHAT AGENT PUBLISHER QUEUE TEST — SEPTEMBER 26, 2026
+
+This is a controlled test draft created by the Apropos messaging chat agent to verify direct staging into the LinkedIn Publisher queue.
+
+TEST ONLY — DO NOT APPROVE OR PUBLISH.`,
+  },
+  {
     key: "ai4-intelligence-layer-2026-09-28",
     preferredDate: "2026-09-28",
     text: `THE INTELLIGENCE LAYER. NOT THE REPLACEMENT LAYER.
