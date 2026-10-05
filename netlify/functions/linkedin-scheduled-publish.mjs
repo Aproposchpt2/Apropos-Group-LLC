@@ -1,4 +1,4 @@
-import { deleteQueuedPost, loadConnection, listQueue, publishToLinkedIn, saveQueuedPost } from "./_shared/linkedin-automation.mjs";
+import { loadConnection, listQueue, publishToLinkedIn, saveQueuedPost } from "./_shared/linkedin-automation.mjs";
 
 function pacificHour(date = new Date()) {
   return Number(new Intl.DateTimeFormat("en-US", { timeZone: "America/Los_Angeles", hour: "2-digit", hourCycle: "h23" }).format(date));
@@ -21,8 +21,13 @@ export default async () => {
   due.updatedAt = now.toISOString();
   await saveQueuedPost(due);
   try {
-    await publishToLinkedIn(session, due.text);
-    await deleteQueuedPost(due.id);
+    const result = await publishToLinkedIn(session, due.text);
+    due.status = "published";
+    due.publishedAt = new Date().toISOString();
+    due.postId = result?.postId || null;
+    due.lastError = null;
+    due.updatedAt = due.publishedAt;
+    await saveQueuedPost(due);
     return;
   } catch (error) {
     due.status = "approved";
