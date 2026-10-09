@@ -24,13 +24,13 @@ const corporateId = 'https://aproposgroupllc.com/#organization';
 const org = graph.find(node => node && node['@id'] === corporateId);
 if (!org) throw new Error('Corporate entity remediation: APROPOS Organization node not found.');
 
-org.telephone = '+1-888-244-5737';
+org.telephone = '+1-888-258-9498';
 org.email = 'jmitchell@aproposgroupllc.com';
 org.naics = ['541511', '541512', '541519', '541611', '541614', '541618'];
 org.contactPoint = {
   '@type': 'ContactPoint',
   contactType: 'business inquiries',
-  telephone: '+1-888-244-5737',
+  telephone: '+1-888-258-9498',
   email: 'jmitchell@aproposgroupllc.com',
   areaServed: 'US',
   availableLanguage: 'en'
