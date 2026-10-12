@@ -666,5 +666,35 @@ The strongest customer operation is not entirely automated or entirely manual.
 It uses each resource where it creates the greatest value.
 
 THE INTELLIGENCE LAYER. NOT THE REPLACEMENT LAYER.`,
-  },
+  },,
+  {
+    key: "stellaruc-black-gold-24-7-2026-10-12",
+    preferredDate: "2026-10-12",
+    media: {
+      type: "image",
+      url: "https://aproposgroupllc.com/linkedin-assets/stellaruc-share-preview.jpg",
+      previewUrl: "/linkedin-assets/stellaruc-share-preview.jpg",
+      altText: "StellarUC: Your business may close. Your sales operation remains open 24/7.",
+    },
+    text: `A prospective customer may call after your staff has gone home.
+
+They may need an estimate, want to schedule an appointment, or be ready to make a purchase.
+
+If nobody responds, that sales opportunity may go elsewhere.
+
+YOUR BUSINESS MAY CLOSE. WHILE YOUR SALES OPERATION REMAINS OPEN 24/7.
+
+The Apropos Intelligent Customer Engagement Operation Center — Sales Service System helps businesses engage inbound sales prospects, capture inquiries, qualify opportunities, and preserve information for staff follow-up.
+
+Keep the business number your customers already know. Add around-the-clock sales coverage without replacing what already works.
+
+With transparent Usage-Based Pricing, you pay for the services delivered—not unused usage capacity. When usage is lower, your usage-related costs are lower.
+
+KEEP YOUR NUMBER. ADD THE INTELLIGENCE.
+
+Experience the Sales Service System:
+https://stellaruc.com/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=sales_service_system&utm_content=black_gold_24_7_creative
+
+#SalesService #CustomerEngagement #LeadCapture #BusinessGrowth`,
+  }
 ];
