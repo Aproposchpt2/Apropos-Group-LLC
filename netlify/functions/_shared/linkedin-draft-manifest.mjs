@@ -669,6 +669,7 @@ THE INTELLIGENCE LAYER. NOT THE REPLACEMENT LAYER.`,
   },,
   {
     key: "stellaruc-black-gold-24-7-2026-10-12",
+    id: "stellaruc-black-gold-24-7-2026-10-12",
     preferredDate: "2026-10-12",
     media: {
       type: "image",
