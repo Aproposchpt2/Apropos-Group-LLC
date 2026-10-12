@@ -20,6 +20,7 @@ function dayPlus(dateText, days) {
 
 export async function importDrafts(drafts = DRAFTS, existing = null, save = saveQueuedPost, ledger = null) {
   const posts = existing ?? await listQueue();
+  const currentTime = new Date();
   const store = ledger ?? linkedinStore();
   const occupied = new Set(posts.filter((p) => p.status !== "published").map((p) => p.scheduledFor));
   const seen = new Set(posts.map((p) => p.text));
@@ -36,6 +37,11 @@ export async function importDrafts(drafts = DRAFTS, existing = null, save = save
     }
     let date = draft.preferredDate;
     let scheduledFor = pacificEleven(date);
+    for (let attempt = 0; new Date(scheduledFor) <= currentTime && attempt < 183; attempt++) {
+      date = dayPlus(date, 2);
+      scheduledFor = pacificEleven(date);
+    }
+    if (new Date(scheduledFor) <= currentTime) throw new Error("No future cadence slot available for draft");
     for (let attempt = 0; occupied.has(scheduledFor) && attempt < 30; attempt++) {
       date = dayPlus(date, 2);
       scheduledFor = pacificEleven(date);
@@ -43,7 +49,7 @@ export async function importDrafts(drafts = DRAFTS, existing = null, save = save
     if (occupied.has(scheduledFor)) throw new Error("No available cadence slot for draft");
     const now = new Date().toISOString();
     const post = {
-      id: crypto.randomUUID(), importKey: draft.key, text: draft.text, media: draft.media ?? null, scheduledFor,
+      id: draft.id || crypto.randomUUID(), importKey: draft.key, text: draft.text, media: draft.media ?? null, scheduledFor,
       timeZone: "America/Los_Angeles", status: "draft", approvedAt: null,
       publishedAt: null, postId: null, createdAt: now, updatedAt: now, lastError: null,
     };
