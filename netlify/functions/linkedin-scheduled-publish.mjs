@@ -21,10 +21,11 @@ export default async () => {
   due.updatedAt = now.toISOString();
   await saveQueuedPost(due);
   try {
-    const result = await publishToLinkedIn(session, due.text);
+    const result = await publishToLinkedIn(session, due.text, due.media || null);
     due.status = "published";
     due.publishedAt = new Date().toISOString();
     due.postId = result?.postId || null;
+    due.mediaUrn = result?.imageUrn || due.mediaUrn || null;
     due.lastError = null;
     due.updatedAt = due.publishedAt;
     await saveQueuedPost(due);

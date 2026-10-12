@@ -50,13 +50,88 @@ export async function deleteQueuedPost(id) {
   await linkedinStore().delete(postKey(id));
 }
 
-export async function publishToLinkedIn(session, text) {
+async function uploadImageToLinkedIn(session, media, linkedinVersion) {
+  if (!media?.url) throw new Error("Approved LinkedIn image URL is missing.");
+  const source = await fetch(media.url, { headers: { Accept: "image/jpeg,image/png,image/gif" } });
+  if (!source.ok) throw new Error(`Approved LinkedIn image is unavailable (${source.status}).`);
+  const contentType = String(source.headers.get("content-type") || "").split(";")[0].trim().toLowerCase();
+  if (!["image/jpeg", "image/png", "image/gif"].includes(contentType)) {
+    throw new Error("Approved LinkedIn image has an unsupported content type.");
+  }
+  const bytes = await source.arrayBuffer();
+  if (!bytes.byteLength) throw new Error("Approved LinkedIn image is empty.");
+
+  const initialize = await fetch("https://api.linkedin.com/rest/images?action=initializeUpload", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${session.accessToken}`,
+      "Content-Type": "application/json",
+      "Linkedin-Version": linkedinVersion,
+      "X-Restli-Protocol-Version": "2.0.0",
+    },
+    body: JSON.stringify({ initializeUploadRequest: { owner: session.authorUrn } }),
+  });
+  const initializeText = await initialize.text();
+  let initializeDetails = initializeText || null;
+  try { initializeDetails = initializeText ? JSON.parse(initializeText) : null; } catch {}
+  if (!initialize.ok) {
+    const error = new Error(initializeDetails?.message || initializeDetails?.error_description || "LinkedIn image initialization failed.");
+    error.status = initialize.status;
+    error.details = initializeDetails;
+    throw error;
+  }
+
+  const uploadUrl = initializeDetails?.value?.uploadUrl;
+  const imageUrn = initializeDetails?.value?.image;
+  if (!uploadUrl || !imageUrn) throw new Error("LinkedIn did not return an image upload target.");
+
+  const upload = await fetch(uploadUrl, {
+    method: "PUT",
+    headers: {
+      Authorization: `Bearer ${session.accessToken}`,
+      "Content-Type": contentType,
+    },
+    body: bytes,
+  });
+  if (!upload.ok) {
+    const uploadText = await upload.text();
+    const error = new Error(`LinkedIn image upload failed (${upload.status}).`);
+    error.status = upload.status;
+    error.details = uploadText || null;
+    throw error;
+  }
+  return imageUrn;
+}
+
+export async function publishToLinkedIn(session, text, media = null) {
   if (!validBrowserSession(session)) {
     const error = new Error("A valid personal-profile authorization is required.");
     error.status = 401;
     throw error;
   }
   const linkedinVersion = String(Netlify.env.get("LINKEDIN_API_VERSION") || "202608").trim();
+  const imageUrn = media?.type === "image" ? await uploadImageToLinkedIn(session, media, linkedinVersion) : null;
+  const payload = {
+    author: session.authorUrn,
+    commentary: text,
+    visibility: "PUBLIC",
+    distribution: {
+      feedDistribution: "MAIN_FEED",
+      targetEntities: [],
+      thirdPartyDistributionChannels: [],
+    },
+    lifecycleState: "PUBLISHED",
+    isReshareDisabledByAuthor: false,
+  };
+  if (imageUrn) {
+    payload.content = {
+      media: {
+        id: imageUrn,
+        ...(media?.altText ? { altText: String(media.altText).slice(0, 4086) } : {}),
+      },
+    };
+  }
+
   const response = await fetch("https://api.linkedin.com/rest/posts", {
     method: "POST",
     headers: {
@@ -65,18 +140,7 @@ export async function publishToLinkedIn(session, text) {
       "Linkedin-Version": linkedinVersion,
       "X-Restli-Protocol-Version": "2.0.0",
     },
-    body: JSON.stringify({
-      author: session.authorUrn,
-      commentary: text,
-      visibility: "PUBLIC",
-      distribution: {
-        feedDistribution: "MAIN_FEED",
-        targetEntities: [],
-        thirdPartyDistributionChannels: [],
-      },
-      lifecycleState: "PUBLISHED",
-      isReshareDisabledByAuthor: false,
-    }),
+    body: JSON.stringify(payload),
   });
   const responseText = await response.text();
   let details = responseText || null;
@@ -87,7 +151,7 @@ export async function publishToLinkedIn(session, text) {
     error.details = details;
     throw error;
   }
-  return { postId: response.headers.get("x-restli-id") || null };
+  return { postId: response.headers.get("x-restli-id") || null, imageUrn };
 }
 
 function pacificDateTime(dateText, hour = 11) {

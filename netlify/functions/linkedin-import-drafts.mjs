@@ -27,6 +27,7 @@ export async function importDrafts(drafts = DRAFTS, existing = null, save = save
   const created = [];
   for (const draft of drafts) {
     if (!draft.key || !draft.preferredDate || !draft.text?.trim() || draft.text.length > 3000) throw new Error("Invalid draft manifest entry");
+    if (draft.media && (draft.media.type !== "image" || !draft.media.url || !draft.media.previewUrl)) throw new Error("Invalid draft media entry");
     const ledgerKey = `imported/${draft.key}`;
     if (keys.has(draft.key) || await store.get(ledgerKey)) continue;
     if (seen.has(draft.text)) {
@@ -42,7 +43,7 @@ export async function importDrafts(drafts = DRAFTS, existing = null, save = save
     if (occupied.has(scheduledFor)) throw new Error("No available cadence slot for draft");
     const now = new Date().toISOString();
     const post = {
-      id: crypto.randomUUID(), importKey: draft.key, text: draft.text, scheduledFor,
+      id: crypto.randomUUID(), importKey: draft.key, text: draft.text, media: draft.media ?? null, scheduledFor,
       timeZone: "America/Los_Angeles", status: "draft", approvedAt: null,
       publishedAt: null, postId: null, createdAt: now, updatedAt: now, lastError: null,
     };
