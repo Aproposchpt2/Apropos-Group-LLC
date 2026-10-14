@@ -2,6 +2,56 @@
 // bundled with the site; the scheduled importer writes only unapproved drafts.
 export const DRAFTS = [
   {
+    key: "new-age-workforce-01-2026-10-15",
+    preferredDate: "2026-10-15",
+    text: "THE NEW AGE WORKFORCE: HUMAN INTELLIGENCE + ARTIFICIAL INTELLIGENCE\n\nThe future of business is not just about working harder. It's about redefining the work.\n\nIntelligent systems can manage predictable, repetitive responsibilities. People can devote more attention to judgment, creativity, relationships, and trust.\n\nThat is not a choice between people and technology. It is a better division of responsibility.\n\nAt Apropos Group LLC, we are putting this philosophy into practice through Stellar UC's intelligent Sales Specialists, supporting customer conversations while people focus on the moments that matter most.\n\nLET INTELLIGENT SYSTEMS MANAGE THE PREDICTABLE. LET PEOPLE EXCEL AT THE PERSONAL.\n\nhttps://stellaruc.com\n\n#FutureOfWork #ArtificialIntelligence #StellarUC",
+  },
+  {
+    key: "new-age-workforce-02-2026-10-17",
+    preferredDate: "2026-10-17",
+    text: "AI'S ROLE AT WORK IS NOT DEFINED BY THE TASKS IT CAN DO.\n\nIt is defined by the time and attention it can return to people.\n\nRoutine questions, first-contact intake, and consistent information capture are valuable work. But they do not always require a person to perform every step.\n\nWhen intelligent systems support those predictable activities, employees can spend more time listening, solving exceptions, and building trust.\n\nThe question for leaders is not simply, 'Where can we use AI?'\n\nIt is, 'Where will human attention create the greatest value?'\n\nHUMAN VISION. INTELLIGENT EXECUTION.\n\n#FutureOfWork #Leadership #WorkforceTransformation",
+  },
+  {
+    key: "new-age-workforce-03-2026-10-19",
+    preferredDate: "2026-10-19",
+    text: "REDEFINING WORK BEGINS WITH REDEFINING RESPONSIBILITY.\n\nA job description often combines two very different kinds of work: predictable tasks and decisions that require experience.\n\nThe next-generation workplace can separate them more deliberately.\n\nLet intelligent systems handle approved, repeatable processes. Keep people accountable for complex decisions, empathy, exceptions, and outcomes.\n\nThis is not automation for its own sake. It is organizational design for an era of intelligent technology.\n\nThe real transformation begins when leaders reconsider how work gets done.\n\n#FutureOfWork #BusinessLeadership #ArtificialIntelligence",
+  },
+  {
+    key: "new-age-workforce-04-2026-10-21",
+    preferredDate: "2026-10-21",
+    text: "THE CUSTOMER SHOULD NOT HAVE TO WAIT FOR THE WORKDAY TO BEGIN.\n\nA business may close its office at 5 PM. Customer interest does not follow the same schedule.\n\nThe new age workforce combines people with intelligent systems that can remain available when employees are away.\n\nIn sales, that can mean engaging a prospective customer, answering approved questions, qualifying an inquiry, and capturing the next step for the team.\n\nStellar UC brings that model to sales operations through intelligent Sales Specialists.\n\nYOUR BUSINESS MAY CLOSE. YOUR SALES OPERATION REMAINS OPEN 24/7.\n\nhttps://stellaruc.com\n\n#SalesOperations #FutureOfWork #StellarUC",
+  },
+  {
+    key: "new-age-workforce-05-2026-10-23",
+    preferredDate: "2026-10-23",
+    text: "THE MOST VALUABLE HUMAN SKILL MAY BE KNOWING WHEN TO TAKE OVER.\n\nIntelligent systems can handle routine interactions, but some customer moments call for empathy, negotiation, judgment, or a difficult decision.\n\nA responsible operating model makes room for both.\n\nClear boundaries. Reliable information. Human handoff when needed. Accountability that stays with the business.\n\nThe future of work is not about removing people from the process.\n\nIt is about making their participation more purposeful.\n\nLET PEOPLE EXCEL AT THE PERSONAL.\n\n#HumanCenteredAI #CustomerExperience #FutureOfWork",
+  },
+  {
+    key: "new-age-workforce-06-2026-10-25",
+    preferredDate: "2026-10-25",
+    text: "SMALL BUSINESSES DESERVE INTELLIGENT CAPACITY, TOO.\n\nA business owner cannot always hire another shift, add another sales desk, or personally answer every call.\n\nBut growth should not depend entirely on being available every minute.\n\nIntelligent sales systems can help handle predictable inquiries and capture opportunities while employees serve customers, complete work, or go home for the day.\n\nThe opportunity is not simply to do more with less.\n\nIt is to organize work so people can focus on what only people do best.\n\nhttps://stellaruc.com\n\n#SmallBusiness #BusinessInnovation #IntelligentSales",
+  },
+  {
+    key: "new-age-workforce-07-2026-10-27",
+    preferredDate: "2026-10-27",
+    text: "THE NEW WORKFORCE NEEDS CLEAR RULES, NOT JUST POWERFUL TOOLS.\n\nAn intelligent system should know what it can answer, what information it can collect, and when it must involve a person.\n\nLeaders still own the standards: accuracy, privacy, customer treatment, escalation, and performance.\n\nSuccessful AI adoption is not measured by how many tasks are automated.\n\nIt is measured by whether the business delivers better outcomes with responsible oversight.\n\nTECHNOLOGY ENABLES. LEADERSHIP DIRECTS.\n\n#ResponsibleAI #Leadership #FutureOfWork",
+  },
+  {
+    key: "new-age-workforce-08-2026-10-29",
+    preferredDate: "2026-10-29",
+    text: "THE FIRST CUSTOMER CONVERSATION IS PART OF THE SALES PROCESS.\n\nIt is not merely a ringing telephone.\n\nA prospective customer may be asking about availability, an estimate, an appointment, or the next step toward a purchase.\n\nWhen intelligent Sales Specialists manage approved first-contact activities, the human sales team can receive structured context rather than an unexplained missed call.\n\nThat is the difference between automating a task and redesigning a workflow.\n\nKEEP YOUR NUMBER. ADD THE INTELLIGENCE.\n\nhttps://stellaruc.com\n\n#SalesEnablement #CustomerEngagement #StellarUC",
+  },
+  {
+    key: "new-age-workforce-09-2026-10-31",
+    preferredDate: "2026-10-31",
+    text: "THE ECONOMICS OF WORK ARE CHANGING.\n\nTraditional capacity planning often begins with headcount and hours.\n\nIntelligent systems introduce another dimension: the amount of predictable work that can be supported without building an equivalent staffing schedule.\n\nThat does not eliminate the need for people. It makes the allocation of human time more intentional.\n\nAt Stellar UC, transparent pricing distinguishes platform access from applicable service usage, so businesses can understand what they are using rather than purchasing unused usage capacity.\n\nSMARTER CAPACITY. CLEARER COSTS.\n\nhttps://stellaruc.com\n\n#BusinessOperations #FutureOfWork #StellarUC",
+  },
+  {
+    key: "new-age-workforce-10-2026-11-02",
+    preferredDate: "2026-11-02",
+    text: "THE FUTURE OF WORK IS A LEADERSHIP DECISION.\n\nArtificial intelligence will continue to expand what systems can do.\n\nBut technology alone does not decide which responsibilities should be automated, which decisions require people, or what kind of customer experience a business wants to create.\n\nThose are leadership choices.\n\nThe strongest organizations will pair intelligent execution with human purpose, accountability, and trust.\n\nTHE FUTURE OF BUSINESS IS NOT JUST ABOUT WORKING HARDER. IT'S ABOUT REDEFINING THE WORK.\n\nExplore the philosophy behind Stellar UC: https://stellaruc.com/about\n\n#FutureOfWork #ArtificialIntelligence #BusinessLeadership",
+  },
+  {
     key: "chat-agent-queue-test-2026-09-26",
     preferredDate: "2026-09-26",
     text: `CHAT AGENT PUBLISHER QUEUE TEST — SEPTEMBER 26, 2026
