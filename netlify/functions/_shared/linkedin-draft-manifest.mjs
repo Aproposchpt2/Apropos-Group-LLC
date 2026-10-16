@@ -716,7 +716,7 @@ The strongest customer operation is not entirely automated or entirely manual.
 It uses each resource where it creates the greatest value.
 
 THE INTELLIGENCE LAYER. NOT THE REPLACEMENT LAYER.`,
-  },,
+  },
   {
     key: "stellaruc-black-gold-24-7-2026-10-12",
     id: "stellaruc-black-gold-24-7-2026-10-12",
@@ -747,5 +747,55 @@ Experience the Sales Service System:
 https://stellaruc.com/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=sales_service_system&utm_content=black_gold_24_7_creative
 
 #SalesService #CustomerEngagement #LeadCapture #BusinessGrowth`,
-  }
+  },
+  {
+    key: "new-age-workforce-process-clarity-2026-11-21",
+    preferredDate: "2026-11-21",
+    text: "AI READINESS STARTS BEFORE THE TECHNOLOGY.\n\nA process that is unclear for people will not become clear simply because an intelligent system is added to it.\n\nLeaders should first define the approved path: what information can be shared, which steps are predictable, where exceptions begin, and when a person must take over.\n\nThat discipline does more than prepare a business for AI. It improves the work itself.\n\nThe strongest operating models give intelligent systems a precise role and give people unmistakable accountability for judgment, relationships, and outcomes.\n\nBefore asking what to automate, ask whether the process is ready to be understood.\n\n#FutureOfWork #WorkforceDesign #ResponsibleAI",
+  },
+  {
+    key: "new-age-workforce-attention-allocation-2026-11-23",
+    preferredDate: "2026-11-23",
+    text: "PRODUCTIVITY IS NOT JUST MORE OUTPUT. IT IS BETTER ALLOCATION OF ATTENTION.\n\nEvery hour spent repeating an approved answer is an hour unavailable for coaching, problem-solving, relationship building, or an important exception.\n\nThat does not make routine work unimportant. It makes the design of that work a leadership decision.\n\nIntelligent systems can carry predictable steps with consistency. People can concentrate on the situations where context, empathy, and judgment change the outcome.\n\nThe New Age Workforce is not measured by how much technology it installs. It is measured by how deliberately it uses human attention.\n\nLET INTELLIGENT SYSTEMS MANAGE THE PREDICTABLE. LET PEOPLE EXCEL AT THE PERSONAL.\n\n#Leadership #FutureOfWork #HumanIntelligence",
+  },
+  {
+    key: "new-age-workforce-context-before-handoff-2026-11-25",
+    preferredDate: "2026-11-25",
+    text: "A HUMAN HANDOFF SHOULD BEGIN WITH CONTEXT, NOT A RESTART.\n\nCustomers notice when they must repeat their name, their question, and the reason they reached out.\n\nA well-designed intelligent workflow can collect the essentials, follow approved steps, and prepare a concise record before a person enters the conversation.\n\nThe system does not replace the relationship. It protects the conditions for a better one.\n\nThe employee begins informed. The customer feels heard. Judgment is applied where it matters.\n\nThat is a practical example of human-machine collaboration: intelligence organizes the predictable; people bring meaning to the personal.\n\n#CustomerExperience #FutureOfWork #HumanMachineCollaboration",
+  },
+  {
+    key: "new-age-workforce-design-work-first-2026-11-27",
+    preferredDate: "2026-11-27",
+    text: "DESIGN THE WORK BEFORE CHOOSING THE TECHNOLOGY.\n\nStart with the customer journey and the employee experience.\n\nWhich requests follow a clear path? Which decisions require discretion? What must be documented? What deserves immediate escalation? Who remains accountable?\n\nOnly then should a business decide where intelligent capability belongs.\n\nThis order matters. Technology selected before the work is understood can add motion without adding capacity.\n\nTechnology introduced after roles, boundaries, and outcomes are clear can help a team operate with greater focus.\n\nThe future of business is not just about working harder. It is about redefining the work.\n\n#OperatingModel #Leadership #FutureOfWork",
+  },
+  {
+    key: "stellaruc-existing-number-continuity-2026-11-29",
+    preferredDate: "2026-11-29",
+    text: "MODERNIZATION SHOULD NOT REQUIRE A BUSINESS TO ABANDON THE NUMBER ITS CUSTOMERS ALREADY KNOW.\n\nThat number may already appear on signs, websites, proposals, vehicles, and years of customer records. It carries continuity.\n\nStellar UC is designed to add intelligent Sales Specialist capability while preserving the existing customer contact path.\n\nKeep the number. Add the intelligence.\n\nThe practical value is not novelty. It is the ability to support approved sales conversations, capture next steps, and escalate to a person when the situation calls for human judgment—without asking the market to relearn how to reach the business.\n\nGood transformation respects what is already working.\n\nhttps://stellaruc.com\n\n#SalesOperations #CustomerExperience #StellarUC",
+  },
+  {
+    key: "stellaruc-24-7-operating-model-2026-12-01",
+    preferredDate: "2026-12-01",
+    text: "24/7 SALES AVAILABILITY IS A WORKFORCE DESIGN DECISION.\n\nIt does not have to mean asking people to cover every hour.\n\nAn intelligent Sales Specialist can support approved first-contact activity when the team is unavailable: engage an inquiry, gather relevant details, address defined questions, identify the next step, and preserve a path to human escalation.\n\nPeople remain responsible for the conversations that require judgment, negotiation, or relationship depth.\n\nStellar UC offers a practical model for extending sales availability without treating intelligent capability as a substitute for leadership or accountability.\n\nThe goal is not to remove people from sales. It is to make human attention available for the moments where it creates the most value.\n\nhttps://stellaruc.com\n\n#SalesLeadership #FutureOfWork #StellarUC",
+  },
+  {
+    key: "new-age-workforce-oversight-operating-discipline-2026-12-03",
+    preferredDate: "2026-12-03",
+    text: "RESPONSIBLE AI IS NOT A ONE-TIME APPROVAL. IT IS AN OPERATING DISCIPLINE.\n\nBusiness information changes. Customer questions evolve. Policies are revised. New exceptions appear.\n\nThat means oversight must continue after an intelligent system begins working.\n\nReview the approved knowledge. Test the boundaries. Examine escalations. Correct weak answers. Confirm that people know when and how to intervene.\n\nGovernance is not a brake on useful technology. It is how useful technology remains aligned with the business.\n\nThe New Age Workforce needs clear ownership on both sides of the collaboration: systems handle defined responsibilities, and people remain accountable for standards, judgment, and outcomes.\n\n#ResponsibleAI #Governance #WorkforceDesign",
+  },
+  {
+    key: "stellaruc-usage-based-pricing-clarity-2026-12-05",
+    preferredDate: "2026-12-05",
+    text: "OPERATING CAPACITY SHOULD FOLLOW BUSINESS ACTIVITY.\n\nThat principle matters in workforce design, and it matters in pricing.\n\nWith Stellar UC, Usage-Based Pricing connects applicable service usage to what is actually delivered instead of requiring a customer to purchase unused usage capacity in advance.\n\nThe commercial model may include platform access. The distinction is that service usage can scale with real activity rather than a block that sits idle.\n\nFor a business evaluating 24/7 intelligent sales availability, that transparency supports a clearer operating decision: understand the access cost, understand the delivered services, and understand how usage changes with demand.\n\nA modern workforce model should make capacity easier to align—not harder to explain.\n\nhttps://stellaruc.com\n\n#BusinessOperations #UsageBasedPricing #StellarUC",
+  },
+  {
+    key: "new-age-workforce-make-exceptions-visible-2026-12-07",
+    preferredDate: "2026-12-07",
+    text: "INTELLIGENT SYSTEMS DO NOT NEED TO MAKE EVERY DECISION TO CREATE VALUE.\n\nOften, their most useful role is to handle the normal path and make the exception visible.\n\nA complete request can move forward. A missing detail can be identified. A policy question can be routed. A sensitive situation can be escalated.\n\nThis creates a more deliberate division of work.\n\nThe system supports consistency and continuity. The person applies context, judgment, and accountability when the situation departs from the expected path.\n\nLeaders do not have to choose between total automation and no automation. They can design a measured operating model that gives each participant the responsibility it is best equipped to carry.\n\n#FutureOfWork #BusinessOperations #ResponsibleAI",
+  },
+  {
+    key: "new-age-workforce-boundary-leadership-question-2026-12-09",
+    preferredDate: "2026-12-09",
+    text: "THE MOST IMPORTANT AI QUESTION MAY BE A BOUNDARY QUESTION.\n\nWhere should intelligent capability end and human responsibility begin?\n\nThe answer will differ by process, customer, risk, and moment. But the method should remain consistent:\n\nDefine the predictable work.\nProtect the decisions that require judgment.\nCreate a clear path to a person.\nMeasure the result.\nImprove the design.\n\nThat is how leaders turn AI from an isolated tool into a responsible operating capability.\n\nTHE FUTURE OF BUSINESS IS NOT JUST ABOUT WORKING HARDER. IT'S ABOUT REDEFINING THE WORK.\n\nWhen the boundary is designed well, technology expands capacity and people remain at the center of trust.\n\n#Leadership #FutureOfWork #HumanIntelligence",
+  },
 ];
