@@ -2,800 +2,206 @@
 // bundled with the site; the scheduled importer writes only unapproved drafts.
 export const DRAFTS = [
   {
-    key: "new-age-workforce-01-2026-10-15",
-    preferredDate: "2026-10-15",
-    text: "THE NEW AGE WORKFORCE: HUMAN INTELLIGENCE + ARTIFICIAL INTELLIGENCE\n\nThe future of business is not just about working harder. It's about redefining the work.\n\nIntelligent systems can manage predictable, repetitive responsibilities. People can devote more attention to judgment, creativity, relationships, and trust.\n\nThat is not a choice between people and technology. It is a better division of responsibility.\n\nAt Apropos Group LLC, we are putting this philosophy into practice through Stellar UC's intelligent Sales Specialists, supporting customer conversations while people focus on the moments that matter most.\n\nLET INTELLIGENT SYSTEMS MANAGE THE PREDICTABLE. LET PEOPLE EXCEL AT THE PERSONAL.\n\nhttps://stellaruc.com\n\n#FutureOfWork #ArtificialIntelligence #StellarUC",
-  },
-  {
-    key: "new-age-workforce-02-2026-10-17",
-    preferredDate: "2026-10-17",
-    text: "AI'S ROLE AT WORK IS NOT DEFINED BY THE TASKS IT CAN DO.\n\nIt is defined by the time and attention it can return to people.\n\nRoutine questions, first-contact intake, and consistent information capture are valuable work. But they do not always require a person to perform every step.\n\nWhen intelligent systems support those predictable activities, employees can spend more time listening, solving exceptions, and building trust.\n\nThe question for leaders is not simply, 'Where can we use AI?'\n\nIt is, 'Where will human attention create the greatest value?'\n\nHUMAN VISION. INTELLIGENT EXECUTION.\n\n#FutureOfWork #Leadership #WorkforceTransformation",
-  },
-  {
-    key: "new-age-workforce-03-2026-10-19",
-    preferredDate: "2026-10-19",
-    text: "REDEFINING WORK BEGINS WITH REDEFINING RESPONSIBILITY.\n\nA job description often combines two very different kinds of work: predictable tasks and decisions that require experience.\n\nThe next-generation workplace can separate them more deliberately.\n\nLet intelligent systems handle approved, repeatable processes. Keep people accountable for complex decisions, empathy, exceptions, and outcomes.\n\nThis is not automation for its own sake. It is organizational design for an era of intelligent technology.\n\nThe real transformation begins when leaders reconsider how work gets done.\n\n#FutureOfWork #BusinessLeadership #ArtificialIntelligence",
-  },
-  {
-    key: "new-age-workforce-04-2026-10-21",
+    key: "sit-new-age-workforce-human-attention-2026-10-21-v2",
     preferredDate: "2026-10-21",
-    text: "THE CUSTOMER SHOULD NOT HAVE TO WAIT FOR THE WORKDAY TO BEGIN.\n\nA business may close its office at 5 PM. Customer interest does not follow the same schedule.\n\nThe new age workforce combines people with intelligent systems that can remain available when employees are away.\n\nIn sales, that can mean engaging a prospective customer, answering approved questions, qualifying an inquiry, and capturing the next step for the team.\n\nStellar UC brings that model to sales operations through intelligent Sales Specialists.\n\nYOUR BUSINESS MAY CLOSE. YOUR SALES OPERATION REMAINS OPEN 24/7.\n\nhttps://stellaruc.com\n\n#SalesOperations #FutureOfWork #StellarUC",
+    text: `THE ROLE OF INTELLIGENT SYSTEMS AT WORK IS NOT DEFINED BY THE TASKS THEY CAN DO.
+
+It is defined by the time and attention they can return to people.
+
+Routine questions, first-contact intake, and consistent information capture are valuable work. But they do not always require a person to perform every step.
+
+When intelligent systems support those predictable activities, employees can spend more time listening, solving exceptions, and building trust.
+
+The question for leaders is not simply, “Where can we use intelligent technology?”
+
+It is, “Where will human attention create the greatest value?”
+
+HUMAN VISION. INTELLIGENT EXECUTION.
+
+Learn how intelligent systems can support your workforce:
+https://stellaruc.com/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=new_age_workforce&utm_content=human_attention_01
+
+#FutureOfWork #Leadership #WorkforceTransformation`,
   },
   {
-    key: "new-age-workforce-05-2026-10-23",
+    key: "sit-new-age-workforce-redefine-responsibility-2026-10-23-v2",
     preferredDate: "2026-10-23",
-    text: "THE MOST VALUABLE HUMAN SKILL MAY BE KNOWING WHEN TO TAKE OVER.\n\nIntelligent systems can handle routine interactions, but some customer moments call for empathy, negotiation, judgment, or a difficult decision.\n\nA responsible operating model makes room for both.\n\nClear boundaries. Reliable information. Human handoff when needed. Accountability that stays with the business.\n\nThe future of work is not about removing people from the process.\n\nIt is about making their participation more purposeful.\n\nLET PEOPLE EXCEL AT THE PERSONAL.\n\n#HumanCenteredAI #CustomerExperience #FutureOfWork",
+    text: `REDEFINING WORK BEGINS WITH REDEFINING RESPONSIBILITY.
+
+A job often combines two different kinds of work: predictable activities and decisions that require experience, empathy, or judgment.
+
+A New Age Workforce separates them more deliberately.
+
+Intelligent systems can support approved, repeatable processes. Employees remain responsible for complex decisions, relationships, exceptions, and outcomes.
+
+This is not technology for its own sake. It is a more intentional way to organize work for productivity and stronger human contribution.
+
+TECHNOLOGY HANDLES THE PREDICTABLE. STAFF HANDLE THE EXCEPTIONAL.
+
+Learn how intelligent systems can support your workforce:
+https://stellaruc.com/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=new_age_workforce&utm_content=redefine_responsibility_02
+
+#NewAgeWorkforce #IntelligentTechnology #BusinessLeadership`,
   },
   {
-    key: "new-age-workforce-06-2026-10-25",
+    key: "sit-new-age-workforce-after-hours-2026-10-25-v2",
     preferredDate: "2026-10-25",
-    text: "SMALL BUSINESSES DESERVE INTELLIGENT CAPACITY, TOO.\n\nA business owner cannot always hire another shift, add another sales desk, or personally answer every call.\n\nBut growth should not depend entirely on being available every minute.\n\nIntelligent sales systems can help handle predictable inquiries and capture opportunities while employees serve customers, complete work, or go home for the day.\n\nThe opportunity is not simply to do more with less.\n\nIt is to organize work so people can focus on what only people do best.\n\nhttps://stellaruc.com\n\n#SmallBusiness #BusinessInnovation #IntelligentSales",
-  },
-  {
-    key: "new-age-workforce-07-2026-10-27",
-    preferredDate: "2026-10-27",
-    text: "THE NEW WORKFORCE NEEDS CLEAR RULES, NOT JUST POWERFUL TOOLS.\n\nAn intelligent system should know what it can answer, what information it can collect, and when it must involve a person.\n\nLeaders still own the standards: accuracy, privacy, customer treatment, escalation, and performance.\n\nSuccessful AI adoption is not measured by how many tasks are automated.\n\nIt is measured by whether the business delivers better outcomes with responsible oversight.\n\nTECHNOLOGY ENABLES. LEADERSHIP DIRECTS.\n\n#ResponsibleAI #Leadership #FutureOfWork",
-  },
-  {
-    key: "new-age-workforce-08-2026-10-29",
-    preferredDate: "2026-10-29",
-    text: "THE FIRST CUSTOMER CONVERSATION IS PART OF THE SALES PROCESS.\n\nIt is not merely a ringing telephone.\n\nA prospective customer may be asking about availability, an estimate, an appointment, or the next step toward a purchase.\n\nWhen intelligent Sales Specialists manage approved first-contact activities, the human sales team can receive structured context rather than an unexplained missed call.\n\nThat is the difference between automating a task and redesigning a workflow.\n\nKEEP YOUR NUMBER. ADD THE INTELLIGENCE.\n\nhttps://stellaruc.com\n\n#SalesEnablement #CustomerEngagement #StellarUC",
-  },
-  {
-    key: "new-age-workforce-09-2026-10-31",
-    preferredDate: "2026-10-31",
-    text: "THE ECONOMICS OF WORK ARE CHANGING.\n\nTraditional capacity planning often begins with headcount and hours.\n\nIntelligent systems introduce another dimension: the amount of predictable work that can be supported without building an equivalent staffing schedule.\n\nThat does not eliminate the need for people. It makes the allocation of human time more intentional.\n\nAt Stellar UC, transparent pricing distinguishes platform access from applicable service usage, so businesses can understand what they are using rather than purchasing unused usage capacity.\n\nSMARTER CAPACITY. CLEARER COSTS.\n\nhttps://stellaruc.com\n\n#BusinessOperations #FutureOfWork #StellarUC",
-  },
-  {
-    key: "new-age-workforce-10-2026-11-02",
-    preferredDate: "2026-11-02",
-    text: "THE FUTURE OF WORK IS A LEADERSHIP DECISION.\n\nArtificial intelligence will continue to expand what systems can do.\n\nBut technology alone does not decide which responsibilities should be automated, which decisions require people, or what kind of customer experience a business wants to create.\n\nThose are leadership choices.\n\nThe strongest organizations will pair intelligent execution with human purpose, accountability, and trust.\n\nTHE FUTURE OF BUSINESS IS NOT JUST ABOUT WORKING HARDER. IT'S ABOUT REDEFINING THE WORK.\n\nExplore the philosophy behind Stellar UC: https://stellaruc.com/about\n\n#FutureOfWork #ArtificialIntelligence #BusinessLeadership",
-  },
-  {
-    key: "chat-agent-queue-test-2026-09-26",
-    preferredDate: "2026-09-26",
-    text: `CHAT AGENT PUBLISHER QUEUE TEST — SEPTEMBER 26, 2026
+    text: `THE CUSTOMER SHOULD NOT HAVE TO WAIT FOR THE WORKDAY TO BEGIN.
 
-This is a controlled test draft created by the Apropos messaging chat agent to verify direct staging into the LinkedIn Publisher queue.
+A business may close its office for the evening. Customer interest does not always follow the same schedule.
 
-TEST ONLY — DO NOT APPROVE OR PUBLISH.`,
-  },
-  {
-    key: "ai4-intelligence-layer-2026-09-28",
-    preferredDate: "2026-09-28",
-    text: `THE INTELLIGENCE LAYER. NOT THE REPLACEMENT LAYER.
+A New Age Workforce combines people with intelligent systems that can remain available when employees are away.
 
-Businesses have already invested in phone numbers, providers, employee workflows, and communications infrastructure.
+For customer-facing operations, that can mean engaging an inquiry, capturing the caller’s information, recording the request, and preserving the next step for staff follow-up.
 
-Why replace all of it just to add intelligence?
-
-AI4 Contact Center takes a different approach.
-
-Keep your number.
-Keep your phones.
-Keep your current provider.
-Keep your workflows.
-
-Add The Intelligence.
-
-The Intelligent Customer Engagement Operation Center sits on top of the communications environment your business already uses—adding intelligent customer engagement, routing, intake, queues, lead operations, and 24/7 coverage without creating another disruptive replacement project.
-
-Preserve what works.
-
-Improve what needs intelligence.
-
-KEEP YOUR NUMBER.
-ADD THE INTELLIGENCE.`,
-  },
-  {
-    key: "ai4-247-economics-2026-09-30",
-    preferredDate: "2026-09-30",
-    text: `WHAT DOES 24/7 CUSTOMER COVERAGE REALLY COST?
-
-A year contains 8,760 hours.
-
-Maintaining even one continuously staffed customer-service position requires multiple employees before accounting for vacation, sick leave, training, turnover, overtime, management, and overnight coverage.
-
-The cost of continuous customer availability can quickly become substantial.
-
-That is the economic problem AI4 Contact Center is designed to address.
-
-The Intelligent Customer Engagement Operation Center can provide continuous customer engagement, intake, routing, qualification, escalation, and workflow support without requiring a business to build an entire round-the-clock staffing operation.
-
-The important question isn't simply:
-
-"What does the system cost?"
-
-Ask:
-
-"What would it cost us to create the same operating capability without it?"`,
-  },
-  {
-    key: "ai4-department-strategy-2026-10-02",
-    preferredDate: "2026-10-02",
-    text: `YOUR ENTIRE ORGANIZATION MAY NOT NEED AN INTELLIGENT CUSTOMER ENGAGEMENT OPERATION CENTER.
-
-One department might.
-
-Large institutions often have specific departments carrying the majority of customer-service pressure:
-
-Recruiting.
-Admissions.
-Registrar.
-Financial Aid.
-Advising.
-Help Desk.
-Student Accounts.
-
-Those departments can experience high call volume, seasonal surges, repetitive inquiries, long queues, and after-hours demand.
-
-AI4 allows organizations to start where the problem actually exists.
-
-Deploy at the department level.
-
-Measure the operational impact.
-
-Prove the value.
-
-Then expand where it makes sense.
-
-START WITH THE DEPARTMENT.
-SOLVE THE PRESSURE POINT.
-PROVE THE VALUE.
-EXPAND.`,
-  },
-  {
-    key: "ai4-modernize-without-replacing-2026-10-04",
-    preferredDate: "2026-10-04",
-    text: `MODERNIZATION SHOULD NOT REQUIRE STARTING OVER.
-
-A business should not have to replace its phone system, port established numbers, retrain employees, or disrupt working processes just to improve customer engagement.
-
-AI4 Contact Center is designed around a simpler operating principle:
-
-Preserve the infrastructure that already works.
-Add intelligence where the pressure exists.
-
-The Intelligent Customer Engagement Operation Center can sit above the existing communications environment and introduce intelligent routing, intake, qualification, escalation, and customer workflow support without turning modernization into another replacement project.
-
-KEEP THE FOUNDATION.
-ADD THE INTELLIGENCE.`,
-  },
-  {
-    key: "ai4-missed-calls-operational-signal-2026-10-06",
-    preferredDate: "2026-10-06",
-    text: `A MISSED CALL IS NOT JUST A MISSED CALL.
-
-It can be a missed customer.
-A missed appointment.
-A missed lead.
-A missed service request.
-A missed revenue opportunity.
-
-High call volume creates an operational problem when customer demand arrives faster than the organization can respond.
-
-The Intelligent Customer Engagement Operation Center is built to help businesses capture that demand, identify why the customer is calling, route the interaction appropriately, collect the information the next step requires, and keep the workflow moving.
-
-The objective is not simply to answer more calls.
-
-The objective is to lose fewer opportunities between the first contact and the next business action.
-
-CUSTOMER ENGAGEMENT SHOULD CREATE MOMENTUM — NOT A DEAD END.`,
-  },
-  {
-    key: "ai4-capacity-without-247-staffing-2026-10-08",
-    preferredDate: "2026-10-08",
-    text: `CUSTOMER DEMAND DOES NOT CLOCK OUT WHEN YOUR STAFF DOES.
-
-Calls arrive after hours.
-Demand spikes unexpectedly.
-Seasonal volume stretches teams.
-Routine questions consume time needed for higher-value work.
-
-Building more customer-service capacity does not always require building a larger round-the-clock staff.
-
-AI4 Contact Center adds an intelligent operating layer that can support customer intake, routing, qualification, escalation, and workflow continuity beyond normal staffing windows.
-
-That creates a different kind of capacity:
-
-More availability without duplicating the entire labor structure.
-More consistency without adding another communications platform.
-More operational leverage from the systems already in place.
-
-INTELLIGENT CUSTOMER OPERATIONS SHOULD EXTEND CAPACITY — NOT COMPLEXITY.`,
-  },
-  {
-    key: "ai4-first-contact-to-next-action-2026-10-10",
-    preferredDate: "2026-10-10",
-    text: `THE FIRST CUSTOMER CONTACT SHOULD ALREADY BE MOVING THE WORK FORWARD.
-
-A customer calls.
-Why are they calling?
-What information is needed?
-Where should the interaction go?
-What should happen next?
-
-Those questions determine whether the call becomes progress or another task waiting for someone to sort out later.
-
-The Intelligent Customer Engagement Operation Center is designed to connect the first customer interaction to the next operational step through intelligent intake, qualification, routing, escalation, and workflow support.
-
-That is the difference between simply handling a call and operating an intelligent customer-engagement process.
-
-FROM FIRST CONTACT TO NEXT ACTION.
-ADD THE INTELLIGENCE.`,
-  },
-  {
-    key: "ai4-cost-of-status-quo-2026-10-12",
-    preferredDate: "2026-10-12",
-    text: `THE MOST EXPENSIVE OPTION CAN BE THE ONE A BUSINESS NEVER CALCULATES.
-
-What does it cost when customer demand continues after the workday ends?
-
-Not only in missed calls, but in overtime, additional shifts, management coverage, turnover pressure, and opportunities that never reach the next step.
-
-That is why I believe 24/7/365 customer engagement should be evaluated as an operating-capacity decision—not as a comparison with a basic answering service.
-
-The Intelligent Customer Engagement Operation Center is designed to extend intake, qualification, routing, escalation, and workflow continuity without requiring a business to recreate an entire round-the-clock staffing structure.
-
-Before asking what intelligence costs, calculate the cost of the operating capability you are trying to create.
-
-THE INTELLIGENCE LAYER. NOT THE REPLACEMENT LAYER.`,
-  },
-  {
-    key: "natcorp-relevance-before-volume-2026-10-14",
-    preferredDate: "2026-10-14",
-    text: `MORE CONTRACT NOTICES DO NOT AUTOMATICALLY CREATE MORE OPPORTUNITY.
-
-For a business owner, the real value is relevance.
-
-Does the opportunity align with the work the business performs?
-
-Is the place of performance practical?
-
-Are the requirements, timing, and eligibility conditions realistic?
-
-State and local procurement information is spread across many agencies, jurisdictions, and publishing systems. That fragmentation creates a discovery burden before the pursuit decision even begins.
-
-NAT-CORP was developed around a simple belief: businesses need clearer visibility into opportunities connected to their capabilities—not another pile of notices to sort through.
-
-Good discovery does not make the decision for the business.
-
-It gives the business a better decision to make.
-
-https://natcorp.aproposgroupllc.com/`,
-  },
-  {
-    key: "ai4-preserve-investment-2026-10-16",
-    preferredDate: "2026-10-16",
-    text: `BUSINESSES SHOULD NOT HAVE TO ABANDON GOOD INFRASTRUCTURE TO GAIN BETTER CAPABILITY.
-
-An established phone number has value.
-
-Existing employee workflows have value.
-
-A communications provider that already works has value.
-
-Too many modernization projects begin by asking what must be replaced. I prefer to begin by asking what should be preserved.
-
-AI4 Contact Center is built around that distinction.
-
-The Intelligent Customer Engagement Operation Center can add intelligent intake, routing, qualification, escalation, and customer visibility above the communications environment already in place.
-
-Keep the number customers know.
-
-Keep the systems employees understand.
-
-Improve the customer-engagement layer where the pressure exists.
-
-KEEP YOUR NUMBER. ADD THE INTELLIGENCE.`,
-  },
-  {
-    key: "fgcp-information-to-relevance-2026-10-18",
-    preferredDate: "2026-10-18",
-    text: `FEDERAL PROCUREMENT DOES NOT HAVE AN INFORMATION SHORTAGE.
-
-It has a relevance problem.
-
-Businesses can spend significant time moving through notices, classifications, amendments, deadlines, and requirements before determining whether an opportunity deserves serious attention.
-
-The Federal Contract Portal is intended to support a more business-focused starting point.
-
-What does the business actually do?
-
-Which opportunities relate to those capabilities?
-
-What conditions could affect the pursuit decision?
-
-The goal is not to promise an award or imply government affiliation.
-
-The goal is to improve visibility so business owners can apply their own judgment to opportunities that matter.
-
-BETTER DISCOVERY SUPPORTS BETTER PURSUIT DECISIONS.
-
-https://fgcp.aproposgroupllc.com/`,
-  },
-  {
-    key: "ai4-education-pressure-point-2026-10-20",
-    preferredDate: "2026-10-20",
-    text: `AN EDUCATIONAL INSTITUTION DOES NOT EXPERIENCE CUSTOMER DEMAND AS ONE UNIFORM PROBLEM.
-
-Admissions may face application surges.
-
-Financial Aid may receive repeated deadline and document questions.
-
-The Registrar may manage concentrated requests around enrollment and records.
-
-Student Accounts, Advising, and the Help Desk each carry different communication pressure.
-
-That is why an institution-wide replacement project is not the only path to modernization.
-
-The Intelligent Customer Engagement Operation Center can begin with the department where high call volume, long waits, repetitive inquiries, and after-hours demand are most measurable.
-
-Solve one pressure point.
-
-Measure the operational effect.
-
-Expand only where the value is demonstrated.
-
-START WITH THE DEPARTMENT. PROVE THE VALUE. EXPAND.`,
-  },
-  {
-    key: "ai4-customer-operations-category-2026-10-22",
-    preferredDate: "2026-10-22",
-    text: `ANSWERING A CALL AND OPERATING A CUSTOMER-ENGAGEMENT PROCESS ARE NOT THE SAME THING.
-
-An answered call can still become a dead end.
-
-Customer operations require context:
-
-Why is the person calling?
-
-What information is needed?
-
-Can the interaction be qualified?
-
-Where should it be routed?
-
-When should a person take over?
-
-What must happen next?
-
-The Intelligent Customer Engagement Operation Center is designed around that broader operating responsibility—intake, qualification, routing, escalation, workflow continuity, and visibility.
-
-The objective is not simply to say that every call was answered.
-
-The objective is to help each qualified interaction move toward the appropriate business action.
-
-CUSTOMER OPERATIONS — NOT AN ANSWERING SERVICE.`,
-  },
-  {
-    key: "natcorp-fragmented-market-2026-10-24",
-    preferredDate: "2026-10-24",
-    text: `ONE OF THE QUIETEST BARRIERS IN PUBLIC-SECTOR BUSINESS DEVELOPMENT IS FRAGMENTATION.
-
-A city may publish one way.
-
-A county may use another portal.
-
-A school district, university, transit authority, or special district may follow a different process entirely.
-
-The opportunity can be real and still remain invisible to the business that could perform the work.
-
-That is the market problem behind NAT-CORP.
-
-The purpose is not to remove the business owner's judgment. It is to reduce the search burden and improve the chance that relevant state and local opportunities reach the businesses capable of evaluating them.
-
-Visibility comes before pursuit.
-
-And disciplined pursuit begins with knowing what is available.
-
-https://natcorp.aproposgroupllc.com/`,
-  },
-  {
-    key: "ai4-after-hours-sales-continuity-2026-10-26",
-    preferredDate: "2026-10-26",
-    text: `YOUR BUSINESS MAY CLOSE FOR THE DAY. CUSTOMER INTEREST DOES NOT ALWAYS WAIT UNTIL MORNING.
-
-A prospective customer may call after hours.
-
-A campaign may create demand while the team is occupied.
-
-A surge may arrive faster than employees can respond.
-
-The commercial risk is not simply that the phone rang unanswered. It is that the opportunity entered the business with no structured path forward.
-
-The Intelligent Customer Engagement Operation Center can support continuous intake, qualification, routing, escalation, and next-step capture while preserving the phone number and communications environment the business already uses.
-
-That creates 24/7/365 engagement capacity without requiring an equivalent 24/7 staffing structure.
-
-KEEP YOUR NUMBER.
-
-KEEP YOUR WORKFLOWS.
-
-ADD THE INTELLIGENCE.`,
-  },
-  {
-    key: "fgcp-capability-beyond-code-2026-10-28",
-    preferredDate: "2026-10-28",
-    text: `A NAICS CODE IS A USEFUL STARTING POINT. IT IS NOT A COMPLETE BUSINESS PROFILE.
-
-Two companies can share the same classification and still differ in experience, specialization, geography, capacity, certifications, and the work they are prepared to pursue.
-
-That distinction matters in federal contract discovery.
-
-A relevant opportunity should connect to the business behind the code—not merely to the code itself.
-
-The Federal Contract Portal reflects that business-focused perspective: use structured procurement information to improve discovery, then allow the company to evaluate fit, requirements, timing, and pursuit readiness.
-
-Technology should narrow the search.
-
-Business judgment should make the decision.
-
-https://fgcp.aproposgroupllc.com/`,
-  },
-  {
-    key: "ai4-land-and-expand-discipline-2026-10-30",
-    preferredDate: "2026-10-30",
-    text: `ENTERPRISE MODERNIZATION DOES NOT HAVE TO BEGIN WITH AN ENTERPRISE-WIDE COMMITMENT.
-
-Start where the operating pressure is visible.
-
-Choose one department with measurable call volume, wait time, after-hours demand, repetitive intake, or routing complexity.
-
-Configure the Intelligent Customer Engagement Operation Center around that department's actual workflow.
-
-Measure what changes.
-
-Did availability improve?
-
-Did intake become more consistent?
-
-Did fewer qualified interactions stall?
-
-Did staff gain time for higher-value work?
-
-Expansion should follow evidence—not enthusiasm.
-
-That is the discipline behind the department-first model.
-
-START WITH THE DEPARTMENT.
-
-SOLVE THE PRESSURE POINT.
-
-PROVE THE VALUE.
-
-EXPAND.`,
-  },
-
-  {
-    key: "ai4-sales-operation-continuity-2026-11-01",
-    preferredDate: "2026-11-01",
-    text: `A BUSINESS CAN CLOSE FOR THE DAY WITHOUT CLOSING THE DOOR ON CUSTOMER INTEREST.
-
-A prospective customer may call after hours.
-A current campaign may create demand overnight.
-A buyer may be ready to explain what they need when no employee is available.
-
-The question is not whether the business should remain physically staffed around the clock.
-
-The question is whether the sales process can remain responsive.
-
-The Intelligent Sales Service System provides the customer-facing engagement layer. Behind it, the Intelligent Customer Engagement Operation Center supports intake, qualification, lead management, Customer 360 visibility, routing, and the next appropriate action.
-
-That is the operating model:
-
-Keep the business accessible.
-Keep qualified opportunities moving.
-Keep people connected to the moments that require human judgment.
-
-YOUR BUSINESS MAY CLOSE.
-
-YOUR SALES OPERATION DOESN'T HAVE TO.`,
-  },
-  {
-    key: "natcorp-opportunity-visibility-discipline-2026-11-03",
-    preferredDate: "2026-11-03",
-    text: `OPPORTUNITY VISIBILITY IS A BUSINESS-DEVELOPMENT CAPABILITY.
-
-A company cannot evaluate an opportunity it never discovers.
-
-That challenge is especially significant in state and local procurement, where notices may be distributed across cities, counties, school districts, universities, authorities, and specialized purchasing systems.
-
-NAT-CORP is built around a disciplined starting point:
-
-Understand the business.
-Identify relevant opportunities.
-Present the information needed for evaluation.
-Leave the pursuit decision with the business owner.
-
-The objective is not to make every contract look attractive.
-
-The objective is to make relevant opportunities easier to see.
-
-Better visibility creates better choices.
-
-https://natcorp.aproposgroupllc.com/`,
-  },
-  {
-    key: "ai4-transparent-usage-pricing-2026-11-05",
-    preferredDate: "2026-11-05",
-    text: `TRANSPARENT PRICING SHOULD HELP A BUSINESS UNDERSTAND WHAT IT IS BUYING.
-
-Platform access provides the operating environment.
-
-Monthly usage reflects the customer engagement delivered during that billing period.
-
-That distinction matters.
-
-A business should not be forced to buy unused communication capacity simply because a pricing tier was designed around somebody else's operating pattern.
-
-The Intelligent Customer Engagement Operation Center uses a transparent usage-based structure so pricing can reflect the way the customer actually uses the service.
-
-When usage is lower, the usage portion is lower.
-
-When demand increases, the business can see what changed.
-
-Transparency is not a promotional extra.
-
-It is part of the customer experience.`,
-  },
-  {
-    key: "fgcp-deadline-is-not-fit-2026-11-07",
-    preferredDate: "2026-11-07",
-    text: `AN OPEN FEDERAL SOLICITATION IS NOT AUTOMATICALLY A GOOD BUSINESS OPPORTUNITY.
-
-The deadline may still be open.
-
-The industry classification may appear relevant.
-
-The title may sound promising.
-
-But a disciplined pursuit decision also considers scope, place of performance, eligibility, amendments, capacity, timing, and the actual work required.
-
-That is why federal opportunity discovery should do more than surface notices.
-
-It should help a business reach the fit question sooner.
-
-The Federal Contract Portal is designed around business-focused visibility—not promises, awards, or government affiliation.
-
-Discovery should reduce search friction.
-
-Judgment should determine the pursuit.
-
-https://fgcp.aproposgroupllc.com/`,
-  },
-  {
-    key: "ai4-front-end-platform-distinction-2026-11-09",
-    preferredDate: "2026-11-09",
-    text: `THE CONVERSATION IS THE FRONT END. THE OPERATING SYSTEM BEHIND IT CREATES THE VALUE.
-
-A customer may begin with a telephone call.
-
-But the business still needs to know:
-
-Who is the customer?
-Why did they call?
-Is there a qualified opportunity?
-What information was collected?
-Who should act next?
-What history should remain visible?
-
-The Intelligent Sales Service System manages the customer-facing sales engagement.
-
-The Intelligent Customer Engagement Operation Center is the platform supporting the customer lifecycle, lead management, Customer 360, administrative visibility, and agent workflow.
-
-That is why this is not simply a call-answering product.
-
-It is a customer-engagement operating model designed to move qualified interest toward business action.`,
-  },
-  {
-    key: "ai4-seasonal-demand-economics-2026-11-11",
-    preferredDate: "2026-11-11",
-    text: `PERMANENT STAFFING IS NOT ALWAYS THE RIGHT ANSWER TO VARIABLE DEMAND.
-
-Call volume can rise during enrollment periods, seasonal promotions, weather events, renewal cycles, product launches, and other predictable surges.
-
-The demand is real.
-
-But building a larger year-round staffing structure around a temporary peak can create a different economic problem.
-
-The Intelligent Customer Engagement Operation Center can add continuous intake, intelligent routing, qualification, and workflow support where demand is concentrated.
-
-For an educational institution, that may begin in Admissions, Financial Aid, the Registrar, Student Accounts, or the Help Desk.
-
-For another organization, it may be the sales department.
-
-START WITH THE DEPARTMENT.
-
-PROVE THE VALUE.
-
-EXPAND WHERE THE OPERATING EVIDENCE SUPPORTS IT.`,
-  },
-  {
-    key: "natcorp-local-market-relevance-2026-11-13",
-    preferredDate: "2026-11-13",
-    text: `A CONTRACT CAN MATCH A BUSINESS CATEGORY AND STILL BE THE WRONG OPPORTUNITY.
-
-Geography matters.
-
-Delivery requirements matter.
-
-Timing matters.
-
-Capacity matters.
-
-The work requirements matter.
-
-That is why state and local contract discovery should not stop at a keyword or industry code.
-
-NAT-CORP is intended to improve visibility into opportunities that deserve closer evaluation while keeping the final commercial decision with the business.
-
-The goal is not more search results.
-
-The goal is a more useful starting point for disciplined business development.
-
-RELEVANCE BEFORE VOLUME.
-
-https://natcorp.aproposgroupllc.com/`,
-  },
-  {
-    key: "ai4-number-as-business-asset-2026-11-15",
-    preferredDate: "2026-11-15",
-    text: `A BUSINESS TELEPHONE NUMBER IS MORE THAN A TECHNICAL CONNECTION.
-
-It may appear on vehicles, advertisements, directories, customer records, websites, proposals, and years of business correspondence.
-
-Customers recognize it.
-
-Employees understand the workflows surrounding it.
-
-That existing value should not be discarded simply to add modern customer-engagement capability.
-
-The Intelligent Customer Engagement Operation Center is designed as the intelligence layer—not the replacement layer.
-
-Keep the number.
-Keep the current provider.
-Keep the familiar operating foundation.
-Add intelligent intake, qualification, routing, visibility, and workflow support where it creates value.
-
-PRESERVE THE BUSINESS ASSET.
-
-ADD THE INTELLIGENCE.`,
-  },
-  {
-    key: "fgcp-information-to-decision-2026-11-17",
-    preferredDate: "2026-11-17",
-    text: `THE PURPOSE OF OPPORTUNITY DISCOVERY IS NOT TO CREATE ACTIVITY.
-
-It is to support a decision.
-
-A federal notice may contain dozens of details, yet a business owner still needs a clear answer to the practical question:
-
-Should we spend time evaluating this further?
-
-The Federal Contract Portal approaches discovery from the business side—capability, relevance, requirements, timing, and the conditions that influence pursuit readiness.
-
-That does not replace proposal review or professional judgment.
-
-It creates a better point of entry.
-
-Business-development technology should not merely present more information.
-
-It should help the right information become visible sooner.
-
-https://fgcp.aproposgroupllc.com/`,
-  },
-  {
-    key: "ai4-human-judgment-at-right-moment-2026-11-19",
-    preferredDate: "2026-11-19",
-    text: `INTELLIGENCE SHOULD NOT REMOVE PEOPLE FROM THE SALES PROCESS.
-
-It should help people enter at the right moment.
-
-Routine intake can be handled consistently.
-
-Initial questions can be organized.
-
-Customer intent can be identified.
-
-Qualified opportunities can be routed.
-
-Interaction history can remain visible.
-
-Then the employee responsible for the next step can begin with context instead of starting from zero.
-
-That is the role of the Intelligent Customer Engagement Operation Center:
-
-Extend availability.
-Create structure.
-Maintain continuity.
-Escalate when human judgment matters.
-
-The strongest customer operation is not entirely automated or entirely manual.
-
-It uses each resource where it creates the greatest value.
-
-THE INTELLIGENCE LAYER. NOT THE REPLACEMENT LAYER.`,
-  },
-  {
-    key: "stellaruc-black-gold-24-7-2026-10-12",
-    id: "stellaruc-black-gold-24-7-2026-10-12",
-    preferredDate: "2026-10-12",
-    media: {
-      type: "image",
-      url: "https://aproposgroupllc.com/linkedin-assets/stellaruc-share-preview.jpg",
-      previewUrl: "/linkedin-assets/stellaruc-share-preview.jpg",
-      altText: "StellarUC: Your business may close. Your sales operation remains open 24/7.",
-    },
-    text: `A prospective customer may call after your staff has gone home.
-
-They may need an estimate, want to schedule an appointment, or be ready to make a purchase.
-
-If nobody responds, that sales opportunity may go elsewhere.
+People remain central to the relationship. Intelligent technology extends availability around the workday.
 
 YOUR BUSINESS MAY CLOSE. WHILE YOUR SALES OPERATION REMAINS OPEN 24/7.
 
-The Apropos Intelligent Customer Engagement Operation Center — Sales Service System helps businesses engage inbound sales prospects, capture inquiries, qualify opportunities, and preserve information for staff follow-up.
+Learn how intelligent systems can support your workforce:
+https://stellaruc.com/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=new_age_workforce&utm_content=after_hours_availability_03
 
-Keep the business number your customers already know. Add around-the-clock sales coverage without replacing what already works.
+#CustomerEngagement #FutureOfWork #SalesService`,
+  },
+  {
+    key: "sit-new-age-workforce-human-handoff-2026-10-27-v2",
+    preferredDate: "2026-10-27",
+    text: `THE MOST VALUABLE HUMAN SKILL MAY BE KNOWING WHEN TO TAKE OVER.
 
-With transparent Usage-Based Pricing, you pay for the services delivered—not unused usage capacity. When usage is lower, your usage-related costs are lower.
+Intelligent systems can support routine interactions, but some customer moments require empathy, negotiation, judgment, or a difficult decision.
+
+A responsible operating model makes room for both.
+
+Clear boundaries. Reliable information. Human handoff when needed. Accountability that remains with the business.
+
+The future of work is not about removing people from the process.
+
+It is about making their participation more purposeful.
+
+TECHNOLOGY HANDLES THE PREDICTABLE. STAFF HANDLE THE EXCEPTIONAL.
+
+Learn how intelligent systems can support your workforce:
+https://stellaruc.com/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=new_age_workforce&utm_content=human_handoff_04
+
+#HumanCenteredTechnology #CustomerExperience #FutureOfWork`,
+  },
+  {
+    key: "sit-new-age-workforce-small-business-capacity-2026-10-29-v2",
+    preferredDate: "2026-10-29",
+    text: `SMALL BUSINESSES DESERVE INTELLIGENT CAPACITY, TOO.
+
+A business owner cannot always add another shift, expand the sales desk, or personally answer every call.
+
+But growth should not depend entirely on being available every minute.
+
+Intelligent systems can support predictable inquiries and capture opportunities while employees serve customers, complete work, or go home for the day.
+
+The opportunity is not simply to do more with less.
+
+It is to organize work so people can focus on what people do best.
+
+STELLAR INTELLIGENT TECHNOLOGIES
+Operated by Apropos Group LLC
+
+Learn how intelligent systems can support your workforce:
+https://stellaruc.com/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=new_age_workforce&utm_content=small_business_capacity_05
+
+#SmallBusiness #BusinessInnovation #IntelligentTechnology`,
+  },
+  {
+    key: "sit-new-age-workforce-first-conversation-2026-10-31-v2",
+    preferredDate: "2026-10-31",
+    text: `THE FIRST CUSTOMER CONVERSATION IS PART OF THE SALES PROCESS.
+
+It is not merely a ringing telephone.
+
+A prospective customer may be asking about availability, an estimate, an appointment, or the next step toward a purchase.
+
+When intelligent systems support approved first-contact activities, the sales team can receive structured information instead of an unexplained missed call.
+
+That is the difference between automating a task and redesigning a workflow.
 
 KEEP YOUR NUMBER. ADD THE INTELLIGENCE.
 
-Experience the Sales Service System:
-https://stellaruc.com/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=sales_service_system&utm_content=black_gold_24_7_creative
+Learn how intelligent systems can support your workforce:
+https://stellaruc.com/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=new_age_workforce&utm_content=first_conversation_06
 
-#SalesService #CustomerEngagement #LeadCapture #BusinessGrowth`,
+#SalesEnablement #CustomerEngagement #LeadCapture`,
   },
   {
-    key: "new-age-workforce-process-clarity-2026-11-21",
-    preferredDate: "2026-11-21",
-    text: "AI READINESS STARTS BEFORE THE TECHNOLOGY.\n\nA process that is unclear for people will not become clear simply because an intelligent system is added to it.\n\nLeaders should first define the approved path: what information can be shared, which steps are predictable, where exceptions begin, and when a person must take over.\n\nThat discipline does more than prepare a business for AI. It improves the work itself.\n\nThe strongest operating models give intelligent systems a precise role and give people unmistakable accountability for judgment, relationships, and outcomes.\n\nBefore asking what to automate, ask whether the process is ready to be understood.\n\n#FutureOfWork #WorkforceDesign #ResponsibleAI",
+    key: "sit-new-age-workforce-context-handoff-2026-11-02-v2",
+    preferredDate: "2026-11-02",
+    text: `A HUMAN HANDOFF SHOULD BEGIN WITH CONTEXT, NOT A RESTART.
+
+Customers notice when they must repeat their name, their question, and the reason they reached out.
+
+A well-designed intelligent workflow can collect essential information, follow approved steps, and prepare a useful record before an employee enters the conversation.
+
+The technology does not replace the relationship. It protects the conditions for a better one.
+
+The employee begins informed. The customer feels heard. Human judgment is applied where it matters.
+
+Learn how intelligent systems can support your workforce:
+https://stellaruc.com/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=new_age_workforce&utm_content=context_before_handoff_07
+
+#CustomerExperience #FutureOfWork #WorkforceTransformation`,
   },
   {
-    key: "new-age-workforce-attention-allocation-2026-11-23",
-    preferredDate: "2026-11-23",
-    text: "PRODUCTIVITY IS NOT JUST MORE OUTPUT. IT IS BETTER ALLOCATION OF ATTENTION.\n\nEvery hour spent repeating an approved answer is an hour unavailable for coaching, problem-solving, relationship building, or an important exception.\n\nThat does not make routine work unimportant. It makes the design of that work a leadership decision.\n\nIntelligent systems can carry predictable steps with consistency. People can concentrate on the situations where context, empathy, and judgment change the outcome.\n\nThe New Age Workforce is not measured by how much technology it installs. It is measured by how deliberately it uses human attention.\n\nLET INTELLIGENT SYSTEMS MANAGE THE PREDICTABLE. LET PEOPLE EXCEL AT THE PERSONAL.\n\n#Leadership #FutureOfWork #HumanIntelligence",
+    key: "sit-new-age-workforce-existing-number-2026-11-04-v2",
+    preferredDate: "2026-11-04",
+    text: `MODERNIZATION SHOULD NOT REQUIRE A BUSINESS TO ABANDON THE NUMBER ITS CUSTOMERS ALREADY KNOW.
+
+That number may already appear on signs, websites, proposals, vehicles, advertisements, and years of customer records.
+
+It carries continuity.
+
+STELLAR INTELLIGENT TECHNOLOGIES is designed to add intelligent capability while preserving the existing customer contact path.
+
+Keep the number. Preserve the infrastructure. Add the intelligence.
+
+Good transformation respects what is already working while strengthening the areas where additional capacity is needed.
+
+Learn how intelligent systems can support your workforce:
+https://stellaruc.com/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=new_age_workforce&utm_content=keep_existing_number_08
+
+#BusinessCommunications #CustomerEngagement #IntelligentTechnology`,
   },
   {
-    key: "new-age-workforce-context-before-handoff-2026-11-25",
-    preferredDate: "2026-11-25",
-    text: "A HUMAN HANDOFF SHOULD BEGIN WITH CONTEXT, NOT A RESTART.\n\nCustomers notice when they must repeat their name, their question, and the reason they reached out.\n\nA well-designed intelligent workflow can collect the essentials, follow approved steps, and prepare a concise record before a person enters the conversation.\n\nThe system does not replace the relationship. It protects the conditions for a better one.\n\nThe employee begins informed. The customer feels heard. Judgment is applied where it matters.\n\nThat is a practical example of human-machine collaboration: intelligence organizes the predictable; people bring meaning to the personal.\n\n#CustomerExperience #FutureOfWork #HumanMachineCollaboration",
+    key: "sit-new-age-workforce-usage-pricing-2026-11-06-v2",
+    preferredDate: "2026-11-06",
+    text: `OPERATING CAPACITY SHOULD FOLLOW BUSINESS ACTIVITY.
+
+That principle matters in workforce design, and it matters in pricing.
+
+With transparent Usage-Based Pricing, customers pay for the service delivered rather than unused capacity. When usage is lower, the usage-related cost is lower.
+
+This supports a clearer operating decision: understand the service, understand how it is used, and understand how cost changes with actual activity.
+
+A modern workforce model should make capacity easier to align—not harder to explain.
+
+Learn how intelligent systems can support your workforce:
+https://stellaruc.com/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=new_age_workforce&utm_content=usage_pricing_clarity_09
+
+#UsageBasedPricing #BusinessOperations #PricingTransparency`,
   },
   {
-    key: "new-age-workforce-design-work-first-2026-11-27",
-    preferredDate: "2026-11-27",
-    text: "DESIGN THE WORK BEFORE CHOOSING THE TECHNOLOGY.\n\nStart with the customer journey and the employee experience.\n\nWhich requests follow a clear path? Which decisions require discretion? What must be documented? What deserves immediate escalation? Who remains accountable?\n\nOnly then should a business decide where intelligent capability belongs.\n\nThis order matters. Technology selected before the work is understood can add motion without adding capacity.\n\nTechnology introduced after roles, boundaries, and outcomes are clear can help a team operate with greater focus.\n\nThe future of business is not just about working harder. It is about redefining the work.\n\n#OperatingModel #Leadership #FutureOfWork",
-  },
-  {
-    key: "stellaruc-existing-number-continuity-2026-11-29",
-    preferredDate: "2026-11-29",
-    text: "MODERNIZATION SHOULD NOT REQUIRE A BUSINESS TO ABANDON THE NUMBER ITS CUSTOMERS ALREADY KNOW.\n\nThat number may already appear on signs, websites, proposals, vehicles, and years of customer records. It carries continuity.\n\nStellar UC is designed to add intelligent Sales Specialist capability while preserving the existing customer contact path.\n\nKeep the number. Add the intelligence.\n\nThe practical value is not novelty. It is the ability to support approved sales conversations, capture next steps, and escalate to a person when the situation calls for human judgment—without asking the market to relearn how to reach the business.\n\nGood transformation respects what is already working.\n\nhttps://stellaruc.com\n\n#SalesOperations #CustomerExperience #StellarUC",
-  },
-  {
-    key: "stellaruc-24-7-operating-model-2026-12-01",
-    preferredDate: "2026-12-01",
-    text: "24/7 SALES AVAILABILITY IS A WORKFORCE DESIGN DECISION.\n\nIt does not have to mean asking people to cover every hour.\n\nAn intelligent Sales Specialist can support approved first-contact activity when the team is unavailable: engage an inquiry, gather relevant details, address defined questions, identify the next step, and preserve a path to human escalation.\n\nPeople remain responsible for the conversations that require judgment, negotiation, or relationship depth.\n\nStellar UC offers a practical model for extending sales availability without treating intelligent capability as a substitute for leadership or accountability.\n\nThe goal is not to remove people from sales. It is to make human attention available for the moments where it creates the most value.\n\nhttps://stellaruc.com\n\n#SalesLeadership #FutureOfWork #StellarUC",
-  },
-  {
-    key: "new-age-workforce-oversight-operating-discipline-2026-12-03",
-    preferredDate: "2026-12-03",
-    text: "RESPONSIBLE AI IS NOT A ONE-TIME APPROVAL. IT IS AN OPERATING DISCIPLINE.\n\nBusiness information changes. Customer questions evolve. Policies are revised. New exceptions appear.\n\nThat means oversight must continue after an intelligent system begins working.\n\nReview the approved knowledge. Test the boundaries. Examine escalations. Correct weak answers. Confirm that people know when and how to intervene.\n\nGovernance is not a brake on useful technology. It is how useful technology remains aligned with the business.\n\nThe New Age Workforce needs clear ownership on both sides of the collaboration: systems handle defined responsibilities, and people remain accountable for standards, judgment, and outcomes.\n\n#ResponsibleAI #Governance #WorkforceDesign",
-  },
-  {
-    key: "stellaruc-usage-based-pricing-clarity-2026-12-05",
-    preferredDate: "2026-12-05",
-    text: "OPERATING CAPACITY SHOULD FOLLOW BUSINESS ACTIVITY.\n\nThat principle matters in workforce design, and it matters in pricing.\n\nWith Stellar UC, Usage-Based Pricing connects applicable service usage to what is actually delivered instead of requiring a customer to purchase unused usage capacity in advance.\n\nThe commercial model may include platform access. The distinction is that service usage can scale with real activity rather than a block that sits idle.\n\nFor a business evaluating 24/7 intelligent sales availability, that transparency supports a clearer operating decision: understand the access cost, understand the delivered services, and understand how usage changes with demand.\n\nA modern workforce model should make capacity easier to align—not harder to explain.\n\nhttps://stellaruc.com\n\n#BusinessOperations #UsageBasedPricing #StellarUC",
-  },
-  {
-    key: "new-age-workforce-make-exceptions-visible-2026-12-07",
-    preferredDate: "2026-12-07",
-    text: "INTELLIGENT SYSTEMS DO NOT NEED TO MAKE EVERY DECISION TO CREATE VALUE.\n\nOften, their most useful role is to handle the normal path and make the exception visible.\n\nA complete request can move forward. A missing detail can be identified. A policy question can be routed. A sensitive situation can be escalated.\n\nThis creates a more deliberate division of work.\n\nThe system supports consistency and continuity. The person applies context, judgment, and accountability when the situation departs from the expected path.\n\nLeaders do not have to choose between total automation and no automation. They can design a measured operating model that gives each participant the responsibility it is best equipped to carry.\n\n#FutureOfWork #BusinessOperations #ResponsibleAI",
-  },
-  {
-    key: "new-age-workforce-boundary-leadership-question-2026-12-09",
-    preferredDate: "2026-12-09",
-    text: "THE MOST IMPORTANT AI QUESTION MAY BE A BOUNDARY QUESTION.\n\nWhere should intelligent capability end and human responsibility begin?\n\nThe answer will differ by process, customer, risk, and moment. But the method should remain consistent:\n\nDefine the predictable work.\nProtect the decisions that require judgment.\nCreate a clear path to a person.\nMeasure the result.\nImprove the design.\n\nThat is how leaders turn AI from an isolated tool into a responsible operating capability.\n\nTHE FUTURE OF BUSINESS IS NOT JUST ABOUT WORKING HARDER. IT'S ABOUT REDEFINING THE WORK.\n\nWhen the boundary is designed well, technology expands capacity and people remain at the center of trust.\n\n#Leadership #FutureOfWork #HumanIntelligence",
+    key: "sit-new-age-workforce-leadership-2026-11-08-v2",
+    preferredDate: "2026-11-08",
+    text: `THE FUTURE OF WORK IS A LEADERSHIP DECISION.
+
+Intelligent technology will continue to expand what systems can do.
+
+But technology alone does not decide which responsibilities should be supported, which decisions require people, or what kind of customer experience a business wants to create.
+
+Those are leadership choices.
+
+The strongest organizations will combine intelligent execution with human purpose, accountability, and trust.
+
+THE FUTURE OF BUSINESS IS ABOUT REDEFINING THE WORK.
+
+Learn how intelligent systems can support your workforce:
+https://stellaruc.com/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=new_age_workforce&utm_content=leadership_decision_10
+
+#FutureOfWork #BusinessLeadership #IntelligentTechnology`,
   },
 ];
