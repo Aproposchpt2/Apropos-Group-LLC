@@ -149,3 +149,13 @@
   from = "/economic-development-partnerships"
   to = "/economic-development-partnerships.html"
   status = 200
+
+[[redirects]]
+  from = "/sms-terms"
+  to = "/sms-terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/sms-consent"
+  to = "/sms-consent.html"
+  status = 200
