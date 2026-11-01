@@ -150,12 +150,28 @@
   to = "/economic-development-partnerships.html"
   status = 200
 
+# Apropos Group LLC (business development) sends no text messages. The SMS program belongs
+# to its DBA, Stellar Intelligent Business Systems, and is documented on stellaruc.com.
 [[redirects]]
   from = "/sms-terms"
-  to = "/sms-terms.html"
-  status = 200
+  to = "https://stellaruc.com/sms-terms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sms-terms.html"
+  to = "https://stellaruc.com/sms-terms"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/sms-consent"
-  to = "/sms-consent.html"
-  status = 200
+  to = "https://stellaruc.com/sms-terms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sms-consent.html"
+  to = "https://stellaruc.com/sms-terms"
+  status = 301
+  force = true
