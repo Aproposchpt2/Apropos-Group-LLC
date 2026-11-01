@@ -35,7 +35,11 @@ exports.handler = async (event) => {
     opportunity_number,
     inquiry_type,
     requirement,
+    sms_consent,
   } = body;
+  // SMS opt-in is recorded only when a phone number was given and the optional box was checked.
+  const smsConsent = sms_consent === 'yes' && Boolean(phone && phone.trim());
+  const consentNote = smsConsent ? `\n\n[SMS consent: YES via contact-form checkbox at ${new Date().toISOString()} for ${phone.trim()}]` : '';
 
   if (!contracting_officer || !agency_name || !email || !inquiry_type || !requirement) {
     return { statusCode: 400, body: JSON.stringify({ ok: false, error: 'Missing required fields' }) };
@@ -63,7 +67,7 @@ exports.handler = async (event) => {
     email: email.trim().toLowerCase(),
     phone: phone ? phone.trim() : null,
     opportunity_number: opportunity_number ? opportunity_number.trim() : null,
-    requirement: requirement.trim(),
+    requirement: requirement.trim() + consentNote,
     status: 'new',
   });
 
@@ -92,6 +96,7 @@ exports.handler = async (event) => {
     <tr><td style="padding:8px 0;color:#8FA3BE;font-size:13px">Agency / Organization</td><td style="padding:8px 0;font-size:14px">${agency_name}</td></tr>
     <tr><td style="padding:8px 0;color:#8FA3BE;font-size:13px">Email</td><td style="padding:8px 0;font-size:14px"><a href="mailto:${email}" style="color:#C8A96E">${email}</a></td></tr>
     ${phone ? `<tr><td style="padding:8px 0;color:#8FA3BE;font-size:13px">Phone</td><td style="padding:8px 0;font-size:14px">${phone}</td></tr>` : ''}
+    <tr><td style="padding:8px 0;color:#8FA3BE;font-size:13px">SMS consent</td><td style="padding:8px 0;font-size:14px">${smsConsent ? 'YES (checkbox)' : 'No'}</td></tr>
     ${opportunity_number ? `<tr><td style="padding:8px 0;color:#8FA3BE;font-size:13px">Opportunity #</td><td style="padding:8px 0;font-size:14px;font-family:monospace">${opportunity_number}</td></tr>` : ''}
     <tr><td style="padding:8px 0;color:#8FA3BE;font-size:13px">Received</td><td style="padding:8px 0;font-size:14px">${new Date().toLocaleString('en-US',{timeZone:'America/Los_Angeles'})}</td></tr>
   </table>
