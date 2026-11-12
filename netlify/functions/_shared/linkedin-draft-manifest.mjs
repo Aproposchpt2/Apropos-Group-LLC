@@ -154,5 +154,55 @@ export const DRAFTS = [
     "key": "stellar-curiosity-pilot-20261112-01",
     "preferredDate": "2027-01-06",
     "text": "In commercial property management, what happens when a maintenance request arrives after the office closes?\n\nThe first response is only one part of the process. Someone still needs to determine urgency, document the issue, coordinate the next step, and keep the right people informed.\n\nI'm interested in hearing from property managers, facility leaders, and service professionals: which part of that after-hours workflow creates the greatest challenge for your team?\n\nAt STELLAR INTELLIGENT SOFTWARE DEVELOPERS, we're listening to industry experience before defining the next intelligent business application.\n\n#CommercialPropertyManagement #FacilityMaintenance #BusinessOperations"
+  },
+  {
+    "key": "stellar-curiosity-20261112-batch01-01",
+    "preferredDate": "2026-11-14",
+    "text": "What is the most overlooked obstacle to growing a small business?\n\nBusiness growth is often discussed in terms of sales and marketing. Yet the daily work behind each new customer—responding, scheduling, documenting, and following up—can determine whether growth is sustainable.\n\nFor business owners and advisors: which operational bottleneck tends to appear first when demand increases?\n\n#BusinessDevelopment #SmallBusiness #Operations"
+  },
+  {
+    "key": "stellar-curiosity-20261112-batch01-02",
+    "preferredDate": "2026-11-16",
+    "text": "When a tenant reports an urgent issue, what information should reach the property manager first?\n\nAn incident can move through several people before anyone takes action. Missing context can slow the response and create unnecessary repeat calls.\n\nProperty managers and maintenance leaders: what single detail makes the biggest difference in triaging an incoming maintenance request?\n\n#PropertyManagement #Maintenance #TenantExperience"
+  },
+  {
+    "key": "stellar-curiosity-20261112-batch01-03",
+    "preferredDate": "2026-11-18",
+    "text": "Where does a service request most often get stuck?\n\nA request may be received promptly but still stall between intake, assignment, scheduling, and completion. The handoffs are easy to overlook until a customer asks for an update.\n\nFacility and field-service professionals: which handoff is hardest to keep consistent, and why?\n\n#FacilityManagement #FieldService #Workflow"
+  },
+  {
+    "key": "stellar-curiosity-20261112-batch01-04",
+    "preferredDate": "2026-11-20",
+    "text": "What should customers be able to accomplish when a business is closed?\n\nAfter-hours service does not have to mean promising an immediate human response to every request. It can mean capturing the right details and making the next step clear.\n\nCustomer service leaders: beyond leaving a voicemail, what after-hours action would be most useful to your customers?\n\n#CustomerExperience #ServiceOperations #AfterHours"
+  },
+  {
+    "key": "stellar-curiosity-20261112-batch01-05",
+    "preferredDate": "2026-11-22",
+    "text": "How do you know when a missed call becomes a missed opportunity?\n\nNot every inquiry is urgent, and not every call becomes a sale. But delayed follow-up can leave teams without the context they need to respond effectively.\n\nSales and operations professionals: what is your most reliable way to identify and recover opportunities that arrive outside business hours?\n\n#SalesOperations #LeadManagement #CustomerEngagement"
+  },
+  {
+    "key": "stellar-curiosity-20261112-batch01-06",
+    "preferredDate": "2026-11-24",
+    "text": "What makes an emergency escalation genuinely useful?\n\nA notification alone may not be enough. The recipient needs to understand what happened, where, how urgent it is, and what has already been done.\n\nProperty and facilities leaders: what information must an after-hours escalation contain before your team can act confidently?\n\n#EmergencyResponse #PropertyOperations #FacilityMaintenance"
+  },
+  {
+    "key": "stellar-curiosity-20261112-batch01-07",
+    "preferredDate": "2026-11-26",
+    "text": "Which repetitive task takes more time than it should?\n\nSmall interruptions can consume a surprising share of the workday: answering the same question, gathering basic details, or checking the status of a request.\n\nBusiness leaders: if your team could recover time from one recurring administrative task, which would you choose?\n\n#BusinessProductivity #WorkflowImprovement #Leadership"
+  },
+  {
+    "key": "stellar-curiosity-20261112-batch01-08",
+    "preferredDate": "2026-11-28",
+    "text": "What does a good customer handoff actually look like?\n\nCustomers notice when they must repeat their story. Employees notice when they receive a request without enough context to help.\n\nCustomer experience professionals: what information should always follow a customer from first contact to the person responsible for resolving the issue?\n\n#CustomerService #CustomerExperience #Operations"
+  },
+  {
+    "key": "stellar-curiosity-20261112-batch01-09",
+    "preferredDate": "2026-11-30",
+    "text": "Where would extended operating coverage create the most value?\n\nFor many organizations, the workday ends before customer needs do. Extending coverage does not necessarily mean staffing every function around the clock.\n\nOwners and operations managers: if one business workflow could remain active 24/7, which would you prioritize—and what outcome would matter most?\n\n#BusinessOperations #OperationalCoverage #FutureOfWork"
+  },
+  {
+    "key": "stellar-curiosity-20261112-batch01-10",
+    "preferredDate": "2026-12-02",
+    "text": "What problem do business systems still fail to solve well?\n\nBusinesses have more software choices than ever, but information can remain fragmented across calls, inboxes, spreadsheets, and service teams.\n\nProfessionals across property management, service, and business development: where do your current tools still force people to bridge the gaps manually?\n\n#BusinessSystems #DigitalTransformation #WorkflowDesign"
   }
 ];
