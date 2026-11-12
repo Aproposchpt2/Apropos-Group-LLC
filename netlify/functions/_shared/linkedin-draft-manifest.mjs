@@ -149,5 +149,10 @@ export const DRAFTS = [
     "key": "sisd-demo-refresh-20261106-30",
     "preferredDate": "2027-01-04",
     "text": "REDEFINING TODAY'S WORKFORCE IS A BUSINESS-SYSTEMS DECISION.\n\nIt requires more than adding an isolated technology.\n\nLeaders must decide how work moves, where information belongs, what employees should own, what intelligent systems can support, and how the customer remains connected throughout the process.\n\nThat is the direction behind:\n\nSTELLAR\nINTELLIGENT SOFTWARE DEVELOPERS\nOperated by Apropos Group LLC\nBusiness Systems Developers\n\nIntelligent Business Systems handle the predictable.\n\nYour people deliver the exceptional.\n\nThe future of business is not just about working harder.\n\nIt is about redefining the work—deliberately, responsibly, and around the strengths of both people and intelligent technology.\n\nREDEFINING TODAY'S WORKFORCE.\n\nhttps://stellaruc.com/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=new_age_workforce&utm_content=redefining_todays_workforce_30\n\nCALL TO EXPERIENCE LIVE DEMO (702) 710-8456\n\n#NewAgeWorkforce #BusinessSystems #IntelligentTechnology"
+  },
+  {
+    "key": "stellar-curiosity-pilot-20261112-01",
+    "preferredDate": "2027-01-06",
+    "text": "In commercial property management, what happens when a maintenance request arrives after the office closes?\n\nThe first response is only one part of the process. Someone still needs to determine urgency, document the issue, coordinate the next step, and keep the right people informed.\n\nI'm interested in hearing from property managers, facility leaders, and service professionals: which part of that after-hours workflow creates the greatest challenge for your team?\n\nAt STELLAR INTELLIGENT SOFTWARE DEVELOPERS, we're listening to industry experience before defining the next intelligent business application.\n\n#CommercialPropertyManagement #FacilityMaintenance #BusinessOperations"
   }
 ];
