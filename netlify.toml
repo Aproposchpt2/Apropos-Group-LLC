@@ -175,3 +175,27 @@
   to = "https://stellaruc.com/sms-terms"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/en"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/"
+  to = "/"
+  status = 301
+  force = true
