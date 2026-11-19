@@ -38,24 +38,10 @@ org.contactPoint = {
 org.subOrganization = [
   {
     '@type': 'Organization',
-    '@id': 'https://nebc.aproposgroupllc.com/#organization',
-    name: 'National Enterprise Business Center',
-    alternateName: 'NEBC',
-    url: 'https://nebc.aproposgroupllc.com/'
-  },
-  {
-    '@type': 'Organization',
-    '@id': 'https://rfcp.aproposgroupllc.com/#organization',
+    '@id': 'https://federalcontractorportal.aproposgroupllc.com/#organization',
     name: 'Registered Federal Contractors Portal',
     alternateName: ['National Government Contract Center', 'NGCC'],
-    url: 'https://rfcp.aproposgroupllc.com/'
-  },
-  {
-    '@type': 'Organization',
-    '@id': 'https://natcorp.aproposgroupllc.com/#organization',
-    name: 'National Corporate Contract Exchange',
-    alternateName: 'NAT-CORP',
-    url: 'https://natcorp.aproposgroupllc.com/'
+    url: 'https://federalcontractorportal.aproposgroupllc.com/'
   },
   {
     '@type': 'Organization',
@@ -151,9 +137,7 @@ if (!html.includes(heroPreload)) {
 
 const required = [
   AUTHORITATIVE_ANALYZE_FIT_PRICE,
-  'https://rfcp.aproposgroupllc.com/#organization',
-  'https://natcorp.aproposgroupllc.com/#organization',
-  'https://nebc.aproposgroupllc.com/#organization',
+  'https://federalcontractorportal.aproposgroupllc.com/#organization',
   'https://marketplace.aproposgroupllc.com/#organization',
   'https://ai4businesses.org/#brand',
   'https://ai4businesses.org/#service',

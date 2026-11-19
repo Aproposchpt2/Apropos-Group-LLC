@@ -1,10 +1,5 @@
 const TARGETS = [
-  { id: 'acb', name: 'Advisor Contract Search Tool / ACB', url: 'https://acb.aproposgroupllc.com' },
-  { id: 'natcorp', name: 'NAT-CORP', url: 'https://natcorp.aproposgroupllc.com' },
-  { id: 'acp', name: 'ACP Outreach', url: 'https://acp.aproposgroupllc.com' },
-  { id: 'nebc', name: 'NEBC', url: 'https://nebc.aproposgroupllc.com' },
-  { id: 'rfcp', name: 'RFCP', url: 'https://rfcp.aproposgroupllc.com' },
-  { id: 'ngcc', name: 'NGCC', url: 'https://ngcc.aproposgroupllc.com' },
+  { id: 'rfcp', name: 'RFCP', url: 'https://federalcontractorportal.aproposgroupllc.com' },
   { id: 'alerts', name: 'Alerts', url: 'https://alerts.aproposgroupllc.com' },
   { id: 'bdms', name: 'BUSINESS DEVELOPMENT MANAGEMENT SYSTEM', url: 'https://bdms.aproposgroupllc.com' }
 ];
