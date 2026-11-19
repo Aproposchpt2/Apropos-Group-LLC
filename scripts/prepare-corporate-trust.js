@@ -72,7 +72,8 @@ function schemaGraph() {
         areaServed: { '@type': 'Country', name: 'United States' },
         subOrganization: [
           { '@type': 'Organization', name: 'Registered Federal Contractors Portal', url: 'https://federalcontractorportal.aproposgroupllc.com/' },
-          { '@type': 'Organization', name: 'APROPOS Marketing Marketplace', url: 'https://marketplace.aproposgroupllc.com/' }
+          { '@type': 'Organization', name: 'Stellar Business Development Agency', url: 'https://sbda.stellaruc.com/' },
+          { '@type': 'Organization', name: 'STELLAR Intelligent Software Developers', url: 'https://stellaruc.com/' }
         ]
       },
       {

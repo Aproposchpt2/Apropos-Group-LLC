@@ -20,8 +20,9 @@ requireText('Federal contract discovery and procurement intelligence built speci
 requireText('Primary mission: help registered federal contractors find relevant Federal contract opportunities.', 'RFCP primary mission');
 requireText('https://federalcontractorportal.aproposgroupllc.com/', 'RFCP pathway');
 requireText('https://sbda.stellaruc.com/', 'SBDA pathway');
-requireText('https://marketplace.aproposgroupllc.com/', 'Marketplace pathway');
-// NAT-CORP and NEBC were retired; make sure they do not come back.
+requireText('https://stellaruc.com/', 'STELLAR pathway');
+// NAT-CORP, NEBC and the Marketplace were retired; make sure they do not come back.
+forbid('marketplace.aproposgroupllc.com', 'retired Marketplace link');
 forbid('natcorp.aproposgroupllc.com', 'retired NAT-CORP link');
 forbid('nebc.aproposgroupllc.com', 'retired NEBC link');
 requireText('APROPOS is an independent private company and is not a government agency.', 'independent-company disclosure');

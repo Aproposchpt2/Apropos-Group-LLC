@@ -10,7 +10,6 @@ const required = [
   [ecosystem, '<link rel="canonical" href="https://aproposgroupllc.com/ecosystem">', 'ecosystem canonical'],
   [ecosystem, 'Business Development Management System', 'BDMS entity'],
   [ecosystem, 'STELLAR Intelligent Software Developers', 'Stellar UC entity'],
-  [ecosystem, 'APROPOS Business Intelligence Marketplace', 'Marketplace entity'],
   [ecosystem, '"@type":"ItemList"', 'ItemList schema'],
   [sitemap, 'https://aproposgroupllc.com/ecosystem', 'ecosystem sitemap entry']
 ];
