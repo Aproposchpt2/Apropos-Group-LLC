@@ -45,9 +45,15 @@ org.subOrganization = [
   },
   {
     '@type': 'Organization',
-    '@id': 'https://marketplace.aproposgroupllc.com/#organization',
-    name: 'APROPOS Marketing Marketplace',
-    url: 'https://marketplace.aproposgroupllc.com/'
+    '@id': 'https://sbda.stellaruc.com/#organization',
+    name: 'Stellar Business Development Agency',
+    url: 'https://sbda.stellaruc.com/'
+  },
+  {
+    '@type': 'Organization',
+    '@id': 'https://stellaruc.com/#organization',
+    name: 'STELLAR Intelligent Software Developers',
+    url: 'https://stellaruc.com/'
   }
 ];
 
@@ -138,7 +144,7 @@ if (!html.includes(heroPreload)) {
 const required = [
   AUTHORITATIVE_ANALYZE_FIT_PRICE,
   'https://federalcontractorportal.aproposgroupllc.com/#organization',
-  'https://marketplace.aproposgroupllc.com/#organization',
+  'https://sbda.stellaruc.com/#organization',
   'https://ai4businesses.org/#brand',
   'https://ai4businesses.org/#service',
   'https://ai4websitedesign.com/#brand',
