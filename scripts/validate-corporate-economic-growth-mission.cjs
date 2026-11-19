@@ -19,7 +19,7 @@ requireText('Businesses grow. People prosper. Communities become stronger.', 'mi
 requireText('Federal contract discovery and procurement intelligence built specifically for registered federal contractors seeking opportunities published by Federal procurement agencies.', 'RFCP governing positioning');
 requireText('Primary mission: help registered federal contractors find relevant Federal contract opportunities.', 'RFCP primary mission');
 requireText('https://federalcontractorportal.aproposgroupllc.com/', 'RFCP pathway');
-requireText('https://boda.stellaruc.com/', 'BODA pathway');
+requireText('https://sbda.stellaruc.com/', 'SBDA pathway');
 requireText('https://marketplace.aproposgroupllc.com/', 'Marketplace pathway');
 // NAT-CORP and NEBC were retired; make sure they do not come back.
 forbid('natcorp.aproposgroupllc.com', 'retired NAT-CORP link');
