@@ -124,10 +124,6 @@ html = html.replace(
   '<p class="coverage">Built for businesses registered to pursue federal contracting opportunities.</p>',
   '<p class="coverage">Primary mission: help registered federal contractors find relevant Federal contract opportunities. Applicable State opportunity access can extend that opportunity reach.</p>'
 );
-html = html.replace(
-  '<p>Personalized state and local procurement intelligence for licensed contractors.</p>',
-  '<p>Business-first State and local public-sector contract discovery that starts with what a business provides and matches opportunity to demonstrated capability.</p>'
-);
 
 html = html.replace(
   '<h2>Expand Opportunity Through <em>Partnership</em></h2>\n          <p>APROPOS may work with institutions that share a commitment to business growth, supplier participation, workforce stability, and Community Economic Development.</p>',

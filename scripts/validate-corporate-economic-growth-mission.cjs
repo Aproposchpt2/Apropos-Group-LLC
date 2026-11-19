@@ -18,11 +18,12 @@ requireText('04 · Prosperity', 'community prosperity stage');
 requireText('Businesses grow. People prosper. Communities become stronger.', 'mission outcome statement');
 requireText('Federal contract discovery and procurement intelligence built specifically for registered federal contractors seeking opportunities published by Federal procurement agencies.', 'RFCP governing positioning');
 requireText('Primary mission: help registered federal contractors find relevant Federal contract opportunities.', 'RFCP primary mission');
-requireText('Business-first State and local public-sector contract discovery', 'NAT-CORP positioning');
-requireText('https://rfcp.aproposgroupllc.com/', 'RFCP pathway');
-requireText('https://natcorp.aproposgroupllc.com/', 'NAT-CORP pathway');
-requireText('https://nebc.aproposgroupllc.com/', 'NEBC pathway');
+requireText('https://federalcontractorportal.aproposgroupllc.com/', 'RFCP pathway');
+requireText('https://boda.stellaruc.com/', 'BODA pathway');
 requireText('https://marketplace.aproposgroupllc.com/', 'Marketplace pathway');
+// NAT-CORP and NEBC were retired; make sure they do not come back.
+forbid('natcorp.aproposgroupllc.com', 'retired NAT-CORP link');
+forbid('nebc.aproposgroupllc.com', 'retired NEBC link');
 requireText('APROPOS is an independent private company and is not a government agency.', 'independent-company disclosure');
 requireText('Additional report · $79.00 one-time', 'Analyze Fit price preserved');
 requireText('/assets/headquarters.webp', 'corporate hero preserved');
@@ -46,4 +47,4 @@ if (failures.length) {
   process.exit(2);
 }
 
-console.log('[corporate-mission] PASS — approved hero identity/alignment, mission chain, RFCP/NAT-CORP boundaries, provenance guard, pricing, hero image, and corporate pathways validated.');
+console.log('[corporate-mission] PASS — approved hero identity/alignment, mission chain, RFCP boundaries, provenance guard, pricing, hero image, and corporate pathways validated.');
